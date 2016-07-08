@@ -13,9 +13,12 @@ while choice != "Q":
         fahrenheit = celsius * 9.0 / 5 + 32
         print("Result: {:.2f} F".format(fahrenheit))
     elif choice == "F":
+        # TODO: Write this section so the program converts F to C and displays the result
+        # Hint: celsius = 5 / 9 * (fahrenheit - 32)
         pass
     else:
         print("Invalid option")
     print(MENU)
     choice = input(">>> ").upper()
 print("Thank you.")
+
