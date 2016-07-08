@@ -1,5 +1,5 @@
 """
-CP1404 - Practical 01
+CP1404/CP5632 - Practical 01
 Pseudocode for temperature conversion
 """
 __author__ = 'Lindsay Ward'
