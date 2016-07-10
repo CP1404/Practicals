@@ -2,7 +2,6 @@
 CP1404/CP5632 Practical
 Car class
 """
-__author__ = 'sci-lmw1'
 
 
 class Car:
