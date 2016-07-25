@@ -2,7 +2,7 @@
 CP1404/CP5632 Practical
 Testing/example client code for trees classes
 """
-import Prac07.trees as trees
+import Prac08.trees as trees
 
 # let's make some trees
 treeList = [trees.Tree(), trees.EvenTree(), trees.UpsideDownTree(),

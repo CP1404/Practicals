@@ -4,9 +4,10 @@ File and class example - opens/reads a file, stores in objects of custom class
 (contains multiple versions for demonstration: using csv and namedtuple)
 """
 
-from Prac07.programming_language import ProgrammingLanguage
-from collections import namedtuple
 import csv
+from collections import namedtuple
+
+from Prac08.programming_language import ProgrammingLanguage
 
 __author__ = 'Lindsay Ward'
 
