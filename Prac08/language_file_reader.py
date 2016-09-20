@@ -16,7 +16,7 @@ def main():
     """ read a file of programming language details, save as objects, display """
     languages = []
     # open the file for reading
-    in_file = open('language.csv', 'r')
+    in_file = open('languages.csv', 'r')
 
     # format is like: Language,Typing,Reflection,Year
     # 'consume' the first line (header) - we don't need its contents
