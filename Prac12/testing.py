@@ -31,7 +31,7 @@ def run_tests():
     # assert test with no message - used to see if the function works properly
     assert repeat_string("Python", 1) == "Python"
     # the test below should fail
-    # assert repeat_string("hi", 2) == "hi hi"
+    assert repeat_string("hi", 2) == "hi hi"
 
     # TODO: 1. fix the repeat_string function above so that it passes the test
     # Hint: join
@@ -48,7 +48,7 @@ def run_tests():
 run_tests()
 
 # TODO: 3. Uncomment the following line and run the doctests
-doctest.testmod()
+# doctest.testmod()
 
 # TODO: 4. Fix the failing is_long_word function
 
