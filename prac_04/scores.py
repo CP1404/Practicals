@@ -1,7 +1,7 @@
 """
 CP1404/CP5632 Practical
-CSV scores file program - broken one
-scores file stores scores for each subject for 10 people.
+Debugging exercise: almost-working version of a CSV scores file program.
+The scores.csv file stores scores for each subject for 10 people.
 This code reads the lines into lists, saves the first line as a list of subject codes and
 converts the rest of the lines from a list of strings into a list of numbers,
 which it then prints with the maximum value for that subject.
@@ -11,6 +11,7 @@ Use the debugger to follow what it's doing... then fix it.
 
 
 def main():
+    """Read and display student scores from scores file."""
     scores_file = open("scores.csv")
     scores_data = scores_file.readlines()
     print(scores_data)

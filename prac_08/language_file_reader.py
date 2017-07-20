@@ -7,18 +7,16 @@ File and class example - opens/reads a file, stores in objects of custom class
 import csv
 from collections import namedtuple
 
-from Prac08.programming_language import ProgrammingLanguage
-
-__author__ = 'Lindsay Ward'
+from prac_08.programming_language import ProgrammingLanguage
 
 
 def main():
-    """ read a file of programming language details, save as objects, display """
+    """Read file of programming language details, save as objects, display."""
     languages = []
     # open the file for reading
     in_file = open('languages.csv', 'r')
 
-    # format is like: Language,Typing,Reflection,Year
+    # file format is like: Language,Typing,Reflection,Year
     # 'consume' the first line (header) - we don't need its contents
     in_file.readline()
 
@@ -34,7 +32,8 @@ def main():
         reflection = parts[2] == "Yes"
 
         # construct a ProgrammingLanguage object using the elements - year should be an int
-        language = ProgrammingLanguage(parts[0], parts[1], reflection, int(parts[3]))
+        language = ProgrammingLanguage(parts[0], parts[1], reflection,
+                                       int(parts[3]))
 
         # add the language we've just constructed to the list
         languages.append(language)
@@ -46,12 +45,14 @@ def main():
     for language in languages:
         print(language)
 
+
 main()
 
 
 def using_csv():
-    # open the file for reading -
-    # specify newline to avoid quoted \n in strings being considered a new record
+    """Language file reader version using the csv module."""
+    # first, open the file for reading - note: specify newline
+    # to avoid quoted \n in strings being considered a new record
     in_file = open('languages.csv', 'r', newline='')
     in_file.readline()
     reader = csv.reader(in_file)  # use default dialect, Excel
@@ -60,13 +61,16 @@ def using_csv():
 
     in_file.close()
 
+
 # using_csv()
 
 
 def using_namedtuple():
+    """Language file reader version using a named tuple."""
     in_file = open('languages.csv', 'r', newline='')
     file_field_names = in_file.readline().strip().split(',')
     print(file_field_names)
+    # Language will be a new subclass of the tuple data type class
     Language = namedtuple('Language', 'name, typing, reflection, year')
     reader = csv.reader(in_file)  # use default dialect, Excel
 
@@ -76,10 +80,12 @@ def using_namedtuple():
         print(repr(language))
     in_file.close()
 
+
 # using_namedtuple()
 
 
 def using_csv_namedtuple():
+    """Language file reader version using both csv module and named tuple."""
     Language = namedtuple('Language', 'name, typing, reflection, year')
     in_file = open("languages.csv", "r")
     in_file.readline()
@@ -88,5 +94,3 @@ def using_csv_namedtuple():
         print(repr(language))
 
 # using_csv_namedtuple()
-
-

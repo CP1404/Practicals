@@ -2,9 +2,7 @@
 CP1404/CP5632 Practical
 File renaming and os examples
 """
-import os, shutil
-
-__author__ = 'Lindsay Ward'
+import os
 
 print("Current directory is", os.getcwd())
 
@@ -26,7 +24,7 @@ for filename in os.listdir('.'):
         # Option 1: rename file to new name - in place
         # os.rename(filename, new_name)
 
-        # Option 2: move file to new place, with new name
+        # Option 2: move file to new place, with new name (import shutil first)
         # shutil.move(filename, 'temp/' + new_name)
 
 
@@ -36,5 +34,3 @@ for filename in os.listdir('.'):
 #     print("In", dir_name)
 #     print("\tcontains subdirectories:", subdir_list)
 #     print("\tand files:", file_list)
-
-
