@@ -33,3 +33,5 @@ for i, number in enumerate(numbers):
 #   0
 #  50
 # 100
+for number in range(0, 101, 50):
+    print("{:3}".format(number))
