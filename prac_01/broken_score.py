@@ -1,19 +1,17 @@
 """
-CP1404/CP5632 - Practical
+CP1404/CP5632 - Practical - Suggested Solution
 Broken program to determine score status
 """
 
-# TODO: Fix this!
+# Note boundary conditions (50 should be a pass, not > 50)
+# Note efficiency and nesting; use the fewest number of if/elif as possible
 
 score = float(input("Enter score: "))
-if score < 0:
+if score < 0 or score > 100:
     print("Invalid score")
-else:
-    if score > 100:
-        print("Invalid score")
-    if score > 50:
-        print("Passable")
-    if score > 90:
+elif score >= 90:
     print("Excellent")
-if score < 50:
+elif score >= 50:
+    print("Passable")
+else:
     print("Bad")
