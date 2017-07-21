@@ -1,6 +1,6 @@
 """
 CP1404/CP5632 - Practical - Suggested Solution
-Broken program to determine score status
+Fixed program to determine score status
 """
 
 # Note boundary conditions (50 should be a pass, not > 50)

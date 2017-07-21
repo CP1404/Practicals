@@ -1,6 +1,6 @@
 """
 CP1404/CP5632 - Practical - Suggested Solution
-Sales bonus program
+Shop calculator program to determine total (discounted) price
 """
 
 total = 0
