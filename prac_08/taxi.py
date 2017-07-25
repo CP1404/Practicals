@@ -1,48 +1,19 @@
 """
 CP1404/CP5632 Practical
-Car class
+Taxi class, derived from Car
 """
 
-
-class Car:
-    """Represent a Car object."""
-
-    def __init__(self, name="", fuel=0):
-        """Initialise a Car instance."""
-        self.name = name
-        self.fuel = fuel
-        self.odometer = 0
-
-    def __str__(self):
-        """Return string representation of a Car."""
-        return "{}, fuel={}, odo={}".format(self.name, self.fuel,
-                                            self.odometer)
-
-    def add_fuel(self, amount):
-        """Add amount to the car's fuel."""
-        self.fuel += amount
-
-    def drive(self, distance):
-        """Drive the car a given distance if it has enough fuel,
-        or drive until fuel runs out.
-        Return the distance actually driven."""
-        if distance > self.fuel:
-            distance_driven = self.fuel
-            self.fuel = 0
-        else:
-            self.fuel -= distance
-            distance_driven = distance
-        self.odometer += distance_driven
-        return distance_driven
+from prac_08.car import Car
 
 
 class Taxi(Car):
     """Specialised version of a Car that includes fare costs."""
 
-    def __init__(self, name, fuel, price_per_km):
+    price_per_km = 1.23
+
+    def __init__(self, name, fuel):
         """Initialise a Taxi instance, based on parent class Car."""
         super().__init__(name, fuel)
-        self.price_per_km = price_per_km
         self.current_fare_distance = 0
 
     def __str__(self):
