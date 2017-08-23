@@ -17,7 +17,7 @@ print("The average of the numbers is", sum(numbers) / len(numbers))
 
 # 2. Woefully inadequate security checker...
 usernames = ['jimbo', 'giltson98', 'derekf', 'WhatSup', 'NicolEye',
-             'swei45''BaseInterpreterInterface', 'BaseStdIn', 'Command',
+             'swei45', 'BaseInterpreterInterface', 'BaseStdIn', 'Command',
              'ExecState', 'InteractiveConsole', 'InterpreterInterface',
              'StartServer', 'bob']
 username = input("Enter username:")
