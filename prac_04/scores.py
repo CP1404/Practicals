@@ -22,12 +22,30 @@ def main():
         score_numbers = [int(value) for value in score_strings]
         score_values.append(score_numbers)
     scores_file.close()
-    for i in range(len(subjects)):
-        print(subjects[i], "Scores:")
-        for score in score_values[i]:
-            print(score)
-        print("Max:", max(score_values[i]))
-        print()
+    scores_by_subject = organise_by_index(score_values, len(subjects))
+    display_subject_details(scores_by_subject, subjects, len(subjects))
 
 
+def organise_by_index(score_values, number_of_subjects):
+    """This function takes in the list of scores values and number of subjects and pops the first index of each line
+    of scores into a new list and returns that list. """
+    subject_scores = []
+    for i in range(number_of_subjects):
+        temp_list = []
+        for scores in score_values:
+            temp_list.append(scores.pop(0))
+        subject_scores.append(temp_list)
+    return subject_scores
+
+
+def display_subject_details(scores_by_subject, subject_names, number_of_subjects):
+    """This function takes in the list of scores by subject code, the subject names list and the number of subjects
+    to display formatted output to user. Print statements include the MAX, MIN, and Average calculations"""
+    for i in range(number_of_subjects):
+        print(subject_names[i], "Scores:")
+        for score in scores_by_subject[i]:
+            print("{:>2}".format(score))
+        print("Max: ", max(scores_by_subject[i]))
+        print("Min: ", min(scores_by_subject[i]))
+        print("Avg: {:.2f}".format((int(sum(scores_by_subject[i]) / len(scores_by_subject[i])))), "\n")
 main()
