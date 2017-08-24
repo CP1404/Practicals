@@ -6,6 +6,7 @@ from prac_07.guitar import Guitar
 
 
 def main():
+    """Guitar program, using Guitar class."""
     guitars = []
 
     print("My guitars!")
@@ -29,9 +30,8 @@ def main():
             vintage_string = ""
             if guitar.is_vintage():
                 vintage_string = "(vintage)"
-            print(
-                "Guitar {0}: {1.name:>30} ({1.year}), worth ${1.cost:10,.2f} {2}".format(
-                    i + 1, guitar, vintage_string))
+            print("Guitar {0}: {1.name:>30} ({1.year}), worth ${1.cost:10,.2f}\
+             {2}".format(i + 1, guitar, vintage_string))
     else:
         print("No guitars :( Quick, go and buy one!")
 

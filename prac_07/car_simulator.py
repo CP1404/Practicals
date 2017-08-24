@@ -8,6 +8,7 @@ MENU = "Menu:\nd) drive\nr) refuel\nq) quit"
 
 
 def main():
+    """Car simulator program, demonstrating use of Car class."""
     print("Let's drive!")
     name = input("Enter your car name: ")
     # create a Car instance with initial fuel of 100 and user-provided name

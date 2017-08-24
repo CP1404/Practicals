@@ -3,8 +3,8 @@ CP1404/CP5632 Practical - Suggested Solution
 UnreliableCar class, derived from Car
 """
 
-from prac_08.car import Car
 from random import randint
+from prac_08.car import Car
 
 
 class UnreliableCar(Car):

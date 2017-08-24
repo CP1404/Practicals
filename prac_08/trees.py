@@ -30,7 +30,7 @@ class Tree:
         if self._leaves % TREE_LEAVES_PER_ROW > 0:
             result += "#" * (self._leaves % TREE_LEAVES_PER_ROW)
             result += "\n"
-        for i in range(self._leaves // TREE_LEAVES_PER_ROW):
+        for _ in range(self._leaves // TREE_LEAVES_PER_ROW):
             result += "#" * TREE_LEAVES_PER_ROW
             result += "\n"
         return result

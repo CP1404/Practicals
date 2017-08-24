@@ -16,5 +16,5 @@ while colour_name != "":
     # Note: using the get dictionary method
     # means you will get None if the key is not found
     print("The code for \"{}\" is {}".format(colour_name,
-                                         COLOUR_CODES.get(colour_name)))
+                                             COLOUR_CODES.get(colour_name)))
     colour_name = input("Enter a colour name: ")

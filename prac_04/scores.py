@@ -35,7 +35,7 @@ def reorganise_scores_by_subject(score_values):
     """Process list of by-student scores into list of by-subject scores."""
     subject_scores = []
     number_of_subjects = len(score_values[0])
-    for i in range(number_of_subjects):
+    for _ in range(number_of_subjects):
         scores_for_one_subject = []
         for scores in score_values:
             # pop first score from by-student scores into the by-subject scores
