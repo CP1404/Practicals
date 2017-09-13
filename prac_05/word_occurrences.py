@@ -11,10 +11,7 @@ for word in words:
     frequency = unique_words.get(word, 0)
     # Note: this is the "Look Before You Leap" (LBYL) pattern
     # we could use the "Easier to Ask Forgiveness" pattern using exceptions
-    if frequency is None:
-        unique_words[word] = 1
-    else:
-        unique_words[word] = frequency + 1
+    unique_words[word] = frequency + 1
 
 # Print the unique words and their frequencies,
 # in alphabetical order
