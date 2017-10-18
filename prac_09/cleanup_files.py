@@ -25,6 +25,13 @@ def main():
             new_name = get_fixed_filename(filename)
             print(new_name)
 
+            # NOTE: These options won't just work...
+            # they show you ways of renaming and moving files,
+            # but you need to have valid filenames. You can't make a file with
+            # a blank name, and on Windows you can't have files with the same
+            # characters but different case (e.g. a.TXT and A.txt)
+            # So, you need to get valid filenames before you can use these.
+
             # Option 1: rename file to new name - in place
             # os.rename(filename, new_name)
 
