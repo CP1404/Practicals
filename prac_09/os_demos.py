@@ -28,7 +28,7 @@ def main():
             continue
 
         new_name = get_fixed_filename(filename)
-        # print("Renaming {} to {}".format(filename, new_name))
+        print("Renaming {} to {}".format(filename, new_name))
 
         # TODO: Try these options one at a time
         # Option 1: rename file to new name - in place
