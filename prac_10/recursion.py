@@ -22,8 +22,8 @@ def do_something(n):
         print(n ** 2)
     do_something(n - 1)
 
-# TODO: 3. write down what you think the output of this will be,
+# TODO: 3. write down what you think the output of do_something(4) will be,
 # TODO: 4. use the debugger to step through and see what's actually happening
 # do_something(4)
 
-# TODO: 5. fix do_something() so that it works the way it probably should :)
+# TODO: 5. fix do_something() so that it works according to the docstring
