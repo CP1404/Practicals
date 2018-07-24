@@ -2,7 +2,7 @@
 CP1404/CP5632 Practical - Suggested Solution
 Basic manual tests for Guitar class
 """
-from prac_07.guitar import Guitar
+from prac_06.guitar import Guitar
 
 CURRENT_YEAR = 2017
 

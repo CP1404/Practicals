@@ -2,7 +2,7 @@
 CP1404/CP5632 Practical - Suggested Solution
 Car Driving Simulator
 """
-from prac_07.car import Car
+from prac_06.car import Car
 
 MENU = "Menu:\nd) drive\nr) refuel\nq) quit"
 

@@ -2,7 +2,7 @@
 CP1404/CP5632 Practical - Suggested Solution
 Guitar program.
 """
-from prac_07.guitar import Guitar
+from prac_06.guitar import Guitar
 
 
 def main():
