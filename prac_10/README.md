@@ -9,7 +9,7 @@ You don't have to finish it but you have to do good work.
 Start by downloading the prac files from
 <https://github.com/CP1404/Practicals/tree/master/prac_10>
 
-These files have *\# **TODO*** comments to show you what steps to do.
+These files have *# **TODO*** comments to show you what steps to do.
 
 Recursion
 ---------
@@ -18,15 +18,15 @@ Recursion
 
 Open recursion.py and read the code, then **write down** (on paper, like
 it's a practice exam question!) the expected output for the first
-function, do\_it(5) **BEFORE** you run it.
+function, do_it(5) **BEFORE** you run it.
 
 Then run it to see if you were right.
 
 Then use the **debugger** to step through the execution to see what's
 happening.
 
-Do the same for the next function, (start by uncommenting \#
-do\_something(4)).
+Do the same for the next function, (start by uncommenting #
+do_something(4)).
 
 You'll find a problem... The function should print the squares of
 positive numbers from n down to 0, but instead it runs until the maximum
@@ -62,7 +62,7 @@ Testing
 Follow the TODO instructions in testing.py, taking note that the code
 shows you examples to learn form.
 
-1.  fix the repeat\_string function so that it passes the assert test
+1.  fix the repeat_string function so that it passes the assert test
 
 2.  write at least two assert statements to show if Car sets the fuel
     correctly
@@ -72,7 +72,7 @@ shows you examples to learn form.
 > Note: PyCharm might detect your tests and automatically run your
 > program in doctest mode.
 
-4.  Fix the failing is\_long\_word function
+4.  Fix the failing is_long_word function
 
 5.  Write and test (using doctest) a function to format a phrase as a
     sentence - starting with a capital and ending with a single full
@@ -100,8 +100,8 @@ simpler, Python-based, API for us. *We need to install that now*.
 
 The lab PCs should let us install packages. If it looks like the package
 is still installing (infinitely), just carry on as if it were finished
-and it should work... or just restart PyCharm if you\'d like it to stop
-telling you it\'s installing! If you really can't install the wikipedia
+and it should work... or just restart PyCharm if you'd like it to stop
+telling you it's installing! If you really can't install the wikipedia
 package, then skip those parts of the prac that use it.
 
 In PyCharm, go to Settings/Preferences \> Project: Practicals \> Project
@@ -126,11 +126,11 @@ the user enters blank input.
 
 Try this with a few page titles and see what happens.  
 (Note that you will get a warning about an outdated use of the
-BeautifulSoup package. We can\'t fix that.)
+BeautifulSoup package. We can't fix that.)
 
 Try it with the search/title "Monty" and you should find that the
 Wikipedia API returns a "disambiguation" page, so you need to handle
-that **exception** as explained in the API\'s docs.
+that **exception** as explained in the API's docs.
 
 Now **modify** your program so when it gets the page, it prints the
 title, summary and the URL.
@@ -143,7 +143,7 @@ always interacted via PyCharm with the console -- or using a GUI we made
 with Kivy. A very common way to deliver software these days is via a Web
 browser. Some programming languages are designed for the Web -- like
 JavaScript for the browser and PHP for Web servers, but we can also use
-Python... if we use it via a \"Web Framework\".
+Python... if we use it via a "Web Framework".
 
 There are a number of great frameworks, like Django, Web2Py and Pyramid,
 but today we will use Flask.  
@@ -168,18 +168,18 @@ The code is shown (left) and explained (right) below:
 +-----------------------------------+-----------------------------------+
 | **from** flask **import** Flask\  | Import the flask class.           |
 | \                                 |                                   |
-| app = Flask(\_\_name\_\_)\        | Create an instance of the Flask   |
+| app = Flask(__name__)\        | Create an instance of the Flask   |
 | \                                 | class called app, passing the     |
 | \                                 | name of this file.                |
-| \@app.route(**\'/\'**)\           |                                   |
-| **def** hello\_world():\          | This is interesting... **@** is  |
-| **return \'Hello World!\'\        | used for what's called a          |
-| \                                 | "**decorator**". This is metadata |
+| \@app.route('/')\           |                                   |
+| **def** hello_world():\          | This is interesting... **@** is  |
+| **return 'Hello World!'\        | used for what's called a          |
+| \                                 | **decorator". This is metadata |
 | **                                | about the following function. In  |
 |                                   | Flask, the **\@app.route**        |
 | **\                               | decorator specifies the URL that  |
-| if** \_\_name\_\_ ==              | will result in the function       |
-| **\'\_\_main\_\_\'**:\            | following it being called.        |
+| if** __name__ ==              | will result in the function       |
+| '__main__':\            | following it being called.        |
 | app.run()                         |                                   |
 |                                   | Then we have a normal function,   |
 |                                   | but importantly it returns a      |
@@ -196,9 +196,9 @@ Run the code and you should see output like the following, including a
 link to click on to see your amazing new Python-based website. Click the
 link in the Python console to view "Hello World!" in your browser.
 
-\* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 
-Modify the function output to return \'\<h1\>Hello World :)\</h1\>\' and
+Modify the function output to return '\<h1\>Hello World :)\</h1\>' and
 rerun the program by pressing Ctrl+F5.  
 To see the new results, you'll need to go back to your browser and hit
 refresh, so do this now.
@@ -215,7 +215,7 @@ definition stubs.
 
 Type 'greet' as the function name and route name (these can be
 different, but we'll keep them the same). Replace 'pass' with a simple
-return \"Hello\" statement.
+return "Hello" statement.
 
 Re-run the program, then change your browser's URL by adding /greet to
 the end, like:
@@ -232,10 +232,10 @@ Go back to PyCharm and look for error messages in the console.
 Add another decorator so that the greet function runs for multiple "sub"
 routes and takes a parameter, like:
 
-\@app.route(**\'/greet\'**)  
-\@app.route(**\'/greet/\<name\>\'**)  
-**def** greet(name=**\"\"**):  
-**return \"Hello {}\"**.format(name)
+\@app.route('/greet')  
+\@app.route('/greet/\<name\>')  
+**def** greet(name="):  
+**return "Hello {}**.format(name)
 
 Re-run and test with the URLs <http://127.0.0.1:5000/greet> and
 <http://127.0.0.1:5000/greet/Yourname>
@@ -281,7 +281,7 @@ Run it and test it, then study the code to find a few new things:
     customised to accept this. It then gets the data from the "request"
     object.
 
--   url\_for() is a function that returns the correct URL for a given
+-   url_for() is a function that returns the correct URL for a given
     view/route function so you don't have to know the exact path.
 
 Right, so now it's your turn to make this more interesting and
@@ -305,8 +305,8 @@ Extension & Practice Work
 
 1.  Write a program that prints a string from the outside in, using
     recursion.  
-    E.g. if the string to print is \"Programming\", your program should
-    print: \"P g r n o i g m r m a\".  
+    E.g. if the string to print is "Programming", your program should
+    print: "P g r n o i g m r m a".  
     Another example:  
     Enter a string: 123456  
     1 6 2 5 3 4  
@@ -323,11 +323,11 @@ Extension & Practice Work
 
 -   abcba
 
--   (ignoring case, spaces and punctuation) A Toyota\'s a Toyota
+-   (ignoring case, spaces and punctuation) A Toyota's a Toyota
 
 3.  Add **assert** and **doctest** testing to your work from an earlier
-    prac -- e.g. the is\_valid\_password() function from prac 02 and the
-    get\_fixed\_filename() function from prac 10.
+    prac -- e.g. the is_valid_password() function from prac 02 and the
+    get_fixed_filename() function from prac 10.
 
 4.  During the holidays you might like to experiment with Flask and see
     if you can make some cool Web interfaces for your existing

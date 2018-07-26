@@ -2,7 +2,7 @@
 
 This week (and from now on), we'll be using Git and GitHub for our work.
 
-If you haven\'t setup your own GitHub account, please do so now. See our
+If you haven't setup your own GitHub account, please do so now. See our
 instructions at:
 <https://github.com/CP1404/Starter/wiki/Software-Setup#github>
 
@@ -23,19 +23,19 @@ First!
 ![](../images/03image1.png)In one of our end-of-subject YourJCU
 student feedback surveys, a student suggested that we do more
 hand-writing code to help prepare for examinations. Great idea! And it
-shows it\'s a great idea for you to provide us with your feedback --
+shows it's a great idea for you to provide us with your feedback --
 during the semester anytime, and especially in our main surveys. OK?
 Thanks!
 
 **On paper**, write a program that asks the user for their name, with
 error-checking to repeat until the name is not blank. The program should
 then print every second letter in the provided name. Example: if the
-user enters \"Pythonista\", the program should print \"Ptoit\".
+user enters "Pythonista", the program should print "Ptoit".
 
 **Hint:** either use string slicing or use a for loop, the range
 function, and the length of the name.
 
-It\'s a valuable skill to be able to write code with pen and paper --
+It's a valuable skill to be able to write code with pen and paper --
 without the support of an IDE. Watch out for things like consistent
 variable names and clear indenting as well as basic syntax like colons
 and brackets.
@@ -50,35 +50,35 @@ this from the point of view of someone working on a JCU lab computer.
 This will be enough to get you started, but please keep learning and
 practising with Git and GitHub.
 
-1.  Let\'s start a new project (not just a new folder) in PyCharm,
+1.  Let's start a new project (not just a new folder) in PyCharm,
     called **Sandbox**, which you can use for doing small tests and
-    demos that you want to keep but don\'t fit into any other projects.
+    demos that you want to keep but don't fit into any other projects.
     Do not put it inside your practicals project or any other project.
 
-2.  Add a Python file called **odd\_name.py** and enter just a single
+2.  Add a Python file called **odd_name.py** and enter just a single
     docstring (triple-quoted comment) at the top with your name in it.
 
-3.  Now we\'ll put this project into Git version control (without using
+3.  Now we'll put this project into Git version control (without using
     GitHub yet).  
     From the PyCharm menu choose **VCS \> Import into Version Control \>
     Create Git Repository...**
     ![](../images/03image3.png)  
     Accept the default directory it offers in the next window, which
     should (must) be the current project directory.  
-    What happened? Not much it seems, but we\'re ready to \"**commit**\"
+    What happened? Not much it seems, but we're ready to **commit"
     our files to Git version control.
 
 4.  Choose **VCS \> Commit Changes** (take note of the shortcut as
-    you\'ll be using it often!)  
+    you'll be using it often!)  
     It should tell you no changes were detected...  
     Click on the Version Control tool window in the footer (or choose
     **View \> Tool Windows \> Version Control**) and click the **Log**
-    tab. It\'s empty...  
+    tab. It's empty...  
     This is what happens with a project that has no files marked for
     staging.
 
-5.  Switch to the **Local Changes** tab and you\'ll see some PyCharm
-    files that we don\'t care about and our one code file, odd\_name.py.
+5.  Switch to the **Local Changes** tab and you'll see some PyCharm
+    files that we don't care about and our one code file, odd_name.py.
     Right-click on this file and choose to **Add** it to Git.  
     ![](../images/03image4.png)  
     (We could have done this in other ways, mostly by right-clicking on
@@ -87,10 +87,10 @@ practising with Git and GitHub.
     **Unversioned Files**, and it changes **colour**!
 
 6.  Click back on the **Log** tab and... it still shows nothing!  
-    That\'s because we\'ve only added this file to the \"staging\"
+    That's because we've only added this file to the "staging"
     state, so it will be included when we commit.  
     This is important. Git only tracks the files we ask it to.  
-    **Note:** If you ever get a prompt to \"Add File to Git\" for
+    **Note:** If you ever get a prompt to "Add File to Git" for
     PyCharm project metadata files (anything in the .idea folder, like
     misc.xml or vcs.xml), then say **no**. We do not want to version
     control these files.
@@ -101,12 +101,12 @@ practising with Git and GitHub.
     describes what your change was.  
     **Use the imperative mood** for your messages. (This is the same for
     Python docstrings, by the way.)  
-    So don\'t write like \"*Added error checking*\" (that\'s the
-    indicative mood), but rather \"*Add error checking*\".  
-    One way to think about this is that your message goes after \"If
-    applied, this commit will...\".  
-    For this nearly-empty change you might just use \"Initialise
-    repository\" or \"Add starter file\".  
+    So don't write like "*Added error checking*" (that's the
+    indicative mood), but rather "*Add error checking*".  
+    One way to think about this is that your message goes after "If
+    applied, this commit will...".  
+    For this nearly-empty change you might just use "Initialise
+    repository" or "Add starter file".  
     Then click **Commit**.**  
     **You should now see your first commit appear in the Log tab of the
     Version Control tool window. Yay!
@@ -115,10 +115,10 @@ practising with Git and GitHub.
     name into your Python file. Test it.
 
 9.  Do another commit with another useful commit message (perhaps
-    something like \"Add name printing program\"). See that it also
+    something like "Add name printing program"). See that it also
     appears in your log.  
       
-    We\'ve now saved the state of our project (just one file) at
+    We've now saved the state of our project (just one file) at
     multiple stages by committing to a ***local* Git repository**. We
     have not used GitHub at all yet. We could do this as many times as
     we want, and we could open previous versions of our files through
@@ -146,29 +146,29 @@ practising with Git and GitHub.
 12. The GitHub website for your new repo will probably have a suggestion
     for you:  
     ![](../images/03image6.png)  
-    So let\'s do it. Click the big green button and enter brief details
+    So let's do it. Click the big green button and enter brief details
     about your project (you can always change them later), then click
-    the big green \"**Commit new file**\" button (which will accept the
+    the big green **Commit new file" button (which will accept the
     defaults).  
     Your repo looks much better online now. READMEs are an important
     part of software development!
 
-13. But... we did that online in our GitHub repo. There\'s a new file
+13. But... we did that online in our GitHub repo. There's a new file
     there, but not locally on our computer.  
-    So, let\'s \"**pull**\" those changes. In PyCharm, choose **VCS \>
+    So, let's **pull" those changes. In PyCharm, choose **VCS \>
     Git \> Pull**, then click Pull (accept defaults).  
     You should now see the README file in your PyCharm project, and if
-    you look, you\'ll see a 3^rd^ commit with a message like \"Create
-    README.md\" in your commit log.
+    you look, you'll see a 3^rd^ commit with a message like "Create
+    README.md" in your commit log.
 
-14. OK, now let\'s go crazy! Close the project in PyCharm, then delete
-    the whole project from your computer. That\'s right, delete it all!
+14. OK, now let's go crazy! Close the project in PyCharm, then delete
+    the whole project from your computer. That's right, delete it all!
     This is what you would do if you had finished working on a lab
     computer and you had committed and pushed all of your changes to
     GitHub (that is, make sure GitHub has an up-to-date copy of your
     project).
 
-15. Now, imagine we\'ve moved to another computer on a different day...
+15. Now, imagine we've moved to another computer on a different day...
     How do we keep working on our project? We **clone** it. Choose
     **VCS \> Checkout from Version Control \> GitHub** from the menu.  
     (Note: do not use the clone/download button on the GitHub website,
@@ -177,20 +177,20 @@ practising with Git and GitHub.
     place on your local computer, then click **Clone**. You now have the
     whole project, including any previous version history, locally.
 
-16. Now add another file, list\_files.py and enter this code:
+16. Now add another file, list_files.py and enter this code:
 
     **import** os  
       
-    print(**\"The files and folders in {} are:\"**.format(os.getcwd()))  
-    items = os.listdir(**\'.\'**)  
+    print("The files and folders in {} are:**.format(os.getcwd()))  
+    items = os.listdir('.')  
     **for** item **in** items:  
     print(item)
 
 17. Run it to make sure it works. It should show you a list of all the
     files and folders in the current (project) folder, and you should
-    see one called \".git\". This is where Git stores all of the history
-    and state information. Don\'t delete this! If you ever want to move
-    a project file that\'s using Git, you can either use GitHub (and
+    see one called ".git". This is where Git stores all of the history
+    and state information. Don't delete this! If you ever want to move
+    a project file that's using Git, you can either use GitHub (and
     then clone it to the new place) or you can just copy it, making sure
     you include this folder.
 
@@ -217,22 +217,22 @@ computer
 -   **Clone** the repository from GitHub to your local computer, then
     add, commit, push, etc.
 
-(If you\'re working on your own computer you won\'t need to clone --
+(If you're working on your own computer you won't need to clone --
 just keep using the same local repo.)
 
 It is possible to edit and upload files directly via the GitHub website
 but **we do not recommend this!**
 
 We only made the Sandbox repo so we could practise Git and GitHub. You
-don\'t need to use it again, but you\'re welcome to put whatever you
+don't need to use it again, but you're welcome to put whatever you
 want there.
 
-Now let\'s get your practicals work on GitHub:
+Now let's get your practicals work on GitHub:
 
 Before you follow the same process as above, please make sure your
 single practicals project has the same folder structure as
 <https://github.com/CP1404/cp1404practicals> and does NOT contain .idea
-folders in any of your prac\_nn folders. If it doesn\'t match this --
+folders in any of your prac_nn folders. If it doesn't match this --
 please tidy up your project or make a new one and copy your prac files
 into the correct folders.
 
@@ -246,8 +246,8 @@ decent-sized changes and especially for milestones or before you start
 making major changes.
 
 Each repo should be a single PyCharm project. Do not have one
-project/repo with other projects/repos inside. For pracs, that\'s one
-PyCharm project = one GitHub repo, as we\'ve (hopefully) just set up.
+project/repo with other projects/repos inside. For pracs, that's one
+PyCharm project = one GitHub repo, as we've (hopefully) just set up.
 
 Intermediate Exercises
 ======================
@@ -299,9 +299,9 @@ So the basic form for all programs now is:
 
 > **def** main():  
 > statements...  
-> do\_stuff()  
+> do_stuff()  
 >   
-> **def** do\_stuff():  
+> **def** do_stuff():  
 > statements...  
 >   
 > main()
@@ -310,34 +310,34 @@ So the basic form for all programs now is:
 
 At the start you wrote some code for a program that asks the user for
 their name and prints every second letter in the name. Copy this into
-your prac\_03 folder and commit (with a message like \"Add name printing
-program\"). Now let\'s modify this program.
+your prac_03 folder and commit (with a message like "Add name printing
+program"). Now let's modify this program.
 
 1.  Move the code inside a main() function and call main() at the
     bottom.  
-    Note: if you don\'t have a main function, the refactoring below will
+    Note: if you don't have a main function, the refactoring below will
     use global variables.
 
 2.  **Refactor** the get name part into a separate function... We can
-    do this by using PyCharm\'s refactoring tool. Select the lines that
+    do this by using PyCharm's refactoring tool. Select the lines that
     get and check the name (it should probably be 4 lines) then
     right-click (or use the main menu) and choose **Refactor \>
     Extract \> Method...**  
-    Change the name to get\_name and press OK.  
+    Change the name to get_name and press OK.  
     PyCharm should make the function and replace the old code with a
-    call to it like name = get\_name()
+    call to it like name = get_name()
 
 3.  Now refactor the loop that prints the name into a function that
     takes 2 parameters: for the name and the frequency of letters (1
     would be every letter, 3 is every third letter).  
     PyCharm will see that name needs to be an input parameter, but not
-    the number. You\'ll have to add this yourself. First test it with a
+    the number. You'll have to add this yourself. First test it with a
     literal value for this, then get the value from the user and pass
     that in.
 
 If you have not done so already, please upgrade your account to a free
 student account at:
-[[https://education.github.com/discount\_requests/new]{.underline}](https://education.github.com/discount_requests/new)
+[[https://education.github.com/discount_requests/new]](https://education.github.com/discount_requests/new)
 - you will need to upload a photo of your JCU student id. This allows
 you to have private repositories for free, and you can get the GitHub
 Education Pack!
@@ -352,9 +352,9 @@ to helping each other - then talk to your tutor.
     verb-phrase function names) ...  
     Copy both of these from prac 1 into prac 3, commit, then update
     them. We do the commit first so we can see clearly what we have
-    changed. We copy them because we want each week\'s prac folder to
-    contain that week\'s prac work.  
-    Remember, any time we\'re using functions, we also need a main()
+    changed. We copy them because we want each week's prac folder to
+    contain that week's prac work.  
+    Remember, any time we're using functions, we also need a main()
     function for the main program.
 
     a.  **temperatures.py** -- use 2 functions for converting Celsius to
@@ -362,10 +362,10 @@ to helping each other - then talk to your tutor.
         **Important:** Remember SRP - functions should do one thing, so
         these should be calculation functions. Do not get user input or
         print output in the functions - do those outside.  
-        That means these will be very small functions... that\'s OK...
+        That means these will be very small functions... that's OK...
         they abstract a core piece of functionality.
 
-    b.  **broken\_score.py** -- use a function that takes in the score
+    b.  **broken_score.py** -- use a function that takes in the score
         as a parameter and returns the result to be printed. The
         *function* should not print it; the *main* program should store
         and print the returned value.
@@ -374,17 +374,17 @@ Practice & Extension Work
 =========================
 
 1.  Copy your **word generator** program from last week into this
-    prac\'s folder. Commit.  
+    prac's folder. Commit.  
     Add error-checking so that you repeatedly validate the user's input
     until it is a valid sequence of just c's and v's. Create and use a
-    function **is\_valid\_format(...)** to return True or False for if
+    function **is_valid_format(...)** to return True or False for if
     the word format is valid or not.  
     **Tip:** use a for loop to iterate through each character in the
     format sequence and return false if you see one that is not valid.
 
-2.  Copy your ascii\_table.py file from last week's prac into this
-    week\'s folder.  
-    Create a function called **get\_number(lower, upper)** to get a
+2.  Copy your ascii_table.py file from last week's prac into this
+    week's folder.  
+    Create a function called **get_number(lower, upper)** to get a
     number, making sure that user input is numeric and within the given
     range.  
     You can use exceptions to check the string is a valid number.  
@@ -427,7 +427,7 @@ Practice & Extension Work
 >
 > **Year 1**
 >
-> **\*\*\*\*\***
+> *********
 >
 > **145 gophers were born. 228 died.**
 >
@@ -435,7 +435,7 @@ Practice & Extension Work
 >
 > **Year 2**
 >
-> **\*\*\*\*\***
+> *********
 >
 > **124 gophers were born. 152 died.**
 >
@@ -443,7 +443,7 @@ Practice & Extension Work
 >
 > **Year 3**
 >
-> **\*\*\*\*\***
+> *********
 >
 > **138 gophers were born. 180 died.**
 >
@@ -457,7 +457,7 @@ Learn Git and GitHub
 -   The following guide shows you lots of useful things just using
     GitHub online:
 
-[https://guides.github.com/activities/hello-world/]{.underline}
+[https://guides.github.com/activities/hello-world/]
 
 -   ### Git Command Line
 
@@ -468,9 +468,9 @@ the command line tools. Over time you should get experience using both.
 So let's learn more about how Git works and pick up some command line
 skills by doing the excellent interactive online Git tutorial:
 
-[[https://try.github.io]{.underline}](https://try.github.io)
+[[https://try.github.io]](https://try.github.io)
 
 -   You may also like to [[login to
-    lynda.com]{.underline}](https://cas.secure.jcu.edu.au/cas/login?service=https://www.lynda.com/portal/jcu)
+    lynda.com]](https://cas.secure.jcu.edu.au/cas/login?service=https://www.lynda.com/portal/jcu)
     and do one or more of the online courses on GitHub:
     <https://cas.secure.jcu.edu.au/cas/login?service=https://www.lynda.com/portal/jcu>

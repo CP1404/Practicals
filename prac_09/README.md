@@ -17,8 +17,8 @@ Download the files from
     (but note that PyCharm doesn't always refresh as often as you might
     like).
 
--   Open the **os\_demos.py** file, read the code and comments to see
-    what it\'s demoing, then run it.  
+-   Open the **os_demos.py** file, read the code and comments to see
+    what it's demoing, then run it.  
     Notice that it imports the **os** and **shutil** modules for working
     with the operating system and files.
 
@@ -47,7 +47,7 @@ Restore your original files, then comment-out the rename/move part of
 your first for loop.
 
 3.  Add code inside walk to change into the directory; print the current
-    directory, then change back to the lyrics\_path we stored before
+    directory, then change back to the lyrics_path we stored before
     starting to walk.
 
 4.  Now replace the simple print (in between where you change directory)
@@ -66,17 +66,17 @@ want them to follow the same format (in order to automate another task).
 So, Lindsay wrote a Python script to rename the files to be consistent.
 This is another example of using programming to automate tasks in your
 everyday life! Nice :)  
-Now it\'s your turn to write this script...
+Now it's your turn to write this script...
 
 This program will be very similar to the walkthrough we just did, but
 the focus is now on the renaming part:  
-the get\_fixed\_filename() function.
+the get_fixed_filename() function.
 
 -   *Commit your work.*  
-    Copy the code from os\_demos.py to a new file called
-    **cleanup\_files.py**.  
+    Copy the code from os_demos.py to a new file called
+    **cleanup_files.py**.  
     Clean up (remove) any commented-out code or TODOs/comments from the
-    demo that you don\'t need in this program.  
+    demo that you don't need in this program.  
     *Commit your work.*
 
 -   Notice that the existing files have been named inconsistently, e.g.
@@ -84,21 +84,21 @@ the get\_fixed\_filename() function.
     "Away In A Manger.txt" or are not in Title Case like  
     "O little town of bethlehem.TXT"  
     Write code to make them consistently use the format like
-    "Away\_In\_A\_Manger.txt", "Silent\_Night.txt" and
-    "O\_Little\_Town\_Of\_Bethlehem.txt" respectively:
+    "Away_In_A_Manger.txt", "Silent_Night.txt" and
+    "O_Little_Town_Of_Bethlehem.txt" respectively:
 
   --------------------------------------------- ------------------------------------
   **Existing Filename (inconsistent format)**   **Desired Filename (consistent)**
-  Away In A Manger.txt                          Away\_In\_A\_Manger.txt
-  SilentNight.txt                               Silent\_Night.txt
-  O little town of bethlehem.TXT                O\_Little\_Town\_Of\_Bethlehem.txt
-  ItIsWell (oh my soul).txt                     It\_Is\_Well\_(Oh\_My\_Soul).txt
+  Away In A Manger.txt                          Away_In_A_Manger.txt
+  SilentNight.txt                               Silent_Night.txt
+  O little town of bethlehem.TXT                O_Little_Town_Of_Bethlehem.txt
+  ItIsWell (oh my soul).txt                     It_Is_Well_(Oh_My_Soul).txt
   --------------------------------------------- ------------------------------------
 
 **Important: **
 
 Do NOT try and solve all of these cases at once. Rather, work up to
-them, building the **get\_fixed\_filename()** function that returns a
+them, building the **get_fixed_filename()** function that returns a
 fixed filename. Test just printing the names before renaming the files.
 When it works for one case, make it handle another one and so on...
 iterative development!
@@ -113,14 +113,14 @@ iterative development!
     character before or after it, since the context is what matters
     here.  
     E.g. if the current character **islower()** and the next character
-    **isupper()** such as with the \"tN\" in \"SilentNight\"), then you
-    know you need to put a \'**\_\'** between them.
+    **isupper()** such as with the "tN" in "SilentNight"), then you
+    know you need to put a '_' between them.
 
 -   You can start with an empty string and build it using string
     concatenation step-by-step as you determine what the next character
-    should be. E.g. for the above case, you can add the \'t\', then the
-    \'\_\' to your new filename string, then move on to the next
-    iteration in the for loop where you will add the \'N\'.
+    should be. E.g. for the above case, you can add the 't', then the
+    '_' to your new filename string, then move on to the next
+    iteration in the for loop where you will add the 'N'.
 
 **Note:** If you get stuck on this, just save your work and come back to
 it later. The next exercises are another great example of os automation

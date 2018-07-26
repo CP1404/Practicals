@@ -5,7 +5,7 @@ consistently for all your work. Each time you finish a part of the
 practical, commit it. Push once or twice per practical - and definitely
 when you finish and/or it's time to leave. We will remind you every now
 and then, but from now on, it should just be how you normally work. When
-you\'re about to make a change, like refactoring, commit first so you
+you're about to make a change, like refactoring, commit first so you
 can track the differences and you can go back to a previous version if
 you need to.
 
@@ -38,7 +38,7 @@ following expressions have?
 >
 > 7 in numbers
 >
-> \"3\" in numbers
+> "3" in numbers
 >
 > numbers + \[6, 5, 3\]
 
@@ -55,7 +55,7 @@ Write Python expressions (in the IDE) to achieve the following:
 Walkthrough Example
 ===================
 
-[Calculating a List of Cumulative Totals]{.underline}
+[Calculating a List of Cumulative Totals]
 
 *(Read the whole question before starting the work!)*
 
@@ -84,15 +84,15 @@ Income Report
 
 \-\-\-\-\-\-\-\-\-\-\-\--
 
-Month 1 - Income: \$ 120.00 Total: \$ 120.00
+Month 1 - Income: $ 120.00 Total: $ 120.00
 
-Month 2 - Income: \$ 245.40 Total: \$ 365.40
+Month 2 - Income: $ 245.40 Total: $ 365.40
 
-Month 3 - Income: \$ 900.00 Total: \$ 1265.40
+Month 3 - Income: $ 900.00 Total: $ 1265.40
 
-Month 4 - Income: \$ 1205.56 Total: \$ 2470.96
+Month 4 - Income: $ 1205.56 Total: $ 2470.96
 
-Month 5 - Income: \$ 12.35 Total: \$ 2483.31
+Month 5 - Income: $ 12.35 Total: $ 2483.31
 
 Have a think about how to do this before reading on...
 
@@ -122,23 +122,23 @@ string format() method for.
     str.format() instead of string concatenation.
 
 4.  We have two variables that sound similar: **incomes** and
-    **months**. They\'re both plural so they sound like they\'re both
+    **months**. They're both plural so they sound like they're both
     lists. incomes is a list of incomes, so we might assume that months
-    is a list of months, but it\'s actually a scalar value that stores
+    is a list of months, but it's actually a scalar value that stores
     the number of months -- an int not a list.  
     **Refactor the** months **variable to a better name**. DO NOT just
     change it in 3 places or use find and replace... but use
     refactoring in PyCharm by clicking anywhere on the variable and
     pressing Shift+F6 (or use a menu). Then rename it.
 
-5.  Run the program again with some sample data and make sure it\'s
+5.  Run the program again with some sample data and make sure it's
     still working well.
 
-6.  Now, let\'s refactor (move) the report printing into its own
+6.  Now, let's refactor (move) the report printing into its own
     function. Select those 6 lines and turn them into a new function
     with a good name.
 
-7.  Test again and make sure it\'s all good.
+7.  Test again and make sure it's all good.
 
 Intermediate Exercises
 ======================
@@ -177,11 +177,11 @@ can make sure you're on track.
 
 2.  Woefully inadequate security checker...  
     Copy the following list of usernames into a new Python file:  
-    usernames = \[*\'[jimbo]{.underline}\'*, *\'giltson98\'*,
-    *\'[derekf]{.underline}\'*, *\'WhatSup\'*, *\'NicolEye\'*,
-    *\'swei45\'*, *\'BaseInterpreterInterface\'*, *\'BaseStdIn\'*,
-    *\'Command\'*, *\'ExecState\'*, *\'InteractiveConsole\'*,
-    *\'InterpreterInterface\'*, *\'StartServer\'*, *\'bob\'*\]  
+    usernames = \[*'[jimbo]'*, *'giltson98'*,
+    *'[derekf]'*, *'WhatSup'*, *'NicolEye'*,
+    *'swei45'*, *'BaseInterpreterInterface'*, *'BaseStdIn'*,
+    *'Command'*, *'ExecState'*, *'InteractiveConsole'*,
+    *'InterpreterInterface'*, *'StartServer'*, *'bob'*\]  
       
     Ask the user for their username. If the username is in the above
     list of authorised users, print "Access granted", otherwise print
@@ -195,12 +195,12 @@ can make sure you're on track.
 
     a.  create a list of integers from a list of strings
 
-    b.  create a list of all of the full\_names in lowercase
+    b.  create a list of all of the full_names in lowercase
 
 Do-from-scratch Exercises
 =========================
 
-#### **"Quick Pick" Lottery Ticket Generator**
+#### "Quick Pick" Lottery Ticket Generator**
 
 > Write a program that asks the user how many "quick picks" they wish to
 > generate. The program then generates that many lines of output. Each
@@ -213,9 +213,9 @@ Do-from-scratch Exercises
 > **Each line of numbers should be displayed in sorted (ascending)
 > order.**
 >
-> **Note:** Python\'s random function has a **sample** method, which
+> **Note:** Python's random function has a **sample** method, which
 > returns a selection from a list. This is a nice way to solve this
-> problem... but it\'s too easy :) Do not use it for this program.
+> problem... but it's too easy :) Do not use it for this program.
 >
 > Your code should produce output that matches this sample output
 > (except the numbers are random):
@@ -234,13 +234,13 @@ Do-from-scratch Exercises
 
 **.gitignore**
 
-![](../images/04image1.png)Before we\'re done, let\'s learn one more
+![](../images/04image1.png)Before we're done, let's learn one more
 Git thing, ignoring files.
 
-You will have files in your project that you don\'t want stored in your
+You will have files in your project that you don't want stored in your
 repo (like PyCharm metadata files), you can just choose not to add them
-(as we\'ve done until now) but they do show up as \"unversioned files\",
-which is kind of a warning... We\'d prefer this to show us files we
+(as we've done until now) but they do show up as "unversioned files",
+which is kind of a warning... We'd prefer this to show us files we
 probably should add.
 
 ![](../images/04image2.png)
@@ -353,35 +353,35 @@ teaching resources we have provided.
 >
 > for i in range(5):
 >
-> number = int(input(*\"Number: \"*))
+> number = int(input(*"Number: "*))
 >
 > numbers.append(number)
 >
-> print(*\"The first number is\"*, numbers\[0\])
+> print(*"The first number is"*, numbers\[0\])
 >
-> print(*\"The last number is\"*, numbers\[-1\])
+> print(*"The last number is"*, numbers\[-1\])
 >
-> print(*\"The smallest number is\"*, min(numbers))
+> print(*"The smallest number is"*, min(numbers))
 >
-> print(*\"The largest number is\"*, max(numbers))
+> print(*"The largest number is"*, max(numbers))
 >
-> print(*\"The average of the numbers is\"*, sum(numbers) /
+> print(*"The average of the numbers is"*, sum(numbers) /
 > len(numbers))
 
 2.
 
-> usernames = \[*\'jimbo\'*, *\'giltson98\'*,
-> *\'[derekf]{.underline}\'*, *\'WhatSup\'*, *\'NicolEye\'*,
-> *\'swei45\'\'BaseInterpreterInterface\'*, *\'BaseStdIn\'*,
-> *\'Command\'*, *\'ExecState\'*, *\'InteractiveConsole\'*,
-> *\'InterpreterInterface\'*, *\'StartServer\'*, *\'bob\'*\]
+> usernames = \[*'jimbo'*, *'giltson98'*,
+> *'[derekf]'*, *'WhatSup'*, *'NicolEye'*,
+> *'swei45''BaseInterpreterInterface'*, *'BaseStdIn'*,
+> *'Command'*, *'ExecState'*, *'InteractiveConsole'*,
+> *'InterpreterInterface'*, *'StartServer'*, *'bob'*\]
 >
-> username = input(*\"Enter username:\"* )
+> username = input(*"Enter username:"* )
 >
 > if username in usernames:
 >
-> print(*\"Access granted\"*)
+> print(*"Access granted"*)
 >
 > else:
 >
-> print(*\"Access denied\"*)
+> print(*"Access denied"*)

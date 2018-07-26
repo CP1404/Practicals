@@ -172,7 +172,7 @@ folders.
     Don't just copy from the normal view without clicking Raw, or you
     will *not* get proper formatting. OK?
 
-    [Get temperatures.py](temperatures.py)  
+    Download [temperatures.py](temperatures.py)  
     This file is hosted on GitHub in our subject's practicals "repository"
     (or "repo" for short).  
     You may want to bookmark the top level of this repo as we will be
@@ -214,8 +214,8 @@ important tips to save you time...
 -   If you see an underline, move your mouse over it to see what the
     issue is, and look at the action item light bulb icon to see if
     PyCharm can automatically fix it for you. Example:  
-    ![highlight suggestion in PyCharm](../images/01image6.png)
-    ![highlight suggestion in PyCharm](../images/01image7.png)
+    ![Highlight suggestion in PyCharm](../images/01image6.png)
+    ![Highlight suggestion in PyCharm](../images/01image7.png)
 
 -   PyCharm offers the programmer many other useful support features...
     Please make use of these so you can work better and faster (it's
@@ -277,74 +277,46 @@ Okay, let's practise using PyCharm to write simple programs.
     excellent, but their code is in the "bad" category and doesn't
     work.  
     **Rewrite** the following programming attempt using the most
-    efficient if-elif-else 'ladder' you can. The code is also available
-    at:
-    [broken_score.py](broken_score.py)
-    Remember to click Raw before copying and pasting so you get proper
+    efficient if-elif-else 'ladder' you can. The code is available
+    here at: [broken_score.py](broken_score.py)  
+    Remember to click **Raw** before copying and pasting so you get proper
     formatting!  
-    The intention is that the score must be between 0 and 100 inclusive;
+    The _intention_ is that the score must be between 0 and 100 inclusive;
     90 or more is excellent; 50 or more is a pass; below 50 is bad.  
     Be very careful of your boundary conditions... and *test!*
 
-> score = float(input(**"Enter score: "**))
->
-> **if** score < 0:
->
-> print(**"Invalid score"**)
->
-> **else**:
->
-> **if** score > 100:
->
-> print(**"Invalid score"**)
->
-> **if** score > 50:
->
-> print(**"Passable"**)
->
-> **if** score > 90:
->
-> print(**"Excellent"**)
->
-> **if** score < 50:
->
-> print(**"Bad"**)
 
 3.  Create a file called **loops.py** and add this for loop that
     displays all of the odd numbers between  
     1 and 20 with a space between each one.
 
-> **for** i **in** range(1, 21, 2):
->
-> print(i, end=**' '**)
->
-> print()
->
-> Now **write more for loops** (using range) to do the following:
+    ```python
+    for i in range(1, 21, 2):
+        print(i, end=' ')
+    print()
+    ```
+    Now **write more for loops** (using range) to do the following:
 
-a.  count in 10s from 0 to 100: 0 10 20 30 40 50 60 70 80 90 100
+    a.  count in 10s from 0 to 100: 0 10 20 30 40 50 60 70 80 90 100
+    
+    b.  count down from 20 to 1: 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5
+        4 3 2 1
+    
+    c.  print n stars. Ask the user for a number, then print that many stars
+        (*), all on one line  
+        *Note: this is a very simple loop for repeating n times. We use for
+        loops for "definite" iteration like this. while loops are used for
+        "indefinite" iteration (like repeating while a user input is
+        incorrect).*
+    
+    d.  print n lines of increasing stars. Using the same number as above
+        print lines of increasing stars, starting at 1. E.g. if **4** was
+        the number entered, your single loop should print
 
-b.  count down from 20 to 1: 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5
-    4 3 2 1
-
-c.  print n stars. Ask the user for a number, then print that many stars
-    (\*), all on one line  
-    *Note: this is a very simple loop for repeating n times. We use for
-    loops for "definite" iteration like this. while loops are used for
-    "indefinite" iteration (like repeating while a user input is
-    incorrect).*
-
-d.  print n lines of increasing stars. Using the same number as above
-    print lines of increasing stars, starting at 1. E.g. if **4** was
-    the number entered, your single loop should print
-
-> \*
->
-> \*\*
->
-> \*\*\*
->
-> \*\*\*\*
+        *
+        **
+        ***
+        ****
 
 4.  Add a loop to the sales bonus exercise you did above, so that the
     program repeatedly asks for the user's sales and prints the bonus
@@ -364,13 +336,12 @@ loop, which we cover in chapter 2 (Control), and which is also
 summarised as one of our standard patterns at:
 <https://github.com/CP1404/Starter/wiki/Programming-Patterns>
 
-Do-from-scratch Exercises
-=========================
+# Do-from-scratch Exercises
 
 Here are a few problems to solve "from scratch". If you need help, ask
 a classmate or your tutor.
 
-**Shop Calculator**
+## Shop Calculator
 
 A shop requires a small program that would allow them to quickly work
 out total price for a number of items, each with different prices.
@@ -381,41 +352,41 @@ Then the program computes and displays the total price of those items.
 If the total price is over $100, then a 10% discount is applied to that
 total before the amount is displayed on the screen.
 
-The output should look something like (**green text** represents user
+The output should look something like (**bold text** represents user
 input):
 
-> Number of items: **3**
->
-> Price of item: **100**
->
-> Price of item: **21.56**
->
-> Price of item: **3**
->
-> Total price for 3 items is $112.10
+<pre>
+Number of items: <b>3</b>  
+Price of item: <b>100</b>  
+Price of item: <b>21.56</b>  
+Price of item: <b>4</b>  
+Total price for 3 items is $113.10  
+</pre>
 
 Create the file **shop_calculator.py** and write this program.  
 Note: start with the main logic, then adjust your program to improve the
 formatting if you need to.
 
-**+ Error checking (input validation loop):** If the number of items is
-less than zero, the message "Invalid number of items!" should be
-displayed and this quantity must be re-entered by the user ***until***
+**+ Error checking (input validation loop):**   
+(Do this _after_ you have completed the above program.)
+If the number of items is less than zero, the message "Invalid number of items!" 
+should be displayed and this quantity must be re-entered by the user ***until***
 it is valid.
 
-Extension & Practice Work
-=========================
+# Extension & Practice Work
 
-Remember, these 'extension & practice' exercises may be optional in
+Remember, even though these 'extension & practice' exercises are optional in
 terms of marks, but the best way to get better at programming is...
-programming! So do them each and every week :)
+***programming!***  
+So do them each and every week :)
 
 You will learn better if you spread your work over multiple sessions
 instead of trying to do all of this in one go.
 
 Save each program in a different file within the prac_01 folder.
 
-1.  **Create an electricity bill estimator**. Inputs should be:
+1.  **Create an electricity bill estimator**  
+Inputs should be:
 
     -   price per kWh in cents,
 
@@ -425,17 +396,13 @@ Save each program in a different file within the prac_01 folder.
           
         **Example use:**
 
-+------------------------------------+
-| Electricity bill estimator         |
-|                                    |
-| Enter cents per kWh: *35*          |
-|                                    |
-| Enter daily use in kWh: *4.5*      |
-|                                    |
-| Enter number of billing days: *90* |
-|                                    |
-| Estimated bill: $141.75           |
-+------------------------------------+
+    <pre>
+    Electricity bill estimator         
+    Enter cents per kWh: <b>35</b>          
+    Enter daily use in kWh: <b>4.5</b>      
+    Enter number of billing days: <b>90</b> 
+    Estimated bill: $141.75            
+    </pre>
 
 2.  Modify your bill estimator by asking the user to choose which tariff
     they are using - then use the appropriate stored value for cents per
@@ -443,26 +410,20 @@ Save each program in a different file within the prac_01 folder.
     Start by defining two **constants** like below.  
     Constants in Python are just variables written in ALL_CAPITALS.
 
-TARIFF_11 = 0.244618
-
-TARIFF_31 = 0.136928
-
-**Example use:**
-
-+----------------------------------+
-| Electricity bill estimator 2.0   |
-|                                  |
-| Which tariff? 11 or 31: 11       |
-|                                  |
-| Enter daily use in kWh: 13.4     |
-|                                  |
-| Enter number of billing days: 90 |
-|                                  |
-| Estimated bill: $295.01         |
-+----------------------------------+
-
-**  
-**
+    ```python
+    TARIFF_11 = 0.244618
+    TARIFF_31 = 0.136928
+    ```
+    
+    **Example use:**
+    
+    <pre>
+    Electricity bill estimator 2.0   
+    Which tariff? 11 or 31: 11       
+    Enter daily use in kWh: 13.4     
+    Enter number of billing days: 90 
+    Estimated bill: $295.01         
+    </pre>
 
 3.  **Menus:**  
     One very common programming task is to make menus by combining
@@ -470,115 +431,74 @@ TARIFF_31 = 0.136928
     (let the user decide what to do).  
     The general pattern of a menu-driven program is as follows:
 
-> *display menu*
->
-> *get choice*
->
-> *while choice != <quit option>*
->
-> *if choice == <first option>*
->
-> *<do first task>*
->
-> *else if choice == <second option>*
->
-> *<do second task>*
->
-> *...*
->
-> *else if choice == <n-th option>*
->
-> *<do n-th task>*
->
-> *else*
->
-> *display invalid input error message*
->
-> *display menu*
->
-> *get choice*
->
-> *<do final thing, if needed>*
->
-> Note that a common error when writing menus is to forget to repeat the
-> menu display and prompt at the end (inside) the loop.
->
-> Use this pattern to create a very simple menu-driven program according
-> to the pseudocode below:
->
-> *get name*
->
-> *display menu*
->
-> *get choice*
->
-> *while choice != Q*
->
-> *if choice == H*
->
-> *display "hello" name*
->
-> *else if choice == G*
->
-> *display "goodbye" name*
->
-> *else*
->
-> *display invalid message*
->
-> *display menu*
->
-> *get choice*
->
-> *display finished message*
+        display menu
+        get choice
+        while choice != quit option
+            if choice == first option
+                do first task
+            else if choice == <second option>
+                do second task
+            ...
+                else if choice == <n-th option>
+                    do n-th task
+            else
+                display invalid input error message
+            display menu
+            get choice
+        do final thing, if needed
 
-Sample output for this program should look like (**green text**
-represents user input):
+    Note that a common error when writing menus is to forget to repeat the
+    menu display and prompt at the end (inside) the loop.
+    
+    Use this pattern to create a very simple menu-driven program according
+    to the pseudocode below:
+    
+        get name
+        display menu
+        get choice
+        while choice != Q
+           if choice == H
+               display "hello" name
+           else if choice == G
+               display "goodbye" name
+           else
+               display invalid message
+           display menu
+           get choice
+        display finished message
 
-Enter name: **Guido**
+    Sample output for this program should look like:
 
-(H)ello
+    <pre>
+    Enter name: Guido
+    (H)ello
+    (G)oodbye
+    (Q)uit
+    
+    >>> A
+    Invalid choice
+    (H)ello
+    (G)oodbye
+    (Q)uit
+        
+    >>> H
+    Hello Guido
+    (H)ello
+    (G)oodbye
+    (Q)uit
+        
+    >>> G
+    Goodbye Guido
+    (H)ello
+    (G)oodbye
+    (Q)uit
+        
+    >>> Q
+    Finished.
+    </pre>
 
-(G)oodbye
-
-(Q)uit
-
->>> **A**
-
-Invalid choice
-
-(H)ello
-
-(G)oodbye
-
-(Q)uit
-
->>> **H**
-
-Hello Guido
-
-(H)ello
-
-(G)oodbye
-
-(Q)uit
-
->>> **G**
-
-Goodbye Guido
-
-(H)ello
-
-(G)oodbye
-
-(Q)uit
-
->>> **Q**
-
-Finished.
-
-4.  **Menu-driven number sequence generator:  
-    **A school teacher requires a small program that would allow primary
+4.  **Menu-driven number sequence generator:**  
+    A school teacher requires a small program that would allow primary
     school students to learn about various number sequences. The teacher
     is interested in a simple menu-driven program that has the following
     choices (where x and y are inputs the user enters once at the start
@@ -592,32 +512,6 @@ Finished.
 
     4.  Exit the program
 
-# Answers to loop example questions
-
-> **for** i **in** range(1, 21, 2):
->
-> print(i, end=**' '**)
->
-> print()
->
-> **for** i **in** range(0, 101, 10):
->
-> print(i, end=**' '**)
->
-> print()
->
-> **for** i **in** range(20, 0, -1):
->
-> print(i, end=**' '**)
->
-> print()
->
-> number_of_stars = int(input(**"Number of stars: "**))  
-> **for** i **in** range(number_of_stars):  
-> print(**'\*'**, end=**' '**)  
-> print()  
->   
-> **for** i **in** range(number_of_stars):  
-> print(**'\*'** \* (i + 1), end=**' '**)  
-> print()  
-> print()
+# Solutions?
+Remember that solutions are provided for most prac exercises... to help you learn, not just for copying :)  
+See the solutions branch here in this repository. Change the **branch** to "solutions" at the top of the page. 

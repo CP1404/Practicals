@@ -19,7 +19,7 @@ Inheritance is appropriate where you are building a more specialised
 version of a class.
 
 When class B inherits from class A, it should always be the case that an
-is a relationship holds (B \"is an\" A).
+is a relationship holds (B "is an" A).
 
 For example, a Tree is a Plant, but it's not true to say a Cat is a Dog.
 So, it is appropriate for a **Tree** class to inherit from a **Plant**
@@ -34,7 +34,7 @@ that we can extend the **Car** class to make a **Taxi** class (a more
 specialised version of a **Car**).
 
 You can use your car from last week, or the finished version in the
-solutions. Either way, copy your car.py file to your prac\_08 folder.
+solutions. Either way, copy your car.py file to your prac_08 folder.
 
 Download taxi.py:
 <https://github.com/CP1404/Practicals/blob/master/prac_08/taxi.py>
@@ -42,12 +42,12 @@ Download taxi.py:
 Read the code and note that the **Taxi** class *extends* the **Car**
 class in two ways:
 
--   it adds new attributes (**price\_per\_km**,
-    **current\_fare\_distance**) and methods (**get\_fare**,
-    **start\_fare**)
+-   it adds new attributes (**price_per_km**,
+    **current_fare_distance**) and methods (**get_fare**,
+    **start_fare**)
 
--   it **overrides** methods (**drive**, **\_\_init\_\_** and
-    **\_\_str\_\_**) to take account of the characteristics of a Taxi
+-   it **overrides** methods (**drive**, **__init__** and
+    **__str__**) to take account of the characteristics of a Taxi
 
 Notice that the **drive** method still works the same way in terms of
 its *interface* - it takes in a distance parameter, and it returns the
@@ -58,18 +58,18 @@ the same way we **drive()** any car.
 Test Taxi
 ---------
 
-Create a separate file, taxi\_test.py, to try out your taxi (don't write
+Create a separate file, taxi_test.py, to try out your taxi (don't write
 client code in class files).
 
 Write lines of code for each of the following (**hint**: use the methods
 available in the Taxi class):
 
 1.  Create a new taxi with name "Prius 1", 100 units of fuel and price
-    of \$1.23/km
+    of $1.23/km
 
 2.  Drive the taxi 40km
 
-3.  Print the taxi\'s details and the current fare
+3.  Print the taxi's details and the current fare
 
 4.  Restart the meter (start a new fare) and then drive the car 100km
 
@@ -80,18 +80,18 @@ Class Variables
 
 Depending on what kind of system you're modelling with **Taxi**, it
 might make sense that all taxis have the same price per km. (We don't
-want to get into one Prius and pay \$2.20, then find another one was
-only \$1.20.) So, we can use a "**class variable**", which is a variable
+want to get into one Prius and pay $2.20, then find another one was
+only $1.20.) So, we can use a **class variable", which is a variable
 that is ***shared*** between all instances of that class. You define
 class variables directly after the class header line and before any
 method definitions.
 
-1.  Add the **class variable** price\_per\_km to the Taxi class (in
+1.  Add the **class variable** price_per_km to the Taxi class (in
     taxi.py) and set it to 1.23
 
-2.  Change the **\_\_init\_\_** function so it doesn't take in the
-    price\_per\_km, which means it doesn\'t need to set
-    self.price\_per\_km because that\'s already set by the class
+2.  Change the **__init__** function so it doesn't take in the
+    price_per_km, which means it doesn't need to set
+    self.price_per_km because that's already set by the class
     variable.
 
 3.  Change any client code that passes in this value (where you create
@@ -101,12 +101,12 @@ method definitions.
 
 > Note: when using class variables, you can either:
 
--   refer to the variable as **Taxi**.price\_per\_km, which explicitly
+-   refer to the variable as **Taxi**.price_per_km, which explicitly
     refers to the class variable shared by any Taxi instances, or
 
--   use **self**.price\_per\_km, which refers to the instance variable
+-   use **self**.price_per_km, which refers to the instance variable
     that may or may not exist... Python looks for an instance variable
-    in the object and if it doesn\'t find it there it looks up to the
+    in the object and if it doesn't find it there it looks up to the
     class variable, then it looks to the parent class...  
     *This is usually preferred*, because it allows you to update the
     value for each object if needed (as we will see later with the
@@ -120,8 +120,8 @@ UnreliableCar
 
 Let's make our own derived class for an **UnreliableCar** that inherits
 from **Car**. Write Python code for this class in a new file,
-unreliable\_car.py, and write some testing code in
-unreliable\_car\_test.py to verify each method.
+unreliable_car.py, and write some testing code in
+unreliable_car_test.py to verify each method.
 
 **UnreliableCar** has an additional attribute:
 
@@ -130,9 +130,9 @@ unreliable\_car\_test.py to verify each method.
 
 **UnreliableCar** should override the following methods:
 
--   **\_\_init\_\_(self, name, fuel, reliability)**
+-   **__init__(self, name, fuel, reliability)**
 
-    -   call the **Car**'s version of **\_\_init\_\_**, and then set the
+    -   call the **Car's version of **__init__**, and then set the
         reliability
 
 -   **drive(self, distance)**
@@ -143,7 +143,7 @@ unreliable\_car\_test.py to verify each method.
     -   **Super Important Note:** the drive method in the base class
         (Car) always returns the distance driven, so your derived class
         (UnreliableCar) should also always return a distance. You must
-        match the \"signature\" of any method you override.
+        match the "signature" of any method you override.
 
 SilverServiceTaxi
 -----------------
@@ -154,47 +154,47 @@ Now create a new class for a **SilverServiceTaxi** that inherits from
 So **SilverServiceTaxi** *is a* **Taxi** and **Taxi** *is a* **Car**
 (which means **SilverServiceTaxi** is a **Car**)
 
-This allows you to have a different effective **price\_per\_km**, based
+This allows you to have a different effective **price_per_km**, based
 on the fanciness of the **SilverServiceTaxi**.
 
 1.  Add a new *attribute*, **fanciness**, which is a **float** that
-    scales the **price\_per\_km**  
+    scales the **price_per_km**  
     Pass the **fanciness** value into the constructor and multiply
-    self.price\_per\_km by it.  
+    self.price_per_km by it.  
     Note that here we can get the initial base price using
-    Taxi.price\_per\_km, then customise our object's instance variable,
-    self.price\_per\_km. So, if the class variable (for all taxis) goes
+    Taxi.price_per_km, then customise our object's instance variable,
+    self.price_per_km. So, if the class variable (for all taxis) goes
     up, the price change is inherited by all SilverServiceTaxis.
 
 2.  **SilverServiceTaxis** also have an extra charge for each new fare,
-    so add a **flagfall** *class variable* set to \$4.50
+    so add a **flagfall** *class variable* set to $4.50
 
 3.  Add or override whatever method you need to (think about it...) in
     order to calculate the fare.
 
-4.  Create an overridden \_\_str\_\_ method so you can add the flagfall
+4.  Create an overridden __str__ method so you can add the flagfall
     to the end. It should display like (for a Hummer with a fanciness of
     4):  
-    Hummer, fuel=200, odo=0, 0km on current fare, \$4.92/km plus
-    flagfall of \$4.50
+    Hummer, fuel=200, odo=0, 0km on current fare, $4.92/km plus
+    flagfall of $4.50
 
 > Note that you can reuse the parent class method like:
-> super().\_\_str\_\_()
+> super().__str__()
 
 5.  Write some test code in a file called
-    **silver\_service\_taxi\_test.py** to see that your
+    **silver_service_taxi_test.py** to see that your
     **SilverServiceTaxi** calculates fares correctly.  
     For an 18km trip in a **SilverServiceTaxi** with fanciness of 2, the
-    fare should be \$48.78 (yikes!)
+    fare should be $48.78 (yikes!)
 
-Let\'s stop and think about what we\'ve learned and done so far:
+Let's stop and think about what we've learned and done so far:
 
 -   We can create new classes by *extending* existing ones - e.g. Taxi
     extends Car
 
 -   Derived (child) classes inherit all of the attributes and behaviours
     of their base (parent) classes - e.g. we do not need to write a new
-    **add\_fuel()** method for Taxi because it comes from Car already
+    **add_fuel()** method for Taxi because it comes from Car already
 
 -   We can *override* (customise) derived classes by modifying existing
     methods so they do different (but similar) things, and we should
@@ -205,44 +205,44 @@ Let\'s stop and think about what we\'ve learned and done so far:
     driven.
 
 Here is what the **class hierarchy** looks like now for **Car** and its
-related classes (remember you can \"read\" these arrows like \"Taxi *is
-a* Car\"):
+related classes (remember you can "read" these arrows like "Taxi *is
+a* Car"):
 
 ![](../images/08image1.png)
 
 Inheriting Enhancements
 -----------------------
 
-One more thing before we move on... It\'s important to see how
+One more thing before we move on... It's important to see how
 inheritance benefits the systems we model with classes. Currently, all
 Taxis (including SilverServiceTaxis and any other derived classes we
-might make) calculate the fare as a regular calculation (price\_per\_km
-\* current\_fare\_distance), and you can get results like \$48.78 in the
+might make) calculate the fare as a regular calculation (price_per_km
+* current_fare_distance), and you can get results like $48.78 in the
 example above...
 
 What if we decided that all taxis should have final fares that are
-rounded to the nearest 10c (so that \$48.78 would change to \$48.80)?
+rounded to the nearest 10c (so that $48.78 would change to $48.80)?
 Well, we should only need to make this change to the base Taxi class,
 and it will be inherited by SilverServiceTaxis... *but only if* we have
-called **super().get\_fare()** and not rewritten the calculation in our
+called **super().get_fare()** and not rewritten the calculation in our
 new classes. That is, we should only need to change one place because we
-should have practised the \"Don\'t Repeat Yourself\" (DRY) principle.
-Make sense? Let\'s do it.
+should have practised the "Don't Repeat Yourself" (DRY) principle.
+Make sense? Let's do it.
 
--   First, run your silver\_service\_taxi\_test program from above and
-    make sure your output produces something that\'s not already a
-    multiple of 10c (such as the example above that produces \$48.78).
+-   First, run your silver_service_taxi_test program from above and
+    make sure your output produces something that's not already a
+    multiple of 10c (such as the example above that produces $48.78).
 
--   Now update the **get\_fare()** method in Taxi and use the
+-   Now update the **get_fare()** method in Taxi and use the
     **round()** function.
 
 -   Re-run your test and you should get a result rounded to 10c (e.g.
-    \$48.80). If it worked, you should see that we only changed Taxi and
+    $48.80). If it worked, you should see that we only changed Taxi and
     that enhancement was inherited by SilverServiceTaxi. Nice :)
 
-**Yet Another Important Note About Functions**: **get\_fare()** must
+**Yet Another Important Note About Functions**: **get_fare()** must
 return a *number*, not a *string*! Even though we may want to format the
-result like currency, that\'s not this function\'s single
+result like currency, that's not this function's single
 responsibility. What if we wanted to add fares together? They must be
 numbers. Do your string formatting *outside* the function.
 
@@ -275,14 +275,14 @@ but the results (including the price) do depend on the class. This is
 
 The taxis used in this example would be like:
 
-taxis = \[Taxi(**\"Prius\"**, 100), SilverServiceTaxi(**\"Limo\"**, 100,
+taxis = \[Taxi("Prius**, 100), SilverServiceTaxi("Limo**, 100,
 2),
 
-SilverServiceTaxi(**\"Hummer\"**, 200, 4)\]
+SilverServiceTaxi("Hummer**, 200, 4)\]
 
 ### Sample Output (to show you how to write your program):
 
-Let\'s drive!
+Let's drive!
 
 q)uit, c)hoose taxi, d)rive
 
@@ -290,17 +290,17 @@ q)uit, c)hoose taxi, d)rive
 
 Taxis available:
 
-0 - Prius, fuel=100, odo=0, 0km on current fare, \$1.20/km
+0 - Prius, fuel=100, odo=0, 0km on current fare, $1.20/km
 
-1 - Limo, fuel=100, odo=0, 0km on current fare, \$2.40/km plus flagfall
-of \$4.50
+1 - Limo, fuel=100, odo=0, 0km on current fare, $2.40/km plus flagfall
+of $4.50
 
-2 - Hummer, fuel=200, odo=0, 0km on current fare, \$4.80/km plus
-flagfall of \$4.50
+2 - Hummer, fuel=200, odo=0, 0km on current fare, $4.80/km plus
+flagfall of $4.50
 
 Choose taxi: 0
 
-Bill to date: \$0.00
+Bill to date: $0.00
 
 q)uit, c)hoose taxi, d)rive
 
@@ -308,9 +308,9 @@ q)uit, c)hoose taxi, d)rive
 
 Drive how far? 333
 
-Your Prius trip cost you \$120.00
+Your Prius trip cost you $120.00
 
-Bill to date: \$120.00
+Bill to date: $120.00
 
 q)uit, c)hoose taxi, d)rive
 
@@ -318,17 +318,17 @@ q)uit, c)hoose taxi, d)rive
 
 Taxis available:
 
-0 - Prius, fuel=0, odo=100, 100km on current fare, \$1.20/km
+0 - Prius, fuel=0, odo=100, 100km on current fare, $1.20/km
 
-1 - Limo, fuel=100, odo=0, 0km on current fare, \$2.40/km plus flagfall
-of \$4.50
+1 - Limo, fuel=100, odo=0, 0km on current fare, $2.40/km plus flagfall
+of $4.50
 
-2 - Hummer, fuel=200, odo=0, 0km on current fare, \$4.80/km plus
-flagfall of \$4.50
+2 - Hummer, fuel=200, odo=0, 0km on current fare, $4.80/km plus
+flagfall of $4.50
 
 Choose taxi: 1
 
-Bill to date: \$120.00
+Bill to date: $120.00
 
 q)uit, c)hoose taxi, d)rive
 
@@ -336,9 +336,9 @@ q)uit, c)hoose taxi, d)rive
 
 Drive how far? 60
 
-Your Limo trip cost you \$148.50
+Your Limo trip cost you $148.50
 
-Bill to date: \$268.50
+Bill to date: $268.50
 
 q)uit, c)hoose taxi, d)rive
 
@@ -346,17 +346,17 @@ q)uit, c)hoose taxi, d)rive
 
 Taxis available:
 
-0 - Prius, fuel=0, odo=100, 100km on current fare, \$1.20/km
+0 - Prius, fuel=0, odo=100, 100km on current fare, $1.20/km
 
-1 - Limo, fuel=40.0, odo=60.0, 60.0km on current fare, \$2.40/km plus
-flagfall of \$4.50
+1 - Limo, fuel=40.0, odo=60.0, 60.0km on current fare, $2.40/km plus
+flagfall of $4.50
 
-2 - Hummer, fuel=200, odo=0, 0km on current fare, \$4.80/km plus
-flagfall of \$4.50
+2 - Hummer, fuel=200, odo=0, 0km on current fare, $4.80/km plus
+flagfall of $4.50
 
 Choose taxi: 2
 
-Bill to date: \$268.50
+Bill to date: $268.50
 
 q)uit, c)hoose taxi, d)rive
 
@@ -364,9 +364,9 @@ q)uit, c)hoose taxi, d)rive
 
 Drive how far? 60
 
-Your Hummer trip cost you \$292.50
+Your Hummer trip cost you $292.50
 
-Bill to date: \$561.00
+Bill to date: $561.00
 
 q)uit, c)hoose taxi, d)rive
 
@@ -374,17 +374,17 @@ q)uit, c)hoose taxi, d)rive
 
 Taxis available:
 
-0 - Prius, fuel=0, odo=100, 100km on current fare, \$1.20/km
+0 - Prius, fuel=0, odo=100, 100km on current fare, $1.20/km
 
-1 - Limo, fuel=40.0, odo=60.0, 60.0km on current fare, \$2.40/km plus
-flagfall of \$4.50
+1 - Limo, fuel=40.0, odo=60.0, 60.0km on current fare, $2.40/km plus
+flagfall of $4.50
 
-2 - Hummer, fuel=140.0, odo=60.0, 60.0km on current fare, \$4.80/km plus
-flagfall of \$4.50
+2 - Hummer, fuel=140.0, odo=60.0, 60.0km on current fare, $4.80/km plus
+flagfall of $4.50
 
 Choose taxi: 1
 
-Bill to date: \$561.00
+Bill to date: $561.00
 
 q)uit, c)hoose taxi, d)rive
 
@@ -392,25 +392,25 @@ q)uit, c)hoose taxi, d)rive
 
 Drive how far? 50
 
-Your Limo trip cost you \$100.50
+Your Limo trip cost you $100.50
 
-Bill to date: \$661.50
+Bill to date: $661.50
 
 q)uit, c)hoose taxi, d)rive
 
 \>\>\> q
 
-Total trip cost: \$661.50
+Total trip cost: $661.50
 
 Taxis are now:
 
-0 - Prius, fuel=0, odo=100, 100km on current fare, \$1.20/km
+0 - Prius, fuel=0, odo=100, 100km on current fare, $1.20/km
 
-1 - Limo, fuel=0, odo=100.0, 40.0km on current fare, \$2.40/km plus
-flagfall of \$4.50
+1 - Limo, fuel=0, odo=100.0, 40.0km on current fare, $2.40/km plus
+flagfall of $4.50
 
-2 - Hummer, fuel=140.0, odo=60.0, 60.0km on current fare, \$4.80/km plus
-flagfall of \$4.50
+2 - Hummer, fuel=140.0, odo=60.0, 60.0km on current fare, $4.80/km plus
+flagfall of $4.50
 
 Practice & Extension Work
 =========================
@@ -425,13 +425,13 @@ Download 3 files from
 <https://github.com/CP1404/Practicals/blob/master/prac_08>  
 For now let's start with:
 
--   language\_file\_reader.py (the client program)
+-   language_file_reader.py (the client program)
 
--   programming\_language.py (the class)
+-   programming_language.py (the class)
 
 -   languages.csv (the data file)
 
-Read the comments and the code in language\_file\_reader.py to see how
+Read the comments and the code in language_file_reader.py to see how
 it works.  
 Notice how:
 
@@ -443,8 +443,8 @@ Notice how:
 -   a for loop is used to read the rest of the file
 
 -   reflection is stored in the file as a string, but this client code
-    converts it to a Boolean ready for the class. It\'s not the class\'s
-    job to do this conversion but the client\'s.
+    converts it to a Boolean ready for the class. It's not the class's
+    job to do this conversion but the client's.
 
 (There are also a few other versions included that use Python's **csv**
 module and a **namedtuple**. Read through them later as extension work
@@ -455,14 +455,14 @@ Modifications
 
 1.  Add another language to the file (use data at this [[Programming
     Language
-    Comparison]{.underline}](http://www.jvoegele.com/software/langcomp.html)
+    Comparison]](http://www.jvoegele.com/software/langcomp.html)
     page) and make sure it still works properly.
 
 2.  Add another attribute to your ProgrammingLanguage class: **Pointer
     Arithmetic**.  
     This will take a bit of effort, as you need to update the class and
     any code that uses it. You also need to add the correct values to
-    your data file (it\'s similar to reflection).
+    your data file (it's similar to reflection).
 
 More Guitars!
 -------------
@@ -500,7 +500,7 @@ Name,Year,Cost
 So we need to define how the \< operator should work. Do you remember
 how?
 
-Write code for the **\_\_lt\_\_** (less than) method. You should be able
+Write code for the **__lt__** (less than) method. You should be able
 to figure this out...  
 Then test and see if it sorts correctly now.
 
@@ -527,7 +527,7 @@ b.  **Bomb** - doesn't actually move when you drive it, but still uses
 c.  **EcoTaxi** - uses half the fuel and gives a 10% on the price per
     fare
 
-d.  [**[CrazyTaxi]{.underline}**](https://en.wikipedia.org/wiki/Crazy_Taxi)
+d.  [**[CrazyTaxi]**](https://en.wikipedia.org/wiki/Crazy_Taxi)
 
 ### 2. Trees
 
@@ -537,19 +537,19 @@ up on the details of the methods...
 
 Trees: some grow wide, some grow thin; some grow fast, some grow slow.
 
-**Open these two files:** trees.py and trees\_tester.py
+**Open these two files:** trees.py and trees_tester.py
 
 trees.py contains the **Tree** class. A Tree object has a
-**trunk\_height**, and a number of **leaves**.  
-The **\_\_str\_\_** method of **Tree** returns a string representation
-of the **Tree**. For example, if **trunk\_height** is 2, and leaves is
+**trunk_height**, and a number of **leaves**.  
+The **__str__** method of **Tree** returns a string representation
+of the **Tree**. For example, if **trunk_height** is 2, and leaves is
 8, the Tree would look like
 
-> \#\#
+> ##
 >
-> \#\#\#
+> ###
 >
-> \#\#\#
+> ###
 >
 > \|
 >
@@ -557,7 +557,7 @@ of the **Tree**. For example, if **trunk\_height** is 2, and leaves is
 >
 > The size of a **Tree** can be changed by calling the **grow** method,
 > which takes in **sunlight** and **water** and randomly increases the
-> **trunk\_height** and leaves.
+> **trunk_height** and leaves.
 
 Not all Trees look the same or grow the same, however, so we're going to
 build specialised classes to represent different types of trees. To
@@ -574,7 +574,7 @@ There are already two completed subclasses of **Tree** in trees.py:
 >
 > upside-down trees are drawn upside-down
 
-trees\_tester.py grows **seven** types of trees. Try running it now. The
+trees_tester.py grows **seven** types of trees. Try running it now. The
 final four types of trees are for you to complete.
 
 There are four more subclasses of **Tree** for you to complete:
@@ -584,16 +584,16 @@ There are four more subclasses of **Tree** for you to complete:
 > a wide trees grow their leaves in rows of six, and have a trunk that
 > is twice as wide as normal trees
 >
-> b you will need to redefine the **get\_ascii\_trunk** and
-> **get\_ascii\_leaves** methods
+> b you will need to redefine the **get_ascii_trunk** and
+> **get_ascii_leaves** methods
 >
 > c example drawing
 >
-> \#\#\#\#..
+> ####..
 >
-> \#\#\#\#\#\#
+> ######
 >
-> \#\#\#\#\#\#
+> ######
 >
 > \|\|..
 >
@@ -614,7 +614,7 @@ There are four more subclasses of **Tree** for you to complete:
 >
 > a fruit trees have a number of **fruit**
 >
-> b add a \_**fruit** variable to the **FruitTree** class; initialise it
+> b add a _**fruit** variable to the **FruitTree** class; initialise it
 > as 1
 >
 > c fruit trees sometimes gain an additional fruit when the **grow**
@@ -630,9 +630,9 @@ There are four more subclasses of **Tree** for you to complete:
 >
 > ...
 >
-> \#\#\#
+> ###
 >
-> \#\#\#
+> ###
 >
 > \|.
 >
@@ -644,13 +644,13 @@ There are four more subclasses of **Tree** for you to complete:
 >
 > a pine trees look like
 >
-> \*...
+> *...
 >
-> \*\*\*..
+> ***..
 >
-> \*\*\*\*\*.
+> *****.
 >
-> \*\*\*\*\*\*\*
+> *******
 >
 > \|...
 >
