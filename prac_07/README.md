@@ -1,4 +1,4 @@
-# Practical 07 - Classes
+# Practical 07 - Kivy
 
 Note: This is a fairly long practical. You should get started early
 (before the prac session) and you will probably need to put in more time
@@ -15,7 +15,7 @@ easier by adding KV language syntax highlighting and auto-completion
 
 -   Download: <https://github.com/Zen-CODE/kivybits/blob/master/IDE/PyCharm_kv_completion.jar?raw=true>
 
--   In PyCharm's main menu, click **Import Settings** or **File \>
+-   In PyCharm's main menu, click **Import Settings** or **File >
     Import**, depending on your version
 
 -   Select the .jar file you just downloaded and click OK in the dialog
@@ -283,12 +283,12 @@ Open, run and inspect Jason's QuickSum Kivy app from (two files,
 
 As explained in the lectures, notice the way it uses:
 
--   class rules like \<Button\>
+-   class rules like <Button>
 
 -   canvas.before and canvas.after to change the background colour or
     other aspects of a widget
 
-Use these techniques to change your miles-\>kilometres converter to use
+Use these techniques to change your miles->kilometres converter to use
 black text on white background widgets - or something else that you'd
 like visually.
 

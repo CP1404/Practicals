@@ -47,10 +47,10 @@ our case getting feedback.
 1.  Open your PyCharm Practicals project. (If it's not already up to
     date on GitHub, then commit and push your current work now.)
 
-2.  Create a branch called "feedback" by: **VCS \> Git \> Branches**
+2.  Create a branch called "feedback" by: **VCS > Git > Branches**
     then click **+ New Branch**
 
-![../../../../Desktop/Screen%20Shot%202016-07-10%20at%2010.12.34%20](../images/05image2.png)
+![New Git Branch](../images/05image2.png)
 
 It may look like nothing happened, but your local repository now has a
 new branch, which is currently exactly the same as the 'master'
@@ -92,7 +92,7 @@ full state name by looking it up in the dictionary.
     the problem... Click on it to see the action icon (light bulb) to
     the left... Click on that to see the options... Choose reformat
     file... Problem solved.  
-    You can also choose **Code \> Reformat Code** or use the keyboard
+    You can also choose **Code > Reformat Code** or use the keyboard
     shortcut any time. It does the whole file or whatever's selected.
     No more excuses for dodgy formatting!  
     This is a great way to learn what the "PEP 8" standards are for
@@ -261,7 +261,7 @@ GitHub, still in the feedback branch.
     ![](../images/05image14.png)
 
 8.  Pull your changes from master (remote) to update your local repo:
-    **VCS \> Git \> Pull** then click **Pull**.
+    **VCS > Git > Pull** then click **Pull**.
 
 All done!
 

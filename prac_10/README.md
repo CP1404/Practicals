@@ -104,7 +104,7 @@ and it should work... or just restart PyCharm if you'd like it to stop
 telling you it's installing! If you really can't install the wikipedia
 package, then skip those parts of the prac that use it.
 
-In PyCharm, go to Settings/Preferences \> Project: Practicals \> Project
+In PyCharm, go to Settings/Preferences > Project: Practicals > Project
 Interpreter (it might look a bit different but you should have been here
 before) and click the plus button to install a package. Type "wikipedia"
 to find the one we want, and then click "Install Package".
@@ -198,7 +198,7 @@ link in the Python console to view "Hello World!" in your browser.
 
 * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
 
-Modify the function output to return '\<h1\>Hello World :)\</h1\>' and
+Modify the function output to return '<h1>Hello World :)</h1>' and
 rerun the program by pressing Ctrl+F5.  
 To see the new results, you'll need to go back to your browser and hit
 refresh, so do this now.
@@ -233,7 +233,7 @@ Add another decorator so that the greet function runs for multiple "sub"
 routes and takes a parameter, like:
 
 \@app.route('/greet')  
-\@app.route('/greet/\<name\>')  
+\@app.route('/greet/<name>')  
 **def** greet(name="):  
 **return "Hello {}**.format(name)
 

@@ -88,8 +88,8 @@ default order.
 to use 3 spaces (or more if needed) for the value when it's used.
 
 - By default, **numbers are right-aligned** and **strings are
-left-aligned**. You can change this with \> or \<  
-So, {:\>6} would format the value to be right-aligned and take up 6 (or
+left-aligned**. You can change this with > or <  
+So, {:>6} would format the value to be right-aligned and take up 6 (or
 more if needed) spaces.
 
 ## Random Numbers

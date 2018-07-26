@@ -1,4 +1,4 @@
-# Practical 06 - Kivy
+# Practical 06 - Classes
 
 **Did you finish last week's work?** If not, make sure to complete it
 during the week. If you do not understand anything, bring those
@@ -14,7 +14,7 @@ and process data appropriate for those types:
     multiple parts (e.g. date of birth)
 
 -   **dict** is useful when the data has a 'mapping' relationship (e.g.
-    names -\> dates of birth)
+    names -> dates of birth)
 
 Very often we want to combine data into one object in a way that doesn't
 suit one of the built-in types, so we write our own **classes** for
@@ -309,7 +309,7 @@ the software development process."
     and figure this out, or just use our code (the width we use for
     guitar.name is just a guesstimate):  
       
-    print("Guitar {}: {:\>20} ({}), worth ${:10,.2f}
+    print("Guitar {}: {:>20} ({}), worth ${:10,.2f}
     {}**.format(i + 1, guitar.name, guitar.year, guitar.cost,
     vintage_string))  
       
@@ -413,7 +413,7 @@ appropriate methods on that object.
 >
 > How many km do you wish to drive? -25
 >
-> Distance must be \>= 0
+> Distance must be >= 0
 >
 > How many km do you wish to drive? 100
 >
@@ -433,7 +433,7 @@ appropriate methods on that object.
 >
 > How many units of fuel do you want to add to the car? -80
 >
-> Fuel amount must be \>= 0
+> Fuel amount must be >= 0
 >
 > How many units of fuel do you want to add to the car? 120
 >

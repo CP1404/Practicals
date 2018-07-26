@@ -286,7 +286,7 @@ Let's drive!
 
 q)uit, c)hoose taxi, d)rive
 
-\>\>\> c
+>>> c
 
 Taxis available:
 
@@ -304,7 +304,7 @@ Bill to date: $0.00
 
 q)uit, c)hoose taxi, d)rive
 
-\>\>\> d
+>>> d
 
 Drive how far? 333
 
@@ -314,7 +314,7 @@ Bill to date: $120.00
 
 q)uit, c)hoose taxi, d)rive
 
-\>\>\> c
+>>> c
 
 Taxis available:
 
@@ -332,7 +332,7 @@ Bill to date: $120.00
 
 q)uit, c)hoose taxi, d)rive
 
-\>\>\> d
+>>> d
 
 Drive how far? 60
 
@@ -342,7 +342,7 @@ Bill to date: $268.50
 
 q)uit, c)hoose taxi, d)rive
 
-\>\>\> c
+>>> c
 
 Taxis available:
 
@@ -360,7 +360,7 @@ Bill to date: $268.50
 
 q)uit, c)hoose taxi, d)rive
 
-\>\>\> d
+>>> d
 
 Drive how far? 60
 
@@ -370,7 +370,7 @@ Bill to date: $561.00
 
 q)uit, c)hoose taxi, d)rive
 
-\>\>\> c
+>>> c
 
 Taxis available:
 
@@ -388,7 +388,7 @@ Bill to date: $561.00
 
 q)uit, c)hoose taxi, d)rive
 
-\>\>\> d
+>>> d
 
 Drive how far? 50
 
@@ -398,7 +398,7 @@ Bill to date: $661.50
 
 q)uit, c)hoose taxi, d)rive
 
-\>\>\> q
+>>> q
 
 Total trip cost: $661.50
 
@@ -495,9 +495,9 @@ Name,Year,Cost
 >
 > We get:
 >
-> TypeError: unorderable types: Guitar() \< Guitar()
+> TypeError: unorderable types: Guitar() < Guitar()
 
-So we need to define how the \< operator should work. Do you remember
+So we need to define how the < operator should work. Do you remember
 how?
 
 Write code for the **__lt__** (less than) method. You should be able
