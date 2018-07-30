@@ -23,18 +23,14 @@ examples...
 
 In one of our end-of-subject YourJCU
 student feedback surveys, a student suggested that we do more
-hand-writing code to help prepare for examinations. Great idea! And it
+hand-writing code to help prepare for the final examin. Great idea! And it
 shows it's a great idea for you to provide us with your feedback --
-during the semester anytime, and especially in our main surveys. OK?
-Thanks!
+during the semester anytime, and especially in our main surveys.
 
-**On paper**, write a program that asks the user for some text, with
-error-checking to repeat until the text is not blank. The program should
-then print every second letter in the provided text. Example: if the
-user enters "Pythonista", the program should print "Ptoit".
-
-**Hint:** either use string slicing or use a for loop, the range
-function, and the length of the text.
+**On paper**, write a program that asks the user for a password, with
+error-checking to repeat if the password doesn't meet a minimum length set by a variable.  
+The program should then print asterisks as long as the password.  
+Example: if the user enters "Pythonista" (10 characters), the program should print "**********".
 
 It's a valuable skill to be able to write code with pen and paper --
 without the support of an IDE. Watch out for things like consistent
@@ -57,7 +53,7 @@ practising with Git and GitHub.
     demos that you want to keep but don't fit into any other projects.
     Do not put it inside your practicals project or any other project.
 
-2.  Add a Python file called **text_printing.py** and enter just a single
+2.  Add a Python file called **password_entry.py** and enter just a single
     docstring (triple-quoted comment) at the top with your name in it.
 
 3.  Now we'll put this project into Git version control (without using
@@ -80,7 +76,7 @@ practising with Git and GitHub.
     staging.
 
 5.  Switch to the **Local Changes** tab and you'll see some PyCharm
-    files that we don't care about and our one code file, text_printing.py.
+    files that we don't care about and our one code file, password_entry.py.
     Right-click on this file and choose to **Add** it to Git.    
     ![Version Control Local Changes](../images/03image4.png)  
     (We could have done this in other ways, mostly by right-clicking on
@@ -113,11 +109,11 @@ practising with Git and GitHub.
     You should now see your first commit appear in the Log tab of the
     Version Control tool window. ***Yay!***
 
-8.  Now type the code you wrote on paper earlier for error-checking and printing some
-    text into your Python file. Test it.
+8.  Now type the code you wrote on paper earlier for error-checking and printing a
+    password as asterisks into your Python file. Test it.
 
 9.  Do another commit with another useful commit message (perhaps
-    something like "Add text printing program"). Have a look and see that it also
+    something like "Add password check program"). Have a look and see that it also
     appears in your log.  
       
     We've now saved the state of our project (just one file) at
@@ -315,41 +311,41 @@ main()
 ```
 
 
-### That Text Thing with Functions
+### Password Check with Functions
 
 At the start you wrote some code for a program that asks the user for
-some text and prints every second letter in it. Copy this into
-your prac_03 folder and commit (with a message like "Add text printing
+a password and prints asterisks based on its length. Copy this into
+your `prac_03` folder and commit (with a message like "Add password check
 program"). Now let's modify this program.
 
-1.  Move the code inside a main() function and call main() at the
+1.  Move all of the code inside a main() function and call main() at the
     bottom.  
-    Note: if you don't have a main function, the refactoring below will
-    use global variables.
+    **Note:** if you don't have a main function, the refactoring below will
+    use global variables. So, it's an important first step to use main before 
+    adding other functions.
 
-2.  **Refactor** the get text part into a separate function... We can
-    do this by using PyCharm's refactoring tool. Select the lines that
-    get and check the name (it should probably be 4 lines) then
-    right-click (or use the main menu) and choose **Refactor >
-    Extract > Method...**  
-    Change the name to get_text and press OK.  
-    PyCharm should make the function and replace the old code with a
-    call to it like name = get_text()
+2.  **Refactor** the part that gets the password into a separate function...  
+    You can either do this manually, or by using PyCharm's refactoring tool.  
+    If you want to use the tool, select the lines that
+    get and check the name (it should be 3-4 lines) then right-click 
+    (or use the main menu) and choose **Refactor > Extract > Method...**  
+    Change the name to `get_password` and press OK.  
+    PyCharm should create the function and replace the old code with a
+    call to it like `password = get_password()`  
+    (Note that this all depends on how you wrote the code to start with.)
 
-3.  Now refactor the loop that prints the output into a function that
-    takes 2 parameters: one for the text and one for the frequency of letters 
-    (1 would be every letter, 3 is every third letter).  
-    PyCharm will see that text needs to be an input parameter, but not
-    the number. You'll have to add this yourself. First test it with a
-    literal value for this, then get the value from the user and pass
-    that in.
+3.  Now refactor the loop that prints the asterisks into a function that
+    takes 1 parameter: the password. (PyCharm will see that password needs 
+    to be an input parameter and create the function accordingly.)  
+    Note that this will be a super simple functions, but that's OK.
     
-4. Finished? Then commit!
+4. Finished? Then commit - with a meaningful message in the imperative voice.  
+   This could be something like "Refactor password program to use functions" 
 
 If you have not done so already, please upgrade your account to a free
 student account at:
 <https://education.github.com/discount_requests/new>  
-You will need to upload a photo of your JCU student id. This allows
+You will need to upload a photo of your JCU student ID. This allows
 you to have private repositories for free, and you can get the GitHub
 Education Pack!
 
