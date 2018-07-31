@@ -97,8 +97,8 @@ Call your class ProgrammingLanguage (using Python's recommended
 "PascalCase" or "CapWords" style)
 
 There are lots of things we could store, but we'll consider only a few,
-based mostly on the information found at this [[Programming Language
-Comparison]](http://www.jvoegele.com/software/langcomp.html)
+based mostly on the information found at this [Programming Language
+Comparison](http://www.jvoegele.com/software/langcomp.html)
 page (<http://www.jvoegele.com/software/langcomp.html>).
 
 For each language, we want to store the following fields - the row names
@@ -179,7 +179,7 @@ year = 1922
 
 cost = 16035.40
 
-print("My guitar: {0}, first made in {1}**.format(name, year))
+print("My guitar: {0}, first made in {1}".format(name, year))
 
 #### You should notice that we have multiple values to store for one guitar entity: name, year and cost... and that guitars are awesome! What if we owned 9 guitars? We'd want to use a collection like a list... but what would each element in the list be? ... A tuple? A dictionary? No... This is a classic case for a class!  Write a **Guitar** class that allows you to store one guitar with those **fields** (attributes):
 
@@ -292,8 +292,8 @@ Instead, comment out the user input lines, and put in lines like this to
 >
 > guitars.append(Guitar("Line 6 JTV-59**, 2010, 1512.9))
 
-According to Wikipedia's page on the [[abstraction
-principle]](https://en.wikipedia.org/wiki/Abstraction_principle_(programming)),
+According to Wikipedia's page on the [abstraction
+principle](https://en.wikipedia.org/wiki/Abstraction_principle_(programming)),
 "When read as recommendation to the programmer, the abstraction
 principle can be generalised as the "[*[don't repeat
 yourself]*](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)"
@@ -308,7 +308,7 @@ the software development process."
     guitar.name is just a guesstimate):  
       
     print("Guitar {}: {:>20} ({}), worth ${:10,.2f}
-    {}**.format(i + 1, guitar.name, guitar.year, guitar.cost,
+    {}".format(i + 1, guitar.name, guitar.year, guitar.cost,
     vintage_string))  
       
     The variable vintage_string is set to "" or "(vintage)"
@@ -324,8 +324,8 @@ the software development process."
 > readable because you can see the name of the variable you're printing
 > in the actual placeholder.
 >
-> print("Car {}, {}**.format(my_car.fuel, my_car.odometer))  
-> print("Car {self.fuel}, {self.odometer}**.format(self=my_car))
+> print("Car {}, {}".format(my_car.fuel, my_car.odometer))  
+> print("Car {self.fuel}, {self.odometer}".format(self=my_car))
 
 -   For this particular code, we've used both i and the target variable
     guitar (instead of guitars\[i]) by using the built-in
@@ -501,7 +501,7 @@ for Git soon. It's a valuable skill. On the lab computers, you should be
 able to use "Git Bash". Right-click on the folder where your files are
 and select "Git Bash here". On a Mac, just use Terminal.  
 A great place to learn git commands is:
-[[https://try.github.io]](https://try.github.io)
+[https://try.github.io](https://try.github.io)
 
 **Why?** Here's a quote from one of our students who completed this
 subject:  
