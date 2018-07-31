@@ -37,7 +37,7 @@ without the support of an IDE. Watch out for things like consistent
 variable names and clear indenting as well as basic syntax like colons
 and brackets.
 
-# Walkthrough Examples
+# Walkthrough Example
 
 ![GitHub logo](../images/03image2.png)  
 

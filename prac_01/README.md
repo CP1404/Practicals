@@ -60,7 +60,7 @@ You may want to
 download or clone the practicals repository... but we don't expect you to know
 how to use GitHub yet, as we will teach you that in a couple of weeks.
 
-# Walkthrough Example - PyCharm
+# Walkthrough Example
 
 Let's start by getting you used to working with the PyCharm IDE
 (Integrated Development Environment).
@@ -358,14 +358,16 @@ input):
 <pre>
 Number of items: <b>3</b>  
 Price of item: <b>100</b>  
-Price of item: <b>21.56</b>  
-Price of item: <b>4</b>  
-Total price for 3 items is $113.10  
+Price of item: <b>35.56</b>  
+Price of item: <b>3.24</b>  
+Total price for 3 items is $124.92  
 </pre>
 
 Create the file **shop_calculator.py** and write this program.  
 Note: start with the main logic, then adjust your program to improve the
-formatting if you need to.
+formatting if you need to.  
+Note that the example output above uses string formatting to set the currency
+to 2 decimal places... don't worry about this for now... or do :)  
 
 **+ Error checking (input validation loop):**   
 (Do this _after_ you have completed the above program.)
@@ -373,7 +375,7 @@ If the number of items is less than zero, the message "Invalid number of items!"
 should be displayed and this quantity must be re-entered by the user ***until***
 it is valid.
 
-# Extension & Practice Work
+# Practice & Extension Work
 
 Remember, even though these 'extension & practice' exercises are optional in
 terms of marks, but the best way to get better at programming is...

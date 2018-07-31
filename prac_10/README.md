@@ -6,32 +6,28 @@ is the final marked practical for the subject, and must be
 satisfactorily attempted during the prac time (no marking next week).
 You don't have to finish it but you have to do good work.
 
-Start by downloading the prac files from
-<https://github.com/CP1404/Practicals/tree/master/prac_10>
-
+Start by downloading the prac files from this folder.  
 These files have *# **TODO*** comments to show you what steps to do.
 
-Recursion
----------
+# Recursion
 
-![](../images/10image1.png)
+![Pencil icon](../images/10image1.png)
 
 Open recursion.py and read the code, then **write down** (on paper, like
 it's a practice exam question!) the expected output for the first
-function, do_it(5) **BEFORE** you run it.
+function, `do_it(5)` **BEFORE** you run it.
 
 Then run it to see if you were right.
 
 Then use the **debugger** to step through the execution to see what's
 happening.
 
-Do the same for the next function, (start by uncommenting #
-do_something(4)).
+Do the same for the next function - start by uncommenting 
+`# do_something(4)`
 
 You'll find a problem... The function should print the squares of
 positive numbers from n down to 0, but instead it runs until the maximum
-recursion limit is reached.
-
+recursion limit is reached...  
 **Fix this.**
 
 **Challenge for later:** Write another version of this that recursively
@@ -40,7 +36,9 @@ base case).
 
 ### Recursion From Scratch
 
-![](../images/10image2.png)Consider that you want to try for the
+![Pyramid](../images/10image2.png)  
+
+Consider that you want to try for the
 world 2D pyramid block building record.  
 Write a program to get the number of rows from the user and calculate
 the number of blocks you will need given the number of rows (n) to make
@@ -52,12 +50,11 @@ about good function design. It should **take in** the number of rows and
 
 The number of blocks for n rows is:
 
-> n + (n-1) + (n-2) + ... 2 + 1
+`n + (n-1) + (n-2) + ... 2 + 1`
 
 E.g. for 6 rows, it is 6 + 5 + 4 + 3 + 2 + 1 = 21
 
-Testing
--------
+# Testing
 
 Follow the TODO instructions in testing.py, taking note that the code
 shows you examples to learn form.
@@ -79,8 +76,7 @@ shows you examples to learn form.
     stop. See the comments for how to do this step by step, taking note
     that you should write your tests before your code
 
-Wikipedia API & Python Library
-------------------------------
+# Wikipedia API & Python Library
 
 Until now, we've only worked on our local computers, interacting with
 local files, but never talking to the great big computer in the sky...
@@ -109,7 +105,7 @@ Interpreter (it might look a bit different but you should have been here
 before) and click the plus button to install a package. Type "wikipedia"
 to find the one we want, and then click "Install Package".
 
-![](../images/10image3.png)
+![PyCharm install package](../images/10image3.png)
 
 The quick start documentation for the wikipedia package can be found at:
 <https://wikipedia.readthedocs.io/en/latest/quickstart.html>
@@ -135,8 +131,7 @@ that **exception** as explained in the API's docs.
 Now **modify** your program so when it gets the page, it prints the
 title, summary and the URL.
 
-Flask Web Framework
--------------------
+# Flask Web Framework
 
 Until now, we have made only one type of project, "Pure Python", and we
 always interacted via PyCharm with the console -- or using a GUI we made
@@ -159,11 +154,13 @@ when making a new project.) If this is the first time you've done this,
 PyCharm should install the Flask package and other dependencies like
 Jinja for templating.
 
-![](../images/10image4.png)
+![New Flask Project window](../images/10image4.png)
 
 The default project comes with a folder structure and a simple "hello
 world" example.  
 The code is shown (left) and explained (right) below:
+
+<!-- #TODO fix table -->
 
 +-----------------------------------+-----------------------------------+
 | **from** flask **import** Flask\  | Import the flask class.           |
@@ -196,9 +193,9 @@ Run the code and you should see output like the following, including a
 link to click on to see your amazing new Python-based website. Click the
 link in the Python console to view "Hello World!" in your browser.
 
-* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+`* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)`
 
-Modify the function output to return '<h1>Hello World :)</h1>' and
+Modify the function output to return `<h1>Hello World :)</h1>` and
 rerun the program by pressing Ctrl+F5.  
 To see the new results, you'll need to go back to your browser and hit
 refresh, so do this now.
@@ -211,7 +208,7 @@ type 'route' and wait for the popup, then choose the first option by
 pressing Enter... and PyCharm will create the decorator and function
 definition stubs.
 
-![](../images/10image5.png)
+![route autocomplete in PyCharm](../images/10image5.png)
 
 Type 'greet' as the function name and route name (these can be
 different, but we'll keep them the same). Replace 'pass' with a simple
@@ -232,10 +229,12 @@ Go back to PyCharm and look for error messages in the console.
 Add another decorator so that the greet function runs for multiple "sub"
 routes and takes a parameter, like:
 
-\@app.route('/greet')  
-\@app.route('/greet/<name>')  
-**def** greet(name="):  
-**return "Hello {}**.format(name)
+```python
+@app.route('/greet')  
+@app.route('/greet/<name>') 
+def greet(name=""):
+    return "Hello {}".format(name)
+```
 
 Re-run and test with the URLs <http://127.0.0.1:5000/greet> and
 <http://127.0.0.1:5000/greet/Yourname>
@@ -243,7 +242,7 @@ Re-run and test with the URLs <http://127.0.0.1:5000/greet> and
 This is one way that you can pass parameters (all strings) to Flask view
 functions.
 
-### Challenge:
+## Challenge
 
 In an earlier prac, you wrote a function to convert between Fahrenheit
 and Celsius. Copy or rewrite this function as a regular function (not a
@@ -254,12 +253,12 @@ Now, create a new route so that you can enter Celsius values in the URL
 and see the Fahrenheit values in the Web page, like below. Note that the
 parameter passed via the URL (100.2 in this case) is a string.
 
-![](../images/10image6.png)
+![Fahrenheit conversion in website view](../images/10image6.png)
 
 That's version 1... Once it works, modify it so the output shows the
 input value and the result with useful text.
 
-### Flask + Wikipedia API
+## Flask + Wikipedia API
 
 Now let's combine the Wikipedia API with our new found Web programming
 powers...
@@ -300,8 +299,7 @@ this and your other subjects?
 If not, please do that right now on LearnJCU.  
 ***Thank you... your input is extremely valuable!***
 
-Extension & Practice Work
-=========================
+# Practice & Extension Work
 
 1.  Write a program that prints a string from the outside in, using
     recursion.  
@@ -319,11 +317,11 @@ Extension & Practice Work
     A palindrome is a word or phrase that reads the same forwards as
     backwards. The following are examples:
 
--   Hannah
-
--   abcba
-
--   (ignoring case, spaces and punctuation) A Toyota's a Toyota
+    -   Hannah
+    
+    -   abcba
+    
+    -   (ignoring case, spaces and punctuation) A Toyota's a Toyota
 
 3.  Add **assert** and **doctest** testing to your work from an earlier
     prac -- e.g. the is_valid_password() function from prac 02 and the

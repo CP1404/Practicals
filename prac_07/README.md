@@ -27,7 +27,7 @@ easier by adding KV language syntax highlighting and auto-completion
 to do it every time, so save the download file on your USB or network
 drive for next time.
 
-# Walkthrough Example - Kivy
+# Walkthrough Example
 
 **Download a zip** of the GitHub repository for our Kivy Examples:
 [https://github.com/CP1404/KivyDemos]
@@ -135,8 +135,7 @@ looking like this:
 10. Lastly, add a new event handler for the clear button so that it
     resets both the text field and the output label to blank.
 
-![](../images/07image3.png)Intermediate Exercises
-==============================================================================================
+![](../images/07image3.png)# Intermediate Exercises========================================================================
 
 Open the **squaring.py & .kv** files from the demos.
 
@@ -196,8 +195,7 @@ towards better separation, but it does show you how Git and GitHub can
 record and show your progress as you improve your code by refactoring
 it.
 
-From Scratch
-============
+# Do-from-scratch Exercises
 
 Create a Kivy program and use the kv language to recreate the following
 layout.  
@@ -240,8 +238,7 @@ Stage 2:
 Don't just copy it, but do use it if you get stuck, and/or to compare
 your solution to ours.
 
-Dynamic Kivy Widgets
---------------------
+## Dynamic Kivy Widgets
 
 All of these programs so far have had the widgets "hard-coded" in the
 .kv file, but what if we want to create dynamic widgets based on a
@@ -275,8 +272,7 @@ displays each one as a separate *Label*.**
 dynamic_widgets example as it is too different. Your app won't have
 any buttons or interactivity. Use the example only as a reference.
 
-Customising Kivy Widgets
-------------------------
+## Customising Kivy Widgets
 
 Open, run and inspect Jason's QuickSum Kivy app from (two files,
 **quick_sum** .py/.kv).
@@ -292,8 +288,7 @@ Use these techniques to change your miles->kilometres converter to use
 black text on white background widgets - or something else that you'd
 like visually.
 
-Practice & Extension Work
-=========================
+# Practice & Extension Work
 
 1.  Modify your Greeter Program so the GUI layout looks like:
 
@@ -339,8 +334,7 @@ Then you'll experience much joy with your (first!) Android app!
 You may also want to look at **python-for-android:**
 <https://github.com/kivy/python-for-android>
 
-Implement our "GuessingGame" app
---------------------------------
+## Implement our "GuessingGame" app
 
 We started working on a simple guessing game Kivy app here:
 <https://github.com/CP1404/GuessingGame>
@@ -351,4 +345,4 @@ We started working on a simple guessing game Kivy app here:
 
 -   Then make a Pull Request back to us.
 
--   We will merge in the best Pull Requests!
+-   We will consider merging in the best Pull Requests!

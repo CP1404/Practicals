@@ -68,8 +68,7 @@ provide comments via GitHub.
 So, you're on the feedback branch? Great! Let's write some code using
 **dictionaries**...
 
-Walkthrough
-===========
+# Walkthrough Example
 
 Copy the code from:
 <https://github.com/CP1404/Practicals/blob/master/prac_05/state_names.py>
@@ -114,8 +113,7 @@ full state name by looking it up in the dictionary.
 
     NT is Northern Territory
 
-Intermediate Exercises
-======================
+# Intermediate Exercises
 
 Based on the state name example program above, create a program that
 allows you to look up hexadecimal colour codes like those at
@@ -125,8 +123,7 @@ Use a constant dictionary of about 10 names and write a program that
 allows a user to enter a name and get the code, e.g. entering
 **AliceBlue** should show **#f0f8ff**.
 
-Do-from-scratch Exercise
-========================
+# Do-from-scratch Exercises
 
 Write a program to count the occurrences of words in a string. The
 program should ask the user for a string, then print the counts of how
@@ -272,8 +269,7 @@ To read more about Pull Requests:
 
 Not all done :) Now on to more practice programming...
 
-Practice & Extension Work
-=========================
+# Practice & Extension Work
 
 1.  Convert parallel lists into a dictionary...
 
@@ -281,9 +277,9 @@ Practice & Extension Work
 > parallel lists where the indices determine how the information is
 > related across lists. For example:
 >
-> names = \["Jack", "Jill", "Harry"\]
+> names = ["Jack", "Jill", "Harry"]
 >
-> dobs = \[(12, 4, 1999), (1, 1, 2000), (27, 3, 1982)\]  
+> dobs = \[(12, 4, 1999), (1, 1, 2000), (27, 3, 1982)]  
 > This means Jack was born on 12/4/1999, Jill was born on 1/1/2000, and
 > Harry was born on 27/3/1982.  
 > Write a program using a dictionary instead of the above parallel lists

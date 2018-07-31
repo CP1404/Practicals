@@ -26,8 +26,7 @@ So, it is appropriate for a **Tree** class to inherit from a **Plant**
 class, but not appropriate for a **Cat** class to inherit from a **Dog**
 class.
 
-Walkthrough Example - Inheritance
-=================================
+# Walkthrough Example
 
 In the last practical, we looked at a **Car** class. This time we see
 that we can extend the **Car** class to make a **Taxi** class (a more
@@ -55,8 +54,7 @@ distance driven. This is important for polymorphism - so we can treat
 all subclasses of **Car** in the same way; i.e. we **drive()** a taxi
 the same way we **drive()** any car.
 
-Test Taxi
----------
+## Test Taxi
 
 Create a separate file, taxi_test.py, to try out your taxi (don't write
 client code in class files).
@@ -75,8 +73,7 @@ available in the Taxi class):
 
 5.  Print the details and the current fare
 
-Class Variables
----------------
+## Class Variables
 
 Depending on what kind of system you're modelling with **Taxi**, it
 might make sense that all taxis have the same price per km. (We don't
@@ -112,11 +109,9 @@ method definitions.
     value for each object if needed (as we will see later with the
     SilverServiceTaxi).
 
-Intermediate Exercises
-======================
+# Intermediate Exercises
 
-UnreliableCar
--------------
+## UnreliableCar
 
 Let's make our own derived class for an **UnreliableCar** that inherits
 from **Car**. Write Python code for this class in a new file,
@@ -145,8 +140,7 @@ unreliable_car_test.py to verify each method.
         (UnreliableCar) should also always return a distance. You must
         match the "signature" of any method you override.
 
-SilverServiceTaxi
------------------
+## SilverServiceTaxi
 
 Now create a new class for a **SilverServiceTaxi** that inherits from
 **Taxi**.
@@ -178,8 +172,8 @@ on the fanciness of the **SilverServiceTaxi**.
     Hummer, fuel=200, odo=0, 0km on current fare, $4.92/km plus
     flagfall of $4.50
 
-> Note that you can reuse the parent class method like:
-> super().__str__()
+    Note that you can reuse the parent class method like:
+    `super().__str__()`
 
 5.  Write some test code in a file called
     **silver_service_taxi_test.py** to see that your
@@ -210,8 +204,7 @@ a* Car"):
 
 ![](../images/08image1.png)
 
-Inheriting Enhancements
------------------------
+## Inheriting Enhancements
 
 One more thing before we move on... It's important to see how
 inheritance benefits the systems we model with classes. Currently, all
@@ -246,11 +239,9 @@ result like currency, that's not this function's single
 responsibility. What if we wanted to add fares together? They must be
 numbers. Do your string formatting *outside* the function.
 
-*Keep going!  
-*
+*Keep going!*
 
-Do-from-scratch Exercise - Inheritance
-======================================
+# Do-from-scratch Exercises
 
 Write a taxi simulator program that uses your **Taxi** and
 **SilverServiceTaxi** classes.
@@ -275,161 +266,98 @@ but the results (including the price) do depend on the class. This is
 
 The taxis used in this example would be like:
 
-taxis = \[Taxi("Prius**, 100), SilverServiceTaxi("Limo**, 100,
+taxis = [Taxi("Prius**, 100), SilverServiceTaxi("Limo**, 100,
 2),
 
-SilverServiceTaxi("Hummer**, 200, 4)\]
+SilverServiceTaxi("Hummer**, 200, 4)]
 
 ### Sample Output (to show you how to write your program):
 
-Let's drive!
+    Let's drive!
+    q)uit, c)hoose taxi, d)rive
+    >>> c
+    Taxis available:
+    0 - Prius, fuel=100, odo=0, 0km on current fare, $1.20/km
+    1 - Limo, fuel=100, odo=0, 0km on current fare, $2.40/km plus flagfall
+    of $4.50
+    2 - Hummer, fuel=200, odo=0, 0km on current fare, $4.80/km plus
+    flagfall of $4.50
+    Choose taxi: 0
+    Bill to date: $0.00
+    q)uit, c)hoose taxi, d)rive
+    >>> d
+    Drive how far? 333
+    Your Prius trip cost you $120.00
+    Bill to date: $120.00
+    q)uit, c)hoose taxi, d)rive
+    >>> c
+    Taxis available:
+    0 - Prius, fuel=0, odo=100, 100km on current fare, $1.20/km
+    1 - Limo, fuel=100, odo=0, 0km on current fare, $2.40/km plus flagfall
+    of $4.50
+    2 - Hummer, fuel=200, odo=0, 0km on current fare, $4.80/km plus
+    flagfall of $4.50
+    Choose taxi: 1
+    Bill to date: $120.00
+    q)uit, c)hoose taxi, d)rive
+    >>> d
+    Drive how far? 60
+    Your Limo trip cost you $148.50
+    Bill to date: $268.50
+    q)uit, c)hoose taxi, d)rive
+    >>> c
+    Taxis available:
+    0 - Prius, fuel=0, odo=100, 100km on current fare, $1.20/km
+    1 - Limo, fuel=40.0, odo=60.0, 60.0km on current fare, $2.40/km plus
+    flagfall of $4.50
+    2 - Hummer, fuel=200, odo=0, 0km on current fare, $4.80/km plus
+    flagfall of $4.50
+    Choose taxi: 2
+    Bill to date: $268.50
+    q)uit, c)hoose taxi, d)rive
+    >>> d
+    Drive how far? 60
+    Your Hummer trip cost you $292.50
+    Bill to date: $561.00
+    q)uit, c)hoose taxi, d)rive
+    >>> c
+    Taxis available:
+    0 - Prius, fuel=0, odo=100, 100km on current fare, $1.20/km
+    1 - Limo, fuel=40.0, odo=60.0, 60.0km on current fare, $2.40/km plus
+    flagfall of $4.50
+    2 - Hummer, fuel=140.0, odo=60.0, 60.0km on current fare, $4.80/km plus
+    flagfall of $4.50
+    Choose taxi: 1
+    Bill to date: $561.00
+    q)uit, c)hoose taxi, d)rive
+    >>> d
+    Drive how far? 50
+    Your Limo trip cost you $100.50
+    Bill to date: $661.50
+    q)uit, c)hoose taxi, d)rive
+    >>> q
+    Total trip cost: $661.50
+    Taxis are now:
+    0 - Prius, fuel=0, odo=100, 100km on current fare, $1.20/km
+    1 - Limo, fuel=0, odo=100.0, 40.0km on current fare, $2.40/km plus
+    flagfall of $4.50
+    2 - Hummer, fuel=140.0, odo=60.0, 60.0km on current fare, $4.80/km plus
+    flagfall of $4.50
 
-q)uit, c)hoose taxi, d)rive
+# Practice & Extension Work
 
->>> c
-
-Taxis available:
-
-0 - Prius, fuel=100, odo=0, 0km on current fare, $1.20/km
-
-1 - Limo, fuel=100, odo=0, 0km on current fare, $2.40/km plus flagfall
-of $4.50
-
-2 - Hummer, fuel=200, odo=0, 0km on current fare, $4.80/km plus
-flagfall of $4.50
-
-Choose taxi: 0
-
-Bill to date: $0.00
-
-q)uit, c)hoose taxi, d)rive
-
->>> d
-
-Drive how far? 333
-
-Your Prius trip cost you $120.00
-
-Bill to date: $120.00
-
-q)uit, c)hoose taxi, d)rive
-
->>> c
-
-Taxis available:
-
-0 - Prius, fuel=0, odo=100, 100km on current fare, $1.20/km
-
-1 - Limo, fuel=100, odo=0, 0km on current fare, $2.40/km plus flagfall
-of $4.50
-
-2 - Hummer, fuel=200, odo=0, 0km on current fare, $4.80/km plus
-flagfall of $4.50
-
-Choose taxi: 1
-
-Bill to date: $120.00
-
-q)uit, c)hoose taxi, d)rive
-
->>> d
-
-Drive how far? 60
-
-Your Limo trip cost you $148.50
-
-Bill to date: $268.50
-
-q)uit, c)hoose taxi, d)rive
-
->>> c
-
-Taxis available:
-
-0 - Prius, fuel=0, odo=100, 100km on current fare, $1.20/km
-
-1 - Limo, fuel=40.0, odo=60.0, 60.0km on current fare, $2.40/km plus
-flagfall of $4.50
-
-2 - Hummer, fuel=200, odo=0, 0km on current fare, $4.80/km plus
-flagfall of $4.50
-
-Choose taxi: 2
-
-Bill to date: $268.50
-
-q)uit, c)hoose taxi, d)rive
-
->>> d
-
-Drive how far? 60
-
-Your Hummer trip cost you $292.50
-
-Bill to date: $561.00
-
-q)uit, c)hoose taxi, d)rive
-
->>> c
-
-Taxis available:
-
-0 - Prius, fuel=0, odo=100, 100km on current fare, $1.20/km
-
-1 - Limo, fuel=40.0, odo=60.0, 60.0km on current fare, $2.40/km plus
-flagfall of $4.50
-
-2 - Hummer, fuel=140.0, odo=60.0, 60.0km on current fare, $4.80/km plus
-flagfall of $4.50
-
-Choose taxi: 1
-
-Bill to date: $561.00
-
-q)uit, c)hoose taxi, d)rive
-
->>> d
-
-Drive how far? 50
-
-Your Limo trip cost you $100.50
-
-Bill to date: $661.50
-
-q)uit, c)hoose taxi, d)rive
-
->>> q
-
-Total trip cost: $661.50
-
-Taxis are now:
-
-0 - Prius, fuel=0, odo=100, 100km on current fare, $1.20/km
-
-1 - Limo, fuel=0, odo=100.0, 40.0km on current fare, $2.40/km plus
-flagfall of $4.50
-
-2 - Hummer, fuel=140.0, odo=60.0, 60.0km on current fare, $4.80/km plus
-flagfall of $4.50
-
-Practice & Extension Work
-=========================
-
-First, a Walkthrough Example - Files & Classes
-----------------------------------------------
+## First, a Walkthrough Example - Files & Classes
 
 This example program loads a number of "Programming Languages" from a
 file and saves them in objects using the class we wrote recently.
 
-Download 3 files from
-<https://github.com/CP1404/Practicals/blob/master/prac_08>  
-For now let's start with:
+Download 3 files from this folder. For now let's start with:
 
--   language_file_reader.py (the client program)
+-   [language_file_reader.py](language_file_reader.py) (the client program)
 
--   programming_language.py (the class)
+-   [programming_language.py](programming_language.py) (the class)
 
--   languages.csv (the data file)
+-   [languages.csv](languages.csv) (the data file)
 
 Read the comments and the code in language_file_reader.py to see how
 it works.  
@@ -437,7 +365,7 @@ Notice how:
 
 -   the file is opened and closed
 
--   readline() is used to read (only) the first line, which just ignores
+-   `readline()` is used to read (only) the first line, which just ignores
     the header in the CSV file
 
 -   a for loop is used to read the rest of the file
@@ -450,13 +378,11 @@ Notice how:
 module and a **namedtuple**. Read through them later as extension work
 if you're interested!)
 
-Modifications
--------------
+## Modifications
 
-1.  Add another language to the file (use data at this [[Programming
-    Language
-    Comparison]](http://www.jvoegele.com/software/langcomp.html)
-    page) and make sure it still works properly.
+1.  Add another language to the file - and make sure it still works properly.
+    Use data from 
+    [this Programming Language Comparison page](http://www.jvoegele.com/software/langcomp.html)
 
 2.  Add another attribute to your ProgrammingLanguage class: **Pointer
     Arithmetic**.  
@@ -464,13 +390,12 @@ Modifications
     any code that uses it. You also need to add the correct values to
     your data file (it's similar to reflection).
 
-More Guitars!
--------------
+## More Guitars!
 
-Open the file: **guitars.csv  
-**This file contains lines like:
+Open the file: **guitars.csv**  
+This file contains lines like:
 
-Fender Stratocaster,2014,765.4
+`Fender Stratocaster,2014,765.4`
 
 So, the format/protocol is:
 
@@ -485,34 +410,32 @@ Name,Year,Cost
     recently.  
     Display these using a loop.
 
-> Now **sort** the list by year (oldest to newest) and display them in
-> sorted order...  
-> How do you do that? Sorting requires that Python knows how to compare
-> objects...  
-> If we just use:
->
-> guitars.sort()
->
-> We get:
->
-> TypeError: unorderable types: Guitar() < Guitar()
+    Now **sort** the list by year (oldest to newest) and display them in
+    sorted order...  
+    How do you do that? Sorting requires that Python knows how to compare
+    objects...  
+    If we just use:
+    
+    `guitars.sort()`
+    We get an error like:
+    
+    `TypeError: unorderable types: Guitar() < Guitar()`
 
-So we need to define how the < operator should work. Do you remember
-how?
+    So we need to define how the < operator should work. Do you remember
+    how?
+    
+    Write code for the `__lt__` (less than) method. You should be able
+    to figure this out...  
+    Then test and see if it sorts correctly now.
 
-Write code for the **__lt__** (less than) method. You should be able
-to figure this out...  
-Then test and see if it sorts correctly now.
+3. Write another version (save a new copy) that does the above, then asks
+   the user to enter their new guitars (just like your practical 6 code).  
+   Store these in your list of guitar objects, then  
+   Write all of your guitars to the file **myguitars.csv**.  
+   Test that this worked by opening the file, and also by running the
+   program again to make sure it reads the new guitars.
 
-Write another version (save a new copy) that does the above, then asks
-the user to enter their new guitars (just like your practical 6 code).  
-Store these in your list of guitar objects, then  
-Write all of your guitars to the file **myguitars.csv**.  
-Test that this worked by opening the file, and also by running the
-program again to make sure it reads the new guitars.
-
-Inheritance
------------
+## Inheritance
 
 ### 1. Cars
 
@@ -527,7 +450,7 @@ b.  **Bomb** - doesn't actually move when you drive it, but still uses
 c.  **EcoTaxi** - uses half the fuel and gives a 10% on the price per
     fare
 
-d.  [**[CrazyTaxi]**](https://en.wikipedia.org/wiki/Crazy_Taxi)
+d.  [CrazyTaxi](https://en.wikipedia.org/wiki/Crazy_Taxi)
 
 ### 2. Trees
 
@@ -545,19 +468,15 @@ The **__str__** method of **Tree** returns a string representation
 of the **Tree**. For example, if **trunk_height** is 2, and leaves is
 8, the Tree would look like
 
-> ##
->
-> ###
->
-> ###
->
-> \|
->
-> \|
->
-> The size of a **Tree** can be changed by calling the **grow** method,
-> which takes in **sunlight** and **water** and randomly increases the
-> **trunk_height** and leaves.
+    ##
+    ###
+    ###
+     |
+     |
+
+The size of a **Tree** can be changed by calling the **grow** method,
+which takes in **sunlight** and **water** and randomly increases the
+**trunk_height** and leaves.
 
 Not all Trees look the same or grow the same, however, so we're going to
 build specialised classes to represent different types of trees. To
@@ -565,110 +484,90 @@ achieve this, we're going to use inheritance.
 
 There are already two completed subclasses of **Tree** in trees.py:
 
-> **EvenTree**
->
-> even trees only grow leaves in multiples of three, that way the
-> leaves always appear in clean rows
->
-> **UpsideDownTree**
->
-> upside-down trees are drawn upside-down
+**EvenTree**
+Even trees only grow leaves in multiples of three, that way the
+leaves always appear in clean rows.
+
+**UpsideDownTree**
+Upside-down trees are drawn upside-down.
 
 trees_tester.py grows **seven** types of trees. Try running it now. The
-final four types of trees are for you to complete.
+final four types of trees are subclasses of **Tree** for you to complete:
 
-There are four more subclasses of **Tree** for you to complete:
+1. **WideTree**
 
-> 1 **WideTree**
->
-> a wide trees grow their leaves in rows of six, and have a trunk that
-> is twice as wide as normal trees
->
-> b you will need to redefine the **get_ascii_trunk** and
-> **get_ascii_leaves** methods
->
-> c example drawing
->
-> ####..
->
-> ######
->
-> ######
->
-> \|\|..
->
-> \|\|..
->
-> 2 **QuickTree**
->
-> a quick trees grow much quicker than normal trees - their leaves
-> always increase by however much sunlight falls on them, and their
-> trunks always grow by however much water they receive
->
-> b you will need to redefine the **grow** method
->
-> c quick trees look exactly the same as normal trees, they just grow
-> differently
->
-> 3 **FruitTree**
->
-> a fruit trees have a number of **fruit**
->
-> b add a _**fruit** variable to the **FruitTree** class; initialise it
-> as 1
->
-> c fruit trees sometimes gain an additional fruit when the **grow**
-> method is called, the chance is 1 in 2
->
-> d fruit trees sometimes lose a fruit when the grow method is called,
-> the chance is 1 in 5
->
-> e example drawing (fruit are represented by a dot **.**)
->
-> the fruit should be displayed the same way as the leaves, wrapping
-> within the maximum width
->
-> ...
->
-> ###
->
-> ###
->
-> \|.
->
-> \|.
->
-> \|.
->
-> 4 **PineTree (challenge)**
->
-> a pine trees look like
->
-> *...
->
-> ***..
->
-> *****.
->
-> *******
->
-> \|...
->
-> \|...
->
-> b pine trees start off with four leaves (1 + 3)
->
-> c pine trees only ever add as many leaves as would make a full new row
-> at the bottom of the tree
->
-> i i.e. they must form a triangle shape
->
-> ii row 1 always has 1 leaf, then 3 for row 2, 5 for row 3, 7 for row
-> 4, 9 for row 5 and so on
->
-> iii every time the grow method is called, the pine tree should add a
-> new row of leaves if a random number between 0 and sunlight is bigger
-> than 2
+     a. Wide trees grow their leaves in rows of six, and have a trunk that
+     is twice as wide as normal trees
+    
+     b. You will need to redefine the **get_ascii_trunk** and
+     **get_ascii_leaves** methods
+    
+     c. Example drawing:
+
+         ####
+         ######
+         ######
+           ||
+           ||
+
+2. **QuickTree**
+
+    a. Quick trees grow much quicker than normal trees - their leaves
+    always increase by however much sunlight falls on them, and their
+    trunks always grow by however much water they receive.
+    
+    b. You will need to redefine the **grow** method.
+    
+    c. Quick trees look exactly the same as normal trees, they just grow
+    differently.
+
+3. **FruitTree**
+
+    a. Fruit trees have a number of **fruit**
+    
+    b. Add a _**fruit** variable to the **FruitTree** class; initialise it
+    as 1
+    
+    c. Fruit trees sometimes gain an additional fruit when the **grow**
+    method is called, the chance is 1 in 2
+    
+    d. Fruit trees sometimes lose a fruit when the grow method is called,
+    the chance is 1 in 5
+    
+    e. Example drawing (fruit are represented by a dot **.**)    
+    the fruit should be displayed the same way as the leaves, wrapping
+    within the maximum width
+    
+        ..
+        ###
+        ###
+         |
+         |
+         |
+
+4. **PineTree (challenge)**
+    a. pine trees look like
+    
+           *
+          ***
+         *****
+        *******
+           |
+           |    
+    
+    b. pine trees start off with four leaves (1 + 3)
+    
+    c. pine trees only ever add as many leaves as would make a full new row
+    at the bottom of the tree
+    
+    i. i.e. they must form a triangle shape
+    
+    ii. row 1 always has 1 leaf, then 3 for row 2, 5 for row 3, 7 for row
+    4, 9 for row 5 and so on
+    
+    iii. every time the grow method is called, the pine tree should add a
+    new row of leaves if a random number between 0 and sunlight is bigger
+    than 2
 
 ### 3. Taxi Simulator Enhancements
 

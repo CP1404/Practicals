@@ -3,8 +3,7 @@
 Today we will explore Python as an automation tool to help us automate
 repetitive tasks with files and the **os** module.
 
-Walkthrough Example - Renaming Files
-====================================
+# Walkthrough Example
 
 Download the files from
 <https://github.com/CP1404/Practicals/tree/master/prac_09>
@@ -22,7 +21,7 @@ Download the files from
     Notice that it imports the **os** and **shutil** modules for working
     with the operating system and files.
 
-**Modifications:**
+## Modifications:
 
 (Follow the TODO comments in the code.)
 
@@ -54,8 +53,7 @@ your first for loop.
     with a loop that renames all of the files. This should rename every
     file in every subdirectory.
 
-Intermediate Exercises
-======================
+# Intermediate Exercises
 
 (Please read this whole section before starting work on it!)
 
@@ -126,8 +124,7 @@ iterative development!
 it later. The next exercises are another great example of os automation
 based on a real-world need, so get moving on them.
 
-From Scratch
-------------
+# Do-from-scratch Exercises
 
 -   Extract the **FilesToSort.zip** file which contains files with
     various names and extensions.
@@ -135,7 +132,7 @@ From Scratch
 -   Write code to sort these files into subdirectories for each
     extension.
 
-### Version 1:
+## Version 1:
 
 Use **os.mkdir()** to create a directory with for each new extension
 that your program finds and use **shutil.move()** to move files into
@@ -148,12 +145,11 @@ Do not try and create directories you've already made.
 **Tip:** You might like to add the extensions to a list or a **set** as
 you process the files.
 
-  ----------------------------------------------------------------------------------------------------------------- -----------------------------------------------------------------------------------
-  **Before:**                                                                                                       **After:**
-  ![Screen Shot 2015-10-20 at 1.29.53 pm.png](../images/09image1.png)   ![](../images/09image2.png)
-  ----------------------------------------------------------------------------------------------------------------- -----------------------------------------------------------------------------------
+|**Before:**                                   | **After:**
+| ---------------------------------------------| ---------------------------------------------
+|![FilesToSort before](../images/09image1.png) | ![FilesToSort after](../images/09image2.png)   
 
-### Version 2:
+## Version 2:
 
 Let the user categorise different extensions as the program encounters
 these, then move them all into those subdirectories.  
@@ -165,40 +161,32 @@ E.g.
 -   another user might want a category "office" containing .doc, .docx,
     .xls, but put the .txt files in a "text" category directory.
 
-**  
-Tip:** Add the extensions to a **dictionary** and make a list of the
+**Tip:** Add the extensions to a **dictionary** and make a list of the
 categories as you process the files.
 
 **Note:** there are two parts to this - **categorising the extensions**
 and **moving the files**. You should approach them as separate steps.
 
-For one example run with these files (user input in **green**):
+For one example run with these files (user input in **bold**):
 
-What category would you like to sort doc files into? **Docs**
+<pre>
+What category would you like to sort doc files into? <b>Docs</b>
+What category would you like to sort docx files into? <b>Docs</b>
+What category would you like to sort png files into? <b>Images</b>
+What category would you like to sort gif files into? <b>Images</b>
+What category would you like to sort txt files into? <b>Docs</b>
+What category would you like to sort xls files into? <b>Spreadsheets</b>
+What category would you like to sort xlsx files into? <b>Spreadsheets</b>
+What category would you like to sort jpg files into? <b>Images</b>
+</pre>
 
-What category would you like to sort docx files into? **Docs**
+|**Before:**                                   | **After:**
+| ---------------------------------------------| ---------------------------------------------
+|![FilesToSort before](../images/09image1.png) | ![FilesToSort after](../images/09image3.png)   
 
-What category would you like to sort png files into? **Images**
+# Practice & Extension Work
 
-What category would you like to sort gif files into? **Images**
-
-What category would you like to sort txt files into? **Docs**
-
-What category would you like to sort xls files into? **Spreadsheets**
-
-What category would you like to sort xlsx files into? **Spreadsheets**
-
-What category would you like to sort jpg files into? **Images**
-
-  ----------------------------------------------------------------------------------------------------------------- --------------------------------------------------------------------------
-  **Before:**                                                                                                       **After:**
-  ![Screen Shot 2015-10-20 at 1.29.53 pm.png](../images/09image1.png)   ![](../images/09image3.png)
-  ----------------------------------------------------------------------------------------------------------------- --------------------------------------------------------------------------
-
-Extension & Practice Work
-=========================
-
-### Check files for missing data:
+## Check files for missing data:
 
 The song lyric text files should all have copyright information in them
 on a line that starts with **.i** like:

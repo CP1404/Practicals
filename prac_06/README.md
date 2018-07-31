@@ -87,8 +87,7 @@ the following:
     Now **add names** to the constructors where you create Car objects
     in the used_cars.py program.
 
-Intermediate Exercises
-======================
+# Intermediate Exercises
 
 Let's make our own simple class for a **programming language**.
 
@@ -167,8 +166,7 @@ Ruby
 
 Python
 
-Do-from-scratch Exercises
-=========================
+# Do-from-scratch Exercises
 
 Guitars!
 --------
@@ -330,7 +328,7 @@ the software development process."
 > print("Car {self.fuel}, {self.odometer}**.format(self=my_car))
 
 -   For this particular code, we've used both i and the target variable
-    guitar (instead of guitars\[i\]) by using the built-in
+    guitar (instead of guitars\[i]) by using the built-in
     **enumerate()** function. You don't have to do it this way, but if
     you want to, it's like this:  
       
@@ -338,13 +336,12 @@ the software development process."
 
 ... So enumerate() must return what type? A tuple!
 
-Practice & Extension Work
-=========================
+# Practice & Extension Work
 
 Use these exercises as much-needed practice and as ways to learn new
 things.
 
-1\. Using car.py, write a **car driving simulator**, with output like the
+1. Using car.py, write a **car driving simulator**, with output like the
 following...
 
 **Note:** Please do this (and every problem of significant size)
@@ -469,7 +466,7 @@ appropriate methods on that object.
 >
 > Good bye The bomb's driver.
 
-2\. Create a **Date** class
+2. Create a **Date** class
 
 Store the fields:
 
@@ -492,7 +489,7 @@ Note: Python has built in date and time functionality in the
 **datetime** module, so you wouldn't usually write your own class to
 store a date, but this is a good practice exercise.
 
-3\. Create a program that uses a list of **Person** objects. Each Person
+3. Create a program that uses a list of **Person** objects. Each Person
 object records the first-name and last-name of each person along with
 their age. The user can type in the details of any number of people. The
 code generates a table formatted with the first-names, last-names, and
