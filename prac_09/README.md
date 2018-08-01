@@ -170,14 +170,14 @@ and **moving the files**. You should approach them as separate steps.
 For one example run with these files (user input in **bold**):
 
 <pre>
-What category would you like to sort doc files into? <b>Docs</b>
-What category would you like to sort docx files into? <b>Docs</b>
-What category would you like to sort png files into? <b>Images</b>
-What category would you like to sort gif files into? <b>Images</b>
-What category would you like to sort txt files into? <b>Docs</b>
-What category would you like to sort xls files into? <b>Spreadsheets</b>
-What category would you like to sort xlsx files into? <b>Spreadsheets</b>
-What category would you like to sort jpg files into? <b>Images</b>
+What category would you like to sort doc files into? <strong>Docs</strong>
+What category would you like to sort docx files into? <strong>Docs</strong>
+What category would you like to sort png files into? <strong>Images</strong>
+What category would you like to sort gif files into? <strong>Images</strong>
+What category would you like to sort txt files into? <strong>Docs</strong>
+What category would you like to sort xls files into? <strong>Spreadsheets</strong>
+What category would you like to sort xlsx files into? <strong>Spreadsheets</strong>
+What category would you like to sort jpg files into? <strong>Images</strong>
 </pre>
 
 |**Before:**                                   | **After:**

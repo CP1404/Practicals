@@ -356,10 +356,10 @@ The output should look something like (**bold text** represents user
 input):
 
 <pre>
-Number of items: <b>3</b>  
-Price of item: <b>100</b>  
-Price of item: <b>35.56</b>  
-Price of item: <b>3.24</b>  
+Number of items: <strong>3</strong>  
+Price of item: <strong>100</strong>  
+Price of item: <strong>35.56</strong>  
+Price of item: <strong>3.24</strong>  
 Total price for 3 items is $124.92  
 </pre>
 
@@ -400,9 +400,9 @@ Inputs should be:
 
     <pre>
     Electricity bill estimator         
-    Enter cents per kWh: <b>35</b>          
-    Enter daily use in kWh: <b>4.5</b>      
-    Enter number of billing days: <b>90</b> 
+    Enter cents per kWh: <strong>35</strong>          
+    Enter daily use in kWh: <strong>4.5</strong>      
+    Enter number of billing days: <strong>90</strong> 
     Estimated bill: $141.75            
     </pre>
 
