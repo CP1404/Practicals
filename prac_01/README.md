@@ -344,7 +344,7 @@ a classmate or your tutor.
 ## Shop Calculator
 
 A shop requires a small program that would allow them to quickly work
-out total price for a number of items, each with different prices.
+out the total price for a number of items, each with different prices.
 
 The program allows the user to enter the number of items and the price
 of each different item.  
