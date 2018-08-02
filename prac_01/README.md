@@ -441,8 +441,8 @@ Inputs should be:
             else if choice == <second option>
                 do second task
             ...
-                else if choice == <n-th option>
-                    do n-th task
+            else if choice == <n-th option>
+                do n-th task
             else
                 display invalid input error message
             display menu
