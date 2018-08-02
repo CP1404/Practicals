@@ -135,7 +135,7 @@ properly.
 Now create a new list that contains these three existing
 ProgrammingLanguage objects.
 
-![Pencil Icon](../images/06image1.png)
+![Pencil Icon](../images/03image1.png)
 
 Do this next part on paper first, then copy it into PyCharm to see how
 you went.  

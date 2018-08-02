@@ -19,7 +19,7 @@ examples...
 
 # First!
 
-![Pencil](../images/03image1.png)  
+![Pencil Icon](../images/03image1.png)  
 
 In one of our end-of-subject YourJCU
 student feedback surveys, a student suggested that we do more

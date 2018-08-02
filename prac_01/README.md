@@ -103,7 +103,7 @@ PyCharm.
 3.  Next, let's add our first source code file to the project.  
     **Right-click** on the project name and select  
     **New > Python File**  
-    ![New file](../images/01image2.png)**
+    ![New file](../images/01image2.png)
 
 4.  This opens a window where you can define the name of the file - call
     it **hello.py** and hit the **OK** button. Always give your files

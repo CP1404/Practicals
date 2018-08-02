@@ -11,7 +11,7 @@ These files have `# TODO` comments to show you what steps to do.
 
 # Recursion
 
-![Pencil icon](../images/10image1.png)
+![Pencil icon](../images/03image1.png)
 
 Open recursion.py and read the code, then **write down** (on paper, like
 it's a practice exam question!) the expected output for the first

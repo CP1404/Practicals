@@ -97,15 +97,16 @@ since we won't be changing the states anytime soon.
     This is a great way to learn what the "PEP 8" standards are for
     Python code formatting style.  
     ![PyCharm PEP 8 warning](../images/05image4.png)
-![Pencil icon](../images/05image5.png)
+
 3.  Currently the program requires you to
     enter the states in capitals. Change the program so lowercase inputs
     also work to show the state names. (There are two places to add a
     string method.)
 
-4.  Do this next part on paper first (then in PyCharm: Write a loop that
-    prints all of the states and names neatly lined up with string
-    formatting, like:
+    ![Pencil icon](../images/03image1.png)
+4.  Do this next part on paper first (then in PyCharm):  
+    Write a loop that prints all of the states and names neatly lined up 
+    with string formatting, like:
 
         NSW is New South Wales
         QLD is Queensland
