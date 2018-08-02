@@ -9,9 +9,9 @@ If you're using your own computer and you haven't already done so,
 please follow the setup instructions for installing Kivy at:
 <https://github.com/CP1404/Starter/wiki/Software-Setup>
 
-If you're using a JCU computer, please save yourself time and make life
-easier by adding KV language syntax highlighting and auto-completion
-(since PyCharm does not know about KV language by default):
+First, please save yourself time and make life
+easier by adding kv language syntax highlighting and auto-completion
+(since PyCharm does not know about kv language by default):
 
 -   Download: <https://github.com/Zen-CODE/kivybits/blob/master/IDE/PyCharm_kv_completion.jar?raw=true>
 
@@ -23,28 +23,28 @@ easier by adding KV language syntax highlighting and auto-completion
 
 -   Restart PyCharm.
 
-*Seriously*, it's worth the 1-2 minutes that this will take. You have
-to do it every time, so save the download file on your USB or network
+***Seriously***, it's worth the 1-2 minutes that this will take.   You have
+On JCU computers you to do it every time, so save the download file on your USB or network
 drive for next time.
 
 # Walkthrough Example
 
 **Download a zip** of the GitHub repository for our Kivy Examples:
-[https://github.com/CP1404/KivyDemos]
+[https://github.com/CP1404/KivyDemos](https://github.com/CP1404/KivyDemos)
 
 You could use Git to clone it, which makes a complete copy, including
 the Git history, but since you don't have write permissions on this
 repo you will not be able to push changes back to it. The easiest thing
-is just to use the GitHub website to **Download Zip".
+is just to use the GitHub website to **Download Zip"**.
 
-![](../images/07image1.png)
+![GitHub Download ZIP option](../images/07image1.png)
 
 1.  The work that you do today should be saved, committed and pushed to
     your Practicals repository in the prac_07 folder. The simplest
     thing is to just **copy everything from the demos zip you just
     downloaded into your prac_07 folder**. Then only commit the work
-    you do today (you don't need to upload all of the other examples to
-    GitHub, but you can if you want).
+    you do today. You don't need to upload all of the other examples to
+    GitHub, but you can if you want.
 
 2.  (Here's a very simple example)  
     Open and run the **hello_world.py** file.  
@@ -54,88 +54,88 @@ is just to use the GitHub website to **Download Zip".
     Open and run the **popup_demo.py** file (which uses
     **popup_demo.kv**) and run that to see how it works. You don't
     need to understand it all just yet, but try to get an overview of
-    the structure, and  
-    look for the parts you do recognise.
+    the structure, and look for the parts you do recognise.
 
-### ![](../images/07image2.png)Modify Existing GUI Program
+## Modify Existing GUI Program
 
 Open the **box_layout_demo.py** and **box_layout.kv** files and run
 the Python program. You should see three vertical buttons.
 
 Let's extend this program to make an app that lets the user enter and
 clear their name, and greets them when we push a button. It will end up
-looking like this:
+looking like this:  
+
+![BoxLayout Demo screenshot](../images/07image2.png)
 
 1.  Add a **label** below the third button with the **text** "Enter your
     name":
 
-> **Button**:
->
-> **text**: 'three'
->
-> **Label**:
->
-> **text**: 'Enter your name'
+```
+Button:
+    text: 'three'
+Label:
+    text: 'Enter your name'
+```
 
 2.  Set the new label's text colour to yellow, by adding the following
     property details "inside" the label:
 
-> **color**: (1, 1, 0, 1)
+        color: (1, 1, 0, 1)
 
-3.  Update the first button so it says "Clear" and the third button so
+3.  Change the first button so it says "Clear" and the third button so
     it says "Greet".
 
 4.  Now to add a button handler, you need to edit both the py and kv
     files. Look at the 'id_demo' files for a good example of this...  
     Add a callback for the press event in the kv file, like:
 
-> **Button**:
->
-> **text**: 'Greet'
->
-> **on_press**: **app**.handle_greet()
->
-> This references a method in your main app class called
-> **handle_greet()**.
+        Button:
+            text: 'Greet'
+            on_press: app.handle_greet()
 
-5.  Add this function in your .py file and simple put a print('greet')
+    This references a method in your main app class called
+    **`handle_greet()`**.
+
+5.  Add the `handle_greet()` function in your .py file and put a `print('greet')`
     statement in that function.  
     Test it. If this works and you see 'greet' in the console (not the
     Kivy window), then you know the connection between the button and
-    this function works, so you can extend it.
+    this function works, so you can keep going...
 
 6.  The next step is to change the text of the label.  
     Add an id to the label, like:
 
-> **id**: output_label
+        id: output_label
 
 7.  Now in your handle_greet function, change this label's text, like:
 
-> **print**("test**)
->
-> self.root.ids.output_label.text = "Hello **
+    ```python
+    print("test")
+    self.root.ids.output_label.text = "Hello "
+    ```
 
 8.  Change button "two" to a text input field, like:
 
-> **TextInput**:
->
-> **id**: input_name
->
-> **text**: ''
+        TextInput:
+            id: input_name
+            text: ''
 
-9.  Since it's got an id, we can now use the information in this text
-    entry field in our button handler, like:
+9.  Since this field has an id, we can now use the information in this text
+    entry field in our button handler function, like:
 
-> **... "Hello ** + self.root.ids.input_name.text
->
-> You should now be able to type in the text field and click the button
-> to greet by name.  
-> Test it and update as needed.
+        self.root.ids.output_label.text = "Hello " + self.root.ids.input_name.text
 
-10. Lastly, add a new event handler for the clear button so that it
-    resets both the text field and the output label to blank.
+    You should now be able to type in the text field and click the button
+    to greet by name.  
+    Test it and make any changes as needed...   
+    and make sure you understand how this works!
 
-![](../images/07image3.png)# Intermediate Exercises========================================================================
+10. Lastly, **add a new event handler** for the clear button so that it
+    resets _both_ the text field and the output label to blank.
+
+# Intermediate Exercises
+
+![Square Number screenshot](../images/07image3.png)
 
 Open the **squaring.py & .kv** files from the demos.
 
@@ -145,55 +145,56 @@ Spend a while reading the code so you know how it works. Pay special
 attention to the functionality -- how it handles the button being
 pressed:
 
-![](../images/07image4.png)Make the following modifications:
----------------------------------------------------------------------------------------------------------------------
+# Modifications
+![Square Number 2 screenshot](../images/07image4.png)
 
--   Change the output text colour to pink (**color** is an RGBA tuple).
+-   Change the output Label text colour to pink (`color` is an RGBA tuple).
 
 -   Change the orientation so the widgets display left-to-right instead
     of top-to-bottom.
 
--   Add a label at the bottom with the text, Enter a number and press
-    "Square".
+-   Add a label at the bottom with the text: `Enter a number and press
+    "Square"`.
 
-> To do this you will need to use **nested layouts**.  
-> There are two 'sections' (BoxLayout) arranged vertically:
+    To do this you will need to use **nested layouts**.  
+    There are two 'sections', made with `BoxLayout`, arranged vertically:
 
--   In the top section, there are three widgets, organised with a
-    BoxLayout, arranged horizontally.
+    -   In the top section (BoxLayout), there are three widgets, 
+        arranged horizontally.
+    
+    -   In the bottom section, there is just one label.
 
--   In the bottom section, there is just one label.
+    A good way to think about organising BoxLayouts is to draw boxes to
+    represent them. You can have multiple widgets and/or BoxLayouts arranged
+    within a BoxLayout.
 
-A good way to think about organising BoxLayouts is to draw boxes to
-represent them. You can have multiple widgets and/or BoxLayouts arranged
-within a BoxLayout.
-
--   ![](../images/07image5.png)So, in the example here, you should
+-   ![BoxLayout sections highlighted screenshot](../images/07image5.png)
+    So, in the example image here (Convert Miles to Kilometres), you should
     notice that the Up and Down buttons are vertically arranged within a
-    BoxLayout (green).
+    BoxLayout (the green box).
 
 -   This green layout is horizontally arranged next to a TextInput, so
-    this must be inside another BoxLayout (blue).
+    these must be inside another BoxLayout (the blue box).
 
 -   This blue layout (the top third) is vertically arranged along with
     the "Convert" button and the label below it inside yet another
-    BoxLayout (red).
+    BoxLayout (the red box).
 
 -   The red BoxLayout will be the top level widget.  
     Nice...
 
 **Refactoring Example:**
 
-Have a look at this commit "diff" for the squaring program:
+Have a look at the following commit "diff" for the squaring program:
 <https://github.com/CP1404/Practicals2016/commit/2f9b38dcfc393e2f50f9b30f6da36f9aabf4ee1f>
 
-You can see that we changed the code so the button handler function now
+You can see that we changed the code so that the button handler function now
 takes in the value of the text field as a parameter instead of getting
-it. This makes the logic less tightly coupled to the view. It still puts
+it. This makes the logic less _"tightly coupled"_ to the view.  
+It still puts
 the calculated result back in the view directly, so it's only one step
 towards better separation, but it does show you how Git and GitHub can
-record and show your progress as you improve your code by refactoring
-it.
+record and show your progress as you improve your code by refactoring.
 
 # Do-from-scratch Exercises
 
@@ -202,24 +203,24 @@ layout.
 (The dark grey with white boxes are buttons, the black with yellow is a
 label and the black on white one is a text input.)
 
-![](../images/07image6.png)
+![Convert Miles to Kilometres screenshot](../images/07image6.png)
 
 When you have created the layout, write the functionality for the whole
 program.
 
 -   You should be able to type a number in the text entry field
 
--   Pressing Up/Down should make this number go up/down by 1
+-   Pressing the Up or Down buttons should make this (miles) number go up/down by 1
 
     -   Note: You can handle both of these with the same function by
         passing a value, e.g.  
-        **on_press: handle_increment(-1) **
+        `on_press: handle_increment(-1)`
 
 -   Pressing the "Convert" button should calculate the conversion from
     miles to kilometres and display this in the bottom label. (Oops, "m"
     in the screenshot is not a good abbreviation for "miles".)
 
-Stage 2:
+###Stage 2
 
 -   Handle invalid inputs. If the text entered is not a valid number,
     just display 0.0 as the output.  
@@ -228,14 +229,12 @@ Stage 2:
 -   Pressing Up/Down when the box is empty or invalid should assume the
     value is 0 and change it to 1/-1.
 
--   Remove the convert button and make the result appear immediately
+-   Remove the convert button (comment it out) and make the result appear immediately
     when either text is entered or the up/down buttons are pressed (you
-    can handle this with Kivy's on_text event)
+    can handle this with Kivy's `on_text` event)
 
 **Note:** The solution to this is provided in your Kivy Demos repository
-(convert_m_km.py/kv).
-
-Don't just copy it, but do use it if you get stuck, and/or to compare
+(convert_m_km.py/kv). Don't just copy it, but do use it if you get stuck, and/or to compare
 your solution to ours.
 
 ## Dynamic Kivy Widgets
@@ -248,20 +247,23 @@ Open **dynamic_widgets.py/kv** to see how this can be done.
 
 The keys to this are:
 
--   Give an **id** to the layout widget that you want to add items to
+-   Give an `id` to the layout widget that you want to add items to
     (in the .kv file)
 
     -   Note that this cannot be the root widget!
 
--   Create the widgets (e.g. buttons) in Python code, e.g. temp_button
-    = Button(text=name)
+-   Create the widgets (e.g. buttons) in Python code, e.g. 
+        
+        temp_button = Button(text=name)
 
--   Add these new widgets using the **add_widget** method, e.g.
-    self.root.ids.entriesBox.add_widget(temp_button)
+-   Add these new widgets using the `add_widget` method, e.g.
+
+        self.root.ids.entries_box.add_widget(temp_button)
 
 -   Bind a function callback when you make the widget object to add
     event handler code, e.g.
-    temp_button.bind(on_release=self.press_entry)
+
+        temp_button.bind(on_release=self.press_entry)
 
 So now it's your turn...
 
@@ -272,29 +274,13 @@ displays each one as a separate *Label*.**
 dynamic_widgets example as it is too different. Your app won't have
 any buttons or interactivity. Use the example only as a reference.
 
-## Customising Kivy Widgets
-
-Open, run and inspect Jason's QuickSum Kivy app from (two files,
-**quick_sum** .py/.kv).
-
-As explained in the lectures, notice the way it uses:
-
--   class rules like <Button>
-
--   canvas.before and canvas.after to change the background colour or
-    other aspects of a widget
-
-Use these techniques to change your miles->kilometres converter to use
-black text on white background widgets - or something else that you'd
-like visually.
-
 # Practice & Extension Work
 
 1.  Modify your Greeter Program so the GUI layout looks like:
 
-![](../images/07image7.png)
+    ![Greeter Program 2 screenshot](../images/07image7.png)
 
-Hint: BoxLayouts inside a BoxLayout, and a size_hint_x...
+    Hint: BoxLayouts inside a BoxLayout, and a `size_hint_x`...
 
 2.  Create a simple GUI similar to your greeting app that lets a user
     type in their score out of 100, click a button and the app shows
@@ -318,21 +304,38 @@ Hint: BoxLayouts inside a BoxLayout, and a size_hint_x...
 5.  Do you have an **Android** device? If so, run one or more of your
     Kivy apps on it using **Kivy Launcher**, as described at:
     <http://kivy.org/docs/guide/packaging-android.html#packaging-your-application-for-the-kivy-launcher>
+    
+    ![Kivy app running on Android tablet with joy](../images/07image8.jpg)
+    
+    If your Android device does not have an SD Card installed, then place
+    your Kivy apps within internal storage, in a folder called kivy, with a
+    subfolder for your project, and make sure you have a **main.py** and
+    **android.txt** (as explained at the link above) in that folder, like
+    this:
+    
+    ![Kivy on Android file folder structure](../images/07image9.png)
+    
+    Then you'll experience much joy with your (first!) Android app!
+    
+    You may also want to look at [python-for-android](https://github.com/kivy/python-for-android)
 
-![](../images/07image8.jpg)
+## Customise your views
+ 
+Open, run and inspect Jason's QuickSum Kivy app from (two files,
+**quick_sum** .py/.kv).
 
-If your Android device does not have an SD Card installed, then place
-your Kivy apps within internal storage, in a folder called kivy, with a
-subfolder for your project, and make sure you have a **main.py** and
-**android.txt** (as explained at the link above) in that folder, like
-this:
+As explained in the lectures, notice the way it uses:
 
-![](../images/07image9.png)
+-   class rules like `<Button>`
 
-Then you'll experience much joy with your (first!) Android app!
+-   `canvas.before` and `canvas.after` to change the background colour or
+    other aspects of a widget
 
-You may also want to look at **python-for-android:**
-<https://github.com/kivy/python-for-android>
+Use these techniques to change your miles->kilometres converter to use
+black text on white background widgets - or something else that you'd
+like visually.  
+Play around as much as you like with this, but don't worry about all 
+the details of getting exactly the style you want.
 
 ## Implement our "GuessingGame" app
 
@@ -345,4 +348,4 @@ We started working on a simple guessing game Kivy app here:
 
 -   Then make a Pull Request back to us.
 
--   We will consider merging in the best Pull Requests!
+-   We will merge (accept) the best Pull Requests!

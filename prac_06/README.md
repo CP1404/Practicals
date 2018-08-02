@@ -314,7 +314,10 @@ principle](https://en.wikipedia.org/wiki/Abstraction_principle_(programming)),
     **`enumerate()`** function. You don't have to do it this way, but if
     you want to, it's like this:  
       
-    `for i, guitar in enumerate(guitars):`
+    ```python
+    for i, guitar in enumerate(guitars):
+        # do something with i (the index) and guitar (the element)
+    ```
 
     So `enumerate()` must return what type? A *tuple*!
 

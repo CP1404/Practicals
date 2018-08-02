@@ -1,7 +1,7 @@
 """
 CP1404/CP5632 Practical
 Tree class with inherited (specialised tree) classes
-Trevor Andersen
+by Trevor Andersen
 """
 import random
 

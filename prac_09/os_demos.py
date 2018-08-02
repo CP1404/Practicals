@@ -7,7 +7,7 @@ import os
 
 
 def main():
-    """Demo of os module functions."""
+    """Demo os module functions."""
     print("Starting directory is: {}".format(os.getcwd()))
 
     # Change to desired directory
@@ -37,22 +37,6 @@ def main():
         # Option 2: move file to new place, with new name
         # shutil.move(filename, 'temp/' + new_name)
 
-    # Process all subdirectories using os.walk()
-    os.chdir('..')  # '..' means to go 'up' one directory
-    lyrics_path = os.getcwd()  # store the path so we can get back to it
-    for directory_name, subdirectories, filenames in os.walk('.'):
-        print("Directory:", directory_name)
-        print("\tcontains subdirectories:", subdirectories)
-        print("\tand files:", filenames)
-        print("(Current working directory is: {})".format(os.getcwd()))
-
-        # TODO: change into the directory and print the current working directory
-        # then change back to the lyrics_path
-        # Note: if you get this wrong, walk will stop short,
-        # so you need to check it still walks through all subdirectories
-
-        # TODO: add a loop (in between directory changes) to rename the files
-
 
 def get_fixed_filename(filename):
     """Return a 'fixed' version of filename."""
@@ -60,4 +44,17 @@ def get_fixed_filename(filename):
     return new_name
 
 
+def demo_walk():
+    """Process all subdirectories using os.walk()."""
+    os.chdir('Lyrics')
+    for directory_name, subdirectories, filenames in os.walk('.'):
+        print("Directory:", directory_name)
+        print("\tcontains subdirectories:", subdirectories)
+        print("\tand files:", filenames)
+        print("(Current working directory is: {})".format(os.getcwd()))
+
+        # TODO: add a loop to rename the files
+
+
 main()
+# demo_walk()

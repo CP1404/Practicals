@@ -5,11 +5,10 @@ repetitive tasks with files and the **os** module.
 
 # Walkthrough Example
 
-Download the files from
-<https://github.com/CP1404/Practicals/tree/master/prac_09>
+Download all of the files from this prac folder.
 
--   Extract the **Lyrics.zip** file into the project directory so it's
-    in a subdirectory called Lyrics.
+-   Extract the **Lyrics.zip** file so it's in a subdirectory called 
+    Lyrics inside this prac folder.
 
 -   Open the directory Lyrics/Christmas so you can see the files listed
     in your file browser or PyCharm  
@@ -27,40 +26,55 @@ Download the files from
 
 1.  Run the program again, and you should get a crash due to trying to
     create an existing directory.  
-    Use exception handling to avoid this crash.
+    Use exception handling to avoid this crash. 
+    Remember that you can read the crash message to see what exception you need to handle.
 
 2.  There are two commented-out options. Try each, one at a time:  
     **Note:** renaming or moving files changes their names (amazing!),
     so to re-run your code with the files in their original state, you
     can just re-copy them from the Lyrics.zip file provided.
 
-    a.  **rename** files (in same directory) using os.rename()
+    a.  **rename** files (in same directory) using `os.rename()`
 
     b.  **move** files to a subdirectory with the new name using
-        shutil.move()
+        `shutil.move()`
 
-The last part of main demonstrates the os.walk() function that moves
-through all subdirectories returning useful information about the
-contents... But it does NOT actually change into those directories.  
-Restore your original files, then comment-out the rename/move part of
-your first for loop.
+3.  The last part of this file demonstrates the `os.walk()` function that "walks"
+    through all subdirectories returning useful information about the
+    contents...  
+    Comment out the call to `main()` and uncomment `demo_walk()`.  
+    Run the code to see how walk works.
 
-3.  Add code inside walk to change into the directory; print the current
-    directory, then change back to the lyrics_path we stored before
-    starting to walk.
+4.  Restore your original files (extract the zip file again).  
+    But it does NOT actually change into those directories.  
 
-4.  Now replace the simple print (in between where you change directory)
-    with a loop that renames all of the files. This should rename every
-    file in every subdirectory.
+5.  Add a loop that renames all of the files in `filenames`.  
+    This should rename every file in every subdirectory... but 
+    (depending on how you did this...) you will likely find that you get an error like
+    
+        FileNotFoundError: [Errno 2] No such file or directory: 'MySaviourLives.txt' -> 'MySaviourLives.txt'
+    
+    This is because `os.walk()` does NOT actually change into the directories.
+    So, we can either do that manually or in our rename, we can use the path.  
+    
+6.  To get a file reference that `os.rename()` can work correctly with, add the path like:
+    `os.path.join(directory_name, filename)`  
+    First print this, so you can see what it looks like, then change the code so you
+    actually rename the file - making sure to add the path in both the `src` and `dst` parameters for `os.rename()`.    
+
 
 # Intermediate Exercises
 
-(Please read this whole section before starting work on it!)
+_(Please read this whole section before starting work on it!)_  
+**Note:** Set yourself a 30-minute timer and if you get stuck on this, 
+just save your work and come back to it later.  
+The next (do-from-scratch) exercises are another great example of os automation
+based on a real-world need, so get moving on them.
 
 The files we're working with today are from a **real-world example**.
 Lindsay uses words projection software at church that takes these files.
-The files he was using have all kinds of different naming formats and we
-want them to follow the same format (in order to automate another task).
+The lyrics files had all kinds of different naming formats and he
+wanted them to follow the same format.  
 So, Lindsay wrote a Python script to rename the files to be consistent.
 This is another example of using programming to automate tasks in your
 everyday life! Nice :)  
@@ -68,7 +82,7 @@ Now it's your turn to write this script...
 
 This program will be very similar to the walkthrough we just did, but
 the focus is now on the renaming part:  
-the get_fixed_filename() function.
+the `get_fixed_filename()` function.
 
 -   *Commit your work.*  
     Copy the code from os_demos.py to a new file called
@@ -85,44 +99,39 @@ the get_fixed_filename() function.
     "Away_In_A_Manger.txt", "Silent_Night.txt" and
     "O_Little_Town_Of_Bethlehem.txt" respectively:
 
-  --------------------------------------------- ------------------------------------
-  **Existing Filename (inconsistent format)**   **Desired Filename (consistent)**
-  Away In A Manger.txt                          Away_In_A_Manger.txt
-  SilentNight.txt                               Silent_Night.txt
-  O little town of bethlehem.TXT                O_Little_Town_Of_Bethlehem.txt
-  ItIsWell (oh my soul).txt                     It_Is_Well_(Oh_My_Soul).txt
-  --------------------------------------------- ------------------------------------
+  |**Existing Filename (inconsistent format)**  | **Desired Filename (consistent)**
+  |---------------------------------------------| ------------------------------------
+  |Away In A Manger.txt                         | Away_In_A_Manger.txt
+  |SilentNight.txt                              | Silent_Night.txt
+  |O little town of bethlehem.TXT               | O_Little_Town_Of_Bethlehem.txt
+  |ItIsWell (oh my soul).txt                    | It_Is_Well_(Oh_My_Soul).txt
 
-**Important: **
+### Important
 
 Do NOT try and solve all of these cases at once. Rather, work up to
-them, building the **get_fixed_filename()** function that returns a
+them, building the **`get_fixed_filename()`** function that returns a
 fixed filename. Test just printing the names before renaming the files.
 When it works for one case, make it handle another one and so on...
 iterative development!
 
-**Hints:**
+### Hints
 
--   You will **not** find simple string methods like **replace()** that
+-   You will **not** find simple string methods like **`replace()`** that
     can solve all of this problem for you.
 
--   A good approach would be to **step through each character (and
-    index)** with **enumerate()** and consider how it relates to the
+-   A good approach would be to **step through each character with its
+    index** with **`enumerate()`** and consider how it relates to the
     character before or after it, since the context is what matters
     here.  
-    E.g. if the current character **islower()** and the next character
-    **isupper()** such as with the "tN" in "SilentNight"), then you
-    know you need to put a '_' between them.
+    E.g. if the current character **`islower()`** and the next character
+    **`isupper()`** such as with the "tN" in "SilentNight"), then you
+    know you need to put '_' between them.
 
--   You can start with an empty string and build it using string
+-   You can start with an empty string `"""` and build it using string
     concatenation step-by-step as you determine what the next character
     should be. E.g. for the above case, you can add the 't', then the
     '_' to your new filename string, then move on to the next
     iteration in the for loop where you will add the 'N'.
-
-**Note:** If you get stuck on this, just save your work and come back to
-it later. The next exercises are another great example of os automation
-based on a real-world need, so get moving on them.
 
 # Do-from-scratch Exercises
 
@@ -132,10 +141,10 @@ based on a real-world need, so get moving on them.
 -   Write code to sort these files into subdirectories for each
     extension.
 
-## Version 1:
+## Version 1
 
-Use **os.mkdir()** to create a directory with for each new extension
-that your program finds and use **shutil.move()** to move files into
+Use **`os.mkdir()`** to create a directory with for each new extension
+that your program finds and use **`shutil.move()`** to move files into
 these new directories.  
 E.g. move all files ending in ".txt" to a directory you create called
 "txt", and all ".doc" files to a "doc" directory.
@@ -149,14 +158,13 @@ you process the files.
 | ---------------------------------------------| ---------------------------------------------
 |![FilesToSort before](../images/09image1.png) | ![FilesToSort after](../images/09image2.png)   
 
-## Version 2:
+## Version 2
 
 Let the user categorise different extensions as the program encounters
-these, then move them all into those subdirectories.  
-E.g.
+these, then move them all into those subdirectories. E.g.
 
 -   one user might want a category "docs" containing all .doc, .docx,
-    .rtf, .txt and "images" containing .jpg, .gif, .png.
+    .rtf, .txt... and an "images" folder containing .jpg, .gif, .png.
 
 -   another user might want a category "office" containing .doc, .docx,
     .xls, but put the .txt files in a "text" category directory.
@@ -186,18 +194,18 @@ What category would you like to sort jpg files into? <strong>Images</strong>
 
 # Practice & Extension Work
 
-## Check files for missing data:
+## Check files for missing data
 
 The song lyric text files should all have copyright information in them
 on a line that starts with **.i** like:
 
-.i (c) 2011 Thankyou Music (Admin. by Crossroad Distributors Pty. Ltd.)
+    .i (c) 2011 Thankyou Music (Admin. by Crossroad Distributors Pty. Ltd.)
 
-Write a program that reports the names and locations of all of the files
+Write a program that reports the names and directories of all of the files
 that are missing this line.
 
 **Version 2**
 
 Automatically look up the copyright information from the Internet based
-on the song title and author, then add the data to the file... Good luck
-with that ;)
+on the song title and author, then add the data to the file...  
+Good luck with that ;)
