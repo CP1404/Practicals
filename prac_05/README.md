@@ -187,7 +187,7 @@ environment.
     Add a title like "Code review request" and some detail like
     "Please check formatting, naming and logic" (or anything else you
     want checked). In this description, *mention* the reviewer with
-    their GitHub username and the @ symbol -- e.g. \@personname -- so
+    their GitHub username and the @ symbol - e.g. \@personname - so
     they will be notified (depending on their GitHub preferences)
 
     OK, now if you are the first to do this, you're finished for now...

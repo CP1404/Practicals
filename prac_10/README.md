@@ -7,7 +7,7 @@ satisfactorily attempted during the prac time (no marking next week).
 You don't have to finish it but you have to do good work.
 
 Start by downloading the prac files from this folder.  
-These files have *# **TODO*** comments to show you what steps to do.
+These files have `# TODO` comments to show you what steps to do.
 
 # Recursion
 
@@ -59,22 +59,26 @@ E.g. for 6 rows, it is 6 + 5 + 4 + 3 + 2 + 1 = 21
 Follow the TODO instructions in testing.py, taking note that the code
 shows you examples to learn form.
 
-1.  fix the repeat_string function so that it passes the assert test
+1.  Fix the `repeat_string` function so that it passes the `assert` test. 
+ 
+    Note: Don't change the test!  
+    The failing test shows that the function is broken; fix the function.
 
-2.  write at least two assert statements to show if Car sets the fuel
-    correctly
+2.  Write at least two `assert` statements to show if Car sets the fuel
+    correctly.
 
-3.  uncomment the doctest.runmod() line to see how the doctests run
+3.  Uncomment the `doctest.runmod()` line to see how the doctests run.
 
-> Note: PyCharm might detect your tests and automatically run your
-> program in doctest mode.
+    Note: PyCharm might detect your tests and automatically run your
+    program in doctest mode.
 
-4.  Fix the failing is_long_word function
+4.  Fix the failing `is_long_word` function
 
 5.  Write and test (using doctest) a function to format a phrase as a
     sentence - starting with a capital and ending with a single full
     stop. See the comments for how to do this step by step, taking note
-    that you should write your tests before your code
+    that you should write your tests _before_ your code.  
+    E.g. the function should change "hello" into "Hello."
 
 # Wikipedia API & Python Library
 
@@ -82,7 +86,7 @@ Until now, we've only worked on our local computers, interacting with
 local files, but never talking to the great big computer in the sky...
 so let's do that now :)
 
-Many systems have public APIs (Application Programmer Interfaces) that
+Many systems have public **APIs** (Application Programmer Interfaces) that
 we can use. An API is a set of functions that we can call to send and
 receive data to and from a system. You can write code to interact with
 things like Twitter, Flickr, weather services, government databases, NSA
@@ -111,8 +115,8 @@ The quick start documentation for the wikipedia package can be found at:
 <https://wikipedia.readthedocs.io/en/latest/quickstart.html>
 
 As this documentation shows, a good way to learn a new package like this
-is via the command line. Follow the docs and try out functions like
-**search()**, **summary()** and **page()**.  
+is via the console. Open the console in PyCharm, then follow the docs and 
+quickly try out functions like `search()`, `summary()` and `page()`.  
 Get a page and see what properties it has.
 
 **Create a new file** called **wiki.py** and write a small script that
@@ -121,8 +125,8 @@ summary of that page. Use a simple loop that continues doing this until
 the user enters blank input.
 
 Try this with a few page titles and see what happens.  
-(Note that you will get a warning about an outdated use of the
-BeautifulSoup package. We can't fix that.)
+(Note that you might get a warning about an outdated use of the
+BeautifulSoup package. We can't fix that so ignore it.)
 
 Try it with the search/title "Monty" and you should find that the
 Wikipedia API returns a "disambiguation" page, so you need to handle
@@ -134,16 +138,16 @@ title, summary and the URL.
 # Flask Web Framework
 
 Until now, we have made only one type of project, "Pure Python", and we
-always interacted via PyCharm with the console -- or using a GUI we made
+always interacted via PyCharm with the console - or using a GUI we made
 with Kivy. A very common way to deliver software these days is via a Web
-browser. Some programming languages are designed for the Web -- like
+browser. Some programming languages are designed for the Web - like
 JavaScript for the browser and PHP for Web servers, but we can also use
 Python... if we use it via a "Web Framework".
 
 There are a number of great frameworks, like Django, Web2Py and Pyramid,
-but today we will use Flask.  
-(You may be interested to know that WakaTime is written in Python and
-uses Flask.)
+but today we will use **Flask**.  
+(You may be interested to know that [WakaTime](https://wakatime.com) 
+is written in Python and uses Flask.)
 
 Flask docs are at: <http://flask.pocoo.org/docs> and Flask is also
 covered in the textbook in **Appendix E**.
@@ -157,37 +161,35 @@ Jinja for templating.
 ![New Flask Project window](../images/10image4.png)
 
 The default project comes with a folder structure and a simple "hello
-world" example.  
-The code is shown (left) and explained (right) below:
+world" example:
 
-<!-- #TODO fix table -->
+```python
+from flask import Flask
 
-+-----------------------------------+-----------------------------------+
-| **from** flask **import** Flask\  | Import the flask class.           |
-| \                                 |                                   |
-| app = Flask(__name__)\        | Create an instance of the Flask   |
-| \                                 | class called app, passing the     |
-| \                                 | name of this file.                |
-| \@app.route('/')\           |                                   |
-| **def** hello_world():\          | This is interesting... **@** is  |
-| **return 'Hello World!'\        | used for what's called a          |
-| \                                 | **decorator". This is metadata |
-| **                                | about the following function. In  |
-|                                   | Flask, the **\@app.route**        |
-| **\                               | decorator specifies the URL that  |
-| if** __name__ ==              | will result in the function       |
-| '__main__':\            | following it being called.        |
-| app.run()                         |                                   |
-|                                   | Then we have a normal function,   |
-|                                   | but importantly it returns a      |
-|                                   | string.\                          |
-|                                   | All Flask "views" (functions that |
-|                                   | will be displayed in the browser) |
-|                                   | must return strings.              |
-|                                   |                                   |
-|                                   | Running a Flask app works like    |
-|                                   | this. Similar to Kivy, isn't it?  |
-+-----------------------------------+-----------------------------------+
+app = Flask(__name__)
+
+
+@app.route('/')
+def hello_world():
+    return 'Hello World!'
+
+
+if __name__ == '__main__':
+    app.run()
+
+```
+
+## Explanation
+After importing the flask class, we create an instance of the Flask class called `app`, passing the name of this file                
+
+`@` is used for what's called a **"decorator"**.                              
+This is metadata about the following function.  
+In Flask, the `@app.route` decorator specifies the URL that will result in the function following it being called.        
+
+Then we have a normal function (`hello_world()`), but importantly it returns a string.                          
+All Flask "views" (functions that will be displayed in the browser) must return strings.
+                                  
+Running a Flask app (`app.run()`) looks similar to Kivy, doesn't it?
 
 Run the code and you should see output like the following, including a
 link to click on to see your amazing new Python-based website. Click the
@@ -212,7 +214,7 @@ definition stubs.
 
 Type 'greet' as the function name and route name (these can be
 different, but we'll keep them the same). Replace 'pass' with a simple
-return "Hello" statement.
+`return "Hello"` statement.
 
 Re-run the program, then change your browser's URL by adding /greet to
 the end, like:
@@ -222,8 +224,7 @@ the end, like:
 This is a bit simple so far... but we're getting there...
 
 Note: If you ever get an "Internal Server Error" in the browser... this
-is *your* server (Python program)!
-
+is *your* server (Python program)!  
 Go back to PyCharm and look for error messages in the console.
 
 Add another decorator so that the greet function runs for multiple "sub"
@@ -260,7 +261,7 @@ input value and the result with useful text.
 
 ## Flask + Wikipedia API
 
-Now let's combine the Wikipedia API with our new found Web programming
+Now let's combine the Wikipedia API with our new-found Web programming
 powers...
 
 Clone or download the demo from
@@ -268,7 +269,7 @@ Clone or download the demo from
 
 Run it and test it, then study the code to find a few new things:
 
--   This demo uses Jinja HTML templates, which makes formatting Web page
+-   This demo uses **Jinja** HTML templates, which makes formatting Web page
     outputs much nicer than hard-coding them in Python.
 
 -   It also uses "template inheritance", so that you can reuse parts of
@@ -276,19 +277,21 @@ Run it and test it, then study the code to find a few new things:
     persist.
 
 -   The search route has an HTML form in it. When it's submitted, it
-    sends the data via the HTTP method "post", so the route has to be
+    sends the data via the HTTP "post" method, so the route has to be
     customised to accept this. It then gets the data from the "request"
     object.
 
--   url_for() is a function that returns the correct URL for a given
+-   `url_for()` is a function that returns the correct URL for a given
     view/route function so you don't have to know the exact path.
+
+### Modifications
 
 Right, so now it's your turn to make this more interesting and
 appealing. What else could you do to it?
 
 -   Start by adding the page title to the results
 
--   Then add some details to the about page using a new template
+-   Then add some details to the **about** page using a new template
 
 -   Then add a link to the about page in your layout template
 
@@ -301,18 +304,20 @@ If not, please do that right now on LearnJCU.
 
 # Practice & Extension Work
 
-1.  Write a program that prints a string from the outside in, using
-    recursion.  
+1.  Write a program that prints a string from the outside in, **using
+    recursion**.  
     E.g. if the string to print is "Programming", your program should
     print: "P g r n o i g m r m a".  
     Another example:  
-    Enter a string: 123456  
-    1 6 2 5 3 4  
+    
+        Enter a string: 123456  
+        1 6 2 5 3 4  
+        
     Remember to analyse and design this problem first. Think about the
     base and recursive cases - when will it stop (base) and how will it
     reduce the problem (recursive) each time?
 
-2.  Write a recursive function to your check whether or not a string is
+2.  Write a recursive function to check whether or not a string is
     a palindrome.  
     A palindrome is a word or phrase that reads the same forwards as
     backwards. The following are examples:
@@ -323,16 +328,16 @@ If not, please do that right now on LearnJCU.
     
     -   (ignoring case, spaces and punctuation) A Toyota's a Toyota
 
-3.  Add **assert** and **doctest** testing to your work from an earlier
-    prac -- e.g. the is_valid_password() function from prac 02 and the
-    get_fixed_filename() function from prac 10.
+3.  Add **`assert`** and **`doctest`** testing to your work from an earlier
+    prac - e.g. the `is_valid_password()` function from prac 2 and the
+    `get_fixed_filename()` function from prac 9.
 
 4.  During the holidays you might like to experiment with Flask and see
     if you can make some cool Web interfaces for your existing
     programs...
 
-    A great idea would be to make programs with 3 interfaces: console,
+    A **great idea** would be to make programs with 3 interfaces: console,
     Kivy and Web, and reuse as much common code as you can. That should
     help you see how modular your work is. This would help you
-    understand the MVC (Model-View-Controller) pattern more, as you just
-    want to create 3 different views.
+    understand the **MVC** (Model-View-Controller) pattern more, as you just
+    want to create 3 different views that use the same model.

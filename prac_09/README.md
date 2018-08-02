@@ -39,16 +39,14 @@ Download all of the files from this prac folder.
     b.  **move** files to a subdirectory with the new name using
         `shutil.move()`
 
-3.  The last part of this file demonstrates the `os.walk()` function that "walks"
+3.  Restore your original files (extract the zip file again).  
+    The last part of this file demonstrates the `os.walk()` function that "walks"
     through all subdirectories returning useful information about the
     contents...  
     Comment out the call to `main()` and uncomment `demo_walk()`.  
     Run the code to see how walk works.
 
-4.  Restore your original files (extract the zip file again).  
-    But it does NOT actually change into those directories.  
-
-5.  Add a loop that renames all of the files in `filenames`.  
+4.  Add a loop that renames all of the files in `filenames`.  
     This should rename every file in every subdirectory... but 
     (depending on how you did this...) you will likely find that you get an error like
     
@@ -57,7 +55,7 @@ Download all of the files from this prac folder.
     This is because `os.walk()` does NOT actually change into the directories.
     So, we can either do that manually or in our rename, we can use the path.  
     
-6.  To get a file reference that `os.rename()` can work correctly with, add the path like:
+5.  To get a file reference that `os.rename()` can work correctly with, add the path like:
     `os.path.join(directory_name, filename)`  
     First print this, so you can see what it looks like, then change the code so you
     actually rename the file - making sure to add the path in both the `src` and `dst` parameters for `os.rename()`.    

@@ -142,7 +142,7 @@ Open the **squaring.py & .kv** files from the demos.
 Run the code to see a simple app with a text entry field, a button and a
 label that squares a number.  
 Spend a while reading the code so you know how it works. Pay special
-attention to the functionality -- how it handles the button being
+attention to the functionality - how it handles the button being
 pressed:
 
 # Modifications

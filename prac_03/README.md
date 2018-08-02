@@ -363,7 +363,7 @@ to helping each other - then talk to your tutor.
     Remember, any time we're using functions, we also need a main()
     function for the main program.
 
-    a.  **temperatures.py** -- use 2 functions for converting Celsius to
+    a.  **temperatures.py** - use 2 functions for converting Celsius to
         Fahrenheit and vice versa  
         **Important:** Remember SRP - functions should do one thing, so
         these should be calculation functions. Do not get user input or
@@ -371,7 +371,7 @@ to helping each other - then talk to your tutor.
         That means these will be very small functions... that's OK...
         they abstract a core piece of functionality.
 
-    b.  **broken_score.py** -- use a function that takes in the score
+    b.  **broken_score.py** - use a function that takes in the score
         as a parameter and returns the result to be printed. The
         *function* should not print it; the *main* program should store
         and print the returned value.
