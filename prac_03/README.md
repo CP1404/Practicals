@@ -48,6 +48,10 @@ We will do this from the point of view of someone working on a JCU lab computer.
 This will be enough to get you started, but please keep learning and
 practising with Git and GitHub.
 
+**Note**: It's not easy to provide exact instructions that cover multiple versions 
+of PyCharm, since things change. Your experience may be a bit different depending
+on what version of PyCharm you have.
+
 1.  Let's start a **new project** (not just a new folder) in PyCharm,
     called **Sandbox**, which you can use for doing small tests and
     demos that you want to keep but don't fit into any other projects.
@@ -69,6 +73,11 @@ practising with Git and GitHub.
 4.  Choose **VCS > Commit Changes** (take note of the shortcut as
     you'll be using it often!)  
     It should tell you no changes were detected...  
+    (or some versions will automatically add files for you - don't commit yet)  
+    **Note:** If you ever get a prompt to "Add File to Git" for
+    PyCharm project metadata files (anything in the `.idea` folder, like
+    `misc.xml` or `vcs.xml`), then choose **no**. 
+    We do not want to version control these files.  
     Click on the Version Control tool window in the footer (or choose
     **View > Tool Windows > Version Control**) and click the **Log**
     tab. It's empty...  
@@ -88,10 +97,6 @@ practising with Git and GitHub.
     That's because we've only added this file to the "staging"
     state, so it will be included when we commit.  
     This is important. Git only tracks the files we ask it to.  
-    **Note:** If you ever get a prompt to "Add File to Git" for
-    PyCharm project metadata files (anything in the .idea folder, like
-    misc.xml or vcs.xml), then say **no**. We do not want to version
-    control these files.
 
 7.  Now for our first **commit**!  
     Press the shortcut key for committing changes (Ctrl+K or Cmd+K
