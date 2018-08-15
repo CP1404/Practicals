@@ -26,6 +26,7 @@ number_of_stars = int(input("Number of stars: "))
 for i in range(number_of_stars):
     print('*', end=' ')
 print()
+
 # d. print n lines of increasing stars.
 # Using the same number as above print lines of increasing stars, starting at 1.
 # E.g. if 4 was the number entered, your single loop should print
@@ -33,7 +34,6 @@ print()
 # **
 # ***
 # ****
-for i in range(number_of_stars):
-    print('*' * (i + 1), end=' ')
-    print()
+for i in range(1, number_of_stars + 1):
+    print('*' * i)
 print()
