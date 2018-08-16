@@ -23,7 +23,7 @@ examples...
 
 In one of our end-of-subject YourJCU
 student feedback surveys, a student suggested that we do more
-hand-writing code to help prepare for the final examin. Great idea! And it
+hand-writing code to help prepare for the final examination. Great idea! And it
 shows it's a great idea for you to provide us with your feedback --
 during the semester anytime, and especially in our main surveys.
 
@@ -67,7 +67,7 @@ on what version of PyCharm you have.
     ![Create Git Repository](../images/03image3.png)    
     Accept the default directory it offers in the next window, which
     should (must) be the current project directory.  
-    What happened? Not much it seems, but we're ready to **commit"
+    What happened? Not much it seems, but we're ready to **commit**
     our files to Git version control.
 
 4.  Choose **VCS > Commit Changes** (take note of the shortcut as
@@ -337,12 +337,12 @@ program"). Now let's modify this program.
     Change the name to `get_password` and press OK.  
     PyCharm should create the function and replace the old code with a
     call to it like `password = get_password()`  
-    (Note that this all depends on how you wrote the code to start with.)
+    (Note that the details depend on how you wrote the code to start with.)
 
 3.  Now refactor the loop that prints the asterisks into a function that
     takes 1 parameter: the password. (PyCharm will see that password needs 
     to be an input parameter and create the function accordingly.)  
-    Note that this will be a super simple functions, but that's OK.
+    Note that this will be a super simple function, but that's OK.
     
 4. Finished? Then commit - with a meaningful message in the imperative voice.  
    This could be something like "Refactor password program to use functions" 
