@@ -156,7 +156,7 @@ Feel free to **check the solutions** for these so you can make sure you're on tr
 2.  **Woefully inadequate security checker...**  
     Copy the following list of usernames into a new Python file:
       
-    `usernames = ['jimbo', 'giltson98', 'derekf', 'WhatSup', 'NicolEye', 'swei45', 'BaseInterpreterInterface', 'BaseStdIn', 'Command', 'ExecState', 'InteractiveConsole', 'InterpreterInterface', 'StartServer', 'bob']` 
+        usernames = ['jimbo', 'giltson98', 'derekf', 'WhatSup', 'NicolEye', 'swei45', 'BaseInterpreterInterface', 'BaseStdIn', 'Command', 'ExecState', 'InteractiveConsole', 'InterpreterInterface', 'StartServer', 'bob'] 
 
     Ask the user for their username. If the username is in the above
     list of authorised users, print "Access granted", otherwise print
@@ -164,12 +164,8 @@ Feel free to **check the solutions** for these so you can make sure you're on tr
 
 3.  **List comprehensions**
     Download/copy [list_comprehensions.py](list_comprehensions.py)  
-    and see how the first two list comprehensions work.  
-    Complete the TODOs, creating two more list comprehensions to:
-
-    a.  create a list of integers from a list of strings
-
-    b.  create a list of all of the full_names in lowercase
+    and see how the example list comprehensions work.  
+    Creating more list comprehensions (not loops) by completing the TODOs in the code.
 
 # Do-from-scratch Exercises
 
@@ -216,7 +212,8 @@ Note the exact spelling, including the dot at the start. On Unix-like
 systems (including Mac), the dot makes a file/folder _hidden_.
 
 .gitignore is just a plain text file that stores the names of any files or
-folders you want Git not to track and not to warn you about.
+folders you want Git not to track and not to warn you about.  
+Your file will still exist in your _project_, but not in your _repository_.
 
 **Create a file called .gitignore** in the root folder of your pracs project/repo, 
 and let PyCharm add it to Git.
