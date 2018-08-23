@@ -135,7 +135,8 @@ Here are some small problems to give you more practice working with
 lists.  
 Feel free to **check the solutions** for these so you can make sure you're on track.
 
-1.  Write a program that prompts the user for 5 numbers and then stores
+1.  **Basic list operations**  
+    Write a program that prompts the user for 5 numbers and then stores
     each of these in a list called **numbers**.  
     The program should then
     output various interesting things, as in the output below.  
@@ -153,7 +154,7 @@ Feel free to **check the solutions** for these so you can make sure you're on tr
         The largest number is 20
         The average of the numbers is 6.2
 
-2.  **Woefully inadequate security checker...**  
+2.  **Woefully inadequate security checker**  
     Copy the following list of usernames into a new Python file:
       
         usernames = ['jimbo', 'giltson98', 'derekf', 'WhatSup', 'NicolEye', 'swei45', 'BaseInterpreterInterface', 'BaseStdIn', 'Command', 'ExecState', 'InteractiveConsole', 'InterpreterInterface', 'StartServer', 'bob'] 
@@ -162,10 +163,10 @@ Feel free to **check the solutions** for these so you can make sure you're on tr
     list of authorised users, print "Access granted", otherwise print
     "Access denied".
 
-3.  **List comprehensions**
+3.  **List comprehensions**  
     Download/copy [list_comprehensions.py](list_comprehensions.py)  
     and see how the example list comprehensions work.  
-    Creating more list comprehensions (not loops) by completing the TODOs in the code.
+    Write more list comprehensions (not loops) by completing the TODOs in the code.
 
 # Do-from-scratch Exercises
 
