@@ -136,6 +136,7 @@ lists.
 Feel free to **check the solutions** for these so you can make sure you're on track.
 
 1.  **Basic list operations**  
+    Create the file **list_exercises.py**
     Write a program that prompts the user for 5 numbers and then stores
     each of these in a list called **numbers**.  
     The program should then
@@ -155,6 +156,7 @@ Feel free to **check the solutions** for these so you can make sure you're on tr
         The average of the numbers is 6.2
 
 2.  **Woefully inadequate security checker**  
+    (Still in the same file)  
     Copy the following list of usernames into a new Python file:
       
         usernames = ['jimbo', 'giltson98', 'derekf', 'WhatSup', 'NicolEye', 'swei45', 'BaseInterpreterInterface', 'BaseStdIn', 'Command', 'ExecState', 'InteractiveConsole', 'InterpreterInterface', 'StartServer', 'bob'] 
@@ -172,6 +174,7 @@ Feel free to **check the solutions** for these so you can make sure you're on tr
 
 ### "Quick Pick" Lottery Ticket Generator
 
+Create the file **quick_picks.py**  
 Write a program that asks the user how many "quick picks" they wish to
 generate. The program then generates that many lines of output. Each
 line consists of 6 random numbers between 1 and 45.  
@@ -247,7 +250,7 @@ index, not the local disk (--cached).
 # Practice & Extension Work
 
 We know from many years of teaching programming, that you need to spend
-lots of time writing programs, so here's some to write.  
+lots of time writing programs, so here's some to write.    
 This final part
 of practicals will usually be for you to do outside of practical time.  
 Use these exercises as normal practice and as ways to learn new things.
