@@ -25,6 +25,7 @@ Get (remember to click Raw)
 add them to your PyCharm project in this week's prac folder.
 
 ```python
+# used_cars.py
 from prac_06.car import Car
 
 
@@ -55,7 +56,7 @@ the following:
 1.  Create a new Car object called "limo" that is initialised with 100
     units of fuel.
 
-2.  Add 20 more units of fuel to the car using the add method.
+2.  Add 20 more units of fuel to this new car object using the add method.
 
 3.  Print the amount of fuel in the car.
 
@@ -65,29 +66,30 @@ the following:
 
 6.  Now add the `__str__` method to the Car class in car.py.  
     Using {} string formatting, have it return a string in the following
-    format:  
-    Car, fuel=42, odometer=277  
+    format:    
+    `Car, fuel=42, odometer=277`  
     Remember that you can run this method by **print**ing your car
     object, or passing the car object to the **str()** function.  
     **Do NOT** call the method explicitly like `my_car.__str__()`
 
-7.  Now add a **name" field to the Car class (in car.py), and adjust
+7.  Now add a `name` field to the Car class (in car.py), and adjust
     the `__init__` and `__str__` methods to set and display this
     respectively. Make the str method return the car's name instead of
     just "Car".  
     Now **add names** (literals) to the constructors where you create Car objects
-    in the used_cars.py program.
+    in the used_cars.py program.  
+    Test your work and make sure you can now make and view named cars.
 
 # Intermediate Exercises
 
-Let's make our own simple class for a **programming language**.
+Let's make our own simple class for a **programming language** in the file 
+**programming_language.py** (note that the file/module name is the same as the 
+class but in lower case and with optional `_`)
 
-Create a new file for our class - programming_language.py
-
-Call your class ProgrammingLanguage (using Python's recommended
+Call your class `ProgrammingLanguage` (using Python's recommended
 "PascalCase" or "CapWords" style)
 
-There are lots of things we could store, but we'll consider only a few,
+There are lots of things we could store, but we'll consider only the following,
 based mostly on the information found at this [Programming Language
 Comparison](http://www.jvoegele.com/software/langcomp.html) page.
 
@@ -115,9 +117,9 @@ Define the following **methods**:
     how the function name starts with **"is"**, like `isupper()`,
     `isnumeric()`, etc.? So, it returns a Boolean.
 
-Create a simple program, languages.py.
+Create a simple program in a file called **languages.py**.
 
-Import the class, then copy these 3 languages:
+Import the class, then copy these 3 lines into your new program:
 
 ```python
 ruby = ProgrammingLanguage("Ruby", "Dynamic", True, 1995)
@@ -125,7 +127,8 @@ python = ProgrammingLanguage("Python", "Dynamic", True, 1991)
 visual_basic = ProgrammingLanguage("Visual Basic", "Static", False, 1991)
 ```
 
-Now add the **`__str__`** method, which should return a string like:
+Now add the `__str__` method to the class (not the client code), 
+which should return a string like:
 
 `Python, Dynamic Typing, Reflection=True, First appeared in 1991`
 
@@ -145,7 +148,8 @@ IDE's help) and encourages you to be consistent and clear with syntax,
 indenting, etc.
 
 Loop through and print the names of all of the languages with dynamic
-typing, which should produce output like:
+typing (make sure you use your new `is_dynamic` method!), 
+which should produce output like:
 
     The dynamically typed languages are:
     Ruby
@@ -158,7 +162,6 @@ typing, which should produce output like:
 Remember the string formatting example from prac 2:
 
 ```python
-
 name = "Gibson L-5 CES"
 year = 1922
 cost = 16035.40
@@ -198,12 +201,12 @@ already knows (like age, year, etc.).
 
 ### Testing
 
-Now **write a guitar_test.py program** with at least enough code to
+Now write a **guitar_test.py** program with at least enough code to
 test that the last two methods work as expected.  
 So to test that the **get_age()** method works, you could test that the
 above example guitar does indeed output 95 as expected. Here is some
-sample output for testing two guitars where the second called 
-Another Guitar has year=2012):
+sample output for testing two guitars where the second is called 
+Another Guitar and has year=2012:
 
     Gibson L-5 CES get_age() - Expected 96. Got 96
     Another Guitar get_age() - Expected 6. Got 6
@@ -212,24 +215,24 @@ Another Guitar has year=2012):
 
 Do you see how this works?
 
-We print our own *literal* for what we expect if it's right (e.g. 96),
+We print our own *literal* for what we expect if the function works (e.g. 96),
 then we print *what the actual method returns* and we look at the output
-to see if they match. This form of testing is quite 'manual' since we
-need to read the output and compare it ourselves, but it is a good
-start.
+to see if they match.  
+This form of testing is quite 'manual' since we need to read the output and 
+compare it ourselves, but it is a good start.
 
 Let's say we wrote the `is_vintage()` method incorrectly, then we want
 to see something like:
 
     50-year old guitar is_vintage() - Expected True. Got False
 
-We can see that the actual does not match the expected, so we know we
+We can see that the actual does **not** match the expected, so we know we
 need to fix something.
 
 ### Playing the Guitars (not really)
 
-Great! Now that you have the class tested a bit, write a program that
-uses it in a file called **guitars.py**
+Got your class working (tested) now? Great!   
+Write a program that uses it in a file called **guitars.py**
 
 The program should use a list to store all of the user's guitars (keep
 inputting until they enter a blank name), then print their details.
@@ -257,7 +260,7 @@ Guitar 2: Gibson L-5 CES (1922), worth $ 16,035.40 (vintage)
 Guitar 3: Line 6 JTV-59 (2010), worth $ 1,512.90
 </pre>
 
-### Programmer Efficiency Note
+**Programmer Efficiency Note**
 
 When testing a program like this you can waste a lot of time typing in
 input... then changing something, running it again and... typing the
@@ -273,15 +276,15 @@ guitars.append(Guitar("Line 6 JTV-59", 2010, 1512.9))
 ```
 
 According to Wikipedia's page on the [abstraction
-principle](https://en.wikipedia.org/wiki/Abstraction_principle_(programming)),
+principle](https://en.wikipedia.org/wiki/Abstraction_principle_(programming)):  
 > "When read as recommendation to the programmer, the abstraction
-> principle can be generalised as the "[*[don't repeat
-> yourself]*](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)"
+> principle can be generalised as the "[*don't repeat
+> yourself*](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)"
 > principle, which recommends avoiding the duplication of information in
 > general, and also avoiding the duplication of human effort involved in
 > the software development process."
 
-### Notes
+### Notes (you haven't started yet, have you?)
 
 -   The sample output uses some nice string formatting. Feel free to try
     and figure this out, or just use our code (the width we use for
@@ -291,22 +294,24 @@ principle](https://en.wikipedia.org/wiki/Abstraction_principle_(programming)),
     print("Guitar {}: {:>20} ({}), worth ${:10,.2f}{}".format(i + 1, guitar.name, guitar.year, guitar.cost, vintage_string))  
     ```
       
-    The variable vintage_string is set to `""` or `" (vintage)"`
+    The variable `vintage_string` is set to `""` or `" (vintage)"`
     depending on the `is_vintage()` method.  
-    If you're keen, try using Python's *ternary operator*
-    (search for it) to do this in one line.
+    If you're keen, try using Python's *ternary operator* to do this in one line.  
+    E.g. to set the value of `is_adult` to True or False depending on age, you could use:
+    
+        is_adult = True if age >= 18 else False  
 
 -   See guitar.year, guitar.cost...? You can do this another way if you
     want...
 
-    E.g. for the car class example above, the following lines are
-    equivalent. This is sometimes a useful way to make the code more
+    E.g. for the car class example above, the following two lines are
+    equivalent. This can be a useful way to make the code more
     readable because you can see the name of the variable you're printing
     in the actual placeholder.
     
     ```python
     print("Car {}, {}".format(my_car.fuel, my_car.odometer))  
-    print("Car {self.fuel}, {self.odometer}".format(self=my_car))
+    print("Car {car.fuel}, {car.odometer}".format(car=my_car))
     ```
 
 -   For this particular code, we've used both `i` and the target variable
@@ -319,15 +324,20 @@ principle](https://en.wikipedia.org/wiki/Abstraction_principle_(programming)),
         # do something with i (the index) and guitar (the element)
     ```
 
-    So `enumerate()` must return what type? A *tuple*!
-
+    So `enumerate()` must return what type? A *tuple*!  
+    `enumerate` can also take a second parameter, the starting number for iteration:  
+    
+    ```python
+    for i, guitar in enumerate(guitars, 1)  # i starts at 1 instead of 0
+    ```
+    
 # Practice & Extension Work
 
 Use these exercises as much-needed practice and as ways to learn new
 things.
 
-1. Using car.py, write a **car driving simulator**, with output like the
-following...
+1. Create a **car driving simulator** in **car_simulator.py** that uses 
+the Car class that works like the following sample output...
 
     **Note:** Please do this (and every problem of significant size)
     incrementally:
@@ -404,7 +414,6 @@ following...
         
         Good bye The bomb's driver.
 
-
 2. Create a **Date** class, storing the fields:
     
     -   **day**
@@ -420,7 +429,7 @@ following...
     Test the class.
     
     Note: Python has built in date and time functionality in the
-    **datetime** module, so you wouldn't usually write your own class to
+    **datetime** module, so you would not usually write your own class to
     store a date, but this is a good practice exercise.
 
 3. Create a program that uses a list of **Person** objects.  
