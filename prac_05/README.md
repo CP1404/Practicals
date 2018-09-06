@@ -97,15 +97,16 @@ since we won't be changing the states anytime soon.
     This is a great way to learn what the "PEP 8" standards are for
     Python code formatting style.  
     ![PyCharm PEP 8 warning](../images/05image4.png)
-![Pencil icon](../images/03image1.png)
+
 3.  Currently the program requires you to
     enter the states in capitals. Change the program so lowercase inputs
     also work to show the state names. (There are two places to add a
     string method.)
 
-4.  Do this next part on paper first (then in PyCharm: Write a loop that
-    prints all of the states and names neatly lined up with string
-    formatting, like:
+    ![Pencil icon](../images/03image1.png)
+4.  Do this next part on paper first (then in PyCharm):  
+    Write a loop that prints all of the states and names neatly lined up 
+    with string formatting, like:
 
         NSW is New South Wales
         QLD is Queensland
@@ -113,16 +114,21 @@ since we won't be changing the states anytime soon.
 
 # Intermediate Exercises
 
+Create the file **hex_colours.py**  
 Based on the state name example program above, create a program that
 allows you to look up hexadecimal colour codes like those at
 [http://www.color-hex.com/color-names.html](http://www.color-hex.com/color-names.html)
 
-Use a constant dictionary of about 10 names and write a program that
+Use a constant dictionary of about 10 colour names and write a program that
 allows a user to enter a name and get the code, e.g. entering
-**AliceBlue** should show **#f0f8ff**.
+**AliceBlue** should show **#f0f8ff**.  
+
+Entering an invalid colour name should not crash.  
+Allow the user to enter names until they enter a blank one to stop the loop.  
 
 # Do-from-scratch Exercises
 
+Create the file **word_occurrences.py**  
 Write a program to count the occurrences of words in a string. The
 program should ask the user for a string, then print the counts of how
 many of each word are in the file.  
@@ -160,29 +166,37 @@ dictionary...
 
     This formats the first placeholder value, x, with a width of y then
     prints a literal = then the value of z.
+    Your output should then look something like:
+    
+        Text: a fun collection 
+        a :          2
+        collection : 1
+        fun :        1
 
 ![GitHub Logo](../images/03image2.png)
 
 # Code Reviews with Pull Requests
 
-This is a process based on how code reviews and pull requests (PRs)
-happen in the IT industry but simplified to suit our teaching
-environment.
+The following (and including creating the branch) is a process based on 
+how code reviews and pull requests (PRs) happen in the IT industry 
+but simplified to suit our teaching environment.
 
-1.  Commit your changes making sure to add any new files that you
+1.  Commit your changes, making sure to add any new files that you
     created today.  
     You have already created and switched to the 'feedback' branch so
-    your commits will go only to this branch.
+    your commits will go only to the feedback branch.
 
 2.  Open the repository in a web browser and you should see a notice
     like:
 
-![GitHub recently pushed branch](../images/05image7.png)
+    ![GitHub recently pushed branch](../images/05image7.png)
+    Note: it's possible that your experience will be slightly different, 
+    so please try and understand what's happening - don't just click things.
 
 3.  Click the green button to make a pull request from feedback to
     master.  
     If that notice doesn't appear, you can switch to the feedback
-    branch and click Pull Request:  
+    branch and click the button to create a new Pull Request:  
     ![GitHub New Pull Request](../images/05image8.png)  
     Add a title like "Code review request" and some detail like
     "Please check formatting, naming and logic" (or anything else you
@@ -190,7 +204,7 @@ environment.
     their GitHub username and the @ symbol - e.g. \@personname - so
     they will be notified (depending on their GitHub preferences)
 
-    OK, now if you are the first to do this, you're finished for now...
+    Now if you are the first to do this, you're finished for now...
     move on to the next section and come back here when you receive a
     mention to do a review for someone else...  
     If you've already got a PR to review, then carry on with the next
@@ -199,7 +213,7 @@ environment.
 4.  (Note that you might see things a bit different, but the process is
     the same.)  
     On the GitHub website, click on the notifications icon at the top:
-    which will have a dot on it if you've received your code review
+    which should have a dot on it if you've received your code review
     request. ![GitHub notification icon](../images/05image9.png)  
     Open the PR you have been mentioned in by clicking the notification
     link there, e.g.:
@@ -207,7 +221,8 @@ environment.
     Read the request (see if there's anything specific to review), then
     click on Commits to see the commits:  
     ![GitHub Code review commits](../images/05image11.png)  
-    Then click on the commit to see the code in "diff" view.
+    Then click on the commit to see the code in "diff" view (old on the left,
+    new on the right).
 
 5.  Read through the code on GitHub and add line comments. Hover your
     mouse over the lines and look for the plus icon to add a comment.  
@@ -226,7 +241,7 @@ environment.
     reviewer have push access to the repository, there would be more,
     including the option to merge and close the pull request.)
 
-    OK, so at some point you will receive the comments from the reviewer and
+    At some point you will receive comments from the review you requested and
     you can respond to them by making changes in your own code in PyCharm
     and replying to the comments on GitHub. Then commit your work back to
     GitHub, still in the feedback branch.
@@ -242,12 +257,12 @@ environment.
     GitHub will tell you that the feedback branch can be deleted.
     You're welcome to delete it.
 
-7.  Now the master branch has been updated on GitHub, but not locally.  
-    You should switch back to the master branch locally by clicking in
+7.  Now the master branch has been updated on GitHub (remote), but not locally.  
+    In PyCharm, switch back to the local master branch by clicking in
     the footer where it shows the branch:  
     ![PyCharm change branch](../images/05image14.png)
 
-8.  Pull your changes from master (remote) to update your local repo:
+8.  **Pull** your changes from master (remote) to update your local repo:
     **VCS > Git > Pull** then click **Pull**.
 
 All done!

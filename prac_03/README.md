@@ -19,11 +19,11 @@ examples...
 
 # First!
 
-![Pencil](../images/03image1.png)  
+![Pencil Icon](../images/03image1.png)  
 
 In one of our end-of-subject YourJCU
 student feedback surveys, a student suggested that we do more
-hand-writing code to help prepare for the final exam. Great idea! And it
+hand-writing code to help prepare for the final examination. Great idea! And it
 shows it's a great idea for you to provide us with your feedback --
 during the semester anytime, and especially in our main surveys.
 
@@ -48,6 +48,10 @@ We will do this from the point of view of someone working on a JCU lab computer.
 This will be enough to get you started, but please keep learning and
 practising with Git and GitHub.
 
+**Note**: It's not easy to provide exact instructions that cover multiple versions 
+of PyCharm, since things change. Your experience may be a bit different depending
+on what version of PyCharm you have.
+
 1.  Let's start a **new project** (not just a new folder) in PyCharm,
     called **Sandbox**, which you can use for doing small tests and
     demos that you want to keep but don't fit into any other projects.
@@ -63,12 +67,17 @@ practising with Git and GitHub.
     ![Create Git Repository](../images/03image3.png)    
     Accept the default directory it offers in the next window, which
     should (must) be the current project directory.  
-    What happened? Not much it seems, but we're ready to **commit"
+    What happened? Not much it seems, but we're ready to **commit**
     our files to Git version control.
 
 4.  Choose **VCS > Commit Changes** (take note of the shortcut as
     you'll be using it often!)  
     It should tell you no changes were detected...  
+    (or some versions will automatically add files for you - don't commit yet)  
+    **Note:** If you ever get a prompt to "Add File to Git" for
+    PyCharm project metadata files (anything in the `.idea` folder, like
+    `misc.xml` or `vcs.xml`), then choose **no**. 
+    We do not want to version control these files.  
     Click on the Version Control tool window in the footer (or choose
     **View > Tool Windows > Version Control**) and click the **Log**
     tab. It's empty...  
@@ -88,10 +97,6 @@ practising with Git and GitHub.
     That's because we've only added this file to the "staging"
     state, so it will be included when we commit.  
     This is important. Git only tracks the files we ask it to.  
-    **Note:** If you ever get a prompt to "Add File to Git" for
-    PyCharm project metadata files (anything in the .idea folder, like
-    misc.xml or vcs.xml), then say **no**. We do not want to version
-    control these files.
 
 7.  Now for our first **commit**!  
     Press the shortcut key for committing changes (Ctrl+K or Cmd+K
@@ -332,12 +337,12 @@ program"). Now let's modify this program.
     Change the name to `get_password` and press OK.  
     PyCharm should create the function and replace the old code with a
     call to it like `password = get_password()`  
-    (Note that this all depends on how you wrote the code to start with.)
+    (Note that the details depend on how you wrote the code to start with.)
 
 3.  Now refactor the loop that prints the asterisks into a function that
     takes 1 parameter: the password. (PyCharm will see that password needs 
     to be an input parameter and create the function accordingly.)  
-    Note that this will be a super simple functions, but that's OK.
+    Note that this will be a super simple function, but that's OK.
     
 4. Finished? Then commit - with a meaningful message in the imperative voice.  
    This could be something like "Refactor password program to use functions" 

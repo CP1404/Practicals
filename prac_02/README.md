@@ -105,9 +105,13 @@ Python has a useful built-in function for finding out about the local
 scope of something, called **dir()**.
 
 **Launch a Python console** (in PyCharm, simply click in the
-footer/status bar where it says "Python Console") and try the following:
+footer/status bar where it says "Python Console") and type the following 
+at the `>>>` prompt:
 
     dir(str)
+    
+This will give you a display of the "dictionary" of everything contained in `str`, like:
+
     ['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
 
 Look carefully! You can see all of those useful **str** methods such as
@@ -116,12 +120,15 @@ Look carefully! You can see all of those useful **str** methods such as
 Next try running the **dir()** function with **random** as the argument:
 
     dir(random)
+
+The result won't be quite the same...
+
     Traceback (most recent call last):
       File "<input>", line 1, in <module>
     NameError: name 'random' is not defined
 
 This doesn't work, since random is a **module** that needs to be
-**imported**.
+**imported** first.
 
 Now try it like this:
 
@@ -447,7 +454,7 @@ since that is how string comparisons are made.
 Mr. Black the school teacher wants an educational program for his school
 students to explore the details of ASCII. He wants the app to allow a
 student to input a character and see the corresponding ASCII code, and
-vice versa. The output of the program should look like (where **g** and
+vice versa. A sample run of the program should look like (where **g** and
 **100** are user inputs):
 
     Enter a character: g
@@ -474,11 +481,11 @@ vice versa. The output of the program should look like (where **g** and
     It should output like ("..." indicates parts that have been removed to
     save space):
 
-        33 !
-        34 "
+         33  !
+         34  "
         ...
-        99 c
-        100 d
+         99  c
+        100  d
         ...
 
 ## ASCII Columns Challenge 
@@ -507,7 +514,7 @@ Copy the code from [word_generator.py](word_generator.py)
 -   Get the word format from the user so they can customise it. Convert
     it to lowercase using a str method.
 
--   Try and make the program more interesting, For example:
+-   Try and make the program more interesting. For example:
 
     a.  Use wildcards for the vowels (#) and consonants (%) or either
         (*) and make alphabetical characters use that actual

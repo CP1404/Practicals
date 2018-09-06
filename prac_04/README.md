@@ -1,12 +1,16 @@
 # Practical 04 - Lists
 
 Now that you know how to use Git and GitHub, please use them
-consistently for all your work. Each time you finish a task,
-commit it.  
-You only need to push once - when you finish and/or it's time 
+consistently for all your work. This should just be how you normally work now.  
+
+If you do not already have your prac work with you, start by **cloning** 
+your prac repository via PyCharm, **VCS > Checkout From Version Control > Git/GitHub**  
+
+Each time you finish a task, **commit** it.  
+
+You only need to **push** once - when you finish and/or it's time 
 to leave, but you can do it more often if you wish. 
-We will remind you every now and then, but from now on, 
-it should just be how you normally work.  
+
 When you're about to make a change, like refactoring, commit first so you
 can track the differences and you can go back to a previous version if
 you need to.
@@ -15,7 +19,8 @@ you need to.
 it's not over... you need to complete it during the week so that you're
 all finished by the *start* of the next practical. If you need help with 
 anything, bring those questions to your tutor the following
-week or ask us for help online.
+week or ask us for help online.  
+And remember, everything you need to know has been taught in the lectures and pracs.
 
 ## Warm-Up
 
@@ -60,7 +65,7 @@ When the incomes have been entered, the program should display a list of
 the month's income next to the cumulative income at that point - for
 each month. Here's some sample output:
 
-How many months? 5
+    How many months? 5
     
     Enter income for month 1: 120
     Enter income for month 2: 245.4
@@ -70,11 +75,11 @@ How many months? 5
 
     Income Report
     -------------    
-    Month 1 - Income: $ 120.00 Total: $ 120.00    
-    Month 2 - Income: $ 245.40 Total: $ 365.40    
-    Month 3 - Income: $ 900.00 Total: $ 1265.40
-    Month 4 - Income: $ 1205.56 Total: $ 2470.96    
-    Month 5 - Income: $ 12.35 Total: $ 2483.31
+    Month  1 - Income: $    120.00         Total: $    120.00
+    Month  2 - Income: $    245.40         Total: $    365.40
+    Month  3 - Income: $    900.00         Total: $   1265.40
+    Month  4 - Income: $   1205.56         Total: $   2470.96
+    Month  5 - Income: $     12.35         Total: $   2483.31
 
 Have a think about how to do this before reading on...
 
@@ -95,7 +100,7 @@ string format() method for.
 **Things to do:**
 
 1.  Copy the starter code from [total_income.py](total_income.py) 
-    and commit it to your own prac repo:
+    (remember to use *Raw* mode) and commit it to your own prac repo:
 
 2.  Study it to see how this code answers those questions so far.
 
@@ -130,7 +135,9 @@ Here are some small problems to give you more practice working with
 lists.  
 Feel free to **check the solutions** for these so you can make sure you're on track.
 
-1.  Write a program that prompts the user for 5 numbers and then stores
+1.  **Basic list operations**  
+    Create the file **list_exercises.py**
+    Write a program that prompts the user for 5 numbers and then stores
     each of these in a list called **numbers**.  
     The program should then
     output various interesting things, as in the output below.  
@@ -148,39 +155,37 @@ Feel free to **check the solutions** for these so you can make sure you're on tr
         The largest number is 20
         The average of the numbers is 6.2
 
-2.  **Woefully inadequate security checker...**  
+2.  **Woefully inadequate security checker**  
+    (Still in the same file)  
     Copy the following list of usernames into a new Python file:
       
-    `usernames = ['jimbo', 'giltson98', 'derekf', 'WhatSup', 'NicolEye', 'swei45', 'BaseInterpreterInterface', 'BaseStdIn', 'Command', 'ExecState', 'InteractiveConsole', 'InterpreterInterface', 'StartServer', 'bob']` 
+        usernames = ['jimbo', 'giltson98', 'derekf', 'WhatSup', 'NicolEye', 'swei45', 'BaseInterpreterInterface', 'BaseStdIn', 'Command', 'ExecState', 'InteractiveConsole', 'InterpreterInterface', 'StartServer', 'bob'] 
 
     Ask the user for their username. If the username is in the above
     list of authorised users, print "Access granted", otherwise print
     "Access denied".
 
-3.  **List comprehensions**
+3.  **List comprehensions**  
     Download/copy [list_comprehensions.py](list_comprehensions.py)  
-    and see how the first two list comprehensions work.  
-    Complete the TODOs, creating two more list comprehensions to:
-
-    a.  create a list of integers from a list of strings
-
-    b.  create a list of all of the full_names in lowercase
+    and see how the example list comprehensions work.  
+    Write more list comprehensions (not loops) by completing the TODOs in the code.
 
 # Do-from-scratch Exercises
 
-### "Quick Pick" Lottery Ticket Generator**
+### "Quick Pick" Lottery Ticket Generator
 
+Create the file **quick_picks.py**  
 Write a program that asks the user how many "quick picks" they wish to
 generate. The program then generates that many lines of output. Each
-line consists of 6 random numbers between 1 and 45. These values
-should be stored as CONSTANTS. 
+line consists of 6 random numbers between 1 and 45.  
+These values should be stored as CONSTANTS. 
 
-**Each line should not contain any repeated number.**  
-Make sure your numbers are unique.  
-**Each line of numbers should be displayed in sorted (ascending)
+- **Each line (quick pick) should not contain any repeated number.**  
+
+- **Each line of numbers should be displayed in sorted (ascending)
 order.**  
 
-**Note:** Python's random module has a **sample()** function, which
+**Note:** Python's random module has a `sample()` function, which
 returns a selection from a list. This is a nice way to solve this
 problem... but it's too easy :) Do not use it for this program.  
 
@@ -188,11 +193,11 @@ Your code should produce output that matches this sample output
 (except the numbers are random):
 
     How many quick picks? 5
-    9 10 11 32 38 44
-    2 9 12 14 28 30
-    5 10 16 22 35 42
-    1 2 16 22 37 40
-    1 17 20 23 25 27
+     1 12 14 15 30 36
+     2  5  8 33 38 41
+     2 12 19 22 29 43
+    13 21 28 29 42 43
+     3  4 10 11 32 44
 
 ### .gitignore
 
@@ -200,27 +205,27 @@ Your code should produce output that matches this sample output
 Before we're done, let's learn one more Git thing, ignoring files.
 
 You will have files in your project that you don't want stored in your
-repo (like PyCharm metadata files), you can just choose not to add them
-(as we've done until now) but they do show up as "unversioned files",
-which is kind of a warning...   
-We'd prefer this to only show us files we
-probably should add.
+repo (like PyCharm metadata files). You can just choose not to add them
+(as we've done until now) but they do show up as "unversioned files".   
+We'd prefer this to only show us files we probably should add.
 
 ![Unversioned Files window](../images/04image2.png)
 
 The solution is to add a file called `.gitignore` to your repository.  
 Note the exact spelling, including the dot at the start. On Unix-like
-systems (including Mac), the dot makes a file/folder hidden.
+systems (including Mac), the dot makes a file/folder _hidden_.
 
-This is just a plain text file that stores the names of any files or
-folders you want Git not to track and not to warn you about.
+.gitignore is just a plain text file that stores the names of any files or
+folders you want Git not to track and not to warn you about.  
+Your file will still exist in your _project_, but not in your _repository_.
 
-Do this now: create the file, and let PyCharm add it to Git.
+**Create a file called .gitignore** in the root folder of your pracs project/repo, 
+and let PyCharm add it to Git.
 
 Then enter one line (the trailing slash means it will match a directory
 but not a file with that name):
 
-`.idea/`
+    .idea/
 
 .idea is the directory (folder) that PyCharm stores its project metadata
 in.
@@ -232,9 +237,10 @@ Now look at that Version Control tool window... problem solved!
 Commit.
 
 **Note:** if you have already committed your .idea folder to your
-repository, PyCharm does not provide a way to stop tracking this. You
-have to use the Git command line (e.g. git bash, or Mac Terminal) and
-run the command:
+repository, PyCharm does not seem to provide a way to stop tracking this. 
+You have to use the Git command line (e.g. git bash, or Mac Terminal).  
+Ask your tutor if you've never done this before.  
+_Change into your project folder_ and run the following command:
 
     git rm -r --cached .idea
 
@@ -244,7 +250,7 @@ index, not the local disk (--cached).
 # Practice & Extension Work
 
 We know from many years of teaching programming, that you need to spend
-lots of time writing programs, so here's some to write.  
+lots of time writing programs, so here's some to write.    
 This final part
 of practicals will usually be for you to do outside of practical time.  
 Use these exercises as normal practice and as ways to learn new things.
