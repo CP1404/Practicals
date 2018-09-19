@@ -220,7 +220,7 @@ program.
     miles to kilometres and display this in the bottom label. (Oops, "m"
     in the screenshot is not a good abbreviation for "miles".)
 
-###Stage 2
+### Stage 2
 
 -   Handle invalid inputs. If the text entered is not a valid number,
     just display 0.0 as the output.  
@@ -233,9 +233,8 @@ program.
     when either text is entered or the up/down buttons are pressed (you
     can handle this with Kivy's `on_text` event)
 
-**Note:** The solution to this is provided in your Kivy Demos repository
-(convert_m_km.py/kv). Don't just copy it, but do use it if you get stuck, and/or to compare
-your solution to ours.
+**Note:** The solution to this is provided (convert_m_km.py/kv).  
+Don't just copy it, but do use it if you get stuck, and/or to compare your solution to ours.
 
 ## Dynamic Kivy Widgets
 
