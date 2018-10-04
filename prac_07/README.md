@@ -3,14 +3,14 @@
 Note: This is a fairly long practical. You should get started early
 (before the prac session) and you will probably need to put in more time
 after the practical session. There are a lot of demos to learn and copy
-from in [https://github.com/CP1404/KivyDemos].
+from in <https://github.com/CP1404/KivyDemos>.
 
 If you're using your own computer and you haven't already done so,
 please follow the setup instructions for installing Kivy at:
 <https://github.com/CP1404/Starter/wiki/Software-Setup>
 
-First, please save yourself time and make life
-easier by adding kv language syntax highlighting and auto-completion
+**First, please save yourself time and make life easier** 
+by adding kv language syntax highlighting and auto-completion
 (since PyCharm does not know about kv language by default):
 
 -   Download: <https://github.com/Zen-CODE/kivybits/blob/master/IDE/PyCharm_kv_completion.jar?raw=true>
@@ -23,8 +23,8 @@ easier by adding kv language syntax highlighting and auto-completion
 
 -   Restart PyCharm.
 
-***Seriously***, it's worth the 1-2 minutes that this will take.   You have
-On JCU computers you to do it every time, so save the download file on your USB or network
+***Seriously***, it's worth the 1-2 minutes that this will take.  
+On JCU computers you will have to do it every time, so save the download file on your USB or network
 drive for next time.
 
 # Walkthrough Example
@@ -198,32 +198,42 @@ record and show your progress as you improve your code by refactoring.
 
 # Do-from-scratch Exercises
 
+## Miles to Kilometres Converter
+
 Create a Kivy program and use the kv language to recreate the following
 layout.  
-(The dark grey with white boxes are buttons, the black with yellow is a
-label and the black on white one is a text input.)
+(The dark grey with white boxes are Buttons, the black with yellow text is a
+Label and the black on white one is a TextInput.)
 
 ![Convert Miles to Kilometres screenshot](../images/07image6.png)
 
 When you have created the layout, write the functionality for the whole
-program.
+program. As always, do this in small steps.
 
--   You should be able to type a number in the text entry field
+-   Use a `StringProperty` for the text on the output (km) label.  
+    Then in the app you can set this property variable without having to 
+    manually update the text of the label. It will automatically update.  
+    See the **mvc_demo.py** and kv file in the demos for an example of this.
+
+-   You should be able to type a number in the text entry field.
+
+-   Pressing the "Convert" button should calculate the conversion from
+    miles to kilometres and display this in the bottom label. (Oops, "m"
+    in the screenshot is not a good abbreviation for "miles".)
 
 -   Pressing the Up or Down buttons should make this (miles) number go up/down by 1
 
     -   Note: You can handle both of these with the same function by
         passing a value, e.g.  
         `on_press: handle_increment(-1)`
+        Or, you may like to pass the text of the input field when you call this, like:
+        `on_press: handle_increment(whatever_your_input_id_is.text, -1)`
 
--   Pressing the "Convert" button should calculate the conversion from
-    miles to kilometres and display this in the bottom label. (Oops, "m"
-    in the screenshot is not a good abbreviation for "miles".)
 
 ### Stage 2
 
 -   Handle invalid inputs. If the text entered is not a valid number,
-    just display 0.0 as the output.  
+    just set the output result to 0.0.  
     It should not crash or produce errors in the console.
 
 -   Pressing Up/Down when the box is empty or invalid should assume the
@@ -232,6 +242,9 @@ program.
 -   Remove the convert button (comment it out) and make the result appear immediately
     when either text is entered or the up/down buttons are pressed (you
     can handle this with Kivy's `on_text` event)
+    
+-   Did you use a `CONSTANT` in your conversion calculation?  
+    Do this now if you haven't already. 
 
 **Note:** The solution to this is provided (convert_m_km.py/kv).  
 Don't just copy it, but do use it if you get stuck, and/or to compare your solution to ours.
