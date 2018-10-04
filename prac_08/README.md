@@ -79,7 +79,7 @@ _Are you reading carefully and learning? Don't skim this!_
 Depending on what kind of system you're modelling with **Taxi**, it
 might make sense that all taxis have the same price per km. (We don't
 want to get into one taxi and pay $2.20, then find another one was
-only $1.20.) So, we can use a **class variable", which is a variable
+only $1.20.) So, we can use a **class variable**, which is a variable
 that is ***shared*** between all instances of that class. You define
 class variables directly _after_ the class header line and _before_ any
 method definitions.
@@ -138,7 +138,7 @@ unreliable_car_test.py to verify each method.
 
 -   **`__init__(self, name, fuel, reliability)`**
 
-    -   call the **Car's version of **`__init__`**, and then set the
+    -   call the Car's version of **`__init__`**, and then set the
         reliability to the value passed in
 
 -   **`drive(self, distance)`**
@@ -457,10 +457,11 @@ So, the format/protocol is:
     to figure this out...  
     Then test and see if it sorts correctly now.
 
-3. Write another version (save a new copy) that does the above, then asks
+3. Save a copy of this program as **myguitars.py** then modify this 
+   version so that it does the above, then asks
    the user to enter their new guitars (just like your practical 6 code).  
    Store these in your list of guitar objects, then  
-   Write all of your guitars to the file **myguitars.csv**.  
+   write all of your guitars to the file **myguitars.csv**.  
    Test that this worked by opening the file, and also by running the
    program again to make sure it reads the new guitars.
 
