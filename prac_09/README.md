@@ -125,7 +125,7 @@ iterative development!
     **`isupper()`** such as with the "tN" in "SilentNight"), then you
     know you need to put '_' between them.
 
--   You can start with an empty string `"""` and build it using string
+-   You can start with an empty string `""` and build it using string
     concatenation step-by-step as you determine what the next character
     should be. E.g. for the above case, you can add the 't', then the
     '_' to your new filename string, then move on to the next
@@ -133,7 +133,7 @@ iterative development!
 
 # Do-from-scratch Exercises
 
--   Extract the **FilesToSort.zip** file which contains files with
+-   Extract the **FilesToSort.zip** file, which contains files with
     various names and extensions.
 
 -   Write code to sort these files into subdirectories for each
