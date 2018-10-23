@@ -138,8 +138,14 @@ iterative development!
 
 -   Write code to sort these files into subdirectories for each
     extension.
+    
+-   **Note:** The provided files are samples. Your solutions must be 
+    able to work for any files with any extensions.  
+    Do not hard-code any file names or extensions.
 
 ## Version 1
+
+Do this first version in **sort_files_1.py**. 
 
 Use **`os.mkdir()`** to create a directory with for each new extension
 that your program finds and use **`shutil.move()`** to move files into
@@ -158,6 +164,8 @@ you process the files.
 
 ## Version 2
 
+Do this second version in **sort_files_2.py**. 
+
 Let the user categorise different extensions as the program encounters
 these, then move them all into those subdirectories. E.g.
 
@@ -171,9 +179,11 @@ these, then move them all into those subdirectories. E.g.
 categories as you process the files.
 
 **Note:** there are two parts to this - **categorising the extensions**
-and **moving the files**. You should approach them as separate steps.
+and **moving the files**. You should approach them as separate steps in your 
+iteratve problem solving process, but the final resulting code should be efficient 
+(e.g. don't use unnecessary loops).
 
-For one example run with these files (user input in **bold**):
+For one _example_ run with these files (user input in **bold**):
 
 <pre>
 What category would you like to sort doc files into? <strong>Docs</strong>

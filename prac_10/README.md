@@ -36,6 +36,8 @@ base case).
 
 ### Recursion From Scratch
 
+Do this next exercise in the same file, recursion.py.
+
 ![Pyramid](../images/10image2.png)  
 
 Consider that you want to try for the
@@ -46,7 +48,7 @@ a 2D pyramid.
 **Do this first as a simple loop in a function**, then **write a
 recursive function** to calculate the number of blocks. As always, think
 about good function design. It should **take in** the number of rows and
-**return** the number of blocks**.**
+**return** the number of blocks.
 
 The number of blocks for n rows is:
 
