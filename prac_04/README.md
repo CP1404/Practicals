@@ -157,7 +157,7 @@ Feel free to **check the solutions** for these so you can make sure you're on tr
 
 2.  **Woefully inadequate security checker**  
     (Still in the same file)  
-    Copy the following list of usernames into a new Python file:
+    Copy the following list of usernames:
       
         usernames = ['jimbo', 'giltson98', 'derekf', 'WhatSup', 'NicolEye', 'swei45', 'BaseInterpreterInterface', 'BaseStdIn', 'Command', 'ExecState', 'InteractiveConsole', 'InterpreterInterface', 'StartServer', 'bob'] 
 
