@@ -164,14 +164,14 @@ dictionary...
     print("{:{}} = {}".format(x, y, z))
     ```
 
-    This formats the first placeholder value, x, with a width of y then
-    prints a literal = then the value of z.
+    This formats the first placeholder value, `x`, with a width of `y` then
+    prints a literal `=` then the value of `z`.
     Your output should then look something like:
     
-        Text: a fun collection 
-        a :          2
+        Text: a fun a collection 
+        a          : 2
         collection : 1
-        fun :        1
+        fun        : 1
 
 ![GitHub Logo](../images/03image2.png)
 
