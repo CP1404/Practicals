@@ -1,69 +1,20 @@
-# Practical 10 - Recursion, Testing, API, Flask
+# Practical 10 - Testing, API, Flask
 
-Today we will explore the use of **recursion**, tools for **testing**,
-an **API** for Wikipedia and the very cool **Flask** Web framework. This
-is the final marked practical for the subject, and must be
+Today we will explore the use of tools for **testing**,
+an **API** for Wikipedia and the very cool **Flask** Web framework.  
+This is the final marked practical for the subject, and must be
 satisfactorily attempted during the prac time (no marking next week).
 You don't have to finish it but you have to do good work.
 
-Start by downloading the prac files from this folder.  
-These files have `# TODO` comments to show you what steps to do.
-
-# Recursion
-
-![Pencil icon](../images/03image1.png)
-
-Open recursion.py and read the code, then **write down** (on paper, like
-it's a practice exam question!) the expected output for the first
-function, `do_it(5)` **BEFORE** you run it.
-
-Then run it to see if you were right.
-
-Then use the **debugger** to step through the execution to see what's
-happening.
-
-Do the same for the next function - start by uncommenting 
-`# do_something(4)`
-
-You'll find a problem... The function should print the squares of
-positive numbers from n down to 0, but instead it runs until the maximum
-recursion limit is reached...  
-**Fix this.**
-
-**Challenge for later:** Write another version of this that recursively
-prints the squares backwards (i.e. on the way back after hitting the
-base case).
-
-### Recursion From Scratch
-
-Do this next exercise in the same file, recursion.py.
-
-![Pyramid](../images/10image2.png)  
-
-Consider that you want to try for the
-world 2D pyramid block building record.  
-Write a program to get the number of rows from the user and calculate
-the number of blocks you will need given the number of rows (n) to make
-a 2D pyramid.  
-**Do this first as a simple loop in a function**, then **write a
-recursive function** to calculate the number of blocks. As always, think
-about good function design. It should **take in** the number of rows and
-**return** the number of blocks.
-
-The number of blocks for n rows is:
-
-`n + (n-1) + (n-2) + ... 2 + 1`
-
-E.g. for 6 rows, it is 6 + 5 + 4 + 3 + 2 + 1 = 21
-
 # Testing
 
-Follow the TODO instructions in testing.py, taking note that the code
+Copy [testing.py](testing.py) to your practicals project, 
+then follow the `TODO` instructions in it, taking note that the code
 shows you examples to learn form.
 
 1.  Fix the `repeat_string` function so that it passes the `assert` test. 
  
-    Note: Don't change the test!  
+    **Don't change the test!**  
     The failing test shows that the function is broken; fix the function.
 
 2.  Write at least two `assert` statements to show if Car sets the fuel
@@ -74,7 +25,7 @@ shows you examples to learn form.
     Note: PyCharm might detect your tests and automatically run your
     program in doctest mode.
 
-4.  Fix the failing `is_long_word` function
+4.  Fix the failing `is_long_word` function.
 
 5.  Write and test (using doctest) a function to format a phrase as a
     sentence - starting with a capital and ending with a single full
@@ -109,7 +60,9 @@ package, then skip those parts of the prac that use it.
 In PyCharm, go to Settings/Preferences > Project: Practicals > Project
 Interpreter (it might look a bit different but you should have been here
 before) and click the plus button to install a package. Type "wikipedia"
-to find the one we want, and then click "Install Package".
+to find the one we want, and then click "Install Package".  
+**Note:** If you don't have permission to install this, 
+try it with the option to install to user's site packages directory.  
 
 ![PyCharm install package](../images/10image3.png)
 
@@ -306,10 +259,69 @@ If not, please do that right now on LearnJCU.
 
 # Practice & Extension Work
 
-1.  Write a program that prints a string from the outside in, **using
-    recursion**.  
-    E.g. if the string to print is "Programming", your program should
-    print: "P g r n o i g m r m a".  
+1.  Add **`assert`** and **`doctest`** testing to your work from an earlier
+    prac - e.g. the `is_valid_password()` function from prac 2 and the
+    `get_fixed_filename()` function from prac 9.
+
+2.  During the holidays you might like to experiment with Flask and see
+    if you can make some cool Web interfaces for your existing
+    programs...
+
+    A **great idea** would be to make programs with 3 interfaces: console,
+    Kivy and Web, and reuse as much common code as you can. That should
+    help you see how modular your work is. This would help you
+    understand the **MVC** (Model-View-Controller) pattern more, as you just
+    want to create 3 different views that use the same model.
+
+# Recursion
+In previous years, this subject has covered **recursion**, but we've since 
+moved that topic to a later programming subject.  
+Here are some questions relating to recursion, just for fun.  
+
+### Explore recursion
+Open `recursion.py` and read the code, then **write down** (on paper, like
+it's a practice exam question!) the expected output for the first
+function, `do_it(5)` **BEFORE** you run it.
+
+Then run it to see if you were right.
+
+Then use the **debugger** to step through the execution to see what's
+happening.
+
+Do the same for the next function - start by uncommenting 
+`# do_something(4)`
+
+You'll find a problem... The function should print the squares of
+positive numbers from n down to 0, but instead it runs until the maximum
+recursion limit is reached...  
+**Fix this.**
+
+Write another version of this that recursively prints the squares backwards 
+(i.e. on the way back after hitting the base case).
+
+### Pyramid program
+
+![Pyramid](../images/10image2.png)  
+
+Write a program to get the number of rows from the user and calculate
+the number of blocks you will need to make a 2D pyramid given this number of rows (n).
+  
+**Do this first as a simple loop in a function**, then **write a
+recursive function** to calculate the number of blocks. As always, think
+about good function design. It should **take in** the number of rows and
+**return** the number of blocks**.**
+
+The number of blocks for n rows is:
+
+`n + (n-1) + (n-2) + ... 2 + 1`
+
+E.g. for 6 rows, it is 6 + 5 + 4 + 3 + 2 + 1 = 21
+
+### Other recursive challenges
+
+1.  Write a recursive program that prints a string from the outside in.  
+    E.g. if the string to print is `"Programming"`, your program should
+    print: `"P g r n o i g m r m a"`.  
     Another example:  
     
         Enter a string: 123456  
@@ -325,21 +337,5 @@ If not, please do that right now on LearnJCU.
     backwards. The following are examples:
 
     -   Hannah
-    
     -   abcba
-    
     -   (ignoring case, spaces and punctuation) A Toyota's a Toyota
-
-3.  Add **`assert`** and **`doctest`** testing to your work from an earlier
-    prac - e.g. the `is_valid_password()` function from prac 2 and the
-    `get_fixed_filename()` function from prac 9.
-
-4.  During the holidays you might like to experiment with Flask and see
-    if you can make some cool Web interfaces for your existing
-    programs...
-
-    A **great idea** would be to make programs with 3 interfaces: console,
-    Kivy and Web, and reuse as much common code as you can. That should
-    help you see how modular your work is. This would help you
-    understand the **MVC** (Model-View-Controller) pattern more, as you just
-    want to create 3 different views that use the same model.
