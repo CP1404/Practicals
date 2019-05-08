@@ -6,10 +6,11 @@ Many files contain `# TODO` comments, which are part of the instructions for wha
 Complete instructions are found in each prac folder.
 
 ## Solutions
-Selected practical solutions are provided here, in the "solutions" branch.  
+Selected practical solutions are provided here, in the **"solutions"** branch.  
 These are to help you learn by evaluating your own work and seeing our suggested ways of solving the practical problems. 
 
-**Important**: Please use the solutions in a mature and honest way, as helpful learning tools... _after_ you complete your own work, _not_ as something to simply copy into your own prac work. OK?
+**Important**: Please use the solutions in a mature and honest way, as helpful learning tools... _after_ you complete your own work, _not_ as something to simply copy into your own prac work. OK?  
+Seriously, **never copy the solutions** as this will not help you learn as much as doing your own coding.
 
 ## Practical Content
 Practical numbers do not necessarily correspond to weeks.
@@ -24,4 +25,4 @@ E.g. some subject offerings run in 10 weeks, some in 13 weeks.
 * [Practical 07 - Kivy](./prac_07)
 * [Practical 08 - Inheritance](./prac_08)
 * [Practical 09 - OS](./prac_09)
-* [Practical 10 - Recursion, Testing, API, Flask](./prac_10)
+* [Practical 10 - Testing, API, Flask](./prac_10)
