@@ -1,6 +1,7 @@
 .idea/
 .DS_Store
 */__pycache__
-/prac_09/Lyrics/
-/prac_09/FilesToSort/
+prac_02/*.txt
+prac_09/Lyrics/
+prac_09/FilesToSort/
 temp.py
