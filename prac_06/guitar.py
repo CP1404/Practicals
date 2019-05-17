@@ -16,7 +16,7 @@ class Guitar:
         self.year = year
         self.cost = cost
 
-    def __str__(self, ):
+    def __str__(self):
         """Return a string representation of a Guitar."""
         return "{} ({}) : ${:,.2f}".format(self.name, self.year, self.cost)
 

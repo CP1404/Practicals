@@ -52,7 +52,7 @@ def main():
 def display_taxis(taxis):
     """Display numbered list of taxis."""
     for i, taxi in enumerate(taxis):
-        print("{} - {}".format(i, str(taxi)))
+        print("{} - {}".format(i, taxi))
 
 
 def run_tests():
