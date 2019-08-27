@@ -1,5 +1,10 @@
 # Practical 06 - Classes
 
+**External students**: Each week, you will do your work in a new branch, 
+then do a *pull request*, mentioning a new/different student to get (and give)
+a code review. So, this week, before starting the prac, create a new branch, `prac_06_feedback`.  
+See how this works? Please ask for help if you're not sure.  
+
 We have seen how to work with lists, tuples and dictionaries to store
 and process data appropriate for those types:
 
