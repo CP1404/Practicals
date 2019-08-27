@@ -1,8 +1,8 @@
 # Practical 05 - Dictionaries, Code Reviews with PRs
 
-**Did you finish last week's work? Including the practice section?** If
-not, make sure to complete it during the week. If you have any questions, 
-ask your peers or tutor the following week.
+**Did you finish last week's work? Including the practice section?**  
+If not, make sure to complete it during the week.  
+If you have any questions, ask your peers or tutor the following week.
 
 _Your_ reason for doing this subject/degree probably has something to do
 with getting a job in the IT industry.
@@ -11,8 +11,8 @@ _Our_ reason for teaching you things like we are today is the same - to
 prepare you for work in the industry.
 
 A common and important part of development jobs in the IT industry is
-doing **code reviews**, where a peer evaluates and comments on
-another's work with the goal of improving the final result (and mutual
+doing **code reviews**, where a developer evaluates and comments on
+the work of a peer with the goal of improving the final result (and mutual
 learning).
 
 So, to help you towards being a better programmer and being more
@@ -20,11 +20,11 @@ familiar with industry practices, today you will work on some programs,
 then review another student's work.
 
 *You need to complete the tasks and do a **Pull Request** that mentions
-another student to get full marks.*
+another student to get full marks for this practical.*
 
 This means you need a partner so you can review each other's code.
 **Organise someone right now and swap GitHub usernames** (external
-students do this via Slack). It's also OK to review multiple people's
+students, please do this via Slack). It's also OK to review multiple people's
 code or to have a cycle of people reviewing the next person's... it
 doesn't have to be a direct swap.
 
@@ -47,10 +47,16 @@ our case getting feedback.
 1.  Open your PyCharm Practicals project. (If it's not already up to
     date on GitHub, then commit and push your current work now.)
 
-2.  Create a branch called "feedback" by: **VCS > Git > Branches**
+2.  Create a branch called "prac_05_feedback" by: **VCS > Git > Branches**
     then click **+ New Branch**
 
 ![New Git Branch](../images/05image2.png)
+
+Note: In previous years, we used the same branch name (feedback) for all PRs
+(external students do one every week), but this caused some confusion with students 
+continuing to work on 'old' branches, so now we ask for a new branch for each prac.
+So, if/when you do your work for the following prac and need to do a pull request,
+use `prac_06_feedback` and so on...
 
 It may look like nothing happened, but your local repository now has a
 new branch, which is currently exactly the same as the 'master'
@@ -59,13 +65,13 @@ footer:
 
 ![PyCharm git branch](../images/05image3.png)
 
-So now the work you do and commit will be in the feedback branch, not
-the master. We will then do a pull request from feedback to master,
+So now the work you do and commit will be in the prac_05_feedback branch, not
+the master. We will then do a pull request from prac_05_feedback to master,
 which is basically a request for someone to **merge** the changes in
-feedback into the master branch... which gives us the opportunity to
+prac_05_feedback into the master branch... which gives us the opportunity to
 provide comments via GitHub.
 
-So, you're on the feedback branch? Great! Let's write some code using
+So, you're on the prac_05_feedback branch? Great! Let's write some code using
 **dictionaries**...
 
 # Walkthrough Example
@@ -126,6 +132,9 @@ allows a user to enter a name and get the code, e.g. entering
 Entering an invalid colour name should not crash.  
 Allow the user to enter names until they enter a blank one to stop the loop.  
 
+Note: We have just done two exercises that use dictionaries that are constants and named in ALL_CAPS. 
+Please don't think this is any kind of rule or pattern. Dictionaries that change would not be constants.
+
 # Do-from-scratch Exercises
 
 Create the file **word_occurrences.py**  
@@ -154,7 +163,7 @@ dictionary...
     *After* you have the program working, **make your program do this
     sorting**.
 
--   As a further refinement, **align the numbers so they are in one nice
+-   As a further refinement, **align the outputs so the numbers are in one nice
     column**. You will need to find the longest word in the list first,
     and then you need to know how to use the str.format method to take a
     variable width. The former is up to you, but the latter can be done
@@ -165,7 +174,8 @@ dictionary...
     ```
 
     This formats the first placeholder value, x, with a width of y then
-    prints a literal = then the value of z.
+    prints a literal = then the value of z.  
+    (Note that x, y and z are not intended to be meaningful names.)
     Your output should then look something like:
     
         Text: a fun collection 
@@ -183,8 +193,8 @@ but simplified to suit our teaching environment.
 
 1.  Commit your changes, making sure to add any new files that you
     created today.  
-    You have already created and switched to the 'feedback' branch so
-    your commits will go only to the feedback branch.
+    You have already created and switched to the 'prac_05_feedback' branch so
+    your commits will go only to the prac_05_feedback branch (not master).
 
 2.  Open the repository in a web browser and you should see a notice
     like:
@@ -193,18 +203,18 @@ but simplified to suit our teaching environment.
     Note: it's possible that your experience will be slightly different, 
     so please try and understand what's happening - don't just click things.
 
-3.  Click the green button to make a pull request from feedback to
+3.  Click the green button to make a pull request from prac_05_feedback to
     master.  
-    If that notice doesn't appear, you can switch to the feedback
+    If that notice doesn't appear, you can switch to the prac_05_feedback
     branch and click the button to create a new Pull Request:  
     ![GitHub New Pull Request](../images/05image8.png)  
-    Add a title like "Code review request" and some detail like
+    Add a title like "Prac 5 code review request" and some detail like
     "Please check formatting, naming and logic" (or anything else you
     want checked). In this description, *mention* the reviewer with
     their GitHub username and the @ symbol - e.g. \@personname - so
-    they will be notified (depending on their GitHub preferences)
+    they will be notified (depending on their GitHub preferences).
 
-    Now if you are the first to do this, you're finished for now...
+    If you are the first to do this, you're finished for now...
     move on to the next section and come back here when you receive a
     mention to do a review for someone else...  
     If you've already got a PR to review, then carry on with the next
@@ -236,15 +246,10 @@ but simplified to suit our teaching environment.
     good mate :)", but take your time and add thoughtful comments that
     help you and the requester to learn and improve.
 
-    (When you've finished, there's nothing more to do as part of this
-    review process. In a collaborative environment where you and the
-    reviewer have push access to the repository, there would be more,
-    including the option to merge and close the pull request.)
-
     At some point you will receive comments from the review you requested and
     you can respond to them by making changes in your own code in PyCharm
     and replying to the comments on GitHub. Then commit your work back to
-    GitHub, still in the feedback branch.
+    GitHub, still in the prac_05_feedback branch.
 
 6.  Ideally, the reviewer would re-check this new work after the updates
     and make more comments... then the author does more work if need
@@ -252,18 +257,20 @@ but simplified to suit our teaching environment.
     decides when it's finished) ... then the reviewer would close the
     pull request.  
     In our simplified version of this process, you can just **Merge the
-    pull request** now (add a comment if you want):  
+    pull request** now (add a comment if you want). 
+    This merge replaces what was in the master branch with what is in the prac_05_feedback branch.    
     ![GitHub Merge Pull Request](../images/05image13.png)  
-    GitHub will tell you that the feedback branch can be deleted.
-    You're welcome to delete it.
+    GitHub will tell you that the prac_05_feedback branch can be deleted.
+    You're welcome to delete it (both on GitHub and locally).
 
 7.  Now the master branch has been updated on GitHub (remote), but not locally.  
-    In PyCharm, switch back to the local master branch by clicking in
+    In PyCharm, *switch back to the local master branch* by clicking in
     the footer where it shows the branch:  
     ![PyCharm change branch](../images/05image14.png)
 
 8.  **Pull** your changes from master (remote) to update your local repo:
-    **VCS > Git > Pull** then click **Pull**.
+    **VCS > Git > Pull** then click **Pull**.  
+    You should now be on your local master branch and see all your up-to-date work.
 
 All done!
 
