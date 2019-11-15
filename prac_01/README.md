@@ -47,11 +47,10 @@ Note that to get full marks, you must have attempted every part of every questio
 it's time to get marked.*
 
 There are online tests available through LearnJCU that also contribute
-to your practical mark. Each test is worth the same value as a prac, so
-your total mark is for 10 practicals + 5 tests. See the subject outline
+to your practical mark. See the subject outline
 for details of how tests are marked. We recommend doing each test before
 you start your practical work, and you must complete it by the due date
-(the week it's in) to get your marks for it.
+to get your marks for it.
 
 All code for pracs can be found here at
 <https://github.com/CP1404/Practicals> - Many of these files have
