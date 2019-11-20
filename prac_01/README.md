@@ -264,11 +264,23 @@ Okay, let's practise using PyCharm to write simple programs.
     So, for this program we could use the following (we're only
     interested in the values, not the format):
 
-| Test Input         | Expected Output
-| ------------------ | ---------------
-| 500                | 50
-| 2000               | 300
-| 1000 (edge case)   | 150
+    | Test Input         | Expected Output
+    | ------------------ | ---------------
+    | 500                | 50
+    | 2000               | 300
+    | 1000 (edge case)   | 150
+
+    Now (only when the above part is finished), add a loop to this, 
+    so it repeatedly asks for the user's sales and prints the bonus
+    **until** they enter a negative number. (Note the boundary carefully.)  
+    Remember that **until** is the opposite of **while**, and if you need help, 
+    please check the patterns. Here's (only) some of the pseudocode to help you:
+    
+        get sales
+        while sales >= 0
+            calculate bonus
+            get sales
+        do next thing (if needed) 
 
 2.  **Debugging:**  
     Someone (it's not polite to say who) was trying to write a program
@@ -284,7 +296,6 @@ Okay, let's practise using PyCharm to write simple programs.
     90 or more is excellent; 50 or more is a pass; below 50 is bad.  
     Be very careful of your boundary conditions... and *test!*
 
-
 3.  Create a file called **loops.py** and add this for loop that
     displays all of the odd numbers between  
     1 and 20 with a space between each one.
@@ -294,19 +305,23 @@ Okay, let's practise using PyCharm to write simple programs.
         print(i, end=' ')
     print()
     ```
-    Now **write more for loops** (using range) to do the following:
+    Now **write more for loops** (using range) to do the following:  
+    (Note that for marking, we expect to see a complete file with each loop still in it.)
 
-    a.  count in 10s from 0 to 100: 0 10 20 30 40 50 60 70 80 90 100
+    a.  count in 10s from 0 to 100: `0 10 20 30 40 50 60 70 80 90 100`
     
-    b.  count down from 20 to 1: 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5
-        4 3 2 1
+    b.  count down from 20 to 1: `20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1`
     
     c.  print n stars. Ask the user for a number, then print that many stars
         (*), all on one line  
         *Note: this is a very simple loop for repeating n times. We use for
         loops for "definite" iteration like this. while loops are used for
         "indefinite" iteration (like repeating while a user input is
-        incorrect).*
+        incorrect).*  
+        Sample output:
+        
+        Number of stars: 4
+        ****
     
     d.  print n lines of increasing stars. Using the same number as above
         print lines of increasing stars, starting at 1. E.g. if **4** was
@@ -316,11 +331,6 @@ Okay, let's practise using PyCharm to write simple programs.
         **
         ***
         ****
-
-4.  Add a loop to the sales bonus exercise you did above, so that the
-    program repeatedly asks for the user's sales and prints the bonus
-    **until** they enter a negative number.  
-    Remember that **until** is the opposite of **while**.
 
 *Keep going...*
 
@@ -333,14 +343,14 @@ as a guide, and if you're not sure how to do it, go back to the subject
 materials. For example, the question below asks for an error-checking
 loop, which we cover in chapter 2 (Control), and which is also
 summarised as one of our standard patterns at:
-<https://github.com/CP1404/Starter/wiki/Programming-Patterns>
+<https://github.com/CP1404/Starter/wiki/Programming-Patterns>  
+
+If you need help, ask a classmate or your tutor.
 
 # Do-from-scratch Exercises
 
-Here are a few problems to solve "from scratch". If you need help, ask
-a classmate or your tutor.
-
 ## Shop Calculator
+`shop_calculator.py`  
 
 A shop requires a small program that would allow them to quickly work
 out the total price for a number of items, each with different prices.
@@ -376,57 +386,20 @@ it is valid.
 
 # Practice & Extension Work
 
-Remember, even though these 'extension & practice' exercises are optional in
-terms of marks, but the best way to get better at programming is...
-***programming!***  
+Remember, even though the questions in this final section are not required for marks, 
+the best way to get better at programming is... ***programming!***  
 So do them each and every week :)
 
 You will learn better if you spread your work over multiple sessions
-instead of trying to do all of this in one go.
+instead of trying to do all of this in one go.  
+There are two sub-sections - *practice*, with easier questions for you to get more... practice  
+and *extension*, with harder questions for you to stretch yourself. 
 
 Save each program in a different file within the prac_01 folder.
 
-1.  **Create an electricity bill estimator**  
-Inputs should be:
+## Practice 
 
-    -   price per kWh in cents,
-
-    -   daily use in kWh, and
-
-    -   number of days in the billing period.  
-          
-        **Example use:**
-
-    <pre>
-    Electricity bill estimator         
-    Enter cents per kWh: <strong>35</strong>          
-    Enter daily use in kWh: <strong>4.5</strong>      
-    Enter number of billing days: <strong>90</strong> 
-    Estimated bill: $141.75            
-    </pre>
-
-2.  Modify your bill estimator by asking the user to choose which tariff
-    they are using - then use the appropriate stored value for cents per
-    kWh.  
-    Start by defining two **constants** like below.  
-    Constants in Python are just variables written in ALL_CAPITALS.
-
-    ```python
-    TARIFF_11 = 0.244618
-    TARIFF_31 = 0.136928
-    ```
-    
-    **Example use:**
-    
-    <pre>
-    Electricity bill estimator 2.0   
-    Which tariff? 11 or 31: 11       
-    Enter daily use in kWh: 13.4     
-    Enter number of billing days: 90 
-    Estimated bill: $295.01         
-    </pre>
-
-3.  **Menus:**  
+1.  **Menus:**  `menus.py`  
     One very common programming task is to make menus by combining
     looping (repeat the program until the user quits) with selection
     (let the user decide what to do).  
@@ -494,7 +467,50 @@ Inputs should be:
     Finished.
     </pre>
 
-4.  **Menu-driven number sequence generator:**  
+2.  **Create an electricity bill estimator**, `electricity_bill.py`  
+  
+    Inputs should be:
+
+    -   price per kWh in cents,
+
+    -   daily use in kWh, and
+
+    -   number of days in the billing period.  
+          
+    **Example use:**
+
+    <pre>
+    Electricity bill estimator         
+    Enter cents per kWh: <strong>35</strong>          
+    Enter daily use in kWh: <strong>4.5</strong>      
+    Enter number of billing days: <strong>90</strong> 
+    Estimated bill: $141.75            
+    </pre>
+
+3.  (in the same file) Modify your bill estimator by asking the user to choose which tariff
+    they are using - then use the appropriate stored value for cents per
+    kWh.  
+    Start by defining two **constants** like below.  
+    Constants in Python are just variables written in ALL_CAPITALS.
+
+    ```python
+    TARIFF_11 = 0.244618
+    TARIFF_31 = 0.136928
+    ```
+    
+    **Example use:**
+    
+    <pre>
+    Electricity bill estimator 2.0   
+    Which tariff? 11 or 31: 11       
+    Enter daily use in kWh: 13.4     
+    Enter number of billing days: 90 
+    Estimated bill: $295.01         
+    </pre>
+
+## Extension
+
+1.  **Menu-driven number sequence generator:**  `sequences.py`    
     A school teacher requires a small program that would allow primary
     school students to learn about various number sequences. The teacher
     is interested in a simple menu-driven program that has the following
@@ -512,3 +528,11 @@ Inputs should be:
 # Solutions?
 Remember that solutions are provided for most prac exercises... to help you learn, not just for copying :)  
 See the solutions branch here in this repository. Change the **branch** to "solutions" at the top of the page. 
+
+# Deliverables
+This section summarises the expectations for marking in this practical
+
+- sales_bonus.py
+- broken_score.py
+- loops.py
+- shop_calculator.py
