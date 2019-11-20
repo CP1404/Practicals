@@ -16,11 +16,12 @@ like: "literal".format(...) or variable.upper()
 Sometimes the best way to start learning this sort of thing is to see
 some useful examples, so:
 
--   (Remember that you just keep using the same PyCharm project for all
-    practicals, you don't need to make a new one for each prac.)  
-    Create a new folder called prac_02 in your practicals project
+-   Remember that you just keep using the same PyCharm project for all
+    practicals.  
+    **DO NOT make a new project for each practical!**   
+    **Create a new folder called `prac_02`** in your existing practicals project.
 
--   Create a new Python file called string_formatting_examples.py in
+-   Create a new Python file called `string_formatting_examples.py` in
     this folder.
 
 -   (Remember when copying code from GitHub to click **Raw** first so
@@ -33,7 +34,7 @@ some useful examples, so:
     ```python
     name = "Gibson L-5 CES"
     year = 1922
-    cost = 16035.40
+    cost = 16035.4
     
     # The 'old' manual way to format text with string concatenation:
     print("My guitar: " + name + ", first made in " + str(year))
@@ -48,10 +49,10 @@ some useful examples, so:
     
     # Aligning columns:
     numbers = [1, 19, 123, 456, -25]
-    for i in range(len(numbers)):
-        print("Number {0} is {1:>5}".format(i + 1, numbers[i]))
+    for number in numbers:
+        print("Number is {:>5}".format(number))
     
-    # Another (nicer) version of the above loop using the enumerate function
+    # A version of the above loop using the enumerate function, useful when you want the index and value
     for i, number in enumerate(numbers):
         print("Number {0} is {1:>5}".format(i + 1, number))
     ```
@@ -64,19 +65,7 @@ some useful examples, so:
 -   You can also repeat values by repeating the positional arguments.
 
 -   And you can do lots of formatting by using the string formatting
-    'mini language'; details come after the **:**
-
-Want to read more about it?
-<https://docs.python.org/3/library/string.html#formatstrings>
-
-### Things to do:
-
-Using a **for** loop with the **range** function and **string
-formatting**, produce the following output (right-aligned numbers):
-
-      0
-     50
-    100
+    'mini language'; details come after the **:**  See: <https://docs.python.org/3/library/string.html#formatstrings>
 
 **Tips for string formatting with the format specifier {}**
 
@@ -91,6 +80,22 @@ to use 3 spaces (or more if needed) for the value when it's used.
 left-aligned**. You can change this with > or <  
 So, {:>6} would format the value to be right-aligned and take up 6 (or
 more if needed) spaces.
+
+### Things to do:
+
+Use string formatting to produce the output:  
+(Notice where the values go and also the float formatting / number of decimal places.)
+```
+1922 Gibson L-5 CES for about $16,035!
+```
+
+Using a **for** loop with the **range** function and **string
+formatting** (do not use a list), produce the following output (right-aligned numbers):
+
+      0
+     50
+    100
+    150
 
 ## Random Numbers
 
@@ -159,9 +164,11 @@ Note: the name of a function can be used without the brackets here, but this
 does not execute the function.
 
 ### Try This Out
+`randoms.py` (Note: never name a file the same as a module; 
+e.g. `random.py` or it will have higher precedence when you, e.g. `import random`)  
 
 In your **console**, type in the following (run each print line multiple
-times), and answer the questions below by writing into one of your prac code files (make one).
+times), and write the answers to the questions below in comments in `randoms.py`.
 
 ```python
 import random
@@ -182,6 +189,8 @@ print(random.uniform(2.5, 5.5))  # line 3
 -   *What did you see on line 3?*  
     What was the smallest number you could have seen, what was the
     largest?
+
+-   Write code, not a comment, to produce a random number between 1 and 100 inclusive.
 
 ## Example to Study
 
@@ -251,7 +260,7 @@ Download the code from: [capitalist_conrad.py](capitalist_conrad.py)
 ## Exceptions
 
 Copy this example code that uses exceptions: [exceptions_demo.py](exceptions_demo.py)
-(also shown below), and run it, then answer the questions below...
+(also shown below), and run it, then answer the questions below in comments...
 
 ```python
 try:
@@ -297,6 +306,9 @@ while not finished:
 print("Valid result is:", result)
 ```
 
+Remove `pass` when you're finished.  
+It's only there to prevent a syntax error.
+
 *You're doing well. Keep it up...*
 
 # Do-from-scratch Exercises
@@ -309,7 +321,14 @@ Note: when you execute a Python program that contains a line like
 `open('data.txt', 'w')` the new file "data.txt" is created in the
 same folder as the Python file in your PyCharm project.
 
-Create a new file called **files.py** and do all of the following in it:
+Create a new file called **files.py** and do all of the following *separate questions* in it:  
+Note: the intention is to give you experience using different ways to read files.  
+Make sure you're confident with:
+
+- `read()`
+- `readline()`
+- `readlines()`
+- `for line in file`
 
 1.  Write code that asks the user for their name, then opens a file
     called "name.txt" and writes that name to it.
@@ -319,15 +338,16 @@ Create a new file called **files.py** and do all of the following in it:
     "Your name is Bob" (or whatever the name is in the file).
 
 3.  Create a text file called `numbers.txt` and save it in your `prac_02`
-    directory. Put the numbers 17 and 42 on separate lines in the file
+    directory. Put the following three numbers on separate lines in the file
     and save it:  
     17  
     42  
-    Write code that opens "numbers.txt", reads the numbers and adds
+    400  
+    Write code that opens "numbers.txt", reads only the first two numbers and adds
     them together then prints the result, which should be... 59.
 
-4.  Now write a fourth block of code that can print the total for a file
-    containing *any* number of numbers.
+4.  Now write a fourth block of code that prints the total for all lines in `numbers.txt`
+    or a file with *any* number of numbers.
 
 ## Password Checker
 
@@ -350,7 +370,7 @@ a.  the minimum and maximum length of the password
 b.  whether or not a special character (not alphabetical or numerical)
     is required
 
-Remember when a program has constants, you should use them everywhere you can so that if you change them at the top, this change affects the whole program as expected.  
+Remember when a program has CONSTANTS, you should use them everywhere you can so that if you change them at the top, this change affects the whole program as expected.  
 E.g. if you changed the minimum length to 5, the program should print 5 and should check to make sure the password is >= 5 characters long.
 
 Output should look something like this:
@@ -407,7 +427,7 @@ this for you with TODO comments in the code provided.
     Test your code for each of these changes as you write them
 
 -   For special characters, remember you can use the **in** operator to
-    see if the character is in another string (like a constant called
+    see if the character is **in** another string (like a constant called
     SPECIAL_CHARACTERS)
 
 -   ... keep going until you can tell how many of each kind of character
@@ -419,7 +439,7 @@ this for you with TODO comments in the code provided.
 everything you code.**
 
 When you have the program working, replace the inconsistent printing of
-text and variables with nice string formatting using the str.format()
+text and variables with nice string formatting using the `str.format()`
 method.
 
 ## Got your GitHub on?
@@ -442,7 +462,17 @@ The final part of pracs will usually be for you to do outside of prac
 time.  
 Use these exercises as normal practice and as ways to learn new things.
 
-## ASCII Table
+##Practice
+
+**Random Things**
+Write 3 different versions of code to generate a random Boolean (True or False).  
+
+**More Random Conrad**
+
+Replace the literal values for the constants at the top (like
+MAX_INCREASE) with randomly generated values (within sensible ranges)
+
+### ASCII Table
 
 Computers use ASCII to define a character-encoding scheme for letters,
 digits, and other characters. It is useful to become familiar with ASCII
@@ -459,7 +489,7 @@ vice versa. A sample run of the program should look like (where **g** and
     Enter a number between 33 and 127: 100
     The character for 100 is d
 
-1.  Start new file, ascii_table.py, and write code for this program.
+1.  Start new file, `ascii_table.py`, and write code for this program.
     Remember that you can use the ord() and chr() functions to convert
     characters to ASCII integer values and vice versa.
 
@@ -485,13 +515,15 @@ vice versa. A sample run of the program should look like (where **g** and
         100  d
         ...
 
-## ASCII Columns Challenge 
+## Extension
 
-Add columns to your ASCII table output. Ask the user for how many
+**ASCII Columns Challenge** 
+
+Add columns to your ASCII table output from the earlier questions. Ask the user for how many
 columns to print, then figure out how to write loop(s) and print
 statements to achieve this.
 
-## Word Generator
+**Word Generator**
 
 The following program randomly generates words by constructing a string
 from random combinations of characters. The word_format variable stores
@@ -499,14 +531,14 @@ a sequence like ccvc, which means: consonant consonant vowel consonant.
 The **random.choice** function is a useful way to select a single value
 from a sequence of values.
 
-Notice how the variable word starts as an empty string and then is
-constructed using repeated string concatenation (with the + operator).
+Notice how the variable `word` starts as an empty string and then is
+constructed using repeated string concatenation (with the `+` operator).
 
-Try this and see if you can get any interesting words:
+Try this and see if you can get any interesting words.
 
 Copy the code from [word_generator.py](word_generator.py)
 
-### Things To Do:
+Things To Do:
 
 -   Get the word format from the user so they can customise it. Convert
     it to lowercase using a str method.
@@ -520,26 +552,33 @@ Copy the code from [word_generator.py](word_generator.py)
 
     b.  Automatically (randomly) generate the word_format variable.
 
-## Automatic Password Generator
+**Automatic Password Generator**
 
-Write a program that should ask for a length and what characteristics it
+Write a program that asks for a length and what characteristics it
 must have - requirements for upper/lower/numeric/special characters -
 then it should generate a password that matches.  
 Use your earlier program's checker functionality to validate the
 generated password.
 
-## More Random Conrad
-
-Replace the literal values for the constants at the top (like
-MAX_INCREASE) with randomly generated values (that make sense)
-
 # Solutions to Selected Exercises
 
 **Note:** it is ***super important*** that you use any provided
-solutions to help you **learn**, not to avoid learning!  
+solutions to **help you learn**, not to avoid learning!  
 Do the work yourself first, and *only* check the solutions to evaluate
 your own work - not to do it for you. **OK?**
 
 Some solutions (not all) for practicals will be provided in the
 **solutions** branch of the Practicals repository on GitHub:
 <https://github.com/CP1404/Practicals/tree/solutions>
+
+
+# Deliverables
+This section summarises the expectations for marking in this practical.
+
+- string_formatting_examples.py
+- randoms.py
+- capitalist_conrad.py
+- exceptions_demo.py
+- exceptions_to_complete.py
+- files.py
+- password_checker.py

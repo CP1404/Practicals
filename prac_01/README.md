@@ -530,7 +530,7 @@ Remember that solutions are provided for most prac exercises... to help you lear
 See the solutions branch here in this repository. Change the **branch** to "solutions" at the top of the page. 
 
 # Deliverables
-This section summarises the expectations for marking in this practical
+This section summarises the expectations for marking in this practical.
 
 - sales_bonus.py
 - broken_score.py
