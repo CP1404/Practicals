@@ -475,25 +475,21 @@ Inputs should be:
     (H)ello
     (G)oodbye
     (Q)uit
-    
     >>> A
     Invalid choice
     (H)ello
     (G)oodbye
     (Q)uit
-        
     >>> H
     Hello Guido
     (H)ello
     (G)oodbye
     (Q)uit
-        
     >>> G
     Goodbye Guido
     (H)ello
     (G)oodbye
     (Q)uit
-        
     >>> Q
     Finished.
     </pre>
