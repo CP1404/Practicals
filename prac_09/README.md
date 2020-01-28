@@ -125,7 +125,7 @@ iterative development!
     **`isupper()`** such as with the "tN" in "SilentNight"), then you
     know you need to put '_' between them.
 
--   You can start with an empty string `"""` and build it using string
+-   You can start with an empty string `""` and build it using string
     concatenation step-by-step as you determine what the next character
     should be. E.g. for the above case, you can add the 't', then the
     '_' to your new filename string, then move on to the next
@@ -133,13 +133,19 @@ iterative development!
 
 # Do-from-scratch Exercises
 
--   Extract the **FilesToSort.zip** file which contains files with
+-   Extract the **FilesToSort.zip** file, which contains files with
     various names and extensions.
 
 -   Write code to sort these files into subdirectories for each
     extension.
+    
+-   **Note:** The provided files are samples. Your solutions must be 
+    able to work for any files with any extensions.  
+    Do not hard-code any file names or extensions.
 
 ## Version 1
+
+Do this first version in **sort_files_1.py**. 
 
 Use **`os.mkdir()`** to create a directory with for each new extension
 that your program finds and use **`shutil.move()`** to move files into
@@ -158,6 +164,8 @@ you process the files.
 
 ## Version 2
 
+Do this second version in **sort_files_2.py**. 
+
 Let the user categorise different extensions as the program encounters
 these, then move them all into those subdirectories. E.g.
 
@@ -171,9 +179,11 @@ these, then move them all into those subdirectories. E.g.
 categories as you process the files.
 
 **Note:** there are two parts to this - **categorising the extensions**
-and **moving the files**. You should approach them as separate steps.
+and **moving the files**. You should approach them as separate steps in your 
+iteratve problem solving process, but the final resulting code should be efficient 
+(e.g. don't use unnecessary loops).
 
-For one example run with these files (user input in **bold**):
+For one _example_ run with these files (user input in **bold**):
 
 <pre>
 What category would you like to sort doc files into? <strong>Docs</strong>
@@ -192,18 +202,31 @@ What category would you like to sort jpg files into? <strong>Images</strong>
 
 # Practice & Extension Work
 
-## Check files for missing data
+## Practice
 
-The song lyric text files should all have copyright information in them
-on a line that starts with **.i** like:
+1.  **Check files for missing data**  
+    The song lyric text files should all have copyright information in them
+    on a line that starts with **.i** like:
+    
+        .i (c) 2011 Thankyou Music (Admin. by Crossroad Distributors Pty. Ltd.)
 
-    .i (c) 2011 Thankyou Music (Admin. by Crossroad Distributors Pty. Ltd.)
+    Write a program that reports the names and directories of all of the files
+    that are missing this line.
 
-Write a program that reports the names and directories of all of the files
-that are missing this line.
+## Extension
 
-**Version 2**
+1.  Write a program to find certain kinds of files on your hard drive.  
+    E.g. you could look for files:
+    
+    - over or within a certain size
+    - with a certain extension
+    - containing certain text
+    - etc.
+    
+# Deliverables
+This section summarises the expectations for marking in this practical.
 
-Automatically look up the copyright information from the Internet based
-on the song title and author, then add the data to the file...  
-Good luck with that ;)
+- os_demos.py & modifications
+- cleanup_files.py
+- sort_files_1.py
+- sort_files_2.py

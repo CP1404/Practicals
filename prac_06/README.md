@@ -1,5 +1,14 @@
 # Practical 06 - Classes
 
+**External students**: Each week, you will do your work in a new branch, 
+then do a *pull request*, mentioning a new/different student to get (and give)
+a code review. So, this week, before starting the prac, create a new branch, `prac_06_feedback`.  
+See how this works? Please ask for help if you're not sure.  
+
+**Internal students**: You are not expected to do PR code reviews each prac, 
+but you are very welcome to do so if you would like to.
+
+
 We have seen how to work with lists, tuples and dictionaries to store
 and process data appropriate for those types:
 
@@ -41,8 +50,8 @@ def main():
     print("Car {self.fuel}, {self.odometer}".format(self=my_car))
 ```
 
-Note that the import statement assumes you have your car.py file in a
-folder called prac_06 as we suggested.
+Note that the import statement assumes you have your `car.py` file in a
+folder called `prac_06` as we suggested.
 
 Run your program and it should work.
 
@@ -79,6 +88,9 @@ the following:
     Now **add names** (literals) to the constructors where you create Car objects
     in the used_cars.py program.  
     Test your work and make sure you can now make and view named cars.
+
+8.  In your used_cars.py program, just print your car object/s to make sure that the 
+    `__str__` method is working as expected.
 
 # Intermediate Exercises
 
@@ -172,11 +184,11 @@ You should notice that we have multiple values to store for one guitar entity:
 name, year and cost... and that guitars are awesome! What if we owned 9 guitars? 
 We'd want to use a collection like a list... but what would each element in the list be?
 ... A tuple? A dictionary? No... This is a classic case for a class!  
-Write a **Guitar** class that allows you to store one guitar with those **fields** 
-(attributes):
 
--   **name** (we could split this into make and model, but one name
-    field will do us for now)
+Write a **Guitar** class (what should the name of the file be?) that allows you to store 
+one guitar with those **fields** (attributes):
+
+-   **name** (we could split this into make and model, but one name field will do us for now)
 -   **year**
 -   **cost**
 
@@ -189,7 +201,8 @@ Define the following **methods**:
     `Gibson L-5 CES (1922) : $16,035.40`
 
 -   **`get_age()`** - which returns how old the guitar is in years (e.g.
-    the L-5 is 2018 - 1922 = 96)
+    the L-5 is 2020 - 1922 = 98) 
+    (unless the year has changed since the last time this page was updated :)
 
 -   **`is_vintage()`** - which returns True if the guitar is 50 or more
     years old, False otherwise  
@@ -204,19 +217,19 @@ already knows (like age, year, etc.).
 Now write a **guitar_test.py** program with at least enough code to
 test that the last two methods work as expected.  
 So to test that the **get_age()** method works, you could test that the
-above example guitar does indeed output 95 as expected. Here is some
+above example guitar does indeed output 98 as expected. Here is some
 sample output for testing two guitars where the second is called 
-Another Guitar and has year=2012:
+Another Guitar and has year=2013:
 
-    Gibson L-5 CES get_age() - Expected 96. Got 96
-    Another Guitar get_age() - Expected 6. Got 6
+    Gibson L-5 CES get_age() - Expected 98. Got 98
+    Another Guitar get_age() - Expected 7. Got 7
     Gibson L-5 CES is_vintage() - Expected True. Got True
     Another Guitar is_vintage() - Expected False. Got False
 
 Do you see how this works?
 
-We print our own *literal* for what we expect if the function works (e.g. 96),
-then we print *what the actual method returns* and we look at the output
+We print our own *literal* for what we expect if the function works (e.g. 98),
+then we print *what the method actually returns* and we look at the output
 to see if they match.  
 This form of testing is quite 'manual' since we need to read the output and 
 compare it ourselves, but it is a good start.
@@ -336,7 +349,17 @@ principle](https://en.wikipedia.org/wiki/Abstraction_principle_(programming)):
 Use these exercises as much-needed practice and as ways to learn new
 things.
 
-1. Create a **car driving simulator** in **car_simulator.py** that uses 
+## Practice
+
+1.  Similar to the practice question with friends' names and addresses in prac 5, 
+    create a program that uses a list of **Person** objects.  
+    Each Person object records the first-name, last-name and age.  
+    The user can type in the details of any number of people. The
+    code generates a table formatted with the first-names, last-names, and
+    ages of the people (perhaps sort the people into order based on their
+    ages).
+
+2. Create a **car driving simulator** in **car_simulator.py** that uses 
 the Car class that works like the following sample output...
 
     **Note:** Please do this (and every problem of significant size)
@@ -414,7 +437,9 @@ the Car class that works like the following sample output...
         
         Good bye The bomb's driver.
 
-2. Create a **Date** class, storing the fields:
+## Extension
+
+1. Create a **Date** class, storing the fields:
     
     -   **day**
     -   **month**
@@ -431,13 +456,6 @@ the Car class that works like the following sample output...
     Note: Python has built in date and time functionality in the
     **datetime** module, so you would not usually write your own class to
     store a date, but this is a good practice exercise.
-
-3. Create a program that uses a list of **Person** objects.  
-    Each Person object records the first-name, last-name and age.  
-    The user can type in the details of any number of people. The
-    code generates a table formatted with the first-names, last-names, and
-    ages of the people (perhaps sort the people into order based on their
-    ages).
 
 ![GitHub logo](../images/03image2.png)  
 ## Try using the command line for Git   
@@ -466,3 +484,12 @@ commit with `git commit`...
 
 Then, next time you're ready to commit and push your practical work, 
 try using the command line to do it!
+
+# Deliverables
+This section summarises the expectations for marking in this practical.
+
+- Practicals repository on GitHub and up-to-date (every week)
+- car.py modifications
+- used_cars.py modifications (cars have names)
+- programming_language.py (the class), languages.py (the client program)
+- guitar.py (the class), guitar_test.py (the tests), guitars.py (the client program)

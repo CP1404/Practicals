@@ -3,14 +3,14 @@
 Note: This is a fairly long practical. You should get started early
 (before the prac session) and you will probably need to put in more time
 after the practical session. There are a lot of demos to learn and copy
-from in [https://github.com/CP1404/KivyDemos].
+from in <https://github.com/CP1404/KivyDemos>.
 
 If you're using your own computer and you haven't already done so,
 please follow the setup instructions for installing Kivy at:
 <https://github.com/CP1404/Starter/wiki/Software-Setup>
 
-First, please save yourself time and make life
-easier by adding kv language syntax highlighting and auto-completion
+**First, please save yourself time and make life easier** 
+by adding kv language syntax highlighting and auto-completion
 (since PyCharm does not know about kv language by default):
 
 -   Download: <https://github.com/Zen-CODE/kivybits/blob/master/IDE/PyCharm_kv_completion.jar?raw=true>
@@ -23,8 +23,8 @@ easier by adding kv language syntax highlighting and auto-completion
 
 -   Restart PyCharm.
 
-***Seriously***, it's worth the 1-2 minutes that this will take.   You have
-On JCU computers you to do it every time, so save the download file on your USB or network
+***Seriously***, it's worth the 1-2 minutes that this will take.  
+On JCU computers you will have to do it every time, so save the download file on your USB or network
 drive for next time.
 
 # Walkthrough Example
@@ -198,32 +198,42 @@ record and show your progress as you improve your code by refactoring.
 
 # Do-from-scratch Exercises
 
-Create a Kivy program and use the kv language to recreate the following
-layout.  
-(The dark grey with white boxes are buttons, the black with yellow is a
-label and the black on white one is a text input.)
+## Miles to Kilometres Converter
+
+Create a Kivy program, convert_m_km.py, and use the kv language, convert_m_km.kv, 
+to recreate the following layout.  
+(The dark grey with white boxes are Buttons, the black with yellow text is a
+Label and the black on white one is a TextInput.)
 
 ![Convert Miles to Kilometres screenshot](../images/07image6.png)
 
 When you have created the layout, write the functionality for the whole
-program.
+program. As always, do this in small steps.
 
--   You should be able to type a number in the text entry field
+-   Use a `StringProperty` for the text on the output (km) label.  
+    Then in the app you can set this property variable without having to 
+    manually update the text of the label. It will automatically update.  
+    See the **mvc_demo.py** and kv file in the demos for an example of this.
+
+-   You should be able to type a number in the text entry field.
+
+-   Pressing the "Convert" button should calculate the conversion from
+    miles to kilometres and display this in the bottom label. (Oops, "m"
+    in the screenshot is not a good abbreviation for "miles".)
 
 -   Pressing the Up or Down buttons should make this (miles) number go up/down by 1
 
     -   Note: You can handle both of these with the same function by
         passing a value, e.g.  
         `on_press: handle_increment(-1)`
+        Or, you may like to pass the text of the input field when you call this, like:
+        `on_press: handle_increment(whatever_your_input_id_is.text, -1)`
 
--   Pressing the "Convert" button should calculate the conversion from
-    miles to kilometres and display this in the bottom label. (Oops, "m"
-    in the screenshot is not a good abbreviation for "miles".)
 
 ### Stage 2
 
 -   Handle invalid inputs. If the text entered is not a valid number,
-    just display 0.0 as the output.  
+    just set the output result to 0.0.  
     It should not crash or produce errors in the console.
 
 -   Pressing Up/Down when the box is empty or invalid should assume the
@@ -232,8 +242,11 @@ program.
 -   Remove the convert button (comment it out) and make the result appear immediately
     when either text is entered or the up/down buttons are pressed (you
     can handle this with Kivy's `on_text` event)
+    
+-   Did you use a `CONSTANT` in your conversion calculation?  
+    Do this now if you haven't already. 
 
-**Note:** The solution to this is provided (convert_m_km.py/kv).  
+**Note:** The solution to this is provided (`convert_m_km.py/kv`).  
 Don't just copy it, but do use it if you get stuck, and/or to compare your solution to ours.
 
 ## Dynamic Kivy Widgets
@@ -266,7 +279,7 @@ The keys to this are:
 
 So now it's your turn...
 
-**Create a very simple app that has a list of names (strings) and
+**Create a very simple app, `dynamic_labels.py` that has a list of names (strings) and
 displays each one as a separate *Label*.**
 
 **Note:** Start a new blank program for this; do not copy the
@@ -275,6 +288,7 @@ any buttons or interactivity. Use the example only as a reference.
 
 # Practice & Extension Work
 
+## Practice
 1.  Modify your Greeter Program so the GUI layout looks like:
 
     ![Greeter Program 2 screenshot](../images/07image7.png)
@@ -285,7 +299,7 @@ any buttons or interactivity. Use the example only as a reference.
     type in their score out of 100, click a button and the app shows
     "Pass" or "Fail" (based on the value) in a label.
 
-    a.  Then extend this to show the JCU grade (e.g. 65-75 is a credit).
+    - Then extend this to show the JCU grade (e.g. 65-75 is a credit).
 
 3.  Make a GUI for the temperature converter program you did in the
     first practical.  
@@ -300,7 +314,9 @@ any buttons or interactivity. Use the example only as a reference.
     person with their name on the button. When you push the button it
     should show their age in a label at the bottom.
 
-5.  Do you have an **Android** device? If so, run one or more of your
+## Extension
+
+1.  Do you have an **Android** device? If so, run one or more of your
     Kivy apps on it using **Kivy Launcher**, as described at:
     <http://kivy.org/docs/guide/packaging-android.html#packaging-your-application-for-the-kivy-launcher>
     
@@ -318,33 +334,26 @@ any buttons or interactivity. Use the example only as a reference.
     
     You may also want to look at [python-for-android](https://github.com/kivy/python-for-android)
 
-## Customise your views
- 
-Open, run and inspect Jason's QuickSum Kivy app from (two files,
-**quick_sum** .py/.kv).
+2.  **Customise your views**
+    Open, run and inspect Jason's QuickSum Kivy app from (two files, **quick_sum** .py/.kv).
+    As explained in the lectures, notice the way it uses:
+    -   class rules like `<Button>`
+    -   `canvas.before` and `canvas.after` to change the background colour or other aspects of a widget
+    Use these techniques to change your miles->kilometres converter to use black text on white background widgets - or something else that you'd
+    like visually.  
+    Play around as much as you like with this, but don't worry about all 
+    the details of getting exactly the style you want.
 
-As explained in the lectures, notice the way it uses:
+3.  **Implement our "GuessingGame" app**
+    We started working on a simple guessing game Kivy app here: <https://github.com/CP1404/GuessingGame>
+    -   Form a team of two students for some **pair programming**
+    -   Have a look at the repo, and try your hand at making the app work
+    -   Then make a Pull Request back to us.
 
--   class rules like `<Button>`
+# Deliverables
+This section summarises the expectations for marking in this practical.
 
--   `canvas.before` and `canvas.after` to change the background colour or
-    other aspects of a widget
-
-Use these techniques to change your miles->kilometres converter to use
-black text on white background widgets - or something else that you'd
-like visually.  
-Play around as much as you like with this, but don't worry about all 
-the details of getting exactly the style you want.
-
-## Implement our "GuessingGame" app
-
-We started working on a simple guessing game Kivy app here:
-<https://github.com/CP1404/GuessingGame>
-
--   Form a team of two students for some **pair programming**
-
--   Have a look at the repo, and try your hand at making the app work
-
--   Then make a Pull Request back to us.
-
--   We will merge (accept) the best Pull Requests!
+- box_layout_demo.py & .kv with modifications (greet, clear)
+- squaring.py & .kv with modifications
+- convert_m_km.py & kv
+- dynamic_labels.py with Labels (not Buttons)

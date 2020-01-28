@@ -29,7 +29,7 @@ during the semester anytime, and especially in our main surveys.
 
 **On paper**, write a program that asks the user for a password, with
 error-checking to repeat if the password doesn't meet a minimum length set by a variable.  
-The program should then print asterisks as long as the password.  
+The program should then print asterisks as long as the word.  
 Example: if the user enters "Pythonista" (10 characters), the program should print "**********".
 
 It's a valuable skill to be able to write code with pen and paper --
@@ -52,12 +52,12 @@ practising with Git and GitHub.
 of PyCharm, since things change. Your experience may be a bit different depending
 on what version of PyCharm you have.
 
-1.  Let's start a **new project** (not just a new folder) in PyCharm,
+1.  **Create a new PyCharm project** (not just a new folder)
     called **Sandbox**, which you can use for doing small tests and
-    demos that you want to keep but don't fit into any other projects.
-    Do not put it inside your practicals project or any other project.
+    demos that you want to keep but that don't fit into any other projects.
+    DO NOT put it inside your practicals project or any other project.  
 
-2.  Add a Python file called **password_entry.py** and enter just a single
+2.  Add a Python file called **my_name.py** and enter just a single
     docstring (triple-quoted comment) at the top with your name in it.
 
 3.  Now we'll put this project into Git version control (without using
@@ -85,7 +85,7 @@ on what version of PyCharm you have.
     staging.
 
 5.  Switch to the **Local Changes** tab and you'll see some PyCharm
-    files that we don't care about and our one code file, password_entry.py.
+    files that we don't care about and our one code file, my_name.py.
     Right-click on this file and choose to **Add** it to Git.    
     ![Version Control Local Changes](../images/03image4.png)  
     (We could have done this in other ways, mostly by right-clicking on
@@ -114,8 +114,9 @@ on what version of PyCharm you have.
     You should now see your first commit appear in the Log tab of the
     Version Control tool window. ***Yay!***
 
-8.  Now type the code you wrote on paper earlier for error-checking and printing a
-    password as asterisks into your Python file. Test it.
+8.  Now create a new file (add to VCS) called `password_check.py` type the 
+    code you wrote on paper earlier for error-checking and printing a
+    word as asterisks into your Python file. Test it.
 
 9.  Do another commit with another useful commit message (perhaps
     something like "Add password check program"). Have a look and see that it also
@@ -176,7 +177,8 @@ on what version of PyCharm you have.
     How do we keep working on our project? We **clone** it. Choose
     **VCS > Checkout from Version Control > GitHub** from the menu.  
     (Note: do not use the clone/download button on the GitHub website,
-    but use PyCharm or git locally.)  
+    but use PyCharm or git locally. Also, never use GitHub's "upload" feature,
+    but use PyCharm or git to commit and push.)  
     Enter the GitHub URL of your Sandbox project, and choose a suitable
     place on your local computer (where your projects are stored), 
     then click **Clone**. You now have the
@@ -231,23 +233,28 @@ just keep using the same local repo.)
 It is possible to edit and upload files directly via the GitHub website
 but **do not do this!**
 
-We only made the Sandbox repo so we could practise Git and GitHub. You
-don't need to use it again, but you're welcome to put whatever you
+We only made the Sandbox repo so we could practise Git and GitHub.  
+You don't need to use it again, but you're welcome to put whatever you
 want there... but do not put your practical work in Sandbox.
 
-Now let's get your practicals on GitHub:
+## Now let's get your practicals on GitHub
 
 Before you follow the same process as above, please make sure your
 single practicals project has the same folder structure as
 <https://github.com/CP1404/cp1404practicals> and does NOT contain .idea
-folders in any of your prac_nn folders. If it doesn't match this --
+folders in any of your `prac_nn` folders. If it doesn't match this --
 please tidy up your project or make a new one and copy your Python files
 into the correct folders.
 
-Open your project in PyCharm, then **share** it on GitHub.  
+Open your project in PyCharm, then **share** it on GitHub (VCS menu).  
+
 **From now on (seriously, for every prac for the rest of the subject)**,
 when you finish a task, do a commit with a meaningful message.  
-Push your prac work to GitHub at least at the end of each prac. Nice!
+Push your prac work to GitHub at least at the end of each prac.  
+
+Do you understand that if you always keep your work up-to-date on GitHub, 
+you will _never_ have the problem of not having access to your work?  
+You will _always_ have your work available on GitHub. Nice!
 
 You do not need to commit or push for every little change, just for
 decent-sized changes and especially for milestones or before you start
@@ -259,7 +266,162 @@ PyCharm project = one GitHub repo, as we've (hopefully) just set up.
 
 # Intermediate Exercises
 
-## Debugging:
+## Functions:
+
+Remember that function names should say what they do (use verb phrases).
+
+Note also that functions should **do one thing** (Single Responsibility Principle, SRP)
+ - so they might calculate a value but NOT print it. If they calculated it AND printed
+it, that would be two things and you could no longer use that function
+if you wanted to use the value without printing it, e.g. in an expression.
+
+E.g. a function that calculates the area of a rectangle should have the
+height and width values passed in as parameters, rather than asking the
+user for them in the function. That way it can be used no matter where
+these values come from.  
+It should also **return** the result rather than printing it. 
+That way it can be used no matter what the purpose of the result is. 
+
+**From now on**, when writing programs with functions, create a `main()`
+function for the main part of the program. Put the main function at the
+*top* and call it at the *bottom*. If you are changing an existing program
+that does not already use functions, first put it all in a main function; 
+then add the other functions.  
+
+**DO NOT** use any global variables.  
+You should never use a global variable in this subject.  
+(CONSTANTS can and should be global, but never any variables.)  
+  
+So the basic form for all programs now is:
+
+```python
+# CONSTANTS
+
+def main():  
+    # statements...
+    # variables...  
+    do_stuff()  
+  
+def do_stuff():  
+    # statements...  
+  
+main()
+```
+
+
+### Password Check with Functions
+
+At the start you wrote `password_check.py` - a program that asks the user for
+a password and prints asterisks based on its length. Copy this from Sandbox into
+your `prac_03` folder and commit (with a message like "Add password check
+program"). Now let's modify this program.
+
+1.  Move all of the code inside a `main()` function and call `main()` at the
+    bottom. Run it to make sure it works.  
+    **Note:** if you don't have a main function, the refactoring below will
+    use global variables. So, it's an important first step to use main before 
+    adding other functions.
+
+2.  **Refactor** the part that gets the password into a separate function...  
+    You can either do this manually, or by using PyCharm's refactoring tool.  
+    If you want to use the tool, select the lines that
+    get and check the name (it should be 3-4 lines) then right-click 
+    (or use the main menu) and choose **Refactor > Extract > Method...**  
+    Change the name to `get_password` and press OK.  
+    PyCharm should create the function and replace the old code with a
+    call to it like `password = get_password()`  
+    (Note that the details depend on how you wrote the code to start with.)
+
+3.  Now refactor the part that prints the asterisks into a function that
+    takes 1 parameter: the password. (PyCharm will see that password needs 
+    to be an input parameter and create the function accordingly.)  
+    Note that this will be a super simple function, but that's fine.
+    
+4. Finished? Then commit - with a meaningful message in the imperative voice.  
+   This could be something like "Refactor password check program to use functions" 
+
+If you have not done so already, please *upgrade* your GitHub account to a free
+student account at:
+<https://education.github.com/discount_requests/new>  
+(You may need to upload a photo of your JCU student ID.)  
+This allows you to have private repositories for free, and you can get the GitHub
+Education Pack!
+
+# Do-from-scratch Exercises
+
+If you need help with any of these, first ask a classmate - to get used
+to helping each other - then talk to your tutor.
+
+1.  Refactor the following two previous programs to use functions (with suitable
+    verb-phrase function names) ...  
+    Copy both of these from prac_01 into prac_03, commit, then update
+    them. We do the commit first before updating so we can see clearly what we have
+    changed in the "diff".  
+    We copy (instead of move) them because we want each week's prac folder to
+    contain that week's prac work (don't change prac 1).  
+    Remember, any time you're using functions, you also need a `main()`
+    function for the main program.
+
+    a.  **temperatures.py** - use 2 functions for converting Celsius to
+        Fahrenheit and vice versa  
+        **Important:** Remember SRP - functions should do one thing, so
+        these should be calculation functions. Do not get user input or
+        print output in the functions - do those outside.  
+        That means these will be very small functions... that's OK...
+        they abstract a core piece of functionality.
+
+    b.  **broken_score.py** - `main` should ask the user for their score and print the result.  
+        write a new function that takes in the user's score
+        as a parameter and returns the result to be printed.  
+        The *function* should not print it.  
+    
+    c.  Now add a new part to the bottom of broken_score's main function that generates a 
+        *random* score and prints the result.  
+        If you've written your function properly, you can see that the function can be 
+        used in different ways, e.g. without user input.
+
+# Practice & Extension Work
+
+## Practice
+
+### Functions  
+
+**More scores**  
+Create `scores.py` and copy in only your function from `broken_score.py` above.
+Now write a main program that uses this function:
+- Ask the user for a number of scores 
+- Generate that many random numbers (scores) between 0 and 100 inclusive
+- For each of those scores, write the "result" to a file called `results.txt` as below:
+
+Example file output for 4 random scores:
+
+    66 is Passable
+    4 is Bad
+    92 is Excellent
+    51 is Passable
+
+**More temperatures**
+Create a text file called `temps_input.txt` and fill it with at least 15 
+floats of any values between -200 and +200. Where will you get these numbers from?  
+Write a Python script to create the text file, of course!  
+
+Now write a program, `convert_temps.py` , that uses the functions you made to convert temperatures.  
+Read the values in `temps_input.txt` as Fahrenheit values and write the converted Celsius values to `temps_output.txt`.  
+(Note: you could just change the function call to convert C->F instead of F->C.)   
+
+Example, if your file `temps_input.txt` contained:
+
+    26.590980264932597
+    -170.578748893293
+    126.69174145157581
+
+You should write `temps_output.txt` as:
+
+    -3.005010963926335
+    -112.54374938516278
+    52.60652302865323
+
+### Debugging  
 
 Open your **Capitalist Conrad** program from last week's practical.
 
@@ -279,110 +441,7 @@ Let's step through the program using the interactive debugger now...
     using the toolbar:    
     ![Debugger toolbar](../images/03image8.png)
 
-## Functions:
-
-Remember that function names should say what they do (use verb phrases).
-
-Note also that functions should **do one thing** - so they might
-calculate a value but NOT print it. If they calculated it AND printed
-it, that would be two things and you could no longer use that function
-if you wanted to use the value without printing it, e.g. in an
-expression.
-
-E.g. a function that calculates the area of a rectangle should have the
-height and width values passed in as parameters, rather than asking the
-user for them in the function. That way it can be used no matter where
-these values come from.  
-It should also **return** the result rather than printing it. 
-That way it can be used no matter what the purpose of the result is. 
-
-**From now on**, when writing programs with functions, create a `main()`
-function for the main part of the program. Put the main function at the
-*top* and call it at the *bottom*. If you are changing an existing program
-that does not already use functions, first put it all in a main function; 
-then add the other functions.  
-  
-So the basic form for all programs now is:
-
-```python
-def main():  
-    # statements...  
-    do_stuff()  
-  
-def do_stuff():  
-    # statements...  
-  
-main()
-```
-
-
-### Password Check with Functions
-
-At the start you wrote some code for a program that asks the user for
-a password and prints asterisks based on its length. Copy this into
-your `prac_03` folder and commit (with a message like "Add password check
-program"). Now let's modify this program.
-
-1.  Move all of the code inside a main() function and call main() at the
-    bottom.  
-    **Note:** if you don't have a main function, the refactoring below will
-    use global variables. So, it's an important first step to use main before 
-    adding other functions.
-
-2.  **Refactor** the part that gets the password into a separate function...  
-    You can either do this manually, or by using PyCharm's refactoring tool.  
-    If you want to use the tool, select the lines that
-    get and check the name (it should be 3-4 lines) then right-click 
-    (or use the main menu) and choose **Refactor > Extract > Method...**  
-    Change the name to `get_password` and press OK.  
-    PyCharm should create the function and replace the old code with a
-    call to it like `password = get_password()`  
-    (Note that the details depend on how you wrote the code to start with.)
-
-3.  Now refactor the loop that prints the asterisks into a function that
-    takes 1 parameter: the password. (PyCharm will see that password needs 
-    to be an input parameter and create the function accordingly.)  
-    Note that this will be a super simple function, but that's OK.
-    
-4. Finished? Then commit - with a meaningful message in the imperative voice.  
-   This could be something like "Refactor password program to use functions" 
-
-If you have not done so already, please upgrade your account to a free
-student account at:
-<https://education.github.com/discount_requests/new>  
-You will need to upload a photo of your JCU student ID. This allows
-you to have private repositories for free, and you can get the GitHub
-Education Pack!
-
-# Do-from-scratch Exercises
-
-If you need help with any of these, first ask a classmate - to get used
-to helping each other - then talk to your tutor.
-
-1.  Refactor two previous programs to use functions (with suitable
-    verb-phrase function names) ...  
-    Copy both of these from prac 1 into prac 3, commit, then update
-    them. We do the commit first so we can see clearly what we have
-    changed. We copy (instead of move) them because we want each week's prac folder to
-    contain that week's prac work.  
-    Remember, any time we're using functions, we also need a main()
-    function for the main program.
-
-    a.  **temperatures.py** - use 2 functions for converting Celsius to
-        Fahrenheit and vice versa  
-        **Important:** Remember SRP - functions should do one thing, so
-        these should be calculation functions. Do not get user input or
-        print output in the functions - do those outside.  
-        That means these will be very small functions... that's OK...
-        they abstract a core piece of functionality.
-
-    b.  **broken_score.py** - use a function that takes in the score
-        as a parameter and returns the result to be printed. The
-        *function* should not print it; the *main* program should store
-        and print the returned value.
-
-# Practice & Extension Work
-
+## Extension
 1.  Copy your **word generator** program from last week into this
     prac's folder. Commit.  
     Add error-checking so that you repeatedly validate the user's input
@@ -462,5 +521,14 @@ skills by doing the excellent interactive online Git tutorial:
 
 [try.github.io](https://try.github.io)
 
-You may also like to [login to lynda.com](https://cas.secure.jcu.edu.au/cas/login?service=https://www.lynda.com/portal/jcu)
-and do one or more of the online courses on GitHub
+You may also like to do one or more of the GitHub courses on [LinkedIn Learning](https://au.linkedin.com/learning/)
+
+
+# Deliverables
+This section summarises the expectations for marking in this practical.
+
+- password -> **** on paper (internal students)
+- Practicals repository on GitHub and up-to-date
+- password_check.py 
+- temperatures.py
+- broken_score.py

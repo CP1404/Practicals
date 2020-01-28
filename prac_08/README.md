@@ -33,7 +33,7 @@ that we can extend the Car class to make a **Taxi** class, which is a more
 specialised version of a Car.
 
 You can use your car from last week, or the finished version in the
-solutions. Either way, copy your car.py file to your prac_08 folder.
+solutions. Either way, copy your `car.py` file to your `prac_08` folder.
 
 Download [taxi.py](https://github.com/CP1404/Practicals/blob/master/prac_08/taxi.py)
 
@@ -79,7 +79,7 @@ _Are you reading carefully and learning? Don't skim this!_
 Depending on what kind of system you're modelling with **Taxi**, it
 might make sense that all taxis have the same price per km. (We don't
 want to get into one taxi and pay $2.20, then find another one was
-only $1.20.) So, we can use a **class variable", which is a variable
+only $1.20.) So, we can use a **class variable**, which is a variable
 that is ***shared*** between all instances of that class. You define
 class variables directly _after_ the class header line and _before_ any
 method definitions.
@@ -122,8 +122,6 @@ method definitions.
 
 ## UnreliableCar
 
-<!-- TODO check "test" file naming convention - make it consistent -->
-
 Let's make our own derived class for an **UnreliableCar** that inherits
 from **Car**. Write Python code for this class in a new file,
 unreliable_car.py, and write some testing code in
@@ -138,7 +136,7 @@ unreliable_car_test.py to verify each method.
 
 -   **`__init__(self, name, fuel, reliability)`**
 
-    -   call the **Car's version of **`__init__`**, and then set the
+    -   call the Car's version of **`__init__`**, and then set the
         reliability to the value passed in
 
 -   **`drive(self, distance)`**
@@ -190,8 +188,7 @@ on the fanciness of the **SilverServiceTaxi**.
     Note that you can reuse the parent class's `__str__` method like:
     `super().__str__()`
 
-5.  Write some test code in a file called
-    **silver_service_taxi_test.py** to see that your
+5.  Write some test code in a file called **silver_service_taxi_test.py** to see that your
     **SilverServiceTaxi** calculates fares correctly.  
     For an 18km trip in a **SilverServiceTaxi** with fanciness of 2, the
     fare should be $48.78 (yikes!)
@@ -266,7 +263,7 @@ numbers. Do your string formatting *outside* this function.
 
 # Do-from-scratch Exercises
 
-Write a taxi simulator program that uses your **Taxi** and
+Write a taxi simulator program, `taxi_simulator.py`, that uses your **Taxi** and
 **SilverServiceTaxi** classes.
 
 Each time, until they quit:
@@ -457,10 +454,11 @@ So, the format/protocol is:
     to figure this out...  
     Then test and see if it sorts correctly now.
 
-3. Write another version (save a new copy) that does the above, then asks
+3. Save a copy of this program as **myguitars.py** then modify this 
+   version so that it does the above, then asks
    the user to enter their new guitars (just like your practical 6 code).  
    Store these in your list of guitar objects, then  
-   Write all of your guitars to the file **myguitars.csv**.  
+   write all of your guitars to the file **myguitars.csv**.  
    Test that this worked by opening the file, and also by running the
    program again to make sure it reads the new guitars.
 
@@ -611,3 +609,13 @@ Enhance your taxi driving program so that it:
     not total requested)
 
 -   displays the taxis with their costs (flagfall and fanciness)
+
+
+# Deliverables
+This section summarises the expectations for marking in this practical.
+
+- taxi_test.py 
+- tax.py modifications (including class variable)
+- unreliable_car.py & unreliable_car_test.py
+- silver_service_taxi.py & silver_service_taxi_test.py
+- taxi_simulator.py
