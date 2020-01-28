@@ -182,6 +182,31 @@ dictionary...
         collection : 1
         fun :        1
 
+
+Create the file **emails.py**  
+Write a program that stores users' emails (unique keys) and names (values) in a dictionary.  
+Ask the user for their email until they enter a blank one.  
+Use a separate function to get the name from the email as in the example below.  
+You should find the following methods useful: `split`, `join`, `title`.  
+Notice the prompt to check if the name is correct: `Y/n`  
+This is used in console programs (like in Linux etc.) so you can just press Enter to accept the default, which is Yes.
+If it's not correct, ask the user for their name.  
+Once you have stored all of the emails and names, just loop through the dictionary (use the `items` method) and print them out.
+  
+    Email: lindsay.ward@jcu.edu.au
+    Is your name Lindsay Ward? (Y/n)
+    Email: abe@gmail.com
+    Is your name Abe? (Y/n) y
+    Email: jimbo546@hotmail.com
+    Is your name Jimbo546? (Y/n) no
+    Name: Jim Boh
+    Email: 
+    
+    Lindsay Ward (lindsay.ward@jcu.edu.au)
+    Abe (Abe@gmail.com)
+    Jim Boh (jimbo546@hotmail.com)
+ 
+
 ![GitHub Logo](../images/03image2.png)
 
 # Code Reviews with Pull Requests
@@ -363,3 +388,4 @@ This section summarises the expectations for marking in this practical.
 - state_names.py
 - hex_colours.py
 - word_occurrences.py
+- emails.py
