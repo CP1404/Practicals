@@ -200,7 +200,7 @@ record and show your progress as you improve your code by refactoring.
 
 ## Miles to Kilometres Converter
 
-Create a Kivy program, convert_m_km.py, and use the kv language, convert_m_km.kv, 
+Create a Kivy program, **convert_miles_km.py**, and use the kv language, **convert_miles_km.kv**, 
 to recreate the following layout.  
 (The dark grey with white boxes are Buttons, the black with yellow text is a
 Label and the black on white one is a TextInput.)
@@ -246,7 +246,7 @@ program. As always, do this in small steps.
 -   Did you use a `CONSTANT` in your conversion calculation?  
     Do this now if you haven't already. 
 
-**Note:** The solution to this is provided (`convert_m_km.py/kv`).  
+**Note:** The solution to this is provided (`convert_miles_km.py/kv`).  
 Don't just copy it, but do use it if you get stuck, and/or to compare your solution to ours.
 
 ## Dynamic Kivy Widgets
@@ -355,5 +355,5 @@ This section summarises the expectations for marking in this practical.
 
 - box_layout_demo.py & .kv with modifications (greet, clear)
 - squaring.py & .kv with modifications
-- convert_m_km.py & kv
+- convert_miles_km.py & kv
 - dynamic_labels.py with Labels (not Buttons)
