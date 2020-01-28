@@ -4,6 +4,16 @@
 during the week. If you do not understand anything, bring those
 questions to your tutor at the start of the following week.
 
+# Remarkably Important!
+
+- **DO NOT make a new project for each practical!**   
+- **Create a new folder called `prac_02`** in your existing practicals project.
+- Remember that you just keep using the same PyCharm project for all practicals.  
+
+This really does make a difference and will save lots of time and effort if you do it correctly to start with.  
+Please don't use multiple projects as then you can't use version control properly (important for Git/GitHub in prac 3)  
+Please don't use spaces in file or folder names as then they are invalid module names (important for importing in prac 6)    
+
 # Walkthrough Example
 
 ## String Formatting
@@ -12,17 +22,12 @@ The **format()** string method lets us format strings using placeholders
 and format specifiers in a way that's very powerful and will make a lot
 of sense once you get used to it. Remember that a *method* is a function
 that runs on a particular object, so a string method runs on a string
-like: "literal".format(...) or variable.upper()  
+like: `"literal".format(...)` or `variable.upper()`  
 Sometimes the best way to start learning this sort of thing is to see
 some useful examples, so:
 
--   Remember that you just keep using the same PyCharm project for all
-    practicals.  
-    **DO NOT make a new project for each practical!**   
-    **Create a new folder called `prac_02`** in your existing practicals project.
-
 -   Create a new Python file called `string_formatting_examples.py` in
-    this folder.
+    your `prac_02` folder.
 
 -   (Remember when copying code from GitHub to click **Raw** first so
     that the formatting copies properly.)  
@@ -503,7 +508,7 @@ vice versa. A sample run of the program should look like (where **g** and
 
 3.  Add on to this program by writing code that displays a table with
     two columns, one for the numeric ASCII value and the other for the
-    character itself. Use the **str.format()** method to align the text
+    character itself. Use the string **format()** method to align the text
     nicely in two columns. Print the values between LOWER and UPPER.  
     It should output like ("..." indicates parts that have been removed to
     save space):
