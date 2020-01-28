@@ -1,7 +1,7 @@
 # Practical 05 - Dictionaries, Code Reviews with PRs
 
 **Did you finish last week's work? Including the practice section?**  
-If not, make sure to complete it during the week.  
+If not, make sure to complete it during the week. The more you practise, the better you'll learn.   
 If you have any questions, ask your peers or tutor the following week.
 
 _Your_ reason for doing this subject/degree probably has something to do
@@ -52,14 +52,14 @@ our case getting feedback.
 
 ![New Git Branch](../images/05image2.png)
 
-Note: In previous years, we used the same branch name (feedback) for all PRs
+When you do your work for the following prac, if you need/want to do a pull request,
+use `prac_06_feedback` and so on...  
+(In previous years, we used the same branch name for all PRs
 (external students do one every week), but this caused some confusion with students 
-continuing to work on 'old' branches, so now we ask for a new branch for each prac.
-So, if/when you do your work for the following prac and need to do a pull request,
-use `prac_06_feedback` and so on...
+continuing to work on 'old' branches, so now we ask for a new branch for each prac.)
 
-It may look like nothing happened, but your local repository now has a
-new branch, which is currently exactly the same as the 'master'
+It may look like nothing happened, but your local repository should now have a
+new branch, which currently has the same contents as the 'master'
 branch, and it is now the one that is "checked out". See in the
 footer:
 
@@ -71,8 +71,8 @@ which is basically a request for someone to **merge** the changes in
 prac_05_feedback into the master branch... which gives us the opportunity to
 provide comments via GitHub.
 
-So, you're on the prac_05_feedback branch? Great! Let's write some code using
-**dictionaries**...
+So, you're on the prac_05_feedback branch?   
+Great! Let's write some code using **dictionaries**...
 
 # Walkthrough Example
 
@@ -89,18 +89,18 @@ since we won't be changing the states anytime soon.
 
 1.  Run the program to see how it works.
 
-2.  Right now the code formatting of this dictionary is incorrect and
-    inconsistent. Dictionary literals should be formatted with no space
+2.  Right now the code formatting is incorrect.  
+    Dictionary literals should be formatted with no space
     before, and one space after, the colon, like `{"A": 1, "B": 2}`  
-    Thankfully, PyCharm knows this and can fix it for you! If you move
-    your mouse over the grey line near the first colon, PyCharm pops up
+    Thankfully, PyCharm knows this and can fix all your formatting problems for you! 
+    If you move your mouse over the grey line near the first colon, PyCharm pops up
     the problem... Click on it to see the action icon (light bulb) to
     the left... Click on that to see the options... Choose reformat
     file... Problem solved.  
     You can also choose **Code > Reformat Code** or use the keyboard
     shortcut any time. It does the whole file or whatever's selected.
-    No more excuses for dodgy formatting!  
-    This is a great way to learn what the "PEP 8" standards are for
+    No more excuses for dodgy formatting! Seriously, always fix your formatting :)   
+    This is also a great way to learn what the "PEP 8" standards are for
     Python code formatting style.  
     ![PyCharm PEP 8 warning](../images/05image4.png)
 
@@ -111,7 +111,7 @@ since we won't be changing the states anytime soon.
 
     ![Pencil icon](../images/03image1.png)
 4.  Do this next part on paper first (then in PyCharm):  
-    Write a loop that prints all of the states and names neatly lined up 
+    Write a loop that prints all of the states and names **neatly lined up** 
     with string formatting, like:
 
         NSW is New South Wales
@@ -127,12 +127,12 @@ allows you to look up hexadecimal colour codes like those at
 
 Use a constant dictionary of about 10 colour names and write a program that
 allows a user to enter a name and get the code, e.g. entering
-**AliceBlue** should show **#f0f8ff**.  
+**AliceBlue** (or aliceblue - don't worry about matching the case) should show **#f0f8ff**.  
 
-Entering an invalid colour name should not crash.  
+Entering an invalid colour name should not crash the program.  
 Allow the user to enter names until they enter a blank one to stop the loop.  
 
-Note: We have just done two exercises that use dictionaries that are constants and named in ALL_CAPS. 
+**Note:** We have just done two exercises that use dictionaries that are constants and named in ALL_CAPS. 
 Please don't think this is any kind of rule or pattern. Dictionaries that change would not be constants.
 
 # Do-from-scratch Exercises
@@ -160,12 +160,12 @@ are the counts; when you find a word, check if it's in the
 dictionary...
 
 -   Notice that the sample output is sorted.  
-    *After* you have the program working, **make your program do this
+    *Only after* you have the program working, **make your program do this
     sorting**.
 
 -   As a further refinement, **align the outputs so the numbers are in one nice
     column**. You will need to find the longest word in the list first,
-    and then you need to know how to use the str.format method to take a
+    and then you need to know how to use the string `format` method to take a
     variable width. The former is up to you, but the latter can be done
     with another {} placeholder, like:
 
@@ -178,7 +178,6 @@ dictionary...
     (Note that x, y and z are not intended to be meaningful names.)
     Your output should then look something like:
     
-        Text: a fun collection 
         a :          2
         collection : 1
         fun :        1
@@ -187,7 +186,9 @@ dictionary...
 
 # Code Reviews with Pull Requests
 
-The following (and including creating the branch) is a process based on 
+Now that you've finished the main code, it's time to request a code review...  
+
+The following (and creating the branch earlier) is a process based on 
 how code reviews and pull requests (PRs) happen in the IT industry 
 but simplified to suit our teaching environment.
 
@@ -272,41 +273,30 @@ but simplified to suit our teaching environment.
     **VCS > Git > Pull** then click **Pull**.  
     You should now be on your local master branch and see all your up-to-date work.
 
-All done!
-
+All done!  
 *What did you learn from this?*
 
 To read more about Pull Requests:
 [https://help.github.com/articles/using-pull-requests/](https://help.github.com/articles/using-pull-requests/)
 
-Not all done :) Now on to more practice programming...
+Not all done :)  
+Now on to more practice programming...
 
 # Practice & Extension Work
 
-1.  Convert parallel lists into a dictionary...
+## Practice
 
-    Recall that it's possible to represent information in the form of
-    parallel lists where the indices determine how the information is
-    related across lists. For example:
-    
-    ```python
-    names = ["Jack", "Jill", "Harry"]
-    dates_of_birth = [(12, 4, 1999), (1, 1, 2000), (27, 3, 1982)]  
-    ```
-    
-    This means Jack was born on 12/4/1999, Jill was born on 1/1/2000, and
-    Harry was born on 27/3/1982.  
-    Write a program using a dictionary instead of the above parallel lists
-    that allows the user to enter the date-of-birth details for 5 people,
-    and have it display their individual ages.  
-    **Hint:** you can **split()** a string like "12/4/1999", as we did in
-    the lecture last week.
+1.  Write a program that uses a dictionary to store and look up your friends' names and addresses.
+    Assume you don't have many friends :) and none of them share the same name 
+    (this means the name can be the unique key for the dictionary).
+    Create a simple menu for your program, which should allow you to do the following
+    (remember to implement this incrementally, one bit at a time):
+     
+    - Enter a new name & address
+    - Change an address for an existing entry
+    - Print the address for a name you choose 
 
-2.  Write a function that takes two parallel lists as input parameters
-    and returns a dictionary where keys are from the first list and the
-    values are from the second. Use the above example as a test case.
-
-3.  In practical 1, you should have created an electricity bill estimator
+2.  In practical 1, you should have created an electricity bill estimator
     using constant values for the tariff amounts like:
 
     ```python
@@ -335,3 +325,41 @@ Not all done :) Now on to more practice programming...
     To show the benefit of this, add three more tariffs (make them up).  
     You should find that this is a very simple step for you, and your
     program can handle it without any extra coding.
+
+
+## Extension
+
+1.  Convert parallel lists into a dictionary...
+
+    Recall that it's possible to represent information in the form of
+    parallel lists where the indices determine how the information is
+    related across lists. For example:
+    
+    ```python
+    names = ["Jack", "Jill", "Harry"]
+    dates_of_birth = [(12, 4, 1999), (1, 1, 2000), (27, 3, 1982)]  
+    ```
+    
+    This means Jack was born on 12/4/1999, Jill was born on 1/1/2000, and
+    Harry was born on 27/3/1982.  
+    Write a program using a dictionary instead of the above parallel lists
+    that allows the user to enter the date-of-birth details for 5 people,
+    and have it display their individual ages.  
+    **Hint:** you can **split()** a string like "12/4/1999", as we did in
+    the lecture last week.
+
+2.  Write a function that takes two parallel lists as input parameters
+    and returns a dictionary where keys are from the first list and the
+    values are from the second. Use the above example as a test case.
+
+3.  Extend your name & address program with file loading and saving 
+    (and any other fun things you'd like to add).
+
+# Deliverables
+This section summarises the expectations for marking in this practical.
+
+- Practicals repository on GitHub and up-to-date (every week)
+- Pull Request that mentions another student properly
+- state_names.py
+- hex_colours.py
+- word_occurrences.py
