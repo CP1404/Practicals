@@ -6,7 +6,7 @@ Want to read more about it? https://docs.python.org/3/library/string.html#format
 
 name = "Gibson L-5 CES"
 year = 1922
-cost = 16035.40
+cost = 16035.4
 
 # The ‘old’ manual way to format text with string concatenation:
 print("My guitar: " + name + ", first made in " + str(year))
@@ -21,17 +21,25 @@ print("My {} would cost ${:,.2f}".format(name, cost))
 
 # Aligning columns:
 numbers = [1, 19, 123, 456, -25]
-for i in range(len(numbers)):
-    print("Number {0} is {1:>5}".format(i + 1, numbers[i]))
+for number in numbers:
+    print("Number is {:>5}".format(number))
 
-# Another (nicer) version of the above loop using the enumerate function
+# A version of the above loop using the enumerate function, useful when you want the index and value
 for i, number in enumerate(numbers):
     print("Number {0} is {1:>5}".format(i + 1, number))
 
+# TODO: Use string formatting to produce the output:
+# 1922 Gibson L-5 CES for about $16,035!
+
+print("{} {} for about ${:,.0f}!".format(year, name, cost))
+
 # TODO: Using a for loop with the range function and string formatting,
-# produce the following output:
+# produce the following right-aligned output (do not use a list):
 #   0
 #  50
 # 100
-for number in range(0, 101, 50):
+# 150
+
+for number in range(0, 151, 50):
     print("{:3}".format(number))
+
