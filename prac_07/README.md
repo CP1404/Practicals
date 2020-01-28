@@ -200,8 +200,8 @@ record and show your progress as you improve your code by refactoring.
 
 ## Miles to Kilometres Converter
 
-Create a Kivy program and use the kv language to recreate the following
-layout.  
+Create a Kivy program, convert_m_km.py, and use the kv language, convert_m_km.kv, 
+to recreate the following layout.  
 (The dark grey with white boxes are Buttons, the black with yellow text is a
 Label and the black on white one is a TextInput.)
 
@@ -246,7 +246,7 @@ program. As always, do this in small steps.
 -   Did you use a `CONSTANT` in your conversion calculation?  
     Do this now if you haven't already. 
 
-**Note:** The solution to this is provided (convert_m_km.py/kv).  
+**Note:** The solution to this is provided (`convert_m_km.py/kv`).  
 Don't just copy it, but do use it if you get stuck, and/or to compare your solution to ours.
 
 ## Dynamic Kivy Widgets
@@ -279,7 +279,7 @@ The keys to this are:
 
 So now it's your turn...
 
-**Create a very simple app that has a list of names (strings) and
+**Create a very simple app, `dynamic_labels.py` that has a list of names (strings) and
 displays each one as a separate *Label*.**
 
 **Note:** Start a new blank program for this; do not copy the
@@ -288,6 +288,7 @@ any buttons or interactivity. Use the example only as a reference.
 
 # Practice & Extension Work
 
+## Practice
 1.  Modify your Greeter Program so the GUI layout looks like:
 
     ![Greeter Program 2 screenshot](../images/07image7.png)
@@ -298,7 +299,7 @@ any buttons or interactivity. Use the example only as a reference.
     type in their score out of 100, click a button and the app shows
     "Pass" or "Fail" (based on the value) in a label.
 
-    a.  Then extend this to show the JCU grade (e.g. 65-75 is a credit).
+    - Then extend this to show the JCU grade (e.g. 65-75 is a credit).
 
 3.  Make a GUI for the temperature converter program you did in the
     first practical.  
@@ -313,7 +314,9 @@ any buttons or interactivity. Use the example only as a reference.
     person with their name on the button. When you push the button it
     should show their age in a label at the bottom.
 
-5.  Do you have an **Android** device? If so, run one or more of your
+## Extension
+
+1.  Do you have an **Android** device? If so, run one or more of your
     Kivy apps on it using **Kivy Launcher**, as described at:
     <http://kivy.org/docs/guide/packaging-android.html#packaging-your-application-for-the-kivy-launcher>
     
@@ -331,33 +334,26 @@ any buttons or interactivity. Use the example only as a reference.
     
     You may also want to look at [python-for-android](https://github.com/kivy/python-for-android)
 
-## Customise your views
- 
-Open, run and inspect Jason's QuickSum Kivy app from (two files,
-**quick_sum** .py/.kv).
+2.  **Customise your views**
+    Open, run and inspect Jason's QuickSum Kivy app from (two files, **quick_sum** .py/.kv).
+    As explained in the lectures, notice the way it uses:
+    -   class rules like `<Button>`
+    -   `canvas.before` and `canvas.after` to change the background colour or other aspects of a widget
+    Use these techniques to change your miles->kilometres converter to use black text on white background widgets - or something else that you'd
+    like visually.  
+    Play around as much as you like with this, but don't worry about all 
+    the details of getting exactly the style you want.
 
-As explained in the lectures, notice the way it uses:
+3.  **Implement our "GuessingGame" app**
+    We started working on a simple guessing game Kivy app here: <https://github.com/CP1404/GuessingGame>
+    -   Form a team of two students for some **pair programming**
+    -   Have a look at the repo, and try your hand at making the app work
+    -   Then make a Pull Request back to us.
 
--   class rules like `<Button>`
+# Deliverables
+This section summarises the expectations for marking in this practical.
 
--   `canvas.before` and `canvas.after` to change the background colour or
-    other aspects of a widget
-
-Use these techniques to change your miles->kilometres converter to use
-black text on white background widgets - or something else that you'd
-like visually.  
-Play around as much as you like with this, but don't worry about all 
-the details of getting exactly the style you want.
-
-## Implement our "GuessingGame" app
-
-We started working on a simple guessing game Kivy app here:
-<https://github.com/CP1404/GuessingGame>
-
--   Form a team of two students for some **pair programming**
-
--   Have a look at the repo, and try your hand at making the app work
-
--   Then make a Pull Request back to us.
-
--   We will merge (accept) the best Pull Requests!
+- box_layout_demo.py & .kv with modifications (greet, clear)
+- squaring.py & .kv with modifications
+- convert_m_km.py & kv
+- dynamic_labels.py with Labels (not Buttons)
