@@ -2,6 +2,7 @@
 .DS_Store
 */__pycache__
 prac_02/*.txt
+prac_03/temps_output.txt
 prac_09/Lyrics/
 prac_09/FilesToSort/
 temp.py
