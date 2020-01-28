@@ -344,6 +344,13 @@ E.g. for 6 rows, it is 6 + 5 + 4 + 3 + 2 + 1 = 21
 # Deliverables
 This section summarises the expectations for marking in this practical.
 
-- 
+Finished:
 
+- testing.py 
+- wiki.py
+- Flask project with modifications
+
+At least started:
+
+- Flask + Wiki project 
 
