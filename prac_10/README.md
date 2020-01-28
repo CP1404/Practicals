@@ -339,3 +339,11 @@ E.g. for 6 rows, it is 6 + 5 + 4 + 3 + 2 + 1 = 21
     -   Hannah
     -   abcba
     -   (ignoring case, spaces and punctuation) A Toyota's a Toyota
+
+
+# Deliverables
+This section summarises the expectations for marking in this practical.
+
+- 
+
+
