@@ -17,3 +17,7 @@ else:
     print("Excellent")
 if score < 50:
     print("Bad")
+     
+        
+        
+        thankyou
