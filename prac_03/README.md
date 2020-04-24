@@ -134,7 +134,7 @@ on what version of PyCharm you have.
     Enter your GitHub username and password and press Enter  
     Do not enter a master password, just **Cancel** this. You never *need*
     to use this master password facility in PyCharm.  
-    Enter a brief description of the repo and **Share** it.  
+    Enter a brief description of the repo, leave it public (don't tick Private) and **Share** it.  
     ![Share Project on GitHub window](../images/03image5.png)
 
 11. If that worked, then PyCharm will show you a message in the status
@@ -247,6 +247,10 @@ please tidy up your project or make a new one and copy your Python files
 into the correct folders.
 
 Open your project in PyCharm, then **share** it on GitHub (VCS menu).  
+
+### Your repo must be public!
+**It is essential that you leave your practicals repo public.**  
+**Do NOT make your repository private or it will not be assessed.**
 
 **From now on (seriously, for every prac for the rest of the subject)**,
 when you finish a task, do a commit with a meaningful message.  

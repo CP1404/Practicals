@@ -22,7 +22,7 @@ need to be practising and revising your programming regularly multiple
 times every week. You can find even more practice projects at
 <https://github.com/CP1404/Starter/wiki/Practice-Programming-Projects>  
 Some students have found benefit from doing extra online courses like
-the video-based ones at <https://www.lynda.com>
+the video-based ones at [LinkedIn Learning](https://www.linkedin.com/learning/topics/python)
 
 ## Practicals are assessed
 
