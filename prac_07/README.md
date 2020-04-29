@@ -246,7 +246,7 @@ program. As always, do this in small steps.
 -   Did you use a `CONSTANT` in your conversion calculation?  
     Do this now if you haven't already. 
 
-**Note:** The solution to this is provided (`convert_miles_km.py/kv`).  
+**Note:** The solution to this is provided (`convert_miles_km_solution.py/kv`).  
 Don't just copy it, but do use it if you get stuck, and/or to compare your solution to ours.
 
 ## Dynamic Kivy Widgets
