@@ -2,7 +2,7 @@
 
 **Welcome to CP1404 practicals!** 
 
-If you haven't read the introduction to pracs and marking, please [read this now](../README.md).
+If you haven't read the introduction to pracs and marking, please [read this now](../README.md).  
 **Note: All students (internal and external), please submit your prac work via LearnJCU each week by the due date.**
 
 # Walkthrough Example
@@ -51,7 +51,7 @@ PyCharm.
     ![New file](../images/01image2.png)
 
 4.  This opens a window where you can define the name of the file - call
-    it **hello.py** and hit the **OK** button. Always give your files
+    it `hello.py` and hit the **OK** button. Always give your files
     descriptive names so they're easy to find again.
 
 5.  PyCharm created a new source code file in the project folder and
@@ -60,8 +60,7 @@ PyCharm.
 
 Note:
 
--   the project window now shows the file (with the file extension
-    **.py**)
+-   the project window now shows the file (with the file extension `.py`)
 
 -   the green box/tick up the top right indicates there are no syntax
     errors... yet :)
@@ -94,21 +93,25 @@ Fahrenheit temperature conversions.
 
 **Your project name and structure should look like our template:
 <https://github.com/CP1404/cp1404practicals>**  
-So you will have one well-named folder for each prac (names like
+So you will have **ONE** correctly-named folder for each prac (names like
 "prac_01" conform with Python module name conventions), with
 well-named files (also use underscore_lowercase) inside those
-folders.
+folders.  
+If you choose different names from what we have shown, you _will_ have problems later on.
 
-**Do not** create new projects for each separate practical.
+### Seriously!
+**DO NOT** create new projects for each separate practical.  
+**DO**   
+**PLEASE** get this right the first time to save wasted effort fixing it later!  
 
 **Do** use separate projects for each assignment and any other side
 'projects'.
 
 1.  If you don't have your first prac folder (directory) yet, create
-    one called **prac_01** and drag your **hello.py** file into it...
+    one called `prac_01` and drag your `hello.py` file into it...
 
 2.  Right-click on your prac_01 folder and create a
-    new Python file here called **temperatures.py**
+    new Python file here called `temperatures.py`
     Copy the raw version of the code found at the link below and paste
     into your file...  
     Click on the link below, then click the Raw button to get a version
@@ -183,7 +186,7 @@ Got your windows organised? Let's keep going...
 Okay, let's practise using PyCharm to write simple programs.
 
 1.  Create a new Python file in the prac_01 directory called
-    **sales_bonus.py**, and copy the following **docstring** at the top
+    `sales_bonus.py`, and copy the following **docstring** at the top
     of the file. A docstring is a triple-quoted special comment
     "doc(umentation) string".  
     ```python
@@ -242,7 +245,7 @@ Okay, let's practise using PyCharm to write simple programs.
     90 or more is excellent; 50 or more is a pass; below 50 is bad.  
     Be very careful of your boundary conditions... and *test!*
 
-3.  Create a file called **loops.py** and add this for loop that
+3.  Create a file called `loops.py` and add this for loop that
     displays all of the odd numbers between  
     1 and 20 with a space between each one.
 
@@ -318,7 +321,7 @@ Price of item: <strong>3.24</strong>
 Total price for 3 items is $124.92  
 </pre>
 
-Create the file **shop_calculator.py** and write this program.  
+Create the file `shop_calculator.py` and write this program.  
 Note: start with the main logic, then adjust your program to improve the
 formatting if you need to.  
 Note that the example output above uses string formatting to set the currency
