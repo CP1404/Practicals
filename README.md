@@ -26,3 +26,72 @@ E.g. some subject offerings run in 10 weeks, some in 13 weeks.
 * [Practical 08 - Inheritance](./prac_08)
 * [Practical 09 - OS](./prac_09)
 * [Practical 10 - Testing, API, Flask](./prac_10)
+
+## Practicals are assessed
+
+You should aim to complete the work in the practical session, but you
+have one additional week to complete each of these tasks and still earn
+your mark. If you do not finish a practical in the scheduled week, you
+can still get full marks if you show it to your practical supervisor at
+the **start** of the next practical. After that, it's too late.
+
+Assessment will be based on completing the tasks up to but not including
+the practice/extension section to a satisfactory standard (not getting
+everything correct). You will be marked as follows:
+
+0. not attempted at all
+1. some of the work attempted with minimal effort
+2. some of the work attempted with reasonable effort
+3. most or all of the work successfully attempted
+
+Note that to get full marks, you must have attempted every part of every question. Make sure you read the questions carefully, and do everything required.
+
+*Internal students: Please have __all__ of your tasks open and ready to show your tutor when
+it's time to get marked.*
+
+There are online tests available through LearnJCU that also contribute
+to your practical mark. See the subject outline
+for details of how tests are marked. We recommend doing each test before
+you start your practical work, and you must complete it by the due date
+to get your marks for it.
+
+## Structure
+Each practical is usually structured in multiple parts:
+
+-   **Part 1** is usually a walkthrough or a warm up that should not take
+    long but shows you working code (which you can reference and learn
+    from),
+
+-   **Part 2** is usually a "fill-in-the-blanks" where you must do a small
+    task, mostly modifying existing code,
+
+-   and **Part 3** is usually a "do-from-scratch" exercise where you do the
+    whole task with the benefit of having completed the earlier parts.
+
+-   The **practice/extension** section provides further challenges for you
+    to practise and extend your programming skills. (You do not need to
+    complete these sections for your prac marks.)
+
+**Important:** You should not expect to learn and do well in this
+subject if you only do the minimum contact hours (like just these pracs). You
+need to be practising and revising your programming regularly multiple
+times every week. You can find even more practice projects at
+<https://github.com/CP1404/Starter/wiki/Practice-Programming-Projects>  
+Some students have found benefit from doing extra online courses like
+the video-based ones at [LinkedIn Learning](https://www.linkedin.com/learning/topics/python)
+
+All code for pracs can be found here at
+<https://github.com/CP1404/Practicals> - Many of these files have
+`# TODO` comments to highlight what steps to do.  
+You may want to download or clone the practicals repository... but we don't expect you to know
+how to use GitHub yet, as we will teach you that in a couple of weeks.
+
+## Save your practical work
+You need to save your work from every prac. Keep every file/script you write.  
+We suggest you use a USB disk and cloud storage (like OneDrive) and organise it using folders, like CP1404/practicals/prac_01.  
+After we learn to use GitHub, your practicals will also be stored in a public GitHub repository.
+
+Give each file a logical name so you can find it again. Also, when you need to make changes to an existing script for a separate question, make a copy of the old question first so you have a record of everything.
+Don't save your work to the JCU computers' local drives, but into your own storage area. You can use the local hard drive for temporary storage, then move your work onto your disk or cloud storage.
+
+For important work like assignments, please make sure you have multiple backups.
