@@ -101,7 +101,6 @@ If you choose different names from what we have shown, you _will_ have problems 
 
 ### Seriously!
 **DO NOT** create new projects for each separate practical.  
-**DO**   
 **PLEASE** get this right the first time to save wasted effort fixing it later!  
 
 **Do** use separate projects for each assignment and any other side
