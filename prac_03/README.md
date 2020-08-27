@@ -73,36 +73,32 @@ on what version of PyCharm you have.
 4.  Choose **VCS > Commit Changes** (take note of the shortcut as
     you'll be using it often!)  
     It should tell you no changes were detected...  
-    (or some versions will automatically add files for you - don't commit yet)  
+    (or some versions may automatically add files for you - but don't commit yet)  
     **Note:** If you ever get a prompt to "Add File to Git" for
     PyCharm project metadata files (anything in the `.idea` folder, like
     `misc.xml` or `vcs.xml`), then choose **no**. 
     We do not want to version control these files.  
-    Click on the Version Control tool window in the footer (or choose
-    **View > Tool Windows > Version Control**) and click the **Log**
-    tab. It's empty...  
-    This is what happens with a project that has no files marked for
-    staging.
+    Click on the Git (or Version Control) tool window in the footer and click the **Log**
+    tab. It's empty because our project has no commits.
 
-5.  Switch to the **Local Changes** tab and you'll see some PyCharm
-    files that we don't care about and our one code file, my_name.py.
-    Right-click on this file and choose to **Add** it to Git.    
+5.  Switch to the **Local Changes** tab and you should see some PyCharm
+    files that we don't care about and our one code file, `my_name.py`.
+    Right-click on this file and choose to **Add** it to **Git**.    
     ![Version Control Local Changes](../images/03image4.png)  
-    (We could have done this in other ways, mostly by right-clicking on
+    (We could have done this in other ways, like by right-clicking on
     it in the main Project window.)  
     You should now see it listed under **Default** instead of
     **Unversioned Files**, and it changes **colour**!
 
 6.  Click back on the **Log** tab and... it still shows nothing!  
     That's because we've only added this file to the "staging"
-    state, so it will be included when we commit.  
+    state, so it will be included when (if) we commit.  
     This is important. Git only tracks the files we ask it to.  
 
 7.  Now for our first **commit**!  
     Press the shortcut key for committing changes (Ctrl+K or Cmd+K
     usually) and enter a **meaningful commit message** that briefly
-    describes what your change was.  
-    **Use the imperative mood** for your messages. (This is the same for
+    describes what your change was **using the imperative mood** for your messages. (This is the same for
     Python docstrings, by the way.)  
     So don't write like "*Added error checking*" (that's the
     indicative mood), but rather "*Add error checking*".  
@@ -122,7 +118,7 @@ on what version of PyCharm you have.
     something like "Add password check program"). Have a look and see that it also
     appears in your log.  
       
-    We've now saved the state of our project (just one file) at
+    We've now saved the state of our project at
     multiple stages by committing to a ***local* Git repository**. We
     have not used GitHub at all yet.  
     We could do this as many times as
