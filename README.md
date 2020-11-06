@@ -29,31 +29,21 @@ E.g. some subject offerings run in 10 weeks, some in 13 weeks.
 
 ## Practicals are assessed
 
-You should aim to complete the work in the practical session, but you
-have one additional week to complete each of these tasks and still earn
-your mark. If you do not finish a practical in the scheduled week, you
-can still get full marks if you show it to your practical supervisor at
-the **start** of the next practical. After that, it's too late.
-
 Assessment will be based on completing the tasks up to but not including
-the practice/extension section to a satisfactory standard (not getting
-everything correct). You will be marked as follows:
+the practice/extension section. You will be marked as follows:
 
-0. not attempted at all
-1. some of the work attempted with minimal effort
-2. some of the work attempted with reasonable effort
-3. most or all of the work successfully attempted
+- 4 = Excellent response to all questions (Always aim for this!)
+- 3 = Good response to most or all questions, but some omissions or problems
+- 2 = Reasonable response to some questions, but some significant omissions or problems
+- 1 = Reasonable response to at least one question
+- 0 = Minimal or no attempt
 
-Note that to get full marks, you must have attempted every part of every question. Make sure you read the questions carefully, and do everything required.
+**Note**: This subject is all about learning best practices and patterns for solving problems using programming (in Python) and it is important that you learn these important foundations according to the teaching philosophy of the subject. For this reason (to help you learn properly!), you will not achieve full marks for working/complete practicals that are not done in the way that we prescribe. Here are some reasons that you might lose marks for your practicals (and assignments):
 
-*Internal students: Please have __all__ of your tasks open and ready to show your tutor when
-it's time to get marked.*
-
-There are online tests available through LearnJCU that also contribute
-to your practical mark. See the subject outline
-for details of how tests are marked. We recommend doing each test before
-you start your practical work, and you must complete it by the due date
-to get your marks for it.
+- Your work looks too similar to any provided solutions
+- Your work includes concepts and code not taught in the subject
+- You miss or skip part of a question (you must attempt all requirements for all questions)
+- Your work does not follow the core concepts and patterns (e.g. using global variables, while True loops or similar techniques), even if they work!
 
 ## Structure
 Each practical is usually structured in multiple parts:
