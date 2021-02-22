@@ -482,6 +482,7 @@ See the solutions branch here in this repository. Change the **branch** to "solu
 # Deliverables
 This section summarises the expectations for marking in this practical.
 
+- temperatures.py
 - sales_bonus.py
 - broken_score.py
 - loops.py
