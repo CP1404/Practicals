@@ -19,14 +19,19 @@ So, to help you towards being a better programmer and being more
 familiar with industry practices, today you will work on some programs,
 then review another student's work.
 
-*You need to complete the tasks and do a **Pull Request** that mentions
+*You need to complete the tasks and do a **Pull Request** that *mentions*
 another student to get full marks for this practical.*
 
-This means you need a partner so you can review each other's code.
-**Organise someone right now and swap GitHub usernames** (external
-students, please do this via Slack). It's also OK to review multiple people's
+Your lecturer may have provided you with details of 
+[whom to mention](https://github.com/CP1404/Starter/wiki/Code-Review-Order), so please follow that.  
+Otherwise, (e.g. in face-to-face practicals), **organise someone right now and swap GitHub usernames**.  
+It's also OK to review multiple people's
 code or to have a cycle of people reviewing the next person's... it
 doesn't have to be a direct swap.
+
+**Remember**: Sometimes there will be changes to the GitHub website design or PyCharm, etc. 
+that mean these instructions will be slightly different.  
+You should still be able to figure out what needs to be done.  
 
 First, **edit your notifications settings**:
 
