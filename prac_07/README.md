@@ -1,15 +1,13 @@
 # Practical 07 - Kivy
 
-Note: This is a fairly long practical. You should get started early
-(before the prac session) and you will probably need to put in more time
-after the practical session. There are a lot of demos to learn and copy
-from in <https://github.com/CP1404/KivyDemos>.
+Note: This is a fairly long practical, so allocate more than the usual time for it.  
+There are a lot of demos to learn and copy from in <https://github.com/CP1404/KivyDemos>.
 
-If you're using your own computer and you haven't already done so,
+If you're using your own computer, and you haven't already done so,
 please follow the setup instructions for installing Kivy at:
 <https://github.com/CP1404/Starter/wiki/Software-Setup>
 
-**First, please save yourself time and make life easier** 
+If you haven't already, **please save yourself time and make life easier** 
 by adding kv language syntax highlighting and auto-completion
 (since PyCharm does not know about kv language by default):
 
@@ -29,36 +27,36 @@ drive for next time.
 
 # Walkthrough Example
 
-**Download a zip** of the GitHub repository for our Kivy Examples:
+**Download** the GitHub repository for our Kivy Examples:
 [https://github.com/CP1404/KivyDemos](https://github.com/CP1404/KivyDemos)
 
 You could use Git to clone it, which makes a complete copy, including
 the Git history, but since you don't have write permissions on this
 repo you will not be able to push changes back to it. The easiest thing
-is just to use the GitHub website to **Download Zip"**.
+is just to use the GitHub website to **Download ZIP**.
 
 ![GitHub Download ZIP option](../images/07image1.png)
 
-1.  The work that you do today should be saved, committed and pushed to
-    your Practicals repository in the prac_07 folder. The simplest
+1.  The work that you do for this practical should be saved, committed and pushed to
+    your Practicals repository in the `prac_07` folder. The simplest
     thing is to just **copy everything from the demos zip you just
-    downloaded into your prac_07 folder**. Then only commit the work
-    you do today. You don't need to upload all of the other examples to
-    GitHub, but you can if you want.
+    downloaded into your `prac_07` folder**. Then only commit the work
+    you do. You don't need to upload all the other examples to
+    GitHub, but you can if you really really want.
 
 2.  (Here's a very simple example)  
-    Open and run the **hello_world.py** file.  
-    You should see a lovely black window with "HelloWorld" in the title.
+    Open and run the `hello_world.py` file.  
+    You should see a plain black window with "HelloWorld" in the title.
 
 3.  (Here's an advanced example)  
-    Open and run the **popup_demo.py** file (which uses
-    **popup_demo.kv**) and run that to see how it works. You don't
+    Open and run the `popup_demo.py` file (which uses
+    `popup_demo.kv`) and run that to see how it works. You don't
     need to understand it all just yet, but try to get an overview of
     the structure, and look for the parts you do recognise.
 
 ## Modify Existing GUI Program
 
-Open the **box_layout_demo.py** and **box_layout.kv** files and run
+Open the `box_layout_demo.py` and `box_layout.kv` files and run
 the Python program. You should see three vertical buttons.
 
 Let's extend this program to make an app that lets the user enter and
@@ -94,7 +92,7 @@ Label:
             on_press: app.handle_greet()
 
     This references a method in your main app class called
-    **`handle_greet()`**.
+    `handle_greet()`.
 
 5.  Add the `handle_greet()` function in your .py file and put a `print('greet')`
     statement in that function.  
@@ -137,7 +135,7 @@ Label:
 
 ![Square Number screenshot](../images/07image3.png)
 
-Open the **squaring.py & .kv** files from the demos.
+Open the `squaring.py & .kv` files from the demos.
 
 Run the code to see a simple app with a text entry field, a button and a
 label that squares a number.  
@@ -186,7 +184,7 @@ pressed:
 **Refactoring Example:**
 
 Have a look at the following commit "diff" for the squaring program:
-<https://github.com/CP1404/Practicals2016/commit/2f9b38dcfc393e2f50f9b30f6da36f9aabf4ee1f>
+<https://github.com/CP1404/Practicals/commit/2f9b38dcfc393e2f50f9b30f6da36f9aabf4ee1f>
 
 You can see that we changed the code so that the button handler function now
 takes in the value of the text field as a parameter instead of getting
@@ -200,7 +198,7 @@ record and show your progress as you improve your code by refactoring.
 
 ## Miles to Kilometres Converter
 
-Create a Kivy program, **convert_miles_km.py**, and use the kv language, **convert_miles_km.kv**, 
+Create a Kivy program, `convert_miles_km.py`, and use the kv language, `convert_miles_km.kv`, 
 to recreate the following layout.  
 (The dark grey with white boxes are Buttons, the black with yellow text is a
 Label and the black on white one is a TextInput.)
@@ -213,7 +211,7 @@ program. As always, do this in small steps.
 -   Use a `StringProperty` for the text on the output (km) label.  
     Then in the app you can set this property variable without having to 
     manually update the text of the label. It will automatically update.  
-    See the **mvc_demo.py** and kv file in the demos for an example of this.
+    See the `mvc_demo.py` and kv file in the demos for an example of this.
 
 -   You should be able to type a number in the text entry field.
 
@@ -255,7 +253,7 @@ All of these programs so far have had the widgets "hard-coded" in the
 .kv file, but what if we want to create dynamic widgets based on a
 variable or the contents of a file or something?
 
-Open **dynamic_widgets.py/kv** to see how this can be done.
+Open `dynamic_widgets.py/kv` to see how this can be done.
 
 The keys to this are:
 
@@ -324,8 +322,8 @@ any buttons or interactivity. Use the example only as a reference.
     
     If your Android device does not have an SD Card installed, then place
     your Kivy apps within internal storage, in a folder called kivy, with a
-    subfolder for your project, and make sure you have a **main.py** and
-    **android.txt** (as explained at the link above) in that folder, like
+    subfolder for your project, and make sure you have a `main.py` and
+    `android.txt` (as explained at the link above) in that folder, like
     this:
     
     ![Kivy on Android file folder structure](../images/07image9.png)
@@ -335,7 +333,7 @@ any buttons or interactivity. Use the example only as a reference.
     You may also want to look at [python-for-android](https://github.com/kivy/python-for-android)
 
 2.  **Customise your views**
-    Open, run and inspect Jason's QuickSum Kivy app from (two files, **quick_sum** .py/.kv).
+    Open, run and inspect Jason's QuickSum Kivy app from (two files, `quick_sum.py/.kv`).
     As explained in the lectures, notice the way it uses:
     -   class rules like `<Button>`
     -   `canvas.before` and `canvas.after` to change the background colour or other aspects of a widget
