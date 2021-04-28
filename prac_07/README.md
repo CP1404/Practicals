@@ -275,19 +275,32 @@ The keys to this are:
 
         temp_button.bind(on_release=self.press_entry)
 
-So now it's your turn...
+### Dynamic Labels
+Now it's your turn...
 
-**Create a very simple app, `dynamic_labels.py` that has a list of names (strings) and
-displays each one as a separate *Label*.**
+Create a **very simple app**, `dynamic_labels.py/kv` that has a list of names (strings) and
+displays each one as a separate *Label*.
 
-**Note:** Start a new blank program for this; do not copy the
+Notice some things in dynamic_widgets demo that will be very similar in yours:
+
+- the dictionary is defined in the `init` function
+- the widgets (Buttons, but yours will be Labels) are made with a loop between loading the kv file and returning from `build`
+
+**Note:** Start a new blank Python program for this; do not copy the
 dynamic_widgets example as it is too different. Your app won't have
-any buttons or interactivity. Use the example only as a reference.
+any buttons or interactivity. Use the example as a reference and copy small sections or ideas from it.
+
+Here's a suggested kv file you could use. Notice how simple it is, but it does have a child `BoxLayout` with an `id`.
+
+    BoxLayout:
+        BoxLayout:
+            orientation: 'vertical'
+            id: main
 
 # Practice & Extension Work
 
 ## Practice
-1.  Modify your Greeter Program so the GUI layout looks like:
+1.  Modify your Greeter Program so that the GUI layout looks like:
 
     ![Greeter Program 2 screenshot](../images/07image7.png)
 
@@ -354,4 +367,4 @@ This section summarises the expectations for marking in this practical.
 - `box_layout_demo.py/kv` with modifications (greet, clear)
 - `squaring.py/kv` with modifications
 - `convert_miles_km.py/kv`
-- `dynamic_labels.py` with Labels (not Buttons)
+- `dynamic_labels.py/kv` with Labels (not Buttons)
