@@ -1,5 +1,7 @@
 # Practical 09 - OS
 
+Don't forget to make a new branch, `prac_09_feedback` _before_ you start!
+
 Today we will explore Python as an automation tool to help us automate
 repetitive tasks with files and the **os** module.
 

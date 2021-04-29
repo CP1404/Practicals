@@ -1,10 +1,13 @@
 # Practical 10 - Testing, API, Flask
 
+Don't forget to make a new branch, `prac_10_feedback` _before_ you start!  
+You will put some files into that branch for your normal practicals project/repo, but you will also have a separate project/repo for the Flask task.
+
 Today we will explore the use of tools for **testing**,
 an **API** for Wikipedia and the very cool **Flask** Web framework.  
 This is the final marked practical for the subject, and must be
 satisfactorily attempted during the prac time (no marking next week).
-You don't have to finish it but you have to do good work.
+You don't have to finish it, but you have to do good work.
 
 # Testing
 

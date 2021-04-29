@@ -1,6 +1,8 @@
 # Practical 07 - Kivy
 
-Note: This is a fairly long practical, so allocate more than the usual time for it.  
+Don't forget to make a new branch, `prac_07_feedback` _before_ you start!
+
+**Note**: This is a fairly long practical, so allocate more than the usual time for it.  
 There are a lot of demos to learn and copy from in <https://github.com/CP1404/KivyDemos>.
 
 If you're using your own computer, and you haven't already done so,

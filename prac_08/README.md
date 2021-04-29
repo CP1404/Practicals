@@ -1,5 +1,7 @@
 # Practical 08 - Inheritance
 
+Don't forget to make a new branch, `prac_08_feedback` _before_ you start!
+
 In this practical, you will work on extending classes with inheritance.  
 There's a lot of _teaching_ in this prac, so make sure you read carefully 
 and do a lot of _learning!_
