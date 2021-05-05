@@ -1,6 +1,6 @@
 # Practical 08 - Inheritance
 
-Don't forget to make a new branch, `prac_08_feedback` _before_ you start!
+Don't forget to make a new branch (starting from `master`), `prac_08_feedback` _before_ you start!
 
 In this practical, you will work on extending classes with inheritance.  
 There's a lot of _teaching_ in this prac, so make sure you read carefully 
@@ -11,12 +11,12 @@ and do a lot of _learning!_
 We recently started making our own classes and objects:
 
 -   A **class** is a blueprint (the code) for creating an **object** 
-    (also known as an **instance**)
+    (an object is also known as an **instance**).
 
--   A class is a new **type**
+-   A class is a new **type**.
 
 -   **Objects** store data in instance variables (`self.something`) and 
-    provide access to the **methods** (functions) defined in the class
+    provide access to the **methods** (functions) defined in the class.
 
 Inheritance is (only) appropriate where you are building a more specialised
 version of a class. Inheritance can be described as an "is a" relationship.  
@@ -26,7 +26,7 @@ When class Y inherits from class X, it should always be the case that an
 For example, a Tree is a Plant, but it's not true to say a Cat is a Dog.
 So, it is appropriate for a **Tree** class to inherit from a **Plant**
 class, but not appropriate for a **Cat** class to inherit from a **Dog**
-class.
+class. Both Cat and Dog could inherit from **Animal**.
 
 # Walkthrough Example
 
@@ -51,13 +51,13 @@ class in two ways:
 
 Notice that the **drive** method still works the same way in terms of
 its ***interface*** - it takes in a distance parameter, and it returns the
-distance driven. This is important for polymorphism - so we can treat
-all subclasses of **Car** in the same way; i.e. we **drive()** a taxi
-the same way we **drive()** any car.
+distance driven. This is important for *polymorphism* - so we can treat
+all subclasses of **Car** in the same way - we **drive()** a taxi
+the same way we **drive()** any other car.
 
 ## Test Taxi
 
-Create a separate file, **taxi_test.py**, to try out your taxi.  
+Create a separate file, `taxi_test.py`, to try out your taxi.  
 Generally we don't write client code in class files, but rather we use separate files.
 
 Write lines of code for each of the following (**hint**: use the methods
@@ -87,9 +87,9 @@ class variables directly _after_ the class header line and _before_ any
 method definitions.
 
 1.  Add the **class variable** `price_per_km` to the Taxi class (in
-    taxi.py) and set it to 1.23
+    `taxi.py`) and set it to 1.23
 
-2.  Change the **`__init__`** function so it does *not* take in the
+2.  Change the **`__init__`** function so that it does *not* take in the
     price_per_km, which means it doesn't need to set
     self.price_per_km because that's already set by the class
     variable.
@@ -114,7 +114,7 @@ method definitions.
     
     -   use `self.price_per_km`, which refers to the instance variable
         that may or may not exist... Python looks for an instance variable
-        in the object and if it doesn't find it there it looks up to the
+        in the object and if it doesn't find it there, then it looks up to the
         class variable, then it looks up to the parent class...  
         *This is usually preferred*, because it allows you to update the
         value for each object if needed (as we will see later with the
@@ -126,8 +126,8 @@ method definitions.
 
 Let's make our own derived class for an **UnreliableCar** that inherits
 from **Car**. Write Python code for this class in a new file,
-unreliable_car.py, and write some testing code in
-unreliable_car_test.py to verify each method.
+`unreliable_car.py`, and write some testing code in
+`unreliable_car_test.py` to verify each method.
 
 **UnreliableCar** has an additional attribute:
 
@@ -150,7 +150,7 @@ unreliable_car_test.py to verify each method.
         use once, every time you call `drive()`.
 
     -   **Super Important Note:** the drive method in the base class
-        (Car) always returns the distance driven, so your derived class
+        (Car) ***always*** returns the distance driven, so your derived class
         (UnreliableCar) must also return a distance. You must
         match the "signature" of any method you override.  
         This is true, even if your UnreliableCar drives 0km.
@@ -158,39 +158,39 @@ unreliable_car_test.py to verify each method.
 ## SilverServiceTaxi
 
 Now create a new class for a **SilverServiceTaxi** that inherits from
-**Taxi**.
+**Taxi**. What file should you use? Do you see the pattern? `silver_service_taxi.py`
 
 So **SilverServiceTaxi** *is a* **Taxi** and **Taxi** *is a* **Car**
 (which means **SilverServiceTaxi** is a **Car**)
 
-This allows you to have a different effective **price_per_km**, based
+This allows you to have a different effective `price_per_km`, based
 on the fanciness of the **SilverServiceTaxi**.
 
-1.  Add a new *attribute*, **fanciness**, which is a **float** that
-    scales the **price_per_km**  
-    Pass the **fanciness** value into the constructor and multiply
-    self.price_per_km by it.  
+1.  Add a new *attribute*, `fanciness`, which is a `float` that
+    scales (multiplies) the `price_per_km`. 
+    Pass the `fanciness` value into the constructor and multiply
+    `self.price_per_km` by it.  
     Note that here we can get the initial base price using
     `Taxi.price_per_km`, then customise our object's instance variable,
     `self.price_per_km`. So, if the class variable (for all taxis) goes
-    up, the price change is inherited by all SilverServiceTaxis.  
+    up, the price change is ***inherited*** by all SilverServiceTaxis.  
     If you're not sure about this, please ask! Don't go on without "getting it".
 
 2.  **SilverServiceTaxis** also have an extra charge for each new fare,
-    so add a **flagfall** *class variable* set to $4.50
+    so add a `flagfall` *class variable* set to $4.50.
 
 3.  Add or override whatever method you need to (think about it...) in
     order to calculate the fare.
 
-4.  Create an overridden `__str__` method so you can add the flagfall
-    to the end. E.g. for a Hummer with a fanciness of 4, it should display like: 
+4.  Create an overridden `__str__` method so that you can add the `flagfall`
+    to the end. E.g., for a Hummer with a fanciness of 4, it should display like: 
      
         Hummer, fuel=200, odo=0, 0km on current fare, $4.92/km plus flagfall of $4.50
 
     Note that you can reuse the parent class's `__str__` method like:
     `super().__str__()`
 
-5.  Write some test code in a file called **silver_service_taxi_test.py** to see that your
+5.  Write some test code in a file called `silver_service_taxi_test.py` to see that your
     **SilverServiceTaxi** calculates fares correctly.  
     For an 18km trip in a **SilverServiceTaxi** with fanciness of 2, the
     fare should be $48.78 (yikes!)
@@ -200,18 +200,17 @@ Let's stop and think about what we've done and (hopefully) learned so far:
 -   We can create new classes by *extending* existing ones - e.g. Taxi
     extends Car
 
--   Derived (child) classes inherit all of the attributes and behaviours
+-   Derived (child) classes inherit all the attributes and behaviours
     of their base (parent) classes - e.g. we do not need to write a new
-    **`add_fuel()`** method for Taxi because it comes from Car already
+    **`add_fuel()`** method for Taxi because it comes from Car already,
     and we don't need anything different in a taxi.
 
 -   We can *override* (customise) derived classes by modifying existing
-    methods so they do different (but similar) things.  
-    We should
-    always make sure that the signature of overridden methods matches
-    the base class - e.g. the **`drive()`** method in Taxi also calculates
+    methods so that they do different (but similar) things.  
+    We should always make sure that the signature of overridden methods matches
+    the base class - e.g., the **`drive()`** method in Taxi also calculates
     a fare, and in UnreliableCar it may or may not drive any distance... 
-    but in all cases, the method takes in a distance value and returns the 
+    but in ***all*** cases, the method takes in a distance value and returns the 
     distance driven.
 
 Here is what the **class hierarchy** looks like now for **Car** and its
@@ -226,8 +225,7 @@ One more thing before we move on... (_Are you still reading/learning carefully?_
 
 It's important to see how
 using inheritance actually benefits the systems we model with classes.  
-Currently, all
-Taxis (including SilverServiceTaxis and any other derived classes we
+Currently, all Taxis (including SilverServiceTaxis and any other derived classes we
 might make) calculate the fare as `price_per_km * current_fare_distance`, 
 and you can get results like $48.78 in the example above...
 
@@ -249,7 +247,7 @@ Make sense? Let's do it.
 -   Now update the **`get_fare()`** method in Taxi and make it use the
     **`round()`** function to return a value rounded to 10c.
 
--   Re-run your test and you should get a result rounded to 10c (e.g.
+-   Re-run your test, and you should get a result rounded to 10c (e.g.,
     $48.80). If it worked, you should see that we only changed Taxi and
     that enhancement was inherited by SilverServiceTaxi. Nice :)
 
@@ -257,7 +255,7 @@ Make sense? Let's do it.
   
 **`get_fare()`** must return a *number*, not a *string*!  
 Even though we may want to format the
-result like currency (e.g. "$48.80"), that's not this function's single
+result like currency (e.g. `"$48.80"`), that's not this function's single
 responsibility. What if we wanted to add fares together? They must be
 numbers. Do your string formatting *outside* this function.
 
@@ -270,31 +268,29 @@ Write a taxi simulator program, `taxi_simulator.py`, that uses your **Taxi** and
 
 Each time, until they quit:
 
-- The user should be presented with a *list* of available taxis and get to
-choose one,
+- The user should be able to choose froma *list* of available taxis,
 
-- Then they can choose how far they want to drive,
+- They can choose how far they want to drive,
 
-- At the end of each trip, show them the trip cost and add it to their
-bill.
+- At the end of each trip, show them the trip cost and add it to their bill.
 
 Note: Use a list of taxi objects, which you create in main and pass to
 functions that need it. When you choose the taxi object, your code will
-call the `drive()` method on that object and it will use the right method
+call the `drive()` method on that object, and it will use the right method
 for that class... so from the client code point of view, driving a taxi
 will work the same whether the object is a Taxi or a SilverServiceTaxi,
 but the results (including the price) depend on the class.  
 This is ***polymorphism***.
 
-Another note: In this program, there's the chance the user will want to 
+Another note: In this program, there's the chance the user will  
 drive a taxi before choosing one. This shouldn't crash.  
 A good option is to maintain something like a `current_taxi`... 
 but what will the initial value of this variable be?  
-When you want a default starting value for an object of your own class, you use `None`: 
+When you want a default starting value for an object, you use `None`: 
 
     current_taxi = None
     
-The taxis used in this example would be like:
+The taxis used in the example below would be like:
 
     taxis = [Taxi("Prius", 100), SilverServiceTaxi("Limo", 100, 2), SilverServiceTaxi("Hummer", 200, 4)]
 
@@ -302,74 +298,82 @@ The taxis used in this example would be like:
 
     Let's drive!
     q)uit, c)hoose taxi, d)rive
+    >>> d
+    You need to choose a taxi before you can drive
+    Bill to date: $0.00
+    q)uit, c)hoose taxi, d)rive
+    >>> P
+    Invalid option
+    Bill to date: $0.00
+    q)uit, c)hoose taxi, d)rive
     >>> c
-    Taxis available:
-    0 - Prius, fuel=100, odo=0, 0km on current fare, $1.20/km
-    1 - Limo, fuel=100, odo=0, 0km on current fare, $2.40/km plus flagfall
-    of $4.50
-    2 - Hummer, fuel=200, odo=0, 0km on current fare, $4.80/km plus
-    flagfall of $4.50
+    Taxis available: 
+    0 - Prius, fuel=100, odometer=0, 0km on current fare, $1.23/km
+    1 - Limo, fuel=100, odometer=0, 0km on current fare, $2.46/km plus flagfall of $4.50
+    2 - Hummer, fuel=200, odometer=0, 0km on current fare, $4.92/km plus flagfall of $4.50
+    Choose taxi: 3
+    Invalid taxi choice
+    Bill to date: $0.00
+    q)uit, c)hoose taxi, d)rive
+    >>> c
+    Taxis available: 
+    0 - Prius, fuel=100, odometer=0, 0km on current fare, $1.23/km
+    1 - Limo, fuel=100, odometer=0, 0km on current fare, $2.46/km plus flagfall of $4.50
+    2 - Hummer, fuel=200, odometer=0, 0km on current fare, $4.92/km plus flagfall of $4.50
     Choose taxi: 0
     Bill to date: $0.00
     q)uit, c)hoose taxi, d)rive
     >>> d
     Drive how far? 333
-    Your Prius trip cost you $120.00
-    Bill to date: $120.00
+    Your Prius trip cost you $123.00
+    Bill to date: $123.00
     q)uit, c)hoose taxi, d)rive
     >>> c
-    Taxis available:
-    0 - Prius, fuel=0, odo=100, 100km on current fare, $1.20/km
-    1 - Limo, fuel=100, odo=0, 0km on current fare, $2.40/km plus flagfall
-    of $4.50
-    2 - Hummer, fuel=200, odo=0, 0km on current fare, $4.80/km plus
-    flagfall of $4.50
+    Taxis available: 
+    0 - Prius, fuel=0, odometer=100, 100km on current fare, $1.23/km
+    1 - Limo, fuel=100, odometer=0, 0km on current fare, $2.46/km plus flagfall of $4.50
+    2 - Hummer, fuel=200, odometer=0, 0km on current fare, $4.92/km plus flagfall of $4.50
     Choose taxi: 1
-    Bill to date: $120.00
+    Bill to date: $123.00
     q)uit, c)hoose taxi, d)rive
     >>> d
     Drive how far? 60
-    Your Limo trip cost you $148.50
-    Bill to date: $268.50
+    Your Limo trip cost you $152.10
+    Bill to date: $275.10
     q)uit, c)hoose taxi, d)rive
     >>> c
-    Taxis available:
-    0 - Prius, fuel=0, odo=100, 100km on current fare, $1.20/km
-    1 - Limo, fuel=40.0, odo=60.0, 60.0km on current fare, $2.40/km plus
-    flagfall of $4.50
-    2 - Hummer, fuel=200, odo=0, 0km on current fare, $4.80/km plus
-    flagfall of $4.50
+    Taxis available: 
+    0 - Prius, fuel=0, odometer=100, 100km on current fare, $1.23/km
+    1 - Limo, fuel=40.0, odometer=60.0, 60.0km on current fare, $2.46/km plus flagfall of $4.50
+    2 - Hummer, fuel=200, odometer=0, 0km on current fare, $4.92/km plus flagfall of $4.50
     Choose taxi: 2
-    Bill to date: $268.50
+    Bill to date: $275.10
     q)uit, c)hoose taxi, d)rive
     >>> d
-    Drive how far? 60
-    Your Hummer trip cost you $292.50
-    Bill to date: $561.00
+    Drive how far? 61
+    Your Hummer trip cost you $304.60
+    Bill to date: $579.70
     q)uit, c)hoose taxi, d)rive
     >>> c
-    Taxis available:
-    0 - Prius, fuel=0, odo=100, 100km on current fare, $1.20/km
-    1 - Limo, fuel=40.0, odo=60.0, 60.0km on current fare, $2.40/km plus
-    flagfall of $4.50
-    2 - Hummer, fuel=140.0, odo=60.0, 60.0km on current fare, $4.80/km plus
-    flagfall of $4.50
+    Taxis available: 
+    0 - Prius, fuel=0, odometer=100, 100km on current fare, $1.23/km
+    1 - Limo, fuel=40.0, odometer=60.0, 60.0km on current fare, $2.46/km plus flagfall of $4.50
+    2 - Hummer, fuel=139.0, odometer=61.0, 61.0km on current fare, $4.92/km plus flagfall of $4.50
     Choose taxi: 1
-    Bill to date: $561.00
+    Bill to date: $579.70
     q)uit, c)hoose taxi, d)rive
     >>> d
-    Drive how far? 50
-    Your Limo trip cost you $100.50
-    Bill to date: $661.50
+    Drive how far? 59
+    Your Limo trip cost you $102.90
+    Bill to date: $682.60
     q)uit, c)hoose taxi, d)rive
-    >>> q
-    Total trip cost: $661.50
+    >>> Q
+    Total trip cost: $682.60
     Taxis are now:
-    0 - Prius, fuel=0, odo=100, 100km on current fare, $1.20/km
-    1 - Limo, fuel=0, odo=100.0, 40.0km on current fare, $2.40/km plus
-    flagfall of $4.50
-    2 - Hummer, fuel=140.0, odo=60.0, 60.0km on current fare, $4.80/km plus
-    flagfall of $4.50
+    0 - Prius, fuel=0, odometer=100, 100km on current fare, $1.23/km
+    1 - Limo, fuel=0, odometer=100.0, 40.0km on current fare, $2.46/km plus flagfall of $4.50
+    2 - Hummer, fuel=139.0, odometer=61.0, 61.0km on current fare, $4.92/km plus flagfall of $4.50
+
 
 # Practice & Extension Work
 
@@ -386,7 +390,7 @@ Download 3 files from this folder. For now let's start with:
 
 -   [languages.csv](languages.csv) (the data file)
 
-Read the comments and the code in language_file_reader.py to see how
+Read the comments and the code in `language_file_reader.py` to see how
 it works.  
 
 Notice how:
@@ -402,8 +406,8 @@ Notice how:
     converts it to a Boolean ready for the class. It's not the class's
     job to do this conversion but the client's.
 
-- There are also a few other versions included that use Python's **csv**
-module and a **namedtuple**. Read through them if you're interested!
+- There are also a few other versions included that use Python's `csv`
+module and a `namedtuple`. Read through them if you're interested!
 
 ## Modifications
 
@@ -419,7 +423,7 @@ module and a **namedtuple**. Read through them if you're interested!
 
 ## More Guitars!
 
-Open the file: **guitars.csv**  
+Open the file: `guitars.csv`  
 This file contains lines like:
 
 `Fender Stratocaster,2014,765.4`
@@ -430,7 +434,7 @@ So, the format/protocol is:
 
 1.  Write a program to read all of these guitars in and store them in a
     list of tuples.  
-    Display all of the tuples using a loop.
+    Display all the tuples using a loop.
 
 2.  Write another version (save a new copy) that stores them in a list
     of Guitar objects, using the class that you wrote in practical 6
@@ -456,11 +460,11 @@ So, the format/protocol is:
     to figure this out...  
     Then test and see if it sorts correctly now.
 
-3. Save a copy of this program as **myguitars.py** then modify this 
+3. Save a copy of this program as `myguitars.py` then modify this 
    version so that it does the above, then asks
    the user to enter their new guitars (just like your practical 6 code).  
    Store these in your list of guitar objects, then  
-   write all of your guitars to the file **myguitars.csv**.  
+   write all of your guitars to the file `myguitars.csv`.  
    Test that this worked by opening the file, and also by running the
    program again to make sure it reads the new guitars.
 
@@ -520,7 +524,7 @@ leaves always appear in clean rows.
 **UpsideDownTree**
 Upside-down trees are drawn upside-down.
 
-trees_tester.py grows **seven** types of trees. Try running it now. The
+`trees_tester.py` grows **seven** types of trees. Try running it now. The
 final four types of trees are subclasses of **Tree** for you to complete:
 
 1. **WideTree**
@@ -528,8 +532,8 @@ final four types of trees are subclasses of **Tree** for you to complete:
      a. Wide trees grow their leaves in rows of six, and have a trunk that
      is twice as wide as normal trees
     
-     b. You will need to redefine the **get_ascii_trunk** and
-     **get_ascii_leaves** methods
+     b. You will need to redefine the `get_ascii_trunk` and
+     `get_ascii_leaves` methods
     
      c. Example drawing:
 
@@ -552,18 +556,18 @@ final four types of trees are subclasses of **Tree** for you to complete:
 
 3. **FruitTree**
 
-    a. Fruit trees have a number of **fruit**
+    a. Fruit trees have a number of `fruit`
     
-    b. Add a _**fruit** variable to the **FruitTree** class; initialise it
+    b. Add a `fruit` variable to the **FruitTree** class; initialise it
     as 1
     
     c. Fruit trees sometimes gain an additional fruit when the **grow**
     method is called, the chance is 1 in 2
     
-    d. Fruit trees sometimes lose a fruit when the grow method is called,
+    d. Fruit trees sometimes lose a fruit when the `grow` method is called,
     the chance is 1 in 5
     
-    e. Example drawing (fruit are represented by a dot **.**)    
+    e. Example drawing (fruit are represented by a dot `.`)    
     the fruit should be displayed the same way as the leaves, wrapping
     within the maximum width
     
@@ -595,7 +599,7 @@ final four types of trees are subclasses of **Tree** for you to complete:
     ii. row 1 always has 1 leaf, then 3 for row 2, 5 for row 3, 7 for row
     4, 9 for row 5 and so on
     
-    iii. every time the grow method is called, the pine tree should add a
+    iii. every time the `grow` method is called, the pine tree should add a
     new row of leaves if a random number between 0 and sunlight is bigger
     than 2
 
@@ -610,14 +614,14 @@ Enhance your taxi driving program so that it:
 -   keeps track of the number of km you've done (actual distance driven
     not total requested)
 
--   displays the taxis with their costs (flagfall and fanciness)
+-   displays the taxis with their costs (`flagfall` and `fanciness`)
 
 
 # Deliverables
 This section summarises the expectations for marking in this practical.
 
-- taxi_test.py 
-- tax.py modifications (including class variable)
-- unreliable_car.py & unreliable_car_test.py
-- silver_service_taxi.py & silver_service_taxi_test.py
-- taxi_simulator.py
+- `taxi_test.py` 
+- `tax.py` modifications (including class variable)
+- `unreliable_car.py` & `unreliable_car_test.py`
+- `silver_service_taxi.py` & `silver_service_taxi_test.py`
+- `taxi_simulator.py`
