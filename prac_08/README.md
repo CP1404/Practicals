@@ -49,11 +49,11 @@ class in two ways:
 -   it *overrides* methods (**`drive`**, **`__init__`** and
     **`__str__`**) to take account of the characteristics of a Taxi
 
-Notice that the **drive** method still works the same way in terms of
+Notice that the `drive` method still works the same way in terms of
 its ***interface*** - it takes in a distance parameter, and it returns the
 distance driven. This is important for *polymorphism* - so we can treat
-all subclasses of **Car** in the same way - we **drive()** a taxi
-the same way we **drive()** any other car.
+all subclasses of **Car** in the same way - we `drive()` a taxi
+the same way we `drive()` any other car.
 
 ## Test Taxi
 
@@ -66,11 +66,11 @@ available in the Taxi class):
 1.  Create a new taxi with name "Prius 1", 100 units of fuel and price
     of $1.23/km
 
-2.  Drive the taxi 40km
+2.  Drive the taxi 40 km
 
 3.  Print the taxi's details and the current fare
 
-4.  Restart the meter (start a new fare) and then drive the car 100km
+4.  Restart the meter (start a new fare) and then drive the car 100 km
 
 5.  Print the details and the current fare
 
@@ -132,7 +132,7 @@ from **Car**. Write Python code for this class in a new file,
 **UnreliableCar** has an additional attribute:
 
 -   **reliability**: a **float** between 0 and 100, that represents the
-    percentage chance that the **drive** method will actually work
+    percentage chance that the `drive` method will actually drive the car
 
 **UnreliableCar** should override the following methods:
 
@@ -153,7 +153,7 @@ from **Car**. Write Python code for this class in a new file,
         (Car) ***always*** returns the distance driven, so your derived class
         (UnreliableCar) must also return a distance. You must
         match the "signature" of any method you override.  
-        This is true, even if your UnreliableCar drives 0km.
+        This is true, even if your UnreliableCar drives 0 km.
 
 ## SilverServiceTaxi
 
@@ -192,7 +192,7 @@ on the fanciness of the **SilverServiceTaxi**.
 
 5.  Write some test code in a file called `silver_service_taxi_test.py` to see that your
     **SilverServiceTaxi** calculates fares correctly.  
-    For an 18km trip in a **SilverServiceTaxi** with fanciness of 2, the
+    For an 18 km trip in a **SilverServiceTaxi** with fanciness of 2, the
     fare should be $48.78 (yikes!)
 
 Let's stop and think about what we've done and (hopefully) learned so far:
@@ -621,7 +621,7 @@ Enhance your taxi driving program so that it:
 This section summarises the expectations for marking in this practical.
 
 - `taxi_test.py` 
-- `tax.py` modifications (including class variable)
+- `taxi.py` modifications (including class variable)
 - `unreliable_car.py` & `unreliable_car_test.py`
 - `silver_service_taxi.py` & `silver_service_taxi_test.py`
 - `taxi_simulator.py`
