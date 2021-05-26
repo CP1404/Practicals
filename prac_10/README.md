@@ -77,7 +77,7 @@ is via the console. Open the console in PyCharm, then follow the docs and
 quickly try out functions like `search()`, `summary()` and `page()`.  
 Get a page and see what properties it has.
 
-**Create a new file** called **wiki.py** and write a small script that
+**Create a new file** called `wiki.py` and write a small script that
 prompts the user for a page title or search phrase, then prints the
 summary of that page. Use a simple loop that continues doing this until
 the user enters blank input.
@@ -86,9 +86,14 @@ Try this with a few page titles and see what happens.
 (Note that you might get a warning about an outdated use of the
 BeautifulSoup package. We can't fix that so ignore it.)
 
-Try it with the search/title "Monty" and you should find that the
+Try it with the search/title "Monty", and you should find that the
 Wikipedia API returns a "disambiguation" page, so you need to handle
 that **exception** as explained in the API's docs.
+
+When getting a `page`, you might find that you get an unexpected result because the API has used `suggest()`
+to suggest a particular page, different from what you asked for. You can customise how the page is determined, example:  
+
+    wikipedia.page(title, autosuggest=False)
 
 Now **modify** your program so when it gets the page, it prints the
 title, summary and the URL.
@@ -240,7 +245,7 @@ Run it and test it, then study the code to find a few new things:
     object.
 
 -   `url_for()` is a function that returns the correct URL for a given
-    view/route function so you don't have to know the exact path.
+    view/route function so that you don't have to know the exact path.
 
 ### Modifications
 
@@ -346,6 +351,9 @@ E.g. for 6 rows, it is 6 + 5 + 4 + 3 + 2 + 1 = 21
 
 # Deliverables
 This section summarises the expectations for marking in this practical.
+
+Your work for `testing.py` and `wiki.py` go in your normal practicals repo and should be part of a code review PR. Then there's two separate Flask projects, which do not go in your practicals repo.  
+Submit three URLs for these three (practicals PR, Flask project from demo, Flask + Wiki project)
 
 Finished:
 
