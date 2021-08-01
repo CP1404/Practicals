@@ -37,6 +37,7 @@ the practice/extension section. You will be marked as follows:
 - 2 = Reasonable response to some questions, but some significant omissions or problems
 - 1 = Reasonable response to at least one question
 - 0 = Minimal or no attempt
+- LATE practicals will receive 1/4 for decent work, or 0 marks for poor work. Do not be late.
 
 **Note**: This subject is all about learning best practices and patterns for solving problems using programming (in Python) and it is important that you learn these important foundations according to the teaching philosophy of the subject. For this reason (to help you learn properly!), you will not achieve full marks for working/complete practicals that are not done in the way that we prescribe. Here are some reasons that you might lose marks for your practicals (and assignments):
 
