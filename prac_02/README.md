@@ -18,6 +18,8 @@ Please don't use spaces in file or folder names as then they are invalid module 
 
 ## String Formatting
 
+File: `string_formatting_examples.py`
+
 The **format()** string method lets us format strings using placeholders
 and format specifiers in a way that's very powerful and will make a lot
 of sense once you get used to it. Remember that a *method* is a function
@@ -26,64 +28,70 @@ like: `"literal".format(...)` or `variable.upper()`
 Sometimes the best way to start learning this sort of thing is to see
 some useful examples, so:
 
--   Create a new Python file called `string_formatting_examples.py` in
+- Create a new Python file called `string_formatting_examples.py` in
     your `prac_02` folder.
 
--   (Remember when copying code from GitHub to click **Raw** first so
+- (Remember when copying code from GitHub to click **Raw** first so
     that the formatting copies properly.)  
     Copy the following string formatting examples from
     [string_formatting_examples.py](string_formatting_examples.py)
     into this file and run the code. (It's also written below for your
     reference.)
 
-    ```python
-    name = "Gibson L-5 CES"
-    year = 1922
-    cost = 16035.4
-    
-    # The 'old' manual way to format text with string concatenation:
-    print("My guitar: " + name + ", first made in " + str(year))
-    
-    # A better way - using str.format():
-    print("My guitar: {}, first made in {}".format(name, year))
-    print("My guitar: {0}, first made in {1}".format(name, year))
-    print("My {0} was first made in {1} (that's right, {1}!)".format(name, year))
-    
-    # Formatting currency (grouping with comma, 2 decimal places):
-    print("My {} would cost ${:,.2f}".format(name, cost))
-    
-    # Aligning columns:
-    numbers = [1, 19, 123, 456, -25]
-    for number in numbers:
-        print("Number is {:>5}".format(number))
-    
-    # A version of the above loop using the enumerate function, useful when you want the index and value
-    for i, number in enumerate(numbers):
-        print("Number {0} is {1:>5}".format(i + 1, number))
-    ```
+```python
+name = "Gibson L-5 CES"
+year = 1922
+cost = 16035.4
+
+# The ‘old’ manual way to format text with string concatenation:
+print("My guitar: " + name + ", first made in " + str(year))
+
+# A better way - using str.format():
+print("My guitar: {}, first made in {}".format(name, year))
+print("My guitar: {0}, first made in {1}".format(name, year))
+print("My {0} was first made in {1} (that's right, {1}!)".format(name, year))
+
+# And with f-string formatting (introduced in Python 3.6)
+print(f"My {name} was first made in {year} (that's right, {year}!)")
+
+# Formatting currency (grouping with comma, 2 decimal places):
+print("My {} would cost ${:,.2f}".format(name, cost))
+print(f"My {name} would cost ${cost:,.2f}")
+
+# Aligning columns:
+numbers = [1, 19, 123, 456, -25]
+for number in numbers:
+    print("Number is {:>5}".format(number))
+
+# An f-string version of the above using the enumerate function, useful when you want the index and value
+for i, number in enumerate(numbers, 1):
+    print(f"Number {i} is {number:>5}")
+```
 
 ***Nice!*** Notice:
 
--   You can leave out the positional arguments, that is the numbers
+- You can leave out the positional arguments, that is the numbers
     inside the {}, if you just want to use the default order.
 
--   You can also repeat values by repeating the positional arguments.
+- You can also repeat values by repeating the positional arguments.
 
--   And you can do lots of formatting by using the string formatting
+- And you can do lots of formatting by using the string formatting
     'mini language'; details come after the **:**  See: <https://docs.python.org/3/library/string.html#formatstrings>
 
-**Tips for string formatting with the format specifier {}**
+- f-strings are not a complete replacement for `.format()`. There are some reasons to continue using `.format()` (such as with variable unpacking) so you should know both. Many Python programmers prefer f-strings for string formatting for readability and conciseness.
 
-- The number *before* the colon, or if there's no colon like {0},
+**Tips for string formatting with the format specifier `{}`**
+
+- The number *before* the colon, or if there's no colon like `{0}`,
 specifies which parameter to use. This can be left out to use the
 default order.
 
-- The part *after* the colon specifies the formatting. E.g. {:3} specifies
+- The part *after* the colon specifies the formatting. E.g., `{:3}` specifies
 to use 3 spaces (or more if needed) for the value when it's used.
 
 - By default, **numbers are right-aligned** and **strings are
 left-aligned**. You can change this with > or <  
-So, {:>6} would format the value to be right-aligned and take up 6 (or
+So, `{:>6}` would format the value to be right-aligned and take up 6 (or
 more if needed) spaces.
 
 ### Things to do:
@@ -95,7 +103,7 @@ Use string formatting to produce the output:
 ```
 
 Using a **for** loop with the **range** function and **string
-formatting** (do not use a list), produce the following output (right-aligned numbers):
+formatting** (DO NOT use a list), produce the following output (right-aligned numbers):
 
       0
      50
@@ -107,12 +115,12 @@ formatting** (do not use a list), produce the following output (right-aligned nu
 We are going to write some programs using random numbers... but how do
 we generate random numbers? Python has a number of random functions -
 contained within the **random** module. Unlike the built-in functions
-(**print()**, **input()**, etc) the random functions are *not* built-in
+(**print()**, **input()**, etc.) the random functions are *not* built-in
 but need to be **imported**. Modules are reusable collections of
 functions, classes and variables (constants) related to a specific topic
-(e.g. maths, operating system services, handling dates and times).
+(e.g., maths, operating system services, handling dates and times).
 Python has a useful built-in function for finding out about the local
-scope of something, called **dir()**.
+scope of something, called `dir()`.
 
 **Launch a Python console** (in PyCharm, simply click in the
 footer/status bar where it says "Python Console") and type the following 
@@ -124,10 +132,10 @@ This will give you a display of the "dictionary" of everything contained in `str
 
     ['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
 
-Look carefully! You can see all of those useful **str** methods such as
-**upper()**, **startswith()**, **isdecimal()**.
+Look carefully! You can see all of those useful `str` methods such as
+`upper()`, `startswith()`, `isdecimal()`.
 
-Next try running the **dir()** function with **random** as the argument:
+Next try running the `dir()` function with **random** as the argument:
 
     dir(random)
 
@@ -145,10 +153,10 @@ Now try it like this:
     import random
     dir(random)
 
-This shows you all of the names in the module - most of which are
+This shows you all the names in the module - most of which are
 functions you can use. To use functions from a module that's been
-imported like this you need to *qualify* the name - e.g. use
-**random.randint** not just **randint**. Use **help()** to find out
+imported like this you need to *qualify* the name - e.g., use
+`random.randint` not just `randint`. Use `help()` to find out
 about a couple of these functions:
 
     help(random.randint)
@@ -169,8 +177,9 @@ Note: the name of a function can be used without the brackets here, but this
 does not execute the function.
 
 ### Try This Out
-`randoms.py` (Note: never name a file the same as a module; 
-e.g. `random.py` or it will have higher precedence when you, e.g. `import random`)  
+
+File: `randoms.py` (Note: never name a file the same as a module; 
+e.g., `random.py` or it will have higher precedence when you, e.g., `import random`)  
 
 In your **console**, type in the following (run each print line multiple
 times), and write the answers to the questions below in comments in `randoms.py`.
@@ -199,7 +208,7 @@ print(random.uniform(2.5, 5.5))  # line 3
 
 ## Example to Study
 
-This example combines some of the control structures (while loops, if
+This example combines some control structures (while loops, if
 statements) from last week with some useful string formatting for
 displaying currency.
 
@@ -216,10 +225,12 @@ displayed to the nearest cent (e.g. $33.59, not $33.5918232901).
 chance of increase or decrease), and uniform (to generate a random
 floating-point number)
 
-Download the code from: [capitalist_conrad.py](capitalist_conrad.py)
-
 
 ### Things To Do:
+
+File: `capitalist_conrad.py`
+
+Download the code from: [capitalist_conrad.py](capitalist_conrad.py)
 
 1.  The program currently runs without telling us how many days it
     simulated.  
@@ -243,7 +254,7 @@ Download the code from: [capitalist_conrad.py](capitalist_conrad.py)
     **file**.  
     How do we do this?
 
-    -   First you need to **open** the file for writing. You only need
+    - First you need to **open** the file for writing. You only need
         to do this once, so add this line before your loop starts:
 
         `out_file = open(OUTPUT_FILE, 'w')`
@@ -251,18 +262,22 @@ Download the code from: [capitalist_conrad.py](capitalist_conrad.py)
         Note that this code line expects you to define the constant
         OUTPUT_FILE, so do that above.
 
-    -   Update any print statements, so they output to the file.  
+    - Update any print statements, so they output to the file.  
         Here's an (incomplete) example:
     
         `print("${:,.2f}".format(price), file=out_file)`
     
-    -   **Close** the file at the very end:
+    - **Close** the file at the very end:
     
         `out_file.close()`
+    
+    - This version uses the `.format()` method when printing the price. Change this to use f-string formatting (keet the same output).
 
 *Keep going... :)*
 
 ## Exceptions
+
+File: `exceptions_demo.py`
 
 Copy this example code that uses exceptions: [exceptions_demo.py](exceptions_demo.py)
 (also shown below), and run it, then answer the questions below in comments...
@@ -293,6 +308,8 @@ change now**.
 
 ## Problem For You To Fill In The Blanks - Exceptions
 
+File: `exceptions_to_complete.py`
+
 Let's write a program that gets an integer from the user and does not
 crash when a non-number is entered. Copy the code below and modify/add
 the parts highlighted so that it works and prints the number at the end:
@@ -306,7 +323,7 @@ while not finished:
         # TODO: this line
         # TODO: this line
         pass
-    except:  # TODO - add something after except
+    except:  # TODO - add the exception you want to catch after except
         print("Please enter a valid integer.")
 print("Valid result is:", result)
 ```
@@ -320,13 +337,15 @@ It's only there to prevent a syntax error.
 
 ## Files
 
+File: `files.py`  
+
 The solutions for these programs are provided, to
 help you get going - or to confirm that your solution was valid.    
 Note: when you execute a Python program that contains a line like
 `open('data.txt', 'w')` the new file "data.txt" is created in the
 same folder as the Python file in your PyCharm project.
 
-Create a new file called **files.py** and do all of the following *separate questions* in it:  
+Create a new file called **files.py** and do all the following *separate questions* in it:  
 Note: the intention is to give you experience using different ways to read files.  
 Make sure you're confident with:
 
@@ -356,13 +375,15 @@ Make sure you're confident with:
 
 ## Password Checker
 
+File: `password_checker.py`
+
 Download the starter code (complete with hints in the form of #TODO
 comments) from [password_checker.py](password_checker.py)
 
 Write a program that asks for and validates a person's password. The
 program is not for comparing a password to a known password, but
 validating the 'strength' of a new password, like you see on websites:
-enter your password and then it tells you if it's valid (matches the
+enter your password, and then it tells you if it's valid (matches the
 required pattern) and re-prompts if it's not.  
 All passwords must contain *at least one each of: number*, *lowercase*
 and *uppercase* character.  
@@ -372,11 +393,11 @@ in ALL_CAPS) to store:
 
 a.  the minimum and maximum length of the password
 
-b.  whether or not a special character (not alphabetical or numerical)
+b.  whether a special character (not alphabetical or numerical)
     is required
 
 Remember when a program has CONSTANTS, you should use them everywhere you can so that if you change them at the top, this change affects the whole program as expected.  
-E.g. if you changed the minimum length to 5, the program should print 5 and should check to make sure the password is >= 5 characters long.
+E.g., if you changed the minimum length to 5, the program should print 5 and should check to make sure the password is >= 5 characters long.
 
 Output should look something like this:
 
@@ -425,7 +446,7 @@ this for you with TODO comments in the code provided.
 
 -   Only when you are able to count lowercase, then, in the same loop,
     count the uppercase characters  
-    That is, **do not** try and get all of the checks working before you
+    That is, **do not** try and get all the checks working before you
     know the first one works. **Do** one at a time.
 
 -   *Then*, count the numbers...  
@@ -449,12 +470,12 @@ method.
 
 ## Got your GitHub on?
 
-If you haven't setup your own GitHub account, please do so now. See our
+If you haven't set up your own GitHub account, please do so now. See our
 instructions at:
 <https://github.com/CP1404/Starter/wiki/Software-Setup#github>
 
 Note that you should use a meaningful username that identifies who you
-are and you must use your JCU email address. (If you already have a
+are, and you must use your JCU email address. (If you already have a
 GitHub account with a non-JCU address, you can add your JCU email as a
 secondary email; you do not need to create a new account.)  
 Ideally, JCU staff should be able to tell who you are from your
@@ -463,8 +484,7 @@ your work. You will likely use it as an online portfolio in the future.
 
 # Practice & Extension Work
 
-The final part of pracs will usually be for you to do outside of prac
-time.  
+The final part of pracs will usually be for you to do outside prac time.  
 Use these exercises as normal practice and as ways to learn new things.
 
 ##Practice
