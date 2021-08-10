@@ -1,24 +1,25 @@
 # Practical 06 - Classes
 
-**External students**: Each week, you will do your work in a new branch, 
-then do a *pull request*, mentioning a new/different student to get (and give)
-a code review. So, this week, before starting the prac, create a new branch, `prac_06_feedback`.  
+**Code Reviews help you learn!** 
+Each practical from now on, you will do your work in a **new branch**, 
+then do a **pull request**, mentioning a new/different student to get (and give)
+a code review. So, this week, ***before*** starting the prac, create a new branch, `prac_06_feedback`.  
 See how this works? Please ask for help if you're not sure.  
 
-**Internal students**: You are not expected to do PR code reviews each prac, 
-but you are very welcome to do so if you would like to.
-
+When you have finished the code reviewing process, you can merge your changes to close the pull request.  
+It is desirable that everyone completes this properly with a decent code review, lessons from the experience, and improved code, but realistically some students will not do this. Merge your code without a review if you need to.  
+**Your** mark is not dependent on someone else's work. You must do the PR with a valid mention, but you don't need to rely on receiving a code review to complete your own work.
 
 We have seen how to work with lists, tuples and dictionaries to store
 and process data appropriate for those types:
 
--   **list** is useful for storing an ordered sequence of data (e.g.
+-   `list` is useful for storing an ordered sequence of data (e.g.
     monthly rainfall data)
 
--   **tuple** is useful for storing fixed (not changing) data with
+-   `tuple` is useful for storing fixed (not changing) data with
     multiple parts (e.g. date of birth)
 
--   **dict** is useful when the data has a 'mapping' relationship (e.g.
+-   `dict` is useful when the data has a 'mapping' relationship (e.g.
     name -> date of birth)
 
 Very often we want to combine data into one object in a way that does not
@@ -69,7 +70,7 @@ the following:
 
 3.  Print the amount of fuel in the car.
 
-4.  Attempt to drive the car 115km using the drive method.
+4.  Attempt to drive the car 115 km using the drive method.
 
 5.  Print the car's odometer reading.
 
@@ -78,7 +79,7 @@ the following:
     format:    
     `Car, fuel=42, odometer=277`  
     Remember that you can run this method by **print**ing your car
-    object, or passing the car object to the **str()** function.  
+    object, or passing the car object to the `str()` function.  
     **Do NOT** call the method explicitly like `my_car.__str__()`
 
 7.  Now add a `name` field to the Car class (in car.py), and adjust
@@ -159,7 +160,7 @@ practice, helps you learn it better (since you can't depend on the
 IDE's help) and encourages you to be consistent and clear with syntax,
 indenting, etc.
 
-Loop through and print the names of all of the languages with dynamic
+Loop through and print the names of all the languages with dynamic
 typing (make sure you use your new `is_dynamic` method!), 
 which should produce output like:
 
@@ -177,7 +178,7 @@ Remember the string formatting example from prac 2:
 name = "Gibson L-5 CES"
 year = 1922
 cost = 16035.40
-print("My guitar: {0}, first made in {1}".format(name, year))
+print(f"My guitar: {name}, first made in {year}")
 ```
 
 You should notice that we have multiple values to store for one guitar entity:
@@ -214,9 +215,11 @@ already knows (like age, year, etc.).
 
 ### Testing
 
-Now write a **guitar_test.py** program with at least enough code to
+File: `guitar_test.py`
+
+Now write a program with at least enough code to
 test that the last two methods work as expected.  
-So to test that the **get_age()** method works, you could test that the
+So to test that the `get_age()` method works, you could test that the
 above example guitar does indeed output 98 as expected. Here is some
 sample output for testing two guitars where the second is called 
 Another Guitar and has year=2013:
@@ -228,7 +231,7 @@ Another Guitar and has year=2013:
 
 Do you see how this works?
 
-We print our own *literal* for what we expect if the function works (e.g. 98),
+We print our own *literal* for what we expect if the function works (e.g., 98),
 then we print *what the method actually returns* and we look at the output
 to see if they match.  
 This form of testing is quite 'manual' since we need to read the output and 
@@ -244,10 +247,12 @@ need to fix something.
 
 ### Playing the Guitars (not really)
 
-Got your class working (tested) now? Great!   
-Write a program that uses it in a file called **guitars.py**
+File: `guitars.py`
 
-The program should use a list to store all of the user's guitars (keep
+Got your class working (tested) now? Great!   
+Write a program that uses it.
+
+The program should use a list to store all the user's guitars (keep
 inputting until they enter a blank name), then print their details.
 
 ***Read the full question*** including the notes *before* starting.  
@@ -300,32 +305,19 @@ principle](https://en.wikipedia.org/wiki/Abstraction_principle_(programming)):
 ### Notes (you haven't started yet, have you?)
 
 -   The sample output uses some nice string formatting. Feel free to try
-    and figure this out, or just use our code (the width we use for
-    guitar.name is just a guesstimate):  
+    and figure this out, or just use something like our code below (the width we use for
+    `guitar.name` is just a guesstimate):  
     
     ```python
-    print("Guitar {}: {:>20} ({}), worth ${:10,.2f}{}".format(i + 1, guitar.name, guitar.year, guitar.cost, vintage_string))  
+    print(f"Guitar {i + 1}: {guitar.name:>20} ({guitar.year}), worth ${guitar.cost:10,.2f}{vintage_string}")
     ```
       
     The variable `vintage_string` is set to `""` or `" (vintage)"`
     depending on the `is_vintage()` method.  
     If you're keen, try using Python's *ternary operator* to do this in one line.  
-    E.g. to set the value of `is_adult` to True or False depending on age, you could use:
+    E.g., to set the value of `response` to yes or no depending on `age`, you could use:
     
-        is_adult = True if age >= 18 else False  
-
--   See guitar.year, guitar.cost...? You can do this another way if you
-    want...
-
-    E.g. for the car class example above, the following two lines are
-    equivalent. This can be a useful way to make the code more
-    readable because you can see the name of the variable you're printing
-    in the actual placeholder.
-    
-    ```python
-    print("Car {}, {}".format(my_car.fuel, my_car.odometer))  
-    print("Car {car.fuel}, {car.odometer}".format(car=my_car))
-    ```
+        response = "yes" if age >= 18 else "no"  
 
 -   For this particular code, we've used both `i` and the target variable
     `guitar` (instead of `guitars[i]`) by using the built-in
