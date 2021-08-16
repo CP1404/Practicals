@@ -2,7 +2,7 @@
 
 This week (and from now on), we'll be using Git and GitHub for our work.
 
-If you haven't setup your own GitHub account, please do so now. See our
+If you haven't set up your own GitHub account, please do so now. See our
 instructions at:
 <https://github.com/CP1404/Starter/wiki/Software-Setup#github>
 
@@ -49,18 +49,18 @@ This will be enough to get you started, but please keep learning and
 practising with Git and GitHub.
 
 **Note**: It's not easy to provide exact instructions that cover multiple versions 
-of PyCharm, since things change. Your experience may be a bit different depending
+of PyCharm. Your experience may be a bit different depending
 on what version of PyCharm you have.
 
-1.  **Create a new PyCharm project** (not just a new folder)
+1. **Create a new PyCharm project** (not just a new folder)
     called **Sandbox**, which you can use for doing small tests and
     demos that you want to keep but that don't fit into any other projects.
     DO NOT put it inside your practicals project or any other project.  
 
-2.  Add a Python file called **my_name.py** and enter just a single
+2. Add a Python file called `my_name.py` and enter just a single
     docstring (triple-quoted comment) at the top with your name in it.
 
-3.  Now we'll put this project into Git version control (without using
+3. Now we'll put this project into Git version control (without using
     GitHub yet).  
     From the PyCharm menu choose **VCS > Import into Version Control >
     Create Git Repository...**  
@@ -70,18 +70,18 @@ on what version of PyCharm you have.
     What happened? Not much it seems, but we're ready to **commit**
     our files to Git version control.
 
-4.  Choose **VCS > Commit Changes** (take note of the shortcut as
+4. Choose **VCS (or Git) > Commit Changes** (take note of the shortcut as
     you'll be using it often!)  
     It should tell you no changes were detected...  
     (or some versions may automatically add files for you - but don't commit yet)  
     **Note:** If you ever get a prompt to "Add File to Git" for
     PyCharm project metadata files (anything in the `.idea` folder, like
-    `misc.xml` or `vcs.xml`), then choose **no**. 
+    `misc.xml` or `vcs.xml`), then choose **NO**. 
     We do not want to version control these files.  
     Click on the Git (or Version Control) tool window in the footer and click the **Log**
     tab. It's empty because our project has no commits.
 
-5.  Switch to the **Local Changes** tab and you should see some PyCharm
+5. Switch to the **Local Changes** tab and you should see some PyCharm
     files that we don't care about and our one code file, `my_name.py`.
     Right-click on this file and choose to **Add** it to **Git**.    
     ![Version Control Local Changes](../images/03image4.png)  
@@ -90,12 +90,12 @@ on what version of PyCharm you have.
     You should now see it listed under **Default** instead of
     **Unversioned Files**, and it changes **colour**!
 
-6.  Click back on the **Log** tab and... it still shows nothing!  
+6. Click back on the **Log** tab and... it still shows nothing!  
     That's because we've only added this file to the "staging"
     state, so it will be included when (if) we commit.  
     This is important. Git only tracks the files we ask it to.  
 
-7.  Now for our first **commit**!  
+7. Now for our first **commit**!  
     Press the shortcut key for committing changes (Ctrl+K or Cmd+K
     usually) and enter a **meaningful commit message** that briefly
     describes what your change was **using the imperative mood** for your messages. (This is the same for
@@ -110,11 +110,11 @@ on what version of PyCharm you have.
     You should now see your first commit appear in the Log tab of the
     Version Control tool window. ***Yay!***
 
-8.  Now create a new file (add to VCS) called `password_check.py` type the 
+8. Now create a new file (add to VCS) called `password_check.py` type the 
     code you wrote on paper earlier for error-checking and printing a
     word as asterisks into your Python file. Test it.
 
-9.  Do another commit with another useful commit message (perhaps
+9. Do another commit with another useful commit message (perhaps
     something like "Add password check program"). Have a look and see that it also
     appears in your log.  
       
@@ -123,11 +123,12 @@ on what version of PyCharm you have.
     have not used GitHub at all yet.  
     We could do this as many times as
     we want, and we could open previous versions of our files through
-    the Version Control tool window in PyCharm.
+    the Version Control tool window in PyCharm or via a Terminal.
 
 10. Now time for **GitHub**!  
-    Choose **VCS > Import into Version Control > Share Project on GitHub**
-    Enter your GitHub username and password and press Enter  
+    Choose **Git > GitHub > Share Project on GitHub**  
+    or **VCS > Import into Version Control > Share Project on GitHub**    
+    Enter your GitHub username and password and press Enter.  
     Do not enter a master password, just **Cancel** this. You never *need*
     to use this master password facility in PyCharm.  
     Enter a brief description of the repo, leave it public (don't tick Private) and **Share** it.  
@@ -151,9 +152,10 @@ on what version of PyCharm you have.
     the big green **Commit new file** button (which will accept the
     defaults).  
     Your repo looks much better online now. READMEs are an important
-    part of software development!
+    part of software development!  
+    **Careful...** The point to this part of the exercise is **NOT** to encourage you to use the GitHub website to make edits and commits. We are **ONLY** using it just this once to help with the next point... **OK? Do not use the GitHub website to make edits and commits again :)** 
 
-13. But... we did that online in our GitHub repo. There's a new file
+14. But... we did that online in our GitHub repo. There's a new file
     there, but not locally on our computer.  
     So, let's **pull** those changes.  
     In PyCharm, choose **VCS > Git > Pull**, then click Pull (accept defaults).  
@@ -161,15 +163,15 @@ on what version of PyCharm you have.
     you look, you'll see a 3rd commit with a message like "Create
     README.md" in your commit log.
 
-14. OK, now let's go crazy!  
+15. OK, now let's go crazy!  
     Close the project in PyCharm, then delete
     the whole project from your computer. That's right, delete it all!
     This is what you could do if you had finished working on a lab
-    computer and you had committed and pushed all of your changes to
+    computer, and you had committed and pushed all of your changes to
     GitHub (that is, make sure GitHub has an up-to-date copy of your
     project).
 
-15. Now, imagine we've moved to another computer on a different day...
+16. Now, imagine we've moved to another computer on a different day...
     How do we keep working on our project? We **clone** it. Choose
     **VCS > Checkout from Version Control > GitHub** from the menu.  
     (Note: do not use the clone/download button on the GitHub website,
@@ -180,7 +182,7 @@ on what version of PyCharm you have.
     then click **Clone**. You now have the
     whole project, including any previous version history, locally.
 
-16. Now add another file, **list_files.py** and enter this code:
+17. Now add another file, `list_files.py` and enter this code:
 
     ```python
     import os  
@@ -194,11 +196,11 @@ on what version of PyCharm you have.
 
 17. Run it to make sure it works. It should show you a list of all the
     files and folders in the current (project) folder, and you should
-    see one called ".git". This is where Git stores all of the history
+    see one called `.git`. This is where Git stores all the history
     and state information. Don't delete this! If you ever want to move
-    a project that's using Git, you can either use GitHub (and
+    a project that's using git, you can either use GitHub (and
     then clone it to the new place) or you can just copy it, making sure
-    you include this folder.
+    you include this .git folder.
 
 18. Now **Add** this new Python file to VCS so Git tracks it, then
     **Commit and Push** (you should see the option to do both at
@@ -215,7 +217,7 @@ the process for working on your projects:
 -   **Commit** every time you make significant (small milestone)
     changes, using good messages in the imperative voice
 
--   **Push** to GitHub so you have an up-to-date online copy
+-   **Push** to GitHub so that you have an up-to-date online copy
 
 Then when you want to keep working on the project again on a different
 computer
@@ -229,9 +231,9 @@ just keep using the same local repo.)
 It is possible to edit and upload files directly via the GitHub website
 but **do not do this!**
 
-We only made the Sandbox repo so we could practise Git and GitHub.  
+We only made the Sandbox repo so that we could practise Git and GitHub.  
 You don't need to use it again, but you're welcome to put whatever you
-want there... but do not put your practical work in Sandbox.
+want there... but do not put your practical work in Sandbox or vice versa.
 
 ## Now let's get your practicals on GitHub
 
@@ -246,7 +248,7 @@ Open your project in PyCharm, then **share** it on GitHub (VCS menu).
 
 ### Your repo must be public!
 **It is essential that you leave your practicals repo public.**  
-**Do NOT make your repository private or it will not be assessed.**
+**Do NOT make your repository private, or it will not be assessed.**
 
 **From now on (seriously, for every prac for the rest of the subject)**,
 when you finish a task, do a commit with a meaningful message.  
@@ -257,7 +259,7 @@ you will _never_ have the problem of not having access to your work?
 You will _always_ have your work available on GitHub. Nice!
 
 You do not need to commit or push for every little change, just for
-decent-sized changes and especially for milestones or before you start
+decent-sized changes, **small milestones**, or before you start
 making major changes.
 
 Each repo should be a single PyCharm project. Do not have one
@@ -272,11 +274,11 @@ Remember that function names should say what they do (use verb phrases).
 
 Note also that functions should **do one thing** (Single Responsibility Principle, SRP)
  - so they might calculate a value but NOT print it. If they calculated it AND printed
-it, that would be two things and you could no longer use that function
-if you wanted to use the value without printing it, e.g. in an expression.
+it, that would be two things, and you could no longer use that function
+if you wanted to use the value without printing it, e.g., in an expression.
 
-E.g. a function that calculates the area of a rectangle should have the
-height and width values passed in as parameters, rather than asking the
+E.g., a function that calculates the area of a rectangle should have the
+height and width values passed in as **parameters**, rather than asking the
 user for them in the function. That way it can be used no matter where
 these values come from.  
 It should also **return** the result rather than printing it. 
@@ -295,14 +297,18 @@ You should never use a global variable in this subject.
 So the basic form for all programs now is:
 
 ```python
+"""Module docstring"""
+# imports
 # CONSTANTS
 
 def main():  
+    """Function docstring"""
     # statements...
     # variables...  
     do_stuff()  
   
 def do_stuff():  
+    """Function docstring"""
     # statements...  
   
 main()
@@ -316,7 +322,7 @@ a password and prints asterisks based on its length. Copy this from Sandbox into
 your `prac_03` folder and commit (with a message like "Add password check
 program"). Now let's modify this program.
 
-1.  Move all of the code inside a `main()` function and call `main()` at the
+1.  Move all the code inside a `main()` function and call `main()` at the
     bottom. Run it to make sure it works.  
     **Note:** if you don't have a main function, the refactoring below will
     use global variables. So, it's an important first step to use main before 
@@ -354,15 +360,15 @@ to helping each other - then talk to your tutor.
 
 1.  Refactor the following two previous programs to use functions (with suitable
     verb-phrase function names) ...  
-    Copy both of these from prac_01 into prac_03, commit, then update
-    them. We do the commit first before updating so we can see clearly what we have
+    Copy both of these from `prac_01` into `prac_03`, commit, then update
+    them. We do the commit first before updating so that we can see clearly what we have
     changed in the "diff".  
     We copy (instead of move) them because we want each week's prac folder to
     contain that week's prac work (don't change prac 1).  
     Remember, any time you're using functions, you also need a `main()`
     function for the main program.
 
-    a.  **temperatures.py** - use 2 functions for converting Celsius to
+    a.  `temperatures.py` - use 2 functions for converting Celsius to
         Fahrenheit and vice versa  
         **Important:** Remember SRP - functions should do one thing, so
         these should be calculation functions. Do not get user input or
@@ -370,7 +376,7 @@ to helping each other - then talk to your tutor.
         That means these will be very small functions... that's OK...
         they abstract a core piece of functionality.
 
-    b.  **broken_score.py** - `main` should ask the user for their score and print the result.  
+    b.  `broken_score.py` - `main` should ask the user for their score and print the result.  
         write a new function that takes in the user's score
         as a parameter and returns the result to be printed.  
         The *function* should not print it.  
@@ -527,8 +533,7 @@ You may also like to do one or more of the GitHub courses on [LinkedIn Learning]
 # Deliverables
 This section summarises the expectations for marking in this practical.
 
-- password -> **** on paper (internal students)
 - Practicals repository on GitHub and up-to-date
-- password_check.py 
-- temperatures.py
-- broken_score.py
+- `password_check.py` 
+- `temperatures.py`
+- `broken_score.py`
