@@ -238,9 +238,9 @@ Name:
 <em>... snip ...</em>
 
 These are my guitars:
-Guitar 1: Fender Stratocaster (2014), worth $ 765.40
-Guitar 2: Gibson L-5 CES (1922), worth $ 16,035.40 (vintage)
-Guitar 3: Line 6 JTV-59 (2010), worth $ 1,512.90
+Guitar 1:       Gibson L-5 CES (1922), worth $ 16,035.40 (vintage)
+Guitar 2:        Line 6 JTV-59 (2010), worth $  1,512.90
+Guitar 3:  Fender Stratocaster (2014), worth $    765.40
 </pre>
 
 **Programmer Efficiency Note**
