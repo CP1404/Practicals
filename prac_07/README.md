@@ -124,15 +124,17 @@ Label:
 
 # Intermediate Exercises
 
+## Square Number
+
 ![Square Number screenshot](../images/07image3.png)
 
-Open the `squaring.py/kv` files from the demos.
+Open the `squaring.py/kv` files from the KivyDemos repository.
 
 Run the code to see a simple app with a text entry field, a button and a label that squares a number.  
-Spend a while reading the code so you know how it works. Pay special attention to the functionality - how it handles the
+Spend some time reading the code so that you know how it works. Pay special attention to the functionality - how it handles the
 button being pressed:
 
-# Modifications
+### Modifications
 
 ![Square Number 2 screenshot](../images/07image4.png)
 
@@ -166,15 +168,28 @@ button being pressed:
 - The red BoxLayout will be the top level widget.  
   Nice...
 
-**Refactoring Example:**
+### Refactoring Example:
 
-Have a look at the following commit "diff" for the squaring program:
-<https://github.com/CP1404/Practicals/commit/2f9b38dcfc393e2f50f9b30f6da36f9aabf4ee1f>
+Have a look at [this commit "diff" for the squaring program](https://github.com/CP1404/Practicals/commit/2f9b38dcfc393e2f50f9b30f6da36f9aabf4ee1f)
 
 You can see that we changed the code so that the button handler function now takes in the value of the text field as a
-parameter instead of getting it. This makes the logic less _"tightly coupled"_ to the view.  
+parameter instead of getting it from the view by id name. This makes the logic less _"tightly coupled"_ to the view.  
 It still puts the calculated result back in the view directly, so it's only one step towards better separation, but it
 does show you how Git and GitHub can record and show your progress as you improve your code by refactoring.
+
+**But wait... here's an even better example from the same demo!**
+The previous version had a line in the kv file, like:
+```
+on_press: app.handle_calculate(int(input_number.text))
+```
+This seems fine, but it's doing too much for the "view". We should be able to change out the view for something different and have it still work. Here, the view is doing more than one job...  
+ It's converting a type... not it's job.  
+So what? Well, what if the user enters text in the field? The kv file contains the code to do the type conversion, which would crash! Where would we put our exception handling? Not in the kv/view!  
+
+So, [this diff shows an update](https://github.com/CP1404/KivyDemos/commit/7b022e48197813e9c73eb8b51edb67a4105d493c) that improves the program by moving the conversion out of the view to where we can handle the possible exception.  
+Ah, that's better :) 
+
+
 
 # Do-from-scratch Exercises
 
