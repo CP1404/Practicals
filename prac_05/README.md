@@ -146,20 +146,22 @@ it's in the dictionary...
   *Only after* you have the program working, **make your program do this sorting**.
 
 - As a further refinement, **align the outputs so the numbers are in one nice column**. You will need to find the
-  longest word in the list first, and then you need to know how to use the string `format` method to take a variable
-  width. The former is up to you, but the latter can be done with another {} placeholder, like:
+  longest word in the list first.  
+  Then you can use the string `format` method (or f-strings) to take a variable
+  width. This can be done with another `{}` placeholder, like in this example:
 
   ```python
-  print("{:{}} = {}".format(x, y, z))
+thing, width, other_thing = "first", 13, "second"
+print("{:{}} = {}".format(thing, width, other_thing))
+print(f"{thing:{width}} = {other_thing}")  # or f-string version
   ```
 
-  This formats the first placeholder value, x, with a width of y then prints a literal = then the value of z.  
-  (Note that x, y and z are not intended to be meaningful names.)
+  This formats the first placeholder value, `thing`, with a width of `width` then prints a literal = then the value of `other_thing`.  
   Your output should then look something like:
 
-      a :          2
+      a          : 2
       collection : 1
-      fun :        1
+      fun        : 1
 
 File: `emails.py`
 
