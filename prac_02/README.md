@@ -321,14 +321,10 @@ while not is_finished:
     try:
         result = int(input("Enter a valid integer: "))
         # TODO: this line
-        pass
     except:  # TODO - add the exception you want to catch after except
         print("Please enter a valid integer.")
 print("Valid result is:", result)
 ```
-
-Remove `pass` when you're finished.  
-It's only there to prevent a syntax error.
 
 Note: PyCharm will probably give you a warning that `result` "may be undefined". This is safe to ignore.  
 It's not a PEP8 formatting warning, it's PyCharm thinking that you might somehow exit the loop before defining `result`.  
