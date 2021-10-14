@@ -316,11 +316,10 @@ the parts highlighted so that it works and prints the number at the end:
 [exceptions_to_complete.py](exceptions_to_complete.py)
 
 ```python
-finished = False
-result = 0
-while not finished:
+is_finished = False
+while not is_finished:
     try:
-        # TODO: this line
+        result = int(input("Enter a valid integer: "))
         # TODO: this line
         pass
     except:  # TODO - add the exception you want to catch after except
@@ -330,6 +329,10 @@ print("Valid result is:", result)
 
 Remove `pass` when you're finished.  
 It's only there to prevent a syntax error.
+
+Note: PyCharm will probably give you a warning that `result` "may be undefined". This is safe to ignore.  
+It's not a PEP8 formatting warning, it's PyCharm thinking that you might somehow exit the loop before defining `result`.  
+Since we're controlling how we exit the loop, we know this problem will not occur.
 
 *You're doing well. Keep it up...*
 

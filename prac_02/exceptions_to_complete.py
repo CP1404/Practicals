@@ -3,13 +3,12 @@ CP1404/CP5632 - Practical
 Fill in the TODOs to complete the task
 """
 
-finished = False
-result = 0
-while not finished:
+is_finished = False
+while not is_finished:
     try:
-        # TODO: this line
+        result = int(input("Enter a valid integer: "))
         # TODO: this line
         pass
-    except:  # TODO - add something after except
+    except:  # TODO - add the exception you want to catch after except
         print("Please enter a valid integer.")
 print("Valid result is:", result)
