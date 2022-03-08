@@ -1,7 +1,7 @@
 # Practical 05 - Dictionaries, Code Reviews with PRs
 
 **Did you finish last week's work? Including the practice section?**  
-If not, make sure to complete it during the week. The more you practise, the better you'll learn.   
+If not, make sure to complete it during the week. The more you practise, the better you'll learn.  
 If you have any questions, ask your peers or tutor the following week.
 
 _Your_ reason for doing this subject/degree probably has something to do with getting a job in the IT industry.
@@ -61,7 +61,7 @@ So now the work you do and commit will be in the prac_05_feedback branch, not th
 from prac_05_feedback to master, which is basically a request for someone to **merge** the changes in prac_05_feedback
 into the master branch... which gives us the opportunity to provide comments via GitHub.
 
-So, you're on the prac_05_feedback branch?   
+So, you're on the prac_05_feedback branch?  
 Great! Let's write some code using **dictionaries**...
 
 # Walkthrough Example
@@ -76,30 +76,31 @@ soon.
 
 ## Modifications
 
-1. Run the program to see how it works.
+1.  Run the program to see how it works.
 
-2. Right now the code formatting is incorrect.  
-   Dictionary literals should be formatted with no space before, and one space after, the colon,
-   like `{"A": 1, "B": 2}`  
-   Thankfully, PyCharm knows this and can fix all your formatting problems for you!
-   If you move your mouse over the grey line near the first colon, PyCharm pops up the problem... Click on it to see the
-   action icon (light bulb) to the left... Click on that to see the options... Choose reformat file... Problem solved.  
-   You can also choose **Code > Reformat Code** or use the keyboard shortcut any time. It does the whole file or
-   whatever's selected. No more excuses for dodgy formatting! Seriously, always fix your formatting :)   
-   This is also a great way to learn what the "PEP 8" standards are for Python code formatting style.  
-   ![PyCharm PEP 8 warning](../images/05image4.png)
+2.  Right now the code formatting is incorrect.  
+    Dictionary literals should be formatted with no space before, and one space after, the colon,
+    like `{"A": 1, "B": 2}`  
+    Thankfully, PyCharm knows this and can fix all your formatting problems for you!
+    If you move your mouse over the grey line near the first colon, PyCharm pops up the problem... Click on it to see the
+    action icon (light bulb) to the left... Click on that to see the options... Choose reformat file... Problem solved.  
+    You can also choose **Code > Reformat Code** or use the keyboard shortcut any time. It does the whole file or
+    whatever's selected. No more excuses for dodgy formatting! Seriously, always fix your formatting :)  
+    This is also a great way to learn what the "PEP 8" standards are for Python code formatting style.  
+    ![PyCharm PEP 8 warning](../images/05image4.png)
 
-3. Currently the program requires you to enter the states in capitals. Change the program so lowercase inputs also work
-   to show the state names. (There are two places to add a string method.)
+3.  Currently the program requires you to enter the states in capitals. Change the program so lowercase inputs also work
+    to show the state names. (There are two places to add a string method.)
 
-   ![Pencil icon](../images/03image1.png)
-4. Do this next part on paper first (then in PyCharm):  
-   Write a loop that prints all of the states and names **neatly lined up**
-   with string formatting, like:
+    ![Pencil icon](../images/03image1.png)
 
-       NSW is New South Wales
-       QLD is Queensland
-       NT  is Northern Territory
+4.  Do this next part on paper first (then in PyCharm):  
+    Write a loop that prints all of the states and names **neatly lined up**
+    with string formatting, like:
+
+        NSW is New South Wales
+        QLD is Queensland
+        NT  is Northern Territory
 
 # Intermediate Exercises
 
@@ -143,25 +144,25 @@ The output should look like this:
 it's in the dictionary...
 
 - Notice that the sample output is sorted.  
-  *Only after* you have the program working, **make your program do this sorting**.
+  _Only after_ you have the program working, **make your program do this sorting**.
 
 - As a further refinement, **align the outputs so the numbers are in one nice column**. You will need to find the
   longest word in the list first.  
-  Then you can use the string `format` method (or f-strings) to take a variable
+   Then you can use the string `format` method (or f-strings) to take a variable
   width. This can be done with another `{}` placeholder, like in this example:
 
   ```python
-thing, width, other_thing = "first", 13, "second"
-print("{:{}} = {}".format(thing, width, other_thing))
-print(f"{thing:{width}} = {other_thing}")  # or f-string version
+  thing, width, other_thing = "first", 13, "second"
+  print("{:{}} = {}".format(thing, width, other_thing))
+  print(f"{thing:{width}} = {other_thing}")  # or f-string version
   ```
 
   This formats the first placeholder value, `thing`, with a width of `width` then prints a literal = then the value of `other_thing`.  
-  Your output should then look something like:
+   Your output should then look something like:
 
-      a          : 2
-      collection : 1
-      fun        : 1
+        a          : 2
+        collection : 1
+        fun        : 1
 
 File: `emails.py`
 
@@ -182,8 +183,8 @@ them out.
     Email: jimbo546@hotmail.com
     Is your name Jimbo546? (Y/n) no
     Name: Jim Boh
-    Email: 
-    
+    Email:
+
     Lindsay Ward (lindsay.ward@jcu.edu.au)
     Abe (Abe@gmail.com)
     Jim Boh (jimbo546@hotmail.com)
@@ -212,7 +213,7 @@ the IT industry but simplified to suit our teaching environment.
    Pull Request:  
    ![GitHub New Pull Request](../images/05image8.png)  
    Add a title like "Prac 5 code review request" and some detail like
-   "Please check formatting, naming and logic" (or anything else you want checked). In this description, *mention* the
+   "Please check formatting, naming and logic" (or anything else you want checked). In this description, _mention_ the
    reviewer with their GitHub username and the @ symbol - e.g. \@personname - so they will be notified (depending on
    their GitHub preferences).
 
@@ -247,13 +248,13 @@ the IT industry but simplified to suit our teaching environment.
    more work if need be... reviewer adds more comments... until all good (the reviewer decides when it's finished) ...
    then the reviewer would close the pull request.  
    In our simplified version of this process, you can just **Merge the pull request** now (add a comment if you want).
-   This merge replaces what was in the master branch with what is in the prac_05_feedback branch.    
+   This merge replaces what was in the master branch with what is in the prac_05_feedback branch.  
    ![GitHub Merge Pull Request](../images/05image13.png)  
    GitHub will tell you that the prac_05_feedback branch can be deleted. You're welcome to delete it (both on GitHub and
    locally).
 
 7. Now the master branch has been updated on GitHub (remote), but not locally.  
-   In PyCharm, *switch back to the local master branch* by clicking in the footer where it shows the branch:  
+   In PyCharm, _switch back to the local master branch_ by clicking in the footer where it shows the branch:  
    ![PyCharm change branch](../images/05image14.png)
 
 8. **Pull** your changes from master (remote) to update your local repo:
@@ -261,7 +262,7 @@ the IT industry but simplified to suit our teaching environment.
    You should now be on your local master branch and see all your up-to-date work.
 
 All done!  
-*What did you learn from this?*
+_What did you learn from this?_
 
 To read more about Pull Requests:
 [https://help.github.com/articles/using-pull-requests/](https://help.github.com/articles/using-pull-requests/)
@@ -279,9 +280,9 @@ Now on to more practice programming...
    allow you to do the following
    (remember to implement this incrementally, one bit at a time):
 
-    - Enter a new name & address
-    - Change an address for an existing entry
-    - Print the address for a name you choose
+   - Enter a new name & address
+   - Change an address for an existing entry
+   - Print the address for a name you choose
 
 2. In practical 1, you should have created an electricity bill estimator using constant values for the tariff amounts
    like:
@@ -319,7 +320,7 @@ Now on to more practice programming...
 
    ```python
    names = ["Jack", "Jill", "Harry"]
-   dates_of_birth = [(12, 4, 1999), (1, 1, 2000), (27, 3, 1982)]  
+   dates_of_birth = [(12, 4, 1999), (1, 1, 2000), (27, 3, 1982)]
    ```
 
    This means Jack was born on 12/4/1999, Jill was born on 1/1/2000, and Harry was born on 27/3/1982.  
