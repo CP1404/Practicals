@@ -6,6 +6,7 @@ def main():
     for key, value in word_list:
         print(f"{key} : {value}".format(key= key,value= value))
 
+
 # count appearance of each word and save as dict
 def dict_count(sentence):
     text_dict = {}
