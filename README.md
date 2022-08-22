@@ -1,6 +1,6 @@
-# Practicals for IT@JCU CP1404/CP1804/CP5632
+# Practicals for IT@JCU CP1404/CP5632
 
-This repository contains Python code and instructions for practicals for the subjects CP1404, CP1804 and CP5632 at James Cook University.
+This repository contains Python code and instructions for practicals for the subjects CP1404/CP5632 at James Cook University.
 
 Many files contain `# TODO` comments, which are part of the instructions for what students need to do.  
 Complete instructions are found in each prac folder.

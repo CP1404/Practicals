@@ -186,101 +186,114 @@ Got your windows organised? Let's keep going...
 
 Okay, let's practise using PyCharm to write simple programs.
 
-1.  Create a new Python file in the prac_01 directory called
-    `sales_bonus.py`, and copy the following **docstring** at the top
-    of the file. A docstring is a triple-quoted special comment
-    "doc(umentation) string".  
-    ```python
-    """
-    Program to calculate and display a user's bonus based on sales.  
-    If sales are under $1,000, the user gets a 10% bonus.  
-    If sales are $1,000 or over, the bonus is 15%.  
-    """
-    ```
+## 1. Sales Bonus
 
-    Now write the Python code to complete the program according to that
-    docstring.  
-    The first line might look like:  
+File: `sales_bonus.py`
 
-    ```python
-    sales = float(input("Enter sales: $"))
-    ```
+Create a new Python file in the `prac_01` directory called
+`sales_bonus.py`, and copy the following **docstring** at the top
+of the file. A docstring is a triple-quoted special comment
+"doc(umentation) string".
 
-    Run and **test** the code with a few different values to verify that
-    it works.  
-    Whenever you are testing code, you should not just use random values
-    but values that you know the expected output for and that test all
-    paths of execution, including the **boundary or edge case**.  
-    So, for this program we could use the following (we're only
-    interested in the values, not the format):
+```python
+"""
+Program to calculate and display a user's bonus based on sales.  
+If sales are under $1,000, the user gets a 10% bonus.  
+If sales are $1,000 or over, the bonus is 15%.  
+"""
+```
 
-    | Test Input         | Expected Output
-    | ------------------ | ---------------
-    | 500                | 50
-    | 2000               | 300
-    | 1000 (edge case)   | 150
+Now write the Python code to complete the program according to that
+docstring.  
+The first line might look like:
 
-    Now (only when the above part is finished), add a loop to this, 
-    so it repeatedly asks for the user's sales and prints the bonus
-    **until** they enter a negative number. (Note the boundary carefully.)  
-    Remember that **until** is the opposite of **while**, and if you need help, 
-    please check the patterns. Here's (only) some of the pseudocode to help you:
-    
+```python
+sales = float(input("Enter sales: $"))
+```
+
+Run and **test** the code with a few different values to verify that
+it works.  
+Whenever you are testing code, you should not just use random values
+but values that you know the expected output for and that test all
+paths of execution, including the **boundary or edge case**.  
+So, for this program we could use the following (we're only
+interested in the values, not the format):
+
+| Test Input         | Expected Output |
+| ------------------ | --------------- |
+| 500                | 50 |
+| 2000               | 300 |
+| 1000 (edge case)   | 150 |
+
+Now (only when the above part is finished), add a loop to this,
+so it repeatedly asks for the user's sales and prints the bonus
+**until** they enter a negative number. (Note the boundary carefully.)  
+Remember that **until** is the opposite of **while**, and if you need help,
+please check the patterns. Here's (only) some of the pseudocode to help you:
+
+    get sales
+    while sales >= 0
+        calculate bonus
         get sales
-        while sales >= 0
-            calculate bonus
-            get sales
-        do next thing (if needed) 
+    do next thing (if needed) 
 
-2.  **Debugging:**  
-    Someone (it's not polite to say who) was trying to write a program
-    to tell the user if their score is invalid, bad, passable or
-    excellent, but their code is in the "bad" category and doesn't
-    work.  
-    **Rewrite** the following programming attempt using the most
-    efficient if-elif-else 'ladder' you can. The code is available
-    here at: [broken_score.py](broken_score.py)  
-    Remember to click **Raw** before copying and pasting so you get proper
-    formatting!  
-    The _intention_ is that the score must be between 0 and 100 inclusive;
-    90 or more is excellent; 50 or more is a pass; below 50 is bad.  
-    Be very careful of your boundary conditions... and *test!*
+## 2. Debugging:
 
-3.  Create a file called `loops.py` and add this for loop that
-    displays all of the odd numbers between  
-    1 and 20 with a space between each one.
+File: `broken_score.py`
 
-    ```python
-    for i in range(1, 21, 2):
-        print(i, end=' ')
-    print()
-    ```
-    Now **write more for loops** (using range) to do the following:  
-    (Note that for marking, we expect to see a complete file with each loop still in it.)
+Someone (it's not polite to say who) was trying to write a program
+to tell the user if their score is invalid, bad, passable or
+excellent, but their code is in the "bad" category and doesn't
+work.  
+**Rewrite** the following programming attempt using the most
+efficient if-elif-else 'ladder' you can. The code is available
+here at: [broken_score.py](broken_score.py)  
+Remember to click **Raw** before copying and pasting so you get proper
+formatting!  
+The _intention_ is that the score must be between 0 and 100 inclusive;
+90 or more is excellent; 50 or more is a pass; below 50 is bad.  
+Be very careful of your boundary conditions... and *test!*
 
-    a.  count in 10s from 0 to 100: `0 10 20 30 40 50 60 70 80 90 100`
-    
-    b.  count down from 20 to 1: `20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1`
-    
-    c.  print n stars. Ask the user for a number, then print that many stars
-        (*), all on one line  
-        *Note: this is a very simple loop for repeating n times. We use for
-        loops for "definite" iteration like this. while loops are used for
-        "indefinite" iteration (like repeating while a user input is
-        incorrect).*  
-        Sample output:
-        
-        Number of stars: 4
-        ****
-    
-    d.  print n lines of increasing stars. Using the same number as above
-        print lines of increasing stars, starting at 1. E.g. if **4** was
-        the number entered, your single loop should print
+## 3. Loops
 
-        *
-        **
-        ***
-        ****
+File: `loops.py`
+
+Create a file called `loops.py` and add this for loop that
+displays all the odd numbers between  
+1 and 20 with a space between each one.
+
+```python
+for i in range(1, 21, 2):
+    print(i, end=' ')
+print()
+```
+
+Now **write more for loops** (using range) to do the following:  
+(Note that for marking, we expect to see a complete file with each loop still in it.)
+
+a. count in 10s from 0 to 100: `0 10 20 30 40 50 60 70 80 90 100`
+
+b. count down from 20 to 1: `20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1`
+
+c. print n stars. Ask the user for a number, then print that many stars
+(*), all on one line  
+*Note: this is a very simple loop for repeating n times. We use for
+loops for "definite" iteration like this. while loops are used for
+"indefinite" iteration (like repeating while a user input is
+incorrect).*  
+Sample output:
+
+    Number of stars: 4
+    ****
+
+d. print n lines of increasing stars. Using the same number as above
+print lines of increasing stars, starting at 1. E.g. if **4** was
+the number entered, your single loop should print
+
+    *
+    **
+    ***
+    ****
 
 *Keep going...*
 
@@ -293,14 +306,15 @@ as a guide, and if you're not sure how to do it, go back to the subject
 materials. For example, the question below asks for an error-checking
 loop, which we cover in chapter 2 (Control), and which is also
 summarised as one of our standard patterns at:
-<https://github.com/CP1404/Starter/wiki/Programming-Patterns>  
+<https://github.com/CP1404/Starter/wiki/Programming-Patterns>
 
 If you need help, ask a classmate or your tutor.
 
 # Do-from-scratch Exercises
 
 ## Shop Calculator
-`shop_calculator.py`  
+
+File: `shop_calculator.py`  
 
 A shop requires a small program that would allow them to quickly work
 out the total price for a number of items, each with different prices.
