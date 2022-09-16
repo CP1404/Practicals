@@ -533,6 +533,13 @@ You may also like to do one or more of the GitHub courses on [LinkedIn Learning]
 # Deliverables
 This section summarises the expectations for marking in this practical.
 
+- Do not zip up your files.
+- Please submit each file separately.
+- Ensure each file has the correct/exact name, including the extension.
+- Ensure your code is not commented-out (only comments should be commented).
+
+Files required:
+
 - Practicals repository on GitHub and up-to-date
 - `password_check.py` 
 - `temperatures.py`

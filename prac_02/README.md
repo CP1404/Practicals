@@ -6,13 +6,14 @@ questions to your tutor at the start of the following week.
 
 # Remarkably Important!
 
-- **DO NOT make a new project for each practical!**   
+- **DO NOT make a new project for each practical!**
 - **Create a new folder called `prac_02`** in your existing practicals project.
-- Remember that you just keep using the same PyCharm project for all practicals.  
+- Remember that you just keep using the same PyCharm project for all practicals.
 
 This really does make a difference and will save lots of time and effort if you do it correctly to start with.  
 Please don't use multiple projects as then you can't use version control properly (important for Git/GitHub in prac 3)  
-Please don't use spaces in file or folder names as then they are invalid module names (important for importing in prac 6)    
+Please don't use spaces in file or folder names as then they are invalid module names (important for importing in prac
+6)
 
 # Walkthrough Example
 
@@ -29,14 +30,14 @@ Sometimes the best way to start learning this sort of thing is to see
 some useful examples, so:
 
 - Create a new Python file called `string_formatting_examples.py` in
-    your `prac_02` folder.
+  your `prac_02` folder.
 
 - (Remember when copying code from GitHub to click **Raw** first so
-    that the formatting copies properly.)  
-    Copy the following string formatting examples from
-    [string_formatting_examples.py](string_formatting_examples.py)
-    into this file and run the code. (It's also written below for your
-    reference.)
+  that the formatting copies properly.)  
+  Copy the following string formatting examples from
+  [string_formatting_examples.py](string_formatting_examples.py)
+  into this file and run the code. (It's also written below for your
+  reference.)
 
 ```python
 name = "Gibson L-5 CES"
@@ -71,33 +72,36 @@ for i, number in enumerate(numbers, 1):
 ***Nice!*** Notice:
 
 - You can leave out the positional arguments, that is the numbers
-    inside the {}, if you just want to use the default order.
+  inside the {}, if you just want to use the default order.
 
 - You can also repeat values by repeating the positional arguments.
 
 - And you can do lots of formatting by using the string formatting
-    'mini language'; details come after the **:**  See: <https://docs.python.org/3/library/string.html#formatstrings>
+  'mini language'; details come after the **:**  See: <https://docs.python.org/3/library/string.html#formatstrings>
 
-- f-strings are not a complete replacement for `.format()`. There are some reasons to continue using `.format()` (such as with variable unpacking) so you should know both. Many Python programmers prefer f-strings for string formatting for readability and conciseness.
+- f-strings are not a complete replacement for `.format()`. There are some reasons to continue using `.format()` (such
+  as with variable unpacking) so you should know both. Many Python programmers prefer f-strings for string formatting
+  for readability and conciseness.
 
 **Tips for string formatting with the format specifier `{}`**
 
 - The number *before* the colon, or if there's no colon like `{0}`,
-specifies which parameter to use. This can be left out to use the
-default order.
+  specifies which parameter to use. This can be left out to use the
+  default order.
 
 - The part *after* the colon specifies the formatting. E.g., `{:3}` specifies
-to use 3 spaces (or more if needed) for the value when it's used.
+  to use 3 spaces (or more if needed) for the value when it's used.
 
 - By default, **numbers are right-aligned** and **strings are
-left-aligned**. You can change this with > or <  
-So, `{:>6}` would format the value to be right-aligned and take up 6 (or
-more if needed) spaces.
+  left-aligned**. You can change this with > or <  
+  So, `{:>6}` would format the value to be right-aligned and take up 6 (or
+  more if needed) spaces.
 
 ### Things to do:
 
 Use string formatting to produce the output:  
 (Notice where the values go and also the float formatting / number of decimal places.)
+
 ```
 1922 Gibson L-5 CES for about $16,035!
 ```
@@ -123,11 +127,11 @@ Python has a useful built-in function for finding out about the local
 scope of something, called `dir()`.
 
 **Launch a Python console** (in PyCharm, simply click in the
-footer/status bar where it says "Python Console") and type the following 
+footer/status bar where it says "Python Console") and type the following
 at the `>>>` prompt:
 
     dir(str)
-    
+
 This will give you a display of the "dictionary" of everything contained in `str`, like:
 
     ['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
@@ -172,39 +176,39 @@ about a couple of these functions:
         This fixes the problem with randint() which includes the
         endpoint; in Python this is usually not what you want.
 
-
 Note: the name of a function can be used without the brackets here, but this
 does not execute the function.
 
 ### Try This Out
 
-File: `randoms.py` (Note: never name a file the same as a module; 
-e.g., `random.py` or it will have higher precedence when you, e.g., `import random`)  
+File: `randoms.py` (Note: never name a file the same as a module;
+e.g., `random.py` or it will have higher precedence when you, e.g., `import random`)
 
 In your **console**, type in the following (run each print line multiple
 times), and write the answers to the questions below in comments in `randoms.py`.
 
 ```python
 import random
+
 print(random.randint(5, 20))  # line 1
 print(random.randrange(3, 10, 2))  # line 2
 print(random.uniform(2.5, 5.5))  # line 3
 ```
 
--   *What did you see on line 1?*  
-    What was the smallest number you could have seen, what was the
-    largest?
+- *What did you see on line 1?*  
+  What was the smallest number you could have seen, what was the
+  largest?
 
--   *What did you see on line 2?*  
-    What was the smallest number you could have seen, what was the
-    largest?  
-    *Could line 2 have produced a 4?*
+- *What did you see on line 2?*  
+  What was the smallest number you could have seen, what was the
+  largest?  
+  *Could line 2 have produced a 4?*
 
--   *What did you see on line 3?*  
-    What was the smallest number you could have seen, what was the
-    largest?
+- *What did you see on line 3?*  
+  What was the smallest number you could have seen, what was the
+  largest?
 
--   Write code, not a comment, to produce a random number between 1 and 100 inclusive.
+- Write code, not a comment, to produce a random number between 1 and 100 inclusive.
 
 ## Example to Study
 
@@ -225,53 +229,53 @@ displayed to the nearest cent (e.g. $33.59, not $33.5918232901).
 chance of increase or decrease), and uniform (to generate a random
 floating-point number)
 
-
 ### Things To Do:
 
 File: `capitalist_conrad.py`
 
 Download the code from: [capitalist_conrad.py](capitalist_conrad.py)
 
-1.  The program currently runs without telling us how many days it
-    simulated.  
-    Add this feature using a day counter and string formatting so that
-    the program prints like:
+1. The program currently runs without telling us how many days it
+   simulated.  
+   Add this feature using a day counter and string formatting so that
+   the program prints like:
 
-        Starting price: $10.00  
-        On day 1 price is: $9.89  
-        ...  
-        On day 424 price is: $915.71  
-        On day 425 price is: $1,001.60  
+       Starting price: $10.00  
+       On day 1 price is: $9.89  
+       ...  
+       On day 424 price is: $915.71  
+       On day 425 price is: $1,001.60  
 
-2.  Notice how the use of CONSTANTS makes the program easier to read and
-    customise.  
-    Try changing these so the allowed price range is $1 to $100 and
-    the increase could be up to 17.5% (remember to change any comments
-    that refer to constant values)  
-    Run the program with these new values.
+2. Notice how the use of CONSTANTS makes the program easier to read and
+   customise.  
+   Try changing these so the allowed price range is $1 to $100 and
+   the increase could be up to 17.5% (remember to change any comments
+   that refer to constant values)  
+   Run the program with these new values.
 
-3.  Update your program so that it prints (writes) the output to a
-    **file**.  
-    How do we do this?
+3. Update your program so that it prints (writes) the output to a
+   **file**.  
+   How do we do this?
 
     - First you need to **open** the file for writing. You only need
-        to do this once, so add this line before your loop starts:
+      to do this once, so add this line before your loop starts:
 
-        `out_file = open(OUTPUT_FILE, 'w')`
-    
-        Note that this code line expects you to define the constant
-        OUTPUT_FILE, so do that above.
+      `out_file = open(OUTPUT_FILE, 'w')`
+
+      Note that this code line expects you to define the constant
+      OUTPUT_FILE, so do that above.
 
     - Update any print statements, so they output to the file.  
-        Here's an (incomplete) example:
-    
-        `print("${:,.2f}".format(price), file=out_file)`
-    
+      Here's an (incomplete) example:
+
+      `print("${:,.2f}".format(price), file=out_file)`
+
     - **Close** the file at the very end:
-    
-        `out_file.close()`
-    
-    - This version uses the `.format()` method when printing the price. Change this to use f-string formatting (keet the same output).
+
+      `out_file.close()`
+
+    - This version uses the `.format()` method when printing the price. Change this to use f-string formatting (keet the
+      same output).
 
 *Keep going... :)*
 
@@ -327,7 +331,8 @@ print("Valid result is:", result)
 ```
 
 Note: PyCharm will probably give you a warning that `result` "may be undefined". This is safe to ignore.  
-It's not a PEP8 formatting warning, it's PyCharm thinking that you might somehow exit the loop before defining `result`.  
+It's not a PEP8 formatting warning, it's PyCharm thinking that you might somehow exit the loop before defining `result`
+.  
 Since we're controlling how we exit the loop, we know this problem will not occur.
 
 *You're doing well. Keep it up...*
@@ -336,7 +341,7 @@ Since we're controlling how we exit the loop, we know this problem will not occu
 
 ## Files
 
-File: `files.py`  
+File: `files.py`
 
 The solutions for these programs are provided, to
 help you get going - or to confirm that your solution was valid.    
@@ -353,24 +358,24 @@ Make sure you're confident with:
 - `readlines()`
 - `for line in file`
 
-1.  Write code that asks the user for their name, then opens a file
-    called "name.txt" and writes that name to it.
+1. Write code that asks the user for their name, then opens a file
+   called "name.txt" and writes that name to it.
 
-2.  Write code that opens "name.txt" and reads the name (as above)
-    then prints,  
-    "Your name is Bob" (or whatever the name is in the file).
+2. Write code that opens "name.txt" and reads the name (as above)
+   then prints,  
+   "Your name is Bob" (or whatever the name is in the file).
 
-3.  Create a text file called `numbers.txt` and save it in your `prac_02`
-    directory. Put the following three numbers on separate lines in the file
-    and save it:  
-    17  
-    42  
-    400  
-    Write code that opens "numbers.txt", reads only the first two numbers and adds
-    them together then prints the result, which should be... 59.
+3. Create a text file called `numbers.txt` and save it in your `prac_02`
+   directory. Put the following three numbers on separate lines in the file
+   and save it:  
+   17  
+   42  
+   400  
+   Write code that opens "numbers.txt", reads only the first two numbers and adds
+   them together then prints the result, which should be... 59.
 
-4.  Now write a fourth block of code that prints the total for all lines in `numbers.txt`
-    or a file with *any* number of numbers.
+4. Now write a fourth block of code that prints the total for all lines in `numbers.txt`
+   or a file with *any* number of numbers.
 
 ## Password Checker
 
@@ -385,18 +390,20 @@ validating the 'strength' of a new password, like you see on websites:
 enter your password, and then it tells you if it's valid (matches the
 required pattern) and re-prompts if it's not.  
 All passwords must contain *at least one each of: number*, *lowercase*
-and *uppercase* character.  
-  
+and *uppercase* character.
+
 The starter code uses constants (variables at the top of the code, named
 in ALL_CAPS) to store:
 
-a.  the minimum and maximum length of the password
+a. the minimum and maximum length of the password
 
-b.  whether a special character (not alphabetical or numerical)
-    is required
+b. whether a special character (not alphabetical or numerical)
+is required
 
-Remember when a program has CONSTANTS, you should use them everywhere you can so that if you change them at the top, this change affects the whole program as expected.  
-E.g., if you changed the minimum length to 5, the program should print 5 and should check to make sure the password is >= 5 characters long.
+Remember when a program has CONSTANTS, you should use them everywhere you can so that if you change them at the top,
+this change affects the whole program as expected.  
+E.g., if you changed the minimum length to 5, the program should print 5 and should check to make sure the password is >
+= 5 characters long.
 
 Output should look something like this:
 
@@ -417,7 +424,6 @@ Output should look something like this:
     > 1thisISit!
     Your 10 character password is valid: 1thisISit!
 
-
 Here's another run with the same code but different values for the
 constants (special characters are not required in this version):
 
@@ -437,28 +443,28 @@ constants (special characters are not required in this version):
 or something, but think about doing this step by step. We have started
 this for you with TODO comments in the code provided.
 
--   First, just check if a string has at least one lowercase character.  
-    You can do this by looping through the string (for character in
-    password:) and testing each character... count the ones that match
-    (using **character.islower()**)... At the end you know how many
-    lowercase characters there are.
+- First, just check if a string has at least one lowercase character.  
+  You can do this by looping through the string (for character in
+  password:) and testing each character... count the ones that match
+  (using **character.islower()**)... At the end you know how many
+  lowercase characters there are.
 
--   Only when you are able to count lowercase, then, in the same loop,
-    count the uppercase characters  
-    That is, **do not** try and get all the checks working before you
-    know the first one works. **Do** one at a time.
+- Only when you are able to count lowercase, then, in the same loop,
+  count the uppercase characters  
+  That is, **do not** try and get all the checks working before you
+  know the first one works. **Do** one at a time.
 
--   *Then*, count the numbers...  
-    Test your code for each of these changes as you write them
+- *Then*, count the numbers...  
+  Test your code for each of these changes as you write them
 
--   For special characters, remember you can use the **in** operator to
-    see if the character is **in** another string (like a constant called
-    SPECIAL_CHARACTERS)
+- For special characters, remember you can use the **in** operator to
+  see if the character is **in** another string (like a constant called
+  SPECIAL_CHARACTERS)
 
--   ... keep going until you can tell how many of each kind of character
-    there are
+- ... keep going until you can tell how many of each kind of character
+  there are
 
--   Then put it all together and test with some different settings.
+- Then put it all together and test with some different settings.
 
 **We hope this incremental approach makes sense and that you use it for
 everything you code.**
@@ -489,7 +495,7 @@ Use these exercises as normal practice and as ways to learn new things.
 ##Practice
 
 **Random Things**
-Write 3 different versions of code to generate a random Boolean (True or False).  
+Write 3 different versions of code to generate a random Boolean (True or False).
 
 **More Random Conrad**
 
@@ -513,35 +519,35 @@ vice versa. A sample run of the program should look like (where **g** and
     Enter a number between 33 and 127: 100
     The character for 100 is d
 
-1.  Start new file, `ascii_table.py`, and write code for this program.
-    Remember that you can use the ord() and chr() functions to convert
-    characters to ASCII integer values and vice versa.
+1. Start new file, `ascii_table.py`, and write code for this program.
+   Remember that you can use the ord() and chr() functions to convert
+   characters to ASCII integer values and vice versa.
 
-2.  Add error checking so that the number entered must be between the
-    LOWER (33) and UPPER (127) bounds. Use **constants** for these
-    values and use them in both your print statement and in your while
-    loop condition. **That is, the numbers 33 and 127 should appear only
-    once**.  
-    Use the **str.format()** method everywhere you print literals and
-    variable values.
+2. Add error checking so that the number entered must be between the
+   LOWER (33) and UPPER (127) bounds. Use **constants** for these
+   values and use them in both your print statement and in your while
+   loop condition. **That is, the numbers 33 and 127 should appear only
+   once**.  
+   Use the **str.format()** method everywhere you print literals and
+   variable values.
 
-3.  Add on to this program by writing code that displays a table with
-    two columns, one for the numeric ASCII value and the other for the
-    character itself. Use the string **format()** method to align the text
-    nicely in two columns. Print the values between LOWER and UPPER.  
-    It should output like ("..." indicates parts that have been removed to
-    save space):
+3. Add on to this program by writing code that displays a table with
+   two columns, one for the numeric ASCII value and the other for the
+   character itself. Use the string **format()** method to align the text
+   nicely in two columns. Print the values between LOWER and UPPER.  
+   It should output like ("..." indicates parts that have been removed to
+   save space):
 
-         33  !
-         34  "
-        ...
-         99  c
-        100  d
-        ...
+        33  !
+        34  "
+       ...
+        99  c
+       100  d
+       ...
 
 ## Extension
 
-**ASCII Columns Challenge** 
+**ASCII Columns Challenge**
 
 Add columns to your ASCII table output from the earlier questions. Ask the user for how many
 columns to print, then figure out how to write loop(s) and print
@@ -564,17 +570,17 @@ Copy the code from [word_generator.py](word_generator.py)
 
 Things To Do:
 
--   Get the word format from the user so they can customise it. Convert
-    it to lowercase using a str method.
+- Get the word format from the user so they can customise it. Convert
+  it to lowercase using a str method.
 
--   Try and make the program more interesting. For example:
+- Try and make the program more interesting. For example:
 
-    a.  Use wildcards for the vowels (#) and consonants (%) or either
-        (*) and make alphabetical characters use that actual
-        character - e.g. the format "%re#*l*" might produce a word
-        like "greatly" or "breuzla"
+  a. Use wildcards for the vowels (#) and consonants (%) or either
+  (*) and make alphabetical characters use that actual
+  character - e.g. the format "%re#*l*" might produce a word
+  like "greatly" or "breuzla"
 
-    b.  Automatically (randomly) generate the word_format variable.
+  b. Automatically (randomly) generate the word_format variable.
 
 **Automatic Password Generator**
 
@@ -595,9 +601,16 @@ Some solutions (not all) for practicals will be provided in the
 **solutions** branch of the Practicals repository on GitHub:
 <https://github.com/CP1404/Practicals/tree/solutions>
 
-
 # Deliverables
+
 This section summarises the expectations for marking in this practical.
+
+- Do not zip up your files.
+- Please submit each file separately.
+- Ensure each file has the correct/exact name, including the extension.
+- Ensure your code is not commented-out (only comments should be commented).
+
+Files required:
 
 - string_formatting_examples.py
 - randoms.py
