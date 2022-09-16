@@ -354,6 +354,13 @@ Here's a suggested kv file you could use. Notice how simple it is, but it does h
 
 This section summarises the expectations for marking in this practical.
 
+- Do not zip up your files.
+- Please submit each file separately.
+- Ensure each file has the correct/exact name, including the extension.
+- Ensure your code is not commented-out (only comments should be commented).
+
+Files required:
+
 - `box_layout_demo.py/kv` with modifications (greet, clear)
 - `squaring.py/kv` with modifications
 - `convert_miles_km.py/kv`

@@ -201,6 +201,13 @@ What category would you like to sort jpg files into? <strong>Images</strong>
 
 This section summarises the expectations for marking in this practical.
 
+- Do not zip up your files.
+- Please submit each file separately.
+- Ensure each file has the correct/exact name, including the extension.
+- Ensure your code is not commented-out (only comments should be commented).
+
+Files required:
+
 - `os_demos.py` & modifications
 - `cleanup_files.py`
 - `sort_files_1.py`

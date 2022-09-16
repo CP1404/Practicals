@@ -358,6 +358,13 @@ teaching resources we have provided.
 # Deliverables
 This section summarises the expectations for marking in this practical.
 
+- Do not zip up your files.
+- Please submit each file separately.
+- Ensure each file has the correct/exact name, including the extension.
+- Ensure your code is not commented-out (only comments should be commented).
+
+Files required:
+
 - lists_warmup.py
 - total_income.py
 - subject_reader.py

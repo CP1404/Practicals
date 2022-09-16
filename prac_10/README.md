@@ -305,6 +305,13 @@ E.g. for 6 rows, it is 6 + 5 + 4 + 3 + 2 + 1 = 21
 
 This section summarises the expectations for marking in this practical.
 
+- Do not zip up your files.
+- Please submit each file separately.
+- Ensure each file has the correct/exact name, including the extension.
+- Ensure your code is not commented-out (only comments should be commented).
+
+Files required:
+
 Your work for `testing.py` and `wiki.py` go in your normal practicals repo and should be part of a code review PR. Then
 there's two separate Flask projects, which do not go in your practicals repo.  
 Submit three URLs for these three (practicals PR, Flask project from demo, Flask + Wiki project)

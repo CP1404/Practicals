@@ -337,6 +337,13 @@ Now on to more practice programming...
 
 This section summarises the expectations for marking in this practical.
 
+- Do not zip up your files.
+- Please submit each file separately.
+- Ensure each file has the correct/exact name, including the extension.
+- Ensure your code is not commented-out (only comments should be commented).
+
+Files required:
+
 - Practicals repository on GitHub and up-to-date (every week)
 - Pull Request that mentions another student properly
 - `state_names.py`
