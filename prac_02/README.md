@@ -1,605 +1,448 @@
-# Practical 02 - Strings, Files, Exceptions
+# Practical 02 - Functions, Git Version Control
 
-**Did you finish last week's work?** If not, make sure to complete it
-during the week. If you do not understand anything, bring those
-questions to your tutor at the start of the following week.
+This week (and from now on), we'll be using Git and GitHub for our work.
 
-# Remarkably Important!
+If you haven't set up your own GitHub account, please do so now.  
+See our instructions at:
+<https://github.com/CP1404/Starter/wiki/Software-Setup#github>
 
-- **DO NOT make a new project for each practical!**
-- **Create a new folder called `prac_02`** in your existing practicals project.
-- Remember that you just keep using the same PyCharm project for all practicals.
+Use a meaningful username that identifies you.  
+JCU staff should be able to determine who you are from your username.  
+Your GitHub account is an important and professional record of
+your work. You will likely use it as an online portfolio in the future.
 
-This really does make a difference and will save lots of time and effort if you do it correctly to start with.  
-Please don't use multiple projects as then you can't use version control properly (important for Git/GitHub in prac 3)  
-Please don't use spaces in file or folder names as then they are invalid module names (important for importing in prac
-6)
+# First!
+
+![Pencil Icon](../images/pencil.png)
+
+In one of our end-of-subject YourJCU
+student feedback surveys, a student suggested that we do more
+hand-writing code to help prepare for the final examination. Great idea!  
+And it shows it's a great idea for you to provide us with your feedback --
+during the semester anytime, and especially in our main surveys.
+
+**On paper**, write a program that asks the user for a password, with
+error-checking to repeat if the password doesn't meet a minimum length set by a variable.  
+The program should then print asterisks as long as the word.  
+Example: if the user enters `Pythonista` (10 characters), the program should print `**********`.
+
+It's a valuable skill to be able to write code with pen and paper --
+without the support of an IDE. Watch out for things like consistent
+variable names and clear indenting as well as basic syntax like colons
+and brackets.
 
 # Walkthrough Example
 
-## String Formatting
+![GitHub logo](../images/githublogo.png)
 
-File: `string_formatting_examples.py`
+Let's start with the basics of **Git** version control.  
+***Git and GitHub are different things!***  
+These instructions are from the point of view of someone working on a JCU lab computer.  
+Please keep learning and practising with Git and GitHub.
 
-The **format()** string method lets us format strings using placeholders
-and format specifiers in a way that's very powerful and will make a lot
-of sense once you get used to it. Remember that a *method* is a function
-that runs on a particular object, so a string method runs on a string
-like: `"literal".format(...)` or `variable.upper()`  
-Sometimes the best way to start learning this sort of thing is to see
-some useful examples, so:
+**Note**: It's not easy to provide exact instructions that cover multiple versions
+of PyCharm. Your experience may be a bit different depending
+on your OS, version of PyCharm and any settings.
 
-- Create a new Python file called `string_formatting_examples.py` in
-  your `prac_02` folder.
+First, we are going to create a new project just to test using Git and GitHub.  
+This will not be inside your existing practicals or other projects.  
+Keep it separate.
 
-- (Remember when copying code from GitHub to click **Raw** first so
-  that the formatting copies properly.)  
-  Copy the following string formatting examples from
-  [string_formatting_examples.py](string_formatting_examples.py)
-  into this file and run the code. (It's also written below for your
-  reference.)
+1. **Create a new PyCharm project** (not just a new folder)
+   called **Sandbox**, which you can use for doing small tests and
+   demos. **DO NOT put it inside your practicals project or any other project.**
+2. Add a Python file called `my_name.py` and enter just a single
+   docstring (triple-quoted comment) with your own name in it.
+3. Now we'll put this project into Git version control (without using
+   GitHub).  
+   From the PyCharm menu choose **VCS > Create Git Repository...**  
+   Accept the default (current) directory it offers.  
+   What happened? Not much it seems, but we're ready to **commit**
+   our files to Git version control. (You may have noticed some colours change.)
+4. Click on the **Git** tool window in the footer and click the **Log** tab.  
+   It's empty because our project has no commits.
+5. Choose **Git > Commit...**
+   You should see a window with a list of changed files with empty tick boxes beside them.  
+   We do not want to version control anything in the `.idea` folder, like
+   `misc.xml` or `vcs.xml`... but we will add our own code files.
+   Tick the box next to `my_name.py`.   
+   Now we need to enter a **meaningful commit message** that briefly
+   describes what your change will be **using the imperative mood** for your messages.
+   One way to think about this is that your message goes after "If applied, this commit will...".  
+   Let's use "Add starter file".  
+   ![Git Commit window](../images/03image1.png)  
+   Then click **Commit**.  
+   You should now see your first commit appear in the Log tab of the
+   Git tool window. ***Yay!***
+
+6. Create a new file called `password_stars.py`
+   PyCharm will prompt you to "Add File to Git". **Add** it.
+   Type the code you wrote on paper earlier. Test it.
+
+7. Commit again. PyCharm will show you only the files that have changed since the last commit.  
+   Use a different commit message, perhaps something like "Add password check program").  
+   Get used to using different, always appropriate, commit messages. Imperative mood. Start with a Capital. No
+   full-stop  
+   Have a look and see that it also appears in your log.  
+   We have now saved the state of our project at multiple stages by committing to a ***local* Git repository**.  
+   We have not used GitHub at all.
+
+8. Now time for **GitHub**!  
+   Choose **Git > GitHub > Share Project on GitHub**  
+   Enter your GitHub username and password and press Enter.  
+   If PyCharm asks for a master password, just **Cancel** this. You never *need*
+   to use this master password facility in PyCharm.  
+   Enter a brief description of the repo, leave it public (don't tick Private) and **Share** it.  
+   ![Share Project on GitHub window](../images/03image5.png)
+
+9. If that worked, PyCharm will show a message in the status
+   bar at the bottom of the window. You can click on this to view your new repository (repo) in your
+   browser on GitHub. Or go to it manually at a URL like (change to your own username):
+   <https://github.com/yourusername/Sandbox>  
+   Explore your repo, clicking to see the 2 commits and any other details.  
+   So now GitHub stores our same Git project from our local computer, including its commit history.
+
+10. OK, now let's go crazy!  
+    Close the project in PyCharm, then delete
+    the project from your computer. That's right, delete it all!
+    This is what you could do if you had finished working on a lab
+    computer, and you had committed and pushed all of your changes to
+    GitHub.
+
+11. Now, imagine we've moved to another computer on a different day...
+    How do we keep working on our project? We **clone** it. Choose
+    **Git > Clone...** from the menu.  
+    Please do not use the GitHub website to clone or upload. Always use PyCharm or git command line.  
+    Copy and paste the GitHub URL of your Sandbox project, and choose the
+    location on your local computer where your projects are stored,
+    then click **Clone**. You now have the
+    whole project, including any previous version history, locally.
+
+12. Now add another file, `list_files.py`, **Add**, then enter this code:
+
+    ```python
+    import os
+      
+    print(f"The files and folders in {os.getcwd()} are:")
+    items = os.listdir('.')
+    for item in items:
+        prefix = "(d) " if os.path.isdir(item) else "(f) "
+        print(f"{prefix}\t{item}")
+
+    ```
+
+13. Run the code. It should show you a list of all the
+    files and folders/directories in the current project folder, and you should
+    see a directory called `.git`. This is where Git stores all the history
+    and state information.  
+    If you ever want to move a project that's using git, you can either use GitHub to store it and
+    then clone it to the new place, or you can just copy the project, making sure
+    you include this `.git` folder.
+
+14. Now **Commit** using the PyCharm shortcut... enter a meaningful message...  
+    Use the button option to **Commit and Push**, then check that the new file is up on GitHub.
+
+We covered a fair bit in that walkthrough. Hopefully you can see
+the process for working on your projects:
+
+- Initialise any new projects (Create Git Repository) at the beginning
+- **Add** new files when you create them
+- **Commit** every time you make significant changes (small milestone), using good messages in the imperative voice
+- **Push** to GitHub so that you have an up-to-date online copy
+
+Then when you want to keep working on the project again on a different
+computer:
+
+- **Clone** the repository from GitHub to your local computer, then add, commit, push, etc.
+
+If you're working on your own computer you won't need to clone --
+just keep using the same local repo.
+
+Even though it is possible to edit and upload files directly via the GitHub website,
+**do not do this!**
+
+We only made the Sandbox repo so that we could practise Git and GitHub.  
+You don't need to use it again, but you're welcome to put whatever you
+want there... but do not put your practical work in Sandbox or vice versa.
+
+## Now let's get your practicals on GitHub
+
+Before you follow the same process as above, it is ***essential***
+that you have a single project for practicals that has the same folder structure as
+<https://github.com/CP1404/cp1404practicals>.  
+Check to make sure none of your prac folders contain `.idea` folders.  
+If they do, you probably made a "Prac 2" project or something, and you can now delete the `.idea` folder.  
+Please tidy up your project or make a new one and copy your Python files
+into the correct folders.
+
+Now, for your practicals project, we can Add it to both Git and GitHub in one step.  
+**VCS > GitHub > Share Project on GitHub**.
+
+### Your repo must be public!
+
+**It is essential that you leave your practicals repo public.**  
+**Do NOT make your repository private, or it will not be assessed.**
+
+**For every prac for the rest of the subject**,
+when you finish a task, do a commit with a meaningful message.  
+Push your prac work to GitHub at least at the end of each prac.
+
+You do not need to commit or push for every little change, just for
+decent-sized changes, **small milestones**, or before you start
+making major changes.
+
+Do you understand that if you always keep your work up-to-date on GitHub,
+you will _never_ have the problem of not having access to your work?  
+You will _always_ have your work available on GitHub. Nice!
+
+# Intermediate Exercises - Functions:
+
+Before we start writing code with functions, let's remind ourselves of some principles.
+
+Function names should say what they do.  
+Use verb phrases, and complete the sentence, _"This function will..."_  
+E.g., this function will `calculate_area`.
+
+Follow the Single Responsibility Principle (SRP, functions should **do one thing**).
+
+E.g., a function that calculates the area of a rectangle should have the
+height and width values passed in as **parameters**, rather than asking the
+user for them in the function. That way it can be used no matter where
+these values come from.  
+It should also **return** the result rather than printing it.
+That way the result can be used in any way.
+
+**DO NOT** use any global variables.  
+You should never use a global variable in this subject.  
+(CONSTANTS can and should be global, but never any variables.)
+
+All functions should have docstring comments that say what the function will do.  
+Here's the third place we use the **imperative mood** (what a thing will do):
+
+- Commit messages
+- Function names
+- Comments
+
+**From now on**, when writing programs with functions, create a `main()`
+function for the main part of the program. Put the main function at the
+*top* and call it at the *bottom*. If you are changing an existing program
+that does not already use functions, *first* put it all in a main function;
+then add the other functions.
+
+[The structure for all programs](https://github.com/CP1404/Starter/wiki/Programming-Patterns#main-program-structure)
+is:
 
 ```python
-name = "Gibson L-5 CES"
-year = 1922
-cost = 16035.4
+"""Module docstring"""
 
-# The ‘old’ manual way to format text with string concatenation:
-print("My guitar: " + name + ", first made in " + str(year))
 
-# A better way - using str.format():
-print("My guitar: {}, first made in {}".format(name, year))
-print("My guitar: {0}, first made in {1}".format(name, year))
-print("My {0} was first made in {1} (that's right, {1}!)".format(name, year))
+# imports
+# CONSTANTS
 
-# And with f-string formatting (introduced in Python 3.6)
-print(f"My {name} was first made in {year} (that's right, {year}!)")
+def main():
+    """Function docstring"""
+    # statements...
+    do_stuff()
 
-# Formatting currency (grouping with comma, 2 decimal places):
-print("My {} would cost ${:,.2f}".format(name, cost))
-print(f"My {name} would cost ${cost:,.2f}")
 
-# Aligning columns:
-numbers = [1, 19, 123, 456, -25]
-for number in numbers:
-    print("Number is {:>5}".format(number))
+def do_stuff():
+    """Function docstring"""
+    # statements...  
 
-# An f-string version of the above using the enumerate function, useful when you want the index and value
-for i, number in enumerate(numbers, 1):
-    print(f"Number {i} is {number:>5}")
+
+main()
 ```
 
-***Nice!*** Notice:
-
-- You can leave out the positional arguments, that is the numbers
-  inside the {}, if you just want to use the default order.
-
-- You can also repeat values by repeating the positional arguments.
-
-- And you can do lots of formatting by using the string formatting
-  'mini language'; details come after the **:**  See: <https://docs.python.org/3/library/string.html#formatstrings>
-
-- f-strings are not a complete replacement for `.format()`. There are some reasons to continue using `.format()` (such
-  as with variable unpacking) so you should know both. Many Python programmers prefer f-strings for string formatting
-  for readability and conciseness.
-
-**Tips for string formatting with the format specifier `{}`**
-
-- The number *before* the colon, or if there's no colon like `{0}`,
-  specifies which parameter to use. This can be left out to use the
-  default order.
-
-- The part *after* the colon specifies the formatting. E.g., `{:3}` specifies
-  to use 3 spaces (or more if needed) for the value when it's used.
-
-- By default, **numbers are right-aligned** and **strings are
-  left-aligned**. You can change this with > or <  
-  So, `{:>6}` would format the value to be right-aligned and take up 6 (or
-  more if needed) spaces.
-
-### Things to do:
-
-Use string formatting to produce the output:  
-(Notice where the values go and also the float formatting / number of decimal places.)
-
-```
-1922 Gibson L-5 CES for about $16,035!
-```
-
-Using a **for** loop with the **range** function and **string
-formatting** (DO NOT use a list), produce the following output (right-aligned numbers):
-
-      0
-     50
-    100
-    150
-
-## Random Numbers
-
-We are going to write some programs using random numbers... but how do
-we generate random numbers? Python has a number of random functions -
-contained within the **random** module. Unlike the built-in functions
-(**print()**, **input()**, etc.) the random functions are *not* built-in
-but need to be **imported**. Modules are reusable collections of
-functions, classes and variables (constants) related to a specific topic
-(e.g., maths, operating system services, handling dates and times).
-Python has a useful built-in function for finding out about the local
-scope of something, called `dir()`.
-
-**Launch a Python console** (in PyCharm, simply click in the
-footer/status bar where it says "Python Console") and type the following
-at the `>>>` prompt:
-
-    dir(str)
-
-This will give you a display of the "dictionary" of everything contained in `str`, like:
-
-    ['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
-
-Look carefully! You can see all of those useful `str` methods such as
-`upper()`, `startswith()`, `isdecimal()`.
-
-Next try running the `dir()` function with **random** as the argument:
-
-    dir(random)
-
-The result won't be quite the same...
-
-    Traceback (most recent call last):
-      File "<input>", line 1, in <module>
-    NameError: name 'random' is not defined
-
-This doesn't work, since random is a **module** that needs to be
-**imported** first.
-
-Now try it like this:
-
-    import random
-    dir(random)
-
-This shows you all the names in the module - most of which are
-functions you can use. To use functions from a module that's been
-imported like this you need to *qualify* the name - e.g., use
-`random.randint` not just `randint`. Use `help()` to find out
-about a couple of these functions:
-
-    help(random.randint)
-    Help on method randint in module random:
-    randint(a, b) method of random.Random instance
-        Return random integer in range [a, b], including both end points.
-    
-    help(random.randrange)
-    Help on method randrange in module random:
-    randrange(start, stop=None, step=1, _int=<class 'int'>) method of random.Random instance
-        Choose a random item from range(start, stop[, step]).
-        
-        This fixes the problem with randint() which includes the
-        endpoint; in Python this is usually not what you want.
-
-Note: the name of a function can be used without the brackets here, but this
-does not execute the function.
-
-### Try This Out
-
-File: `randoms.py` (Note: never name a file the same as a module;
-e.g., `random.py` or it will have higher precedence when you, e.g., `import random`)
-
-In your **console**, type in the following (run each print line multiple
-times), and write the answers to the questions below in comments in `randoms.py`.
-
-```python
-import random
-
-print(random.randint(5, 20))  # line 1
-print(random.randrange(3, 10, 2))  # line 2
-print(random.uniform(2.5, 5.5))  # line 3
-```
-
-- *What did you see on line 1?*  
-  What was the smallest number you could have seen, what was the
-  largest?
-
-- *What did you see on line 2?*  
-  What was the smallest number you could have seen, what was the
-  largest?  
-  *Could line 2 have produced a 4?*
-
-- *What did you see on line 3?*  
-  What was the smallest number you could have seen, what was the
-  largest?
-
-- Write code, not a comment, to produce a random number between 1 and 100 inclusive.
-
-## Example to Study
-
-This example combines some control structures (while loops, if
-statements) from last week with some useful string formatting for
-displaying currency.
-
-Capitalist Conrad wants us to write a stock-price simulator for a
-volatile stock. The price starts off at $10.00, and, at the end of
-every day there is a 50% chance it increases by 0 to 10%, and a 50%
-chance that it decreases by 0 to 5%. If the price rises above $1000, or
-falls below $0.01, the program should end. The price should be
-displayed to the nearest cent (e.g. $33.59, not $33.5918232901).
-
-**What module do we need to import?** random
-
-**What functions from random do we need to use?** randint (for the 50%
-chance of increase or decrease), and uniform (to generate a random
-floating-point number)
-
-### Things To Do:
-
-File: `capitalist_conrad.py`
-
-Download the code from: [capitalist_conrad.py](capitalist_conrad.py)
-
-1. The program currently runs without telling us how many days it
-   simulated.  
-   Add this feature using a day counter and string formatting so that
-   the program prints like:
-
-       Starting price: $10.00  
-       On day 1 price is: $9.89  
-       ...  
-       On day 424 price is: $915.71  
-       On day 425 price is: $1,001.60  
-
-2. Notice how the use of CONSTANTS makes the program easier to read and
-   customise.  
-   Try changing these so the allowed price range is $1 to $100 and
-   the increase could be up to 17.5% (remember to change any comments
-   that refer to constant values)  
-   Run the program with these new values.
-
-3. Update your program so that it prints (writes) the output to a
-   **file**.  
-   How do we do this?
-
-    - First you need to **open** the file for writing. You only need
-      to do this once, so add this line before your loop starts:
-
-      `out_file = open(OUTPUT_FILE, 'w')`
-
-      Note that this code line expects you to define the constant
-      OUTPUT_FILE, so do that above.
-
-    - Update any print statements, so they output to the file.  
-      Here's an (incomplete) example:
-
-      `print("${:,.2f}".format(price), file=out_file)`
-
-    - **Close** the file at the very end:
-
-      `out_file.close()`
-
-    - This version uses the `.format()` method when printing the price. Change this to use f-string formatting (keet the
-      same output).
-
-*Keep going... :)*
-
-## Exceptions
-
-File: `exceptions_demo.py`
-
-Copy this example code that uses exceptions: [exceptions_demo.py](exceptions_demo.py)
-(also shown below), and run it, then answer the questions below in comments...
-
-```python
-try:
-    numerator = int(input("Enter the numerator: "))
-    denominator = int(input("Enter the denominator: "))
-    fraction = numerator / denominator
-    print(fraction)
-except ValueError:
-    print("Numerator and denominator must be valid numbers!")
-except ZeroDivisionError:
-    print("Cannot divide by zero!")
-print("Finished.")
-```
-
-**Questions**
-
-1. When will a ValueError occur?
-2. When will a ZeroDivisionError occur?
-3. Could you change the code to avoid the possibility of a ZeroDivisionError?
-
-If you could figure out the answer to question 3, then **make this
-change now**.
-
-# Intermediate Exercises
-
-## Problem For You To Fill In The Blanks - Exceptions
-
-File: `exceptions_to_complete.py`
-
-Let's write a program that gets an integer from the user and does not
-crash when a non-number is entered. Copy the code below and modify/add
-the parts highlighted so that it works and prints the number at the end:
-[exceptions_to_complete.py](exceptions_to_complete.py)
-
-```python
-is_finished = False
-while not is_finished:
-    try:
-        result = int(input("Enter a valid integer: "))
-        # TODO: this line
-    except:  # TODO - add the exception you want to catch after except
-        print("Please enter a valid integer.")
-print("Valid result is:", result)
-```
-
-Note: PyCharm will probably give you a warning that `result` "may be undefined". This is safe to ignore.  
-It's not a PEP8 formatting warning, it's PyCharm thinking that you might somehow exit the loop before defining `result`
-.  
-Since we're controlling how we exit the loop, we know this problem will not occur.
-
-*You're doing well. Keep it up...*
+## Refactoring
+
+We are going to change some of our earlier programs using **refactoring**.
+
+If you need help with any of these, first ask a classmate - to get used
+to helping each other - then talk to your tutor.
+
+### Password Check with Functions
+
+File: `password_stars.py`
+
+Copy `password_stars.py` that you wrote earlier from Sandbox into
+your `prac_02` folder and commit (with a message like "Add password check program").  
+Now let's modify this program.
+
+1. Move all the code inside a `main()` function and call `main()` at the
+   bottom. Run it to make sure it works.  
+   **Note:** if you don't have a main function, the refactoring below will
+   use global variables. So, it's an important first step to use `main` before
+   adding other functions.
+
+2. **Refactor** the part that gets the password into a separate function...  
+   You could do this manually, but let's use PyCharm's refactoring tool:  
+   Select the lines that
+   get and check the name (it should be 3-4 lines) then right-click
+   and choose **Refactor > Extract Method...**  
+   Set the name to `get_password` and press OK.  
+   PyCharm should create the function and replace the old code with a
+   call like `password = get_password()`  
+   If it didn't work properly, your starting code may not have been correct.
+
+3. Now refactor the part that prints the asterisks into a function that
+   takes 1 parameter: the password. PyCharm will see that password needs
+   to be an input parameter and create the function accordingly.  
+   This will be a very simple function, but that's fine.
+
+4. Commit with a meaningful message in the imperative voice.  
+   This could be something like "Refactor password check program to use functions"
+
+If you have not done so already, please *upgrade* your GitHub account to a free
+student account at:
+<https://education.github.com/discount_requests/new>  
+(You may need to upload a photo of your JCU student ID.)  
+This allows you to have private repositories for free, and you can get the GitHub
+Education Pack!
+
+Now we'll refactor two programs from prac 1 to use functions (with suitable
+verb-phrase function names)...  
+Copy both of these from `prac_01` into `prac_02`, **commit**, then update
+them. We do the commit first before updating so that we can see clearly what we have
+changed in the "diff".  
+We copy (instead of move) them because we want each week's prac folder to
+contain that week's prac work (don't change prac 1).
+
+### Temperatures
+
+File: `temperatures.py`
+
+Use 2 functions (NOT one!) for converting Celsius to Fahrenheit and vice versa.  
+**Important:** Remember SRP - functions should do one thing, so
+these should be simple calculation functions.  
+Do not get user input or print output in the functions - do those things outside.
+
+### Scores
+
+File: `score.py`
+
+Copy `broken_score.py` from prac 1 and rename it to `score.py`, then commit.
+
+Your `main` function should ask the user for their score and print the result.  
+Write a new function that takes in the user's score
+as a parameter and returns the result to be printed.  
+**Follow SRP**: The *function* should not print it.
+
+Now add a new part to the bottom of your main function that generates a
+***random*** score and prints the result.  
+You do NOT need to write a different function to determine the result for the random score.  
+If you've written your new function properly, you can use it.  
+If you've breached SRP, then you'll see that you can't.
 
 # Do-from-scratch Exercises
 
-## Files
+## Menu
 
-File: `files.py`
+File: `score_menu.py`
 
-The solutions for these programs are provided, to
-help you get going - or to confirm that your solution was valid.    
-Note: when you execute a Python program that contains a line like
-`open('data.txt', 'w')` the new file "data.txt" is created in the
-same folder as the Python file in your PyCharm project.
+In the lecture there was a "do this now" activity similar to this, so you can use what we did there to help with this
+program.
 
-Create a new file called **files.py** and do all the following *separate questions* in it:  
-Note: the intention is to give you experience using different ways to read files.  
-Make sure you're confident with:
+Write a complete Python program following the standard structure that uses a main and other functions.  
+Use a main menu following the
+[standard menu pattern](https://github.com/CP1404/Starter/wiki/Programming-Patterns#menus):
 
-- `read()`
-- `readline()`
-- `readlines()`
-- `for line in file`
-
-1. Write code that asks the user for their name, then opens a file
-   called "name.txt" and writes that name to it.
-
-2. Write code that opens "name.txt" and reads the name (as above)
-   then prints,  
-   "Your name is Bob" (or whatever the name is in the file).
-
-3. Create a text file called `numbers.txt` and save it in your `prac_02`
-   directory. Put the following three numbers on separate lines in the file
-   and save it:  
-   17  
-   42  
-   400  
-   Write code that opens "numbers.txt", reads only the first two numbers and adds
-   them together then prints the result, which should be... 59.
-
-4. Now write a fourth block of code that prints the total for all lines in `numbers.txt`
-   or a file with *any* number of numbers.
-
-## Password Checker
-
-File: `password_checker.py`
-
-Download the starter code (complete with hints in the form of #TODO
-comments) from [password_checker.py](password_checker.py)
-
-Write a program that asks for and validates a person's password. The
-program is not for comparing a password to a known password, but
-validating the 'strength' of a new password, like you see on websites:
-enter your password, and then it tells you if it's valid (matches the
-required pattern) and re-prompts if it's not.  
-All passwords must contain *at least one each of: number*, *lowercase*
-and *uppercase* character.
-
-The starter code uses constants (variables at the top of the code, named
-in ALL_CAPS) to store:
-
-a. the minimum and maximum length of the password
-
-b. whether a special character (not alphabetical or numerical)
-is required
-
-Remember when a program has CONSTANTS, you should use them everywhere you can so that if you change them at the top,
-this change affects the whole program as expected.  
-E.g., if you changed the minimum length to 5, the program should print 5 and should check to make sure the password is >
-= 5 characters long.
-
-Output should look something like this:
-
-    Please enter a valid password
-    Your password must be between 5 and 15 characters, and contain:
-        1 or more uppercase characters
-        1 or more lowercase characters
-        1 or more numbers
-        and 1 or more special characters:  !@#$%^&*()_-=+`~,./'[]<>?{}|\
-    > this?
-    Invalid password!
-    > whyNot?CanIhaveThis?
-    Invalid password!
-    > 12345678901234567890aBcv@
-    Invalid password!
-    > thisISmy123Pass!
-    Invalid password!
-    > 1thisISit!
-    Your 10 character password is valid: 1thisISit!
-
-Here's another run with the same code but different values for the
-constants (special characters are not required in this version):
-
-    Please enter a valid password
-    Your password must be between 2 and 6 characters, and contain:
-        1 or more uppercase characters
-        1 or more lowercase characters
-        1 or more numbers
-    > aB
-    Invalid password!
-    > HowCanIHave2Chars?
-    Invalid password!
-    > 1aB
-    Your 3 character password is valid: 1aB
-
-**Important Note:** Do not just try and Google "Python password checker"
-or something, but think about doing this step by step. We have started
-this for you with TODO comments in the code provided.
-
-- First, just check if a string has at least one lowercase character.  
-  You can do this by looping through the string (for character in
-  password:) and testing each character... count the ones that match
-  (using **character.islower()**)... At the end you know how many
-  lowercase characters there are.
-
-- Only when you are able to count lowercase, then, in the same loop,
-  count the uppercase characters  
-  That is, **do not** try and get all the checks working before you
-  know the first one works. **Do** one at a time.
-
-- *Then*, count the numbers...  
-  Test your code for each of these changes as you write them
-
-- For special characters, remember you can use the **in** operator to
-  see if the character is **in** another string (like a constant called
-  SPECIAL_CHARACTERS)
-
-- ... keep going until you can tell how many of each kind of character
-  there are
-
-- Then put it all together and test with some different settings.
-
-**We hope this incremental approach makes sense and that you use it for
-everything you code.**
-
-When you have the program working, replace the inconsistent printing of
-text and variables with nice string formatting using the `str.format()`
-method.
-
-## Got your GitHub on?
-
-If you haven't set up your own GitHub account, please do so now. See our
-instructions at:
-<https://github.com/CP1404/Starter/wiki/Software-Setup#github>
-
-Note that you should use a meaningful username that identifies who you
-are, and you must use your JCU email address. (If you already have a
-GitHub account with a non-JCU address, you can add your JCU email as a
-secondary email; you do not need to create a new account.)  
-Ideally, JCU staff should be able to tell who you are from your
-username. Your GitHub account is an important and professional record of
-your work. You will likely use it as an online portfolio in the future.
+- get a valid score (must be 0-100 inclusive)
+- print result (copy or `import` your function from `score.py`)
+- print stars (this should print as many stars as the score)
+- quit
 
 # Practice & Extension Work
 
-The final part of pracs will usually be for you to do outside prac time.  
-Use these exercises as normal practice and as ways to learn new things.
+## Practice
 
-##Practice
+### More scores
 
-**Random Things**
-Write 3 different versions of code to generate a random Boolean (True or False).
+Create `more_scores.py` and copy in only your function from `score.py` above.
+Now write a main program that uses this function:
 
-**More Random Conrad**
+- Ask the user for a number of scores
+- Generate that many random numbers (scores) between 0 and 100 inclusive
+- For each of those scores, write the "result" to a file called `results.txt` as below:
 
-Replace the literal values for the constants at the top (like
-MAX_INCREASE) with randomly generated values (within sensible ranges)
+Example file output for 4 random scores:
 
-### ASCII Table
-
-Computers use ASCII to define a character-encoding scheme for letters,
-digits, and other characters. It is useful to become familiar with ASCII
-since that is how string comparisons are made.
-
-Mr. Black the school teacher wants an educational program for his school
-students to explore the details of ASCII. He wants the app to allow a
-student to input a character and see the corresponding ASCII code, and
-vice versa. A sample run of the program should look like (where **g** and
-**100** are user inputs):
-
-    Enter a character: g
-    The ASCII code for g is 103
-    Enter a number between 33 and 127: 100
-    The character for 100 is d
-
-1. Start new file, `ascii_table.py`, and write code for this program.
-   Remember that you can use the ord() and chr() functions to convert
-   characters to ASCII integer values and vice versa.
-
-2. Add error checking so that the number entered must be between the
-   LOWER (33) and UPPER (127) bounds. Use **constants** for these
-   values and use them in both your print statement and in your while
-   loop condition. **That is, the numbers 33 and 127 should appear only
-   once**.  
-   Use the **str.format()** method everywhere you print literals and
-   variable values.
-
-3. Add on to this program by writing code that displays a table with
-   two columns, one for the numeric ASCII value and the other for the
-   character itself. Use the string **format()** method to align the text
-   nicely in two columns. Print the values between LOWER and UPPER.  
-   It should output like ("..." indicates parts that have been removed to
-   save space):
-
-        33  !
-        34  "
-       ...
-        99  c
-       100  d
-       ...
+    66 is Passable
+    4 is Bad
+    92 is Excellent
+    51 is Passable
 
 ## Extension
 
-**ASCII Columns Challenge**
+### More temperatures
 
-Add columns to your ASCII table output from the earlier questions. Ask the user for how many
-columns to print, then figure out how to write loop(s) and print
-statements to achieve this.
+Create a text file called `temps_input.txt` and fill it with at least 15
+floats of any values between -200 and +200. Where will you get these numbers from?  
+Write a Python script to create the text file, of course!
 
-**Word Generator**
+Now write a program, `convert_temps.py` , that uses the functions you made to convert temperatures.  
+Read the values in `temps_input.txt` as Fahrenheit values and write the converted Celsius values to `temps_output.txt`
+.  
+(Note: you could just change the function call to convert C->F instead of F->C.)
 
-The following program randomly generates words by constructing a string
-from random combinations of characters. The word_format variable stores
-a sequence like ccvc, which means: consonant consonant vowel consonant.
-The **random.choice** function is a useful way to select a single value
-from a sequence of values.
+Example, if your file `temps_input.txt` contained:
 
-Notice how the variable `word` starts as an empty string and then is
-constructed using repeated string concatenation (with the `+` operator).
+    26.590980264932597
+    -170.578748893293
+    126.69174145157581
 
-Try this and see if you can get any interesting words.
+You should write `temps_output.txt` as:
 
-Copy the code from [word_generator.py](word_generator.py)
+    -3.005010963926335
+    -112.54374938516278
+    52.60652302865323
 
-Things To Do:
+### GPS (Gopher Population Simulator)
 
-- Get the word format from the user so they can customise it. Convert
-  it to lowercase using a str method.
+A secret population of 1000 gophers lives near the library. Every
+year, a random number of gophers is born, between 10% of the current
+population, and 20%. (e.g. 15% of the gophers might give birth,
+increasing the population by 150). Also, each year a random number
+of gophers die, between 5% and 25% (e.g. 8% of the gophers might
+die, reducing the population by 80).
 
-- Try and make the program more interesting. For example:
+Write a program that simulates a population of gophers over a
+ten-year period and displays each year's population size.
+The output should look something like this (it's random, so yours
+won't be the same):
 
-  a. Use wildcards for the vowels (#) and consonants (%) or either
-  (*) and make alphabetical characters use that actual
-  character - e.g. the format "%re#*l*" might produce a word
-  like "greatly" or "breuzla"
+       Welcome to the Gopher Population Simulator!
+       Starting population: 1000
+       Year 1
+       
+       145 gophers were born. 228 died.
+       Population: 917
+       Year 2
+       
+       124 gophers were born. 152 died.
+       Population: 889
+       Year 3
+       
+       138 gophers were born. 180 died.
+       Population: 847
+       ...
 
-  b. Automatically (randomly) generate the word_format variable.
+## Learn Git and GitHub
 
-**Automatic Password Generator**
+The following guide shows you lots of useful things just using GitHub online:
+<https://guides.github.com/activities/hello-world/>
 
-Write a program that asks for a length and what characteristics it
-must have - requirements for upper/lower/numeric/special characters -
-then it should generate a password that matches.  
-Use your earlier program's checker functionality to validate the
-generated password.
+### Git Command Line
 
-# Solutions to Selected Exercises
+Even if you just use the built-in tools in your IDE, you will be able to
+understand more of what's happening in Git Version Control if you know
+the command line tools. Over time, you should get experience using both.
 
-**Note:** it is ***super important*** that you use any provided
-solutions to **help you learn**, not to avoid learning!  
-Do the work yourself first, and *only* check the solutions to evaluate
-your own work - not to do it for you. **OK?**
+So let's learn more about how Git works and pick up some command line
+skills by doing the excellent interactive online Git tutorial:
 
-Some solutions (not all) for practicals will be provided in the
-**solutions** branch of the Practicals repository on GitHub:
-<https://github.com/CP1404/Practicals/tree/solutions>
+[try.github.io](https://try.github.io)
+
+You may also like to do one or more of the GitHub courses on [LinkedIn Learning](https://au.linkedin.com/learning/)
 
 # Deliverables
 
@@ -612,10 +455,8 @@ This section summarises the expectations for marking in this practical.
 
 Files required:
 
-- string_formatting_examples.py
-- randoms.py
-- capitalist_conrad.py
-- exceptions_demo.py
-- exceptions_to_complete.py
-- files.py
-- password_checker.py
+- Practicals repository on GitHub and up-to-date
+- `password_stars.py`
+- `temperatures.py`
+- `score.py`
+- `score_menu.py`
