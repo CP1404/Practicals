@@ -487,12 +487,13 @@ your work. You will likely use it as an online portfolio in the future.
 The final part of pracs will usually be for you to do outside prac time.  
 Use these exercises as normal practice and as ways to learn new things.
 
-##Practice
+## Practice
 
-**Random Things**
+### Random Things
+
 Write 3 different versions of code to generate a random Boolean (True or False).
 
-**More Random Conrad**
+### More Random Conrad
 
 Replace the literal values for the constants at the top (like
 MAX_INCREASE) with randomly generated values (within sensible ranges)
@@ -540,20 +541,39 @@ vice versa. A sample run of the program should look like (where **g** and
        100  d
        ...
 
+### Debugging
+
+Open your **Capitalist Conrad** program.  
+Let's step through the program using the interactive debugger now...
+
+1. Add a **breakpoint** on the while line by clicking in the left
+   margin:    
+   ![Breakpoint](../images/03image7.png)
+
+2. Click the "debug" button or choose Run > Debug from the menu or
+   press Shift+F9  
+   The program will run until it hits the breakpoint - then stop and
+   show you the current state of the program and its variables (both
+   in the bottom window and in your code)
+
+3. Try all the different methods for stepping through the program
+   using the toolbar:    
+   ![Debugger toolbar](../images/03image8.png)
+
 ## Extension
 
-**ASCII Columns Challenge**
+### ASCII Columns Challenge
 
 Add columns to your ASCII table output from the earlier questions. Ask the user for how many
 columns to print, then figure out how to write loop(s) and print
 statements to achieve this.
 
-**Word Generator**
+### Word Generator
 
 The following program randomly generates words by constructing a string
 from random combinations of characters. The word_format variable stores
 a sequence like ccvc, which means: consonant consonant vowel consonant.
-The **random.choice** function is a useful way to select a single value
+The `random.choice` function is a useful way to select a single value
 from a sequence of values.
 
 Notice how the variable `word` starts as an empty string and then is
@@ -565,7 +585,7 @@ Copy the code from [word_generator.py](word_generator.py)
 
 Things To Do:
 
-- Get the word format from the user so they can customise it. Convert
+- Get the word format from the user so that they can customise it. Convert
   it to lowercase using a str method.
 
 - Try and make the program more interesting. For example:
@@ -577,13 +597,46 @@ Things To Do:
 
   b. Automatically (randomly) generate the word_format variable.
 
-**Automatic Password Generator**
+### Automatic Password Generator
 
 Write a program that asks for a length and what characteristics it
 must have - requirements for upper/lower/numeric/special characters -
 then it should generate a password that matches.  
 Use your earlier program's checker functionality to validate the
 generated password.
+
+1. Copy your **word generator** program from last week into this
+   prac's folder. Commit.  
+   Add error-checking so that you repeatedly validate the user's input
+   until it is a valid sequence of just c's and v's. Create and use a
+   function `is_valid_format(...)` to return True or False for if
+   the word format is valid or not.  
+   **Tip:** use a for loop to iterate through each character in the
+   format sequence and return false if you see one that is not valid.
+
+2. Copy your **ascii_table.py** file from last week's prac into this
+   week's folder.  
+   Create a function called `get_number(lower, upper)` to get a
+   number, making sure that user input is numeric and within the given
+   range.  
+   You can use exceptions to check the string is a valid number.  
+   Repeatedly re-prompt for a number until a valid one is entered, then
+   return it.  
+   Example:
+
+       Enter a number (10-50):  
+       >>>abc  
+       Please enter a valid number!  
+       Enter a number (10-50):  
+       >>>75  
+       Please enter a valid number!  
+       Enter a number (10-50):  
+       >>>30
+       (then the function should return 30)
+
+   When this function works, use it in your program in place of the code
+   you used to get the number.  
+   Test it with both invalid and valid inputs.
 
 # Solutions to Selected Exercises
 
@@ -607,10 +660,10 @@ This section summarises the expectations for marking in this practical.
 
 Files required:
 
-- string_formatting_examples.py
-- randoms.py
-- capitalist_conrad.py
-- exceptions_demo.py
-- exceptions_to_complete.py
-- files.py
-- password_checker.py
+- `string_formatting_examples.py`
+- `randoms.py`
+- `capitalist_conrad.py`
+- `exceptions_demo.py`
+- `exceptions_to_complete.py`
+- `files.py`
+- `password_checker.py`

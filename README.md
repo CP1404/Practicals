@@ -17,7 +17,7 @@ Practical numbers do not necessarily correspond to weeks.
 E.g. some subject offerings run in 10 weeks, some in 13 weeks.
 
 * [Practical 01 - PyCharm, Control](./prac_01)
-* [Practical 02 - Functions, GitHub](./prac_02)
+* [Practical 02 - Functions, Git Version Control](./prac_02)
 * [Practical 03 - Strings, Files, Exceptions](./prac_03)
 * [Practical 04 - Lists](./prac_04)
 * [Practical 05 - Dictionaries, Code Reviews with PRs](./prac_05)

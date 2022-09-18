@@ -1,4 +1,4 @@
-# Practical 02 - Functions, GitHub
+# Practical 02 - Functions, Git Version Control
 
 This week (and from now on), we'll be using Git and GitHub for our work.
 
@@ -185,7 +185,7 @@ Now, for your practicals project, we can Add it to both Git and GitHub in one st
 
 **For every prac for the rest of the subject**,
 when you finish a task, do a commit with a meaningful message.  
-Push your prac work to GitHub at least at the end of each prac.  
+Push your prac work to GitHub at least at the end of each prac.
 
 You do not need to commit or push for every little change, just for
 decent-sized changes, **small milestones**, or before you start
@@ -195,36 +195,42 @@ Do you understand that if you always keep your work up-to-date on GitHub,
 you will _never_ have the problem of not having access to your work?  
 You will _always_ have your work available on GitHub. Nice!
 
-# Intermediate Exercises
+# Intermediate Exercises - Functions:
 
-## Functions:
+Before we start writing code with functions, let's remind ourselves of some principles.
 
-Remember that function names should say what they do (use verb phrases).
+Function names should say what they do.  
+Use verb phrases, and complete the sentence, _"This function will..."_  
+E.g., this function will `calculate_area`.
 
-Note also that functions should **do one thing** (Single Responsibility Principle, SRP)
-
-- so they might calculate a value but NOT print it. If they calculated it AND printed
-  it, that would be two things, and you could no longer use that function
-  if you wanted to use the value without printing it, e.g., in an expression.
+Follow the Single Responsibility Principle (SRP, functions should **do one thing**).
 
 E.g., a function that calculates the area of a rectangle should have the
 height and width values passed in as **parameters**, rather than asking the
 user for them in the function. That way it can be used no matter where
 these values come from.  
 It should also **return** the result rather than printing it.
-That way it can be used no matter what the purpose of the result is.
-
-**From now on**, when writing programs with functions, create a `main()`
-function for the main part of the program. Put the main function at the
-*top* and call it at the *bottom*. If you are changing an existing program
-that does not already use functions, first put it all in a main function;
-then add the other functions.
+That way the result can be used in any way.
 
 **DO NOT** use any global variables.  
 You should never use a global variable in this subject.  
 (CONSTANTS can and should be global, but never any variables.)
 
-So the basic form for all programs now is:
+All functions should have docstring comments that say what the function will do.  
+Here's the third place we use the **imperative mood** (what a thing will do):
+
+- Commit messages
+- Function names
+- Comments
+
+**From now on**, when writing programs with functions, create a `main()`
+function for the main part of the program. Put the main function at the
+*top* and call it at the *bottom*. If you are changing an existing program
+that does not already use functions, *first* put it all in a main function;
+then add the other functions.
+
+[The structure for all programs](https://github.com/CP1404/Starter/wiki/Programming-Patterns#main-program-structure)
+is:
 
 ```python
 """Module docstring"""
@@ -236,7 +242,6 @@ So the basic form for all programs now is:
 def main():
     """Function docstring"""
     # statements...
-    # variables...  
     do_stuff()
 
 
@@ -248,35 +253,43 @@ def do_stuff():
 main()
 ```
 
+## Refactoring
+
+We are going to change some of our earlier programs using **refactoring**.
+
+If you need help with any of these, first ask a classmate - to get used
+to helping each other - then talk to your tutor.
+
 ### Password Check with Functions
 
-At the start you wrote `password_check.py` - a program that asks the user for
-a password and prints asterisks based on its length. Copy this from Sandbox into
-your `prac_03` folder and commit (with a message like "Add password check
-program"). Now let's modify this program.
+File: `password_stars.py`
+
+Copy `password_stars.py` that you wrote earlier from Sandbox into
+your `prac_02` folder and commit (with a message like "Add password check program").  
+Now let's modify this program.
 
 1. Move all the code inside a `main()` function and call `main()` at the
    bottom. Run it to make sure it works.  
    **Note:** if you don't have a main function, the refactoring below will
-   use global variables. So, it's an important first step to use main before
+   use global variables. So, it's an important first step to use `main` before
    adding other functions.
 
 2. **Refactor** the part that gets the password into a separate function...  
-   You can either do this manually, or by using PyCharm's refactoring tool.  
-   If you want to use the tool, select the lines that
+   You could do this manually, but let's use PyCharm's refactoring tool:  
+   Select the lines that
    get and check the name (it should be 3-4 lines) then right-click
-   (or use the main menu) and choose **Refactor > Extract > Method...**  
-   Change the name to `get_password` and press OK.  
+   and choose **Refactor > Extract Method...**  
+   Set the name to `get_password` and press OK.  
    PyCharm should create the function and replace the old code with a
-   call to it like `password = get_password()`  
-   (Note that the details depend on how you wrote the code to start with.)
+   call like `password = get_password()`  
+   If it didn't work properly, your starting code may not have been correct.
 
 3. Now refactor the part that prints the asterisks into a function that
-   takes 1 parameter: the password. (PyCharm will see that password needs
-   to be an input parameter and create the function accordingly.)  
-   Note that this will be a super simple function, but that's fine.
+   takes 1 parameter: the password. PyCharm will see that password needs
+   to be an input parameter and create the function accordingly.  
+   This will be a very simple function, but that's fine.
 
-4. Finished? Then commit - with a meaningful message in the imperative voice.  
+4. Commit with a meaningful message in the imperative voice.  
    This could be something like "Refactor password check program to use functions"
 
 If you have not done so already, please *upgrade* your GitHub account to a free
@@ -286,47 +299,65 @@ student account at:
 This allows you to have private repositories for free, and you can get the GitHub
 Education Pack!
 
+Now we'll refactor two programs from prac 1 to use functions (with suitable
+verb-phrase function names)...  
+Copy both of these from `prac_01` into `prac_02`, **commit**, then update
+them. We do the commit first before updating so that we can see clearly what we have
+changed in the "diff".  
+We copy (instead of move) them because we want each week's prac folder to
+contain that week's prac work (don't change prac 1).
+
+### Temperatures
+
+File: `temperatures.py`
+
+Use 2 functions (NOT one!) for converting Celsius to Fahrenheit and vice versa.  
+**Important:** Remember SRP - functions should do one thing, so
+these should be simple calculation functions.  
+Do not get user input or print output in the functions - do those things outside.
+
+### Scores
+
+File: `score.py`
+
+Copy `broken_score.py` from prac 1 and rename it to `score.py`, then commit.
+
+Your `main` function should ask the user for their score and print the result.  
+Write a new function that takes in the user's score
+as a parameter and returns the result to be printed.  
+**Follow SRP**: The *function* should not print it.
+
+Now add a new part to the bottom of your main function that generates a
+***random*** score and prints the result.  
+You do NOT need to write a different function to determine the result for the random score.  
+If you've written your new function properly, you can use it.  
+If you've breached SRP, then you'll see that you can't.
+
 # Do-from-scratch Exercises
 
-If you need help with any of these, first ask a classmate - to get used
-to helping each other - then talk to your tutor.
+## Menu
 
-1. Refactor the following two previous programs to use functions (with suitable
-   verb-phrase function names) ...  
-   Copy both of these from `prac_01` into `prac_03`, commit, then update
-   them. We do the commit first before updating so that we can see clearly what we have
-   changed in the "diff".  
-   We copy (instead of move) them because we want each week's prac folder to
-   contain that week's prac work (don't change prac 1).  
-   Remember, any time you're using functions, you also need a `main()`
-   function for the main program.
+File: `score_menu.py`
 
-   a.  `temperatures.py` - use 2 functions for converting Celsius to
-   Fahrenheit and vice versa  
-   **Important:** Remember SRP - functions should do one thing, so
-   these should be calculation functions. Do not get user input or
-   print output in the functions - do those outside.  
-   That means these will be very small functions... that's OK...
-   they abstract a core piece of functionality.
+In the lecture there was a "do this now" activity similar to this, so you can use what we did there to help with this
+program.
 
-   b.  `broken_score.py` - `main` should ask the user for their score and print the result.  
-   write a new function that takes in the user's score
-   as a parameter and returns the result to be printed.  
-   The *function* should not print it.
+Write a complete Python program following the standard structure that uses a main and other functions.  
+Use a main menu following the
+[standard menu pattern](https://github.com/CP1404/Starter/wiki/Programming-Patterns#menus):
 
-   c. Now add a new part to the bottom of broken_score's main function that generates a
-   *random* score and prints the result.  
-   If you've written your function properly, you can see that the function can be
-   used in different ways, e.g. without user input.
+- get a valid score (must be 0-100 inclusive)
+- print result (copy or `import` your function from `score.py`)
+- print stars (this should print as many stars as the score)
+- quit
 
 # Practice & Extension Work
 
 ## Practice
 
-### Functions
+### More scores
 
-**More scores**  
-Create `scores.py` and copy in only your function from `broken_score.py` above.
+Create `more_scores.py` and copy in only your function from `score.py` above.
 Now write a main program that uses this function:
 
 - Ask the user for a number of scores
@@ -340,7 +371,10 @@ Example file output for 4 random scores:
     92 is Excellent
     51 is Passable
 
-**More temperatures**
+## Extension
+
+### More temperatures
+
 Create a text file called `temps_input.txt` and fill it with at least 15
 floats of any values between -200 and +200. Where will you get these numbers from?  
 Write a Python script to create the text file, of course!
@@ -362,73 +396,19 @@ You should write `temps_output.txt` as:
     -112.54374938516278
     52.60652302865323
 
-### Debugging
+### GPS (Gopher Population Simulator)
 
-Open your **Capitalist Conrad** program from last week's practical.
+A secret population of 1000 gophers lives near the library. Every
+year, a random number of gophers is born, between 10% of the current
+population, and 20%. (e.g. 15% of the gophers might give birth,
+increasing the population by 150). Also, each year a random number
+of gophers die, between 5% and 25% (e.g. 8% of the gophers might
+die, reducing the population by 80).
 
-Let's step through the program using the interactive debugger now...
-
-1. Add a **breakpoint** on the while line by clicking in the left
-   margin:    
-   ![Breakpoint](../images/03image7.png)
-
-2. Click the "debug" button or choose Run > Debug from the menu or
-   press Shift+F9  
-   The program will run until it hits the breakpoint - then stop and
-   show you the current state of the program and its variables (both
-   in the bottom window and in your code)
-
-3. Try all of the different methods for stepping through the program
-   using the toolbar:    
-   ![Debugger toolbar](../images/03image8.png)
-
-## Extension
-
-1. Copy your **word generator** program from last week into this
-   prac's folder. Commit.  
-   Add error-checking so that you repeatedly validate the user's input
-   until it is a valid sequence of just c's and v's. Create and use a
-   function `is_valid_format(...)` to return True or False for if
-   the word format is valid or not.  
-   **Tip:** use a for loop to iterate through each character in the
-   format sequence and return false if you see one that is not valid.
-
-2. Copy your **ascii_table.py** file from last week's prac into this
-   week's folder.  
-   Create a function called `get_number(lower, upper)` to get a
-   number, making sure that user input is numeric and within the given
-   range.  
-   You can use exceptions to check the string is a valid number.  
-   Repeatedly re-prompt for a number until a valid one is entered, then
-   return it.  
-   Example:
-
-       Enter a number (10-50):  
-       >>>abc  
-       Please enter a valid number!  
-       Enter a number (10-50):  
-       >>>75  
-       Please enter a valid number!  
-       Enter a number (10-50):  
-       >>>30
-       (then the function should return 30)
-
-   When this function works, use it in your program in place of the code
-   you used to get the number.  
-   Test it with both invalid and valid inputs.
-
-3. **GPS (Gopher Population Simulator)**  
-   A secret population of 1000 gophers lives near the library. Every
-   year, a random number of gophers is born, between 10% of the current
-   population, and 20%. (e.g. 15% of the gophers might give birth,
-   increasing the population by 150). Also each year, a random number
-   of gophers die, between 5% and 25% (e.g. 8% of the gophers might
-   die, reducing the population by 80).
-
-   Write a program that simulates a population of gophers over a
-   ten-year period and displays each year's population size.
-   The output should look something like this (it's random, so yours
-   won't be the same):
+Write a program that simulates a population of gophers over a
+ten-year period and displays each year's population size.
+The output should look something like this (it's random, so yours
+won't be the same):
 
        Welcome to the Gopher Population Simulator!
        Starting population: 1000
@@ -455,7 +435,7 @@ The following guide shows you lots of useful things just using GitHub online:
 
 Even if you just use the built-in tools in your IDE, you will be able to
 understand more of what's happening in Git Version Control if you know
-the command line tools. Over time you should get experience using both.
+the command line tools. Over time, you should get experience using both.
 
 So let's learn more about how Git works and pick up some command line
 skills by doing the excellent interactive online Git tutorial:
@@ -478,4 +458,5 @@ Files required:
 - Practicals repository on GitHub and up-to-date
 - `password_stars.py`
 - `temperatures.py`
-- `broken_score.py`
+- `score.py`
+- `score_menu.py`
