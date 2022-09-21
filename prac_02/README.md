@@ -431,16 +431,11 @@ won't be the same):
 The following guide shows you lots of useful things just using GitHub online:
 <https://guides.github.com/activities/hello-world/>
 
-### Git Command Line
-
 Even if you just use the built-in tools in your IDE, you will be able to
 understand more of what's happening in Git Version Control if you know
 the command line tools. Over time, you should get experience using both.
 
-So let's learn more about how Git works and pick up some command line
-skills by doing the excellent interactive online Git tutorial:
-
-[try.github.io](https://try.github.io)
+Try some of the websites and resources provided in the lecture materials.  
 
 You may also like to do one or more of the GitHub courses on [LinkedIn Learning](https://au.linkedin.com/learning/)
 
@@ -455,7 +450,7 @@ This section summarises the expectations for marking in this practical.
 
 Files required:
 
-- Practicals repository on GitHub and up-to-date
+- Please type the URL of your GitHub practicals repository in the text box when you submit your practical on LearnJCU.
 - `password_stars.py`
 - `temperatures.py`
 - `score.py`
