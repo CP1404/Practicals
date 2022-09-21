@@ -489,9 +489,9 @@ This section summarises the expectations for marking in this practical.
 
 Files required:
 
-- temperatures.py
-- sales_bonus.py
-- broken_score.py
-- loops.py
-- shop_calculator.py
-- menus.py
+- `temperatures.py`
+- `sales_bonus.py`
+- `broken_score.py`
+- `loops.py`
+- `shop_calculator.py`
+- `menus.py`

@@ -365,10 +365,10 @@ This section summarises the expectations for marking in this practical.
 
 Files required:
 
-- lists_warmup.py
-- total_income.py
-- subject_reader.py
-- list_exercises.py
-- list_comprehensions.py
-- quick_picks.py
-- .gitignore
+- `lists_warmup.py`
+- `total_income.py`
+- `subject_reader.py`
+- `list_exercises.py`
+- `list_comprehensions.py`
+- `quick_picks.py`
+- `.gitignore`
