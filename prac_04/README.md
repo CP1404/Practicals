@@ -1,22 +1,5 @@
 # Practical 04 - Lists
 
-Now that you know how to use version control (Git and GitHub), please use it
-consistently for **all** your work. This should just be how you normally work now.  
-Remember that it's an important "industry-relevant" skill that you should expect to use
-for many years to come (your entire IT career), so make the time to get good at it.
-
-If you do not already have your prac work with you, start by **cloning**
-your prac repository via PyCharm, **VCS > Checkout From Version Control > Git/GitHub**
-
-Each time you finish a practical task, **commit** it.
-
-You only need to **push** once (when you finish and/or it's time to leave),
-but you can do it more often if you wish.
-
-When you're about to make a change, like refactoring, commit first so you
-can track the differences and you can go back to a previous version if
-you need to.
-
 **Please remember**, if you do not finish a practical during class time,
 it's not over... you need to complete it during the week so that you're
 all finished by the *start* of the next practical. If you need help with

@@ -1,6 +1,21 @@
 # Practical 03 - Strings, Files, Exceptions
 
-***Work in Progress***
+Now that you know how to use version control (Git and GitHub), please use it
+consistently for **all** your work. This should just be how you normally work now.  
+Remember that it's an important "industry-relevant" skill that you should expect to use
+for many years to come (your entire IT career), so make the time to get good at it.
+
+If you do not already have your prac work with you, start by **cloning**
+your prac repository via PyCharm.
+
+Each time you finish a practical task, **commit** it.
+
+You only need to **push** once (when you finish and/or it's time to leave),
+but you can do it more often if you wish.
+
+When you're about to make a change, like refactoring, commit first so that you
+can track the differences, and you can go back to a previous version if
+you need to.
 
 # Remarkably Important!
 
@@ -416,7 +431,8 @@ systems (including Mac), the dot makes a file/folder _hidden_.
 folders you want Git not to track and not to warn you about.  
 Your file will still exist in your _project_, but not in your _repository_.
 
-**Create a file called `.gitignore`** in the **root folder** (NOT inside `prac_03` or similar) of your pracs project/repo,
+**Create a file called `.gitignore`** in the **root folder** (NOT inside `prac_03` or similar) of your pracs
+project/repo,
 and **add** it to Git.
 
 Then enter the following line (the trailing slash means it will match a directory
