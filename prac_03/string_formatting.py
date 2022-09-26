@@ -16,22 +16,25 @@ print("My guitar: {}, first made in {}".format(name, year))
 print("My guitar: {0}, first made in {1}".format(name, year))
 print("My {0} was first made in {1} (that's right, {1}!)".format(name, year))
 
+# And with f-string formatting (introduced in Python 3.6)
+print(f"My {name} was first made in {year} (that's right, {year}!)")
+
 # Formatting currency (grouping with comma, 2 decimal places):
 print("My {} would cost ${:,.2f}".format(name, cost))
+print(f"My {name} would cost ${cost:,.2f}")
 
-# Aligning columns:
+# Aligning columns by using width after the :
+# This loop uses enumerate, useful when you want both the index and value
 numbers = [1, 19, 123, 456, -25]
-for number in numbers:
-    print("Number is {:>5}".format(number))
 
-# A version of the above loop using the enumerate function, useful when you want the index and value
-for i, number in enumerate(numbers):
-    print("Number {0} is {1:>5}".format(i + 1, number))
+for i, number in enumerate(numbers, 1):
+    print(f"Number {i} is {number:5}")
 
 # TODO: Use string formatting to produce the output:
 # 1922 Gibson L-5 CES for about $16,035!
 
-print("{} {} for about ${:,.0f}!".format(year, name, cost))
+# Note that the .0f rounds to no decimal places
+print(f"{year} {name} for about ${cost:,.0f}!")
 
 # TODO: Using a for loop with the range function and string formatting,
 # produce the following right-aligned output (do not use a list):
@@ -41,5 +44,4 @@ print("{} {} for about ${:,.0f}!".format(year, name, cost))
 # 150
 
 for number in range(0, 151, 50):
-    print("{:3}".format(number))
-
+    print(f"{number:3}")
