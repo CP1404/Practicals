@@ -6,95 +6,55 @@
 
 - **DO NOT make a new project for each practical!**
 - **Create a new folder called `prac_03`** in your existing practicals project.
-- Remember that you just keep using the same PyCharm project for all practicals.
+- Keep using the same PyCharm project for all practicals.
 - Please don't use spaces in file or folder names as then they are invalid module names (important for importing in prac
   6).
+
+If you correctly shared your practicals repository on GitHub, then you can **clone** your repo to continue your work on
+a new computer any time you need to.
 
 # Walkthrough Example
 
 ## String Formatting
 
-File: `string_formatting_examples.py`
+File: `string_formatting.py`
 
-The **format()** string method lets us format strings using placeholders
-and format specifiers in a way that's very powerful and will make a lot
-of sense once you get used to it. Remember that a *method* is a function
-that runs on a particular object, so a string method runs on a string
-like: `"literal".format(...)` or `variable.upper()`  
+String formatting lets us format strings using format specifiers in a way that's very powerful and will make a lot
+of sense once you get used to it.
+
 Sometimes the best way to start learning this sort of thing is to see
 some useful examples, so:
 
-- Create a new Python file called `string_formatting_examples.py` in
-  your `prac_02` folder.
+- Create a new Python file called `string_formatting.py` in
+  your `prac_03` folder.
 
-- (Remember when copying code from GitHub to click **Raw** first so
+- (Remember when copying code from GitHub to use **Raw** so
   that the formatting copies properly.)  
   Copy the following string formatting examples from
   [string_formatting_examples.py](string_formatting_examples.py)
-  into this file and run the code. (It's also written below for your
+  into your file and run the code. (It's also written below for your
   reference.)
 
-```python
-name = "Gibson L-5 CES"
-year = 1922
-cost = 16035.4
+### Things to Notice
 
-# The ‘old’ manual way to format text with string concatenation:
-print("My guitar: " + name + ", first made in " + str(year))
-
-# A better way - using str.format():
-print("My guitar: {}, first made in {}".format(name, year))
-print("My guitar: {0}, first made in {1}".format(name, year))
-print("My {0} was first made in {1} (that's right, {1}!)".format(name, year))
-
-# And with f-string formatting (introduced in Python 3.6)
-print(f"My {name} was first made in {year} (that's right, {year}!)")
-
-# Formatting currency (grouping with comma, 2 decimal places):
-print("My {} would cost ${:,.2f}".format(name, cost))
-print(f"My {name} would cost ${cost:,.2f}")
-
-# Aligning columns:
-numbers = [1, 19, 123, 456, -25]
-for number in numbers:
-    print("Number is {:>5}".format(number))
-
-# An f-string version of the above using the enumerate function, useful when you want the index and value
-for i, number in enumerate(numbers, 1):
-    print(f"Number {i} is {number:>5}")
-```
-
-***Nice!*** Notice:
-
-- You can leave out the positional arguments, that is the numbers
-  inside the {}, if you just want to use the default order.
-
-- You can also repeat values by repeating the positional arguments.
-
-- And you can do lots of formatting by using the string formatting
+- Use the string formatting
   'mini language'; details come after the **:**  See: <https://docs.python.org/3/library/string.html#formatstrings>
 
 - f-strings are not a complete replacement for `.format()`. There are some reasons to continue using `.format()` (such
   as with variable unpacking) so you should know both. Many Python programmers prefer f-strings for string formatting
   for readability and conciseness.
 
-**Tips for string formatting with the format specifier `{}`**
-
-- The number *before* the colon, or if there's no colon like `{0}`,
-  specifies which parameter to use. This can be left out to use the
-  default order.
-
 - The part *after* the colon specifies the formatting. E.g., `{:3}` specifies
-  to use 3 spaces (or more if needed) for the value when it's used.
+  to use a width of 3 (or more if needed) for the value.
 
 - By default, **numbers are right-aligned** and **strings are
   left-aligned**. You can change this with > or <  
   So, `{:>6}` would format the value to be right-aligned and take up 6 (or
   more if needed) spaces.
 
-### Things to do:
+### Things to do
 
-Use string formatting to produce the output:  
+Use f-string formatting to produce the output:  
 (Notice where the values go and also the float formatting / number of decimal places.)
 
 ```
@@ -111,30 +71,31 @@ formatting** (DO NOT use a list), produce the following output (right-aligned nu
 
 ## Random Numbers
 
-We are going to write some programs using random numbers... but how do
-we generate random numbers? Python has a number of random functions -
-contained within the **random** module. Unlike the built-in functions
-(**print()**, **input()**, etc.) the random functions are *not* built-in
+File: `randoms.py`
+
+Python has a number of random functions -
+contained within the `random` module. Unlike the built-in functions
+(`print()`, `input()`, etc.) the random functions are *not* built-in
 but need to be **imported**. Modules are reusable collections of
 functions, classes and variables (constants) related to a specific topic
 (e.g., maths, operating system services, handling dates and times).
 Python has a useful built-in function for finding out about the local
 scope of something, called `dir()`.
 
-**Launch a Python console** (in PyCharm, simply click in the
+**Launch a Python Console** (in PyCharm, simply click in the
 footer/status bar where it says "Python Console") and type the following
 at the `>>>` prompt:
 
     dir(str)
 
-This will give you a display of the "dictionary" of everything contained in `str`, like:
+This displays everything contained in `str`, like:
 
     ['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
 
-Look carefully! You can see all of those useful `str` methods such as
+You can see all of those useful methods such as
 `upper()`, `startswith()`, `isdecimal()`.
 
-Next try running the `dir()` function with **random** as the argument:
+Next try running the `dir()` function with `random` as the argument:
 
     dir(random)
 
@@ -152,7 +113,7 @@ Now try it like this:
     import random
     dir(random)
 
-This shows you all the names in the module - most of which are
+This shows all the names in the module - most of which are
 functions you can use. To use functions from a module that's been
 imported like this you need to *qualify* the name - e.g., use
 `random.randint` not just `randint`. Use `help()` to find out
@@ -174,12 +135,10 @@ about a couple of these functions:
 Note: the name of a function can be used without the brackets here, but this
 does not execute the function.
 
-### Try This Out
+**Never** name a file the same as a module;
+e.g., `random.py` or it will have higher precedence when you import it.
 
-File: `randoms.py` (Note: never name a file the same as a module;
-e.g., `random.py` or it will have higher precedence when you, e.g., `import random`)
-
-In your **console**, type in the following (run each print line multiple
+In your **console**, type in the following (run each line multiple
 times), and write the answers to the questions below in comments in `randoms.py`.
 
 ```python
@@ -205,34 +164,30 @@ print(random.uniform(2.5, 5.5))  # line 3
 
 - Write code, not a comment, to produce a random number between 1 and 100 inclusive.
 
-## Example to Study
+## Capitalist Conrad
 
-This example combines some control structures (while loops, if
-statements) from last week with some useful string formatting for
-displaying currency.
+File: `capitalist_conrad.py`
+
+Download the code from: [capitalist_conrad.py](capitalist_conrad.py)
 
 Capitalist Conrad wants us to write a stock-price simulator for a
 volatile stock. The price starts off at $10.00, and, at the end of
 every day there is a 50% chance it increases by 0 to 10%, and a 50%
 chance that it decreases by 0 to 5%. If the price rises above $1000, or
 falls below $0.01, the program should end. The price should be
-displayed to the nearest cent (e.g. $33.59, not $33.5918232901).
+displayed to the nearest cent (e.g., `$33.59`, not `$33.5918232901`).
 
-**What module do we need to import?** random
+**What module do we need to import?** `random`
 
-**What functions from random do we need to use?** randint (for the 50%
-chance of increase or decrease), and uniform (to generate a random
+**What functions from random do we need to use?** `randint` (for the 50%
+chance of increase or decrease), and `uniform` (to generate a random
 floating-point number)
 
-### Things To Do:
-
-File: `capitalist_conrad.py`
-
-Download the code from: [capitalist_conrad.py](capitalist_conrad.py)
+### Things To Do
 
 1. The program currently runs without telling us how many days it
    simulated.  
-   Add this feature using a day counter and string formatting so that
+   Add this feature using a `number_of_days` variable so that
    the program prints like:
 
        Starting price: $10.00  
@@ -241,89 +196,62 @@ Download the code from: [capitalist_conrad.py](capitalist_conrad.py)
        On day 424 price is: $915.71  
        On day 425 price is: $1,001.60  
 
-2. Notice how the use of CONSTANTS makes the program easier to read and
+2. Notice how the use of `CONSTANTS` makes the program easier to read and
    customise.  
    Try changing these so the allowed price range is $1 to $100 and
    the increase could be up to 17.5% (remember to change any comments
-   that refer to constant values)  
+   that refer to constant values).   
    Run the program with these new values.
 
 3. Update your program so that it prints (writes) the output to a
-   **file**.  
-   How do we do this?
+   **file**.
 
-    - First you need to **open** the file for writing. You only need
+    - First you need to `open` the file for writing. You only need
       to do this once, so add this line before your loop starts:
 
       `out_file = open(OUTPUT_FILE, 'w')`
 
       Note that this code line expects you to define the constant
-      OUTPUT_FILE, so do that above.
+      `OUTPUT_FILE`, so do that above.
 
     - Update any print statements, so they output to the file.  
       Here's an (incomplete) example:
 
-      `print("${:,.2f}".format(price), file=out_file)`
+      `print(f"${price:,.2f}", file=out_file)`
 
     - **Close** the file at the very end:
 
       `out_file.close()`
 
-    - This version uses the `.format()` method when printing the price. Change this to use f-string formatting (keet the
+    - This version uses the `.format()` method when printing the price. Change this to use f-string formatting (keep the
       same output).
 
-*Keep going... :)*
-
-## Exceptions
+## Exceptions Demo
 
 File: `exceptions_demo.py`
 
 Copy this example code that uses exceptions: [exceptions_demo.py](exceptions_demo.py)
-(also shown below), and run it, then answer the questions below in comments...
+and run it, then answer the following questions in comments in your file...
 
-```python
-try:
-    numerator = int(input("Enter the numerator: "))
-    denominator = int(input("Enter the denominator: "))
-    fraction = numerator / denominator
-    print(fraction)
-except ValueError:
-    print("Numerator and denominator must be valid numbers!")
-except ZeroDivisionError:
-    print("Cannot divide by zero!")
-print("Finished.")
-```
+### Questions
 
-**Questions**
-
-1. When will a ValueError occur?
-2. When will a ZeroDivisionError occur?
-3. Could you change the code to avoid the possibility of a ZeroDivisionError?
+1. When will a `ValueError` occur?
+2. When will a `ZeroDivisionError` occur?
+3. Could you change the code to avoid the possibility of a `ZeroDivisionError`?
 
 If you could figure out the answer to question 3, then **make this
 change now**.
 
 # Intermediate Exercises
 
-## Problem For You To Fill In The Blanks - Exceptions
+## Exceptions To Complete
 
 File: `exceptions_to_complete.py`
 
 Let's write a program that gets an integer from the user and does not
-crash when a non-number is entered. Copy the code below and modify/add
-the parts highlighted so that it works and prints the number at the end:
+crash when a non-number is entered. Copy the code from
 [exceptions_to_complete.py](exceptions_to_complete.py)
-
-```python
-is_finished = False
-while not is_finished:
-    try:
-        result = int(input("Enter a valid integer: "))
-        # TODO: this line
-    except:  # TODO - add the exception you want to catch after except
-        print("Please enter a valid integer.")
-print("Valid result is:", result)
-```
+and complete the program by following the `TODO` comment instructions.
 
 Note: PyCharm will probably give you a warning that `result` "may be undefined". This is safe to ignore.  
 It's not a PEP8 formatting warning, it's PyCharm thinking that you might somehow exit the loop before defining `result`
@@ -340,11 +268,11 @@ File: `files.py`
 
 The solutions for these programs are provided, to
 help you get going - or to confirm that your solution was valid.    
-Note: when you execute a Python program that contains a line like
+When you execute a Python program that contains a line like
 `open('data.txt', 'w')` the new file "data.txt" is created in the
 same folder as the Python file in your PyCharm project.
 
-Create a new file called **files.py** and do all the following *separate questions* in it:  
+Create a new file called `files.py` and do all the following *separate questions* in it:  
 Note: the intention is to give you experience using different ways to read files.  
 Make sure you're confident with:
 
@@ -354,14 +282,15 @@ Make sure you're confident with:
 - `for line in file`
 
 1. Write code that asks the user for their name, then opens a file
-   called "name.txt" and writes that name to it.
+   called "name.txt" and writes that name to it. Remember to close your file.
 
-2. Write code that opens "name.txt" and reads the name (as above)
+2. (In the same file, but as if it were a separate program) Write code that opens "name.txt" and reads the name (as
+   above)
    then prints,  
    "Your name is Bob" (or whatever the name is in the file).
 
-3. Create a text file called `numbers.txt` and save it in your `prac_02`
-   directory. Put the following three numbers on separate lines in the file
+3. Create a text file called `numbers.txt` and save it in your prac directory. Put the following three numbers on
+   separate lines in the file
    and save it:  
    17  
    42  
@@ -376,7 +305,7 @@ Make sure you're confident with:
 
 File: `password_checker.py`
 
-Download the starter code (complete with hints in the form of #TODO
+Download the starter code (complete with hints in the form of `TODO`
 comments) from [password_checker.py](password_checker.py)
 
 Write a program that asks for and validates a person's password. The
@@ -384,16 +313,18 @@ program is not for comparing a password to a known password, but
 validating the 'strength' of a new password, like you see on websites:
 enter your password, and then it tells you if it's valid (matches the
 required pattern) and re-prompts if it's not.  
-All passwords must contain *at least one each of: number*, *lowercase*
-and *uppercase* character.
+All passwords must contain **at least one** each of:
+
+- digit
+- lowercase letter
+- uppercase letter
 
 The starter code uses constants (variables at the top of the code, named
 in ALL_CAPS) to store:
 
 a. the minimum and maximum length of the password
 
-b. whether a special character (not alphabetical or numerical)
-is required
+b. whether a special character (not alphabetical or numerical) is required
 
 Remember when a program has CONSTANTS, you should use them everywhere you can so that if you change them at the top,
 this change affects the whole program as expected.  
@@ -436,51 +367,81 @@ constants (special characters are not required in this version):
 
 **Important Note:** Do not just try and Google "Python password checker"
 or something, but think about doing this step by step. We have started
-this for you with TODO comments in the code provided.
+this for you with `TODO` comments in the code provided. Follow these.
 
 - First, just check if a string has at least one lowercase character.  
-  You can do this by looping through the string (for character in
-  password:) and testing each character... count the ones that match
-  (using **character.islower()**)... At the end you know how many
+  You can do this by looping through the string (`for character in password:`) and testing each character... count the
+  ones that match
+  (using `character.islower()`)... At the end you know how many
   lowercase characters there are.
 
-- Only when you are able to count lowercase, then, in the same loop,
+- Only when you are able to count lowercase, then, **in the same loop**,
   count the uppercase characters  
   That is, **do not** try and get all the checks working before you
   know the first one works. **Do** one at a time.
 
 - *Then*, count the numbers...  
-  Test your code for each of these changes as you write them
+  Test your code for each of these changes as you write them.
 
-- For special characters, remember you can use the **in** operator to
-  see if the character is **in** another string (like a constant called
-  SPECIAL_CHARACTERS)
+- For special characters, remember you can use the `in` operator to
+  see if the character is `in` another string (like a constant called
+  `SPECIAL_CHARACTERS`)
 
-- ... keep going until you can tell how many of each kind of character
-  there are
+- ... keep going until you can tell how many of each kind of character there are.
 
 - Then put it all together and test with some different settings.
 
-**We hope this incremental approach makes sense and that you use it for
-everything you code.**
+**We hope this incremental approach makes sense and that you use it regularly.**
 
 When you have the program working, replace the inconsistent printing of
-text and variables with nice string formatting using the `str.format()`
-method.
+text and variables with nice string formatting using f-strings.
 
-## Got your GitHub on?
+## .gitignore
 
-If you haven't set up your own GitHub account, please do so now. See our
-instructions at:
-<https://github.com/CP1404/Starter/wiki/Software-Setup#github>
+![GitHub logo](../images/githublogo.png)  
+Before we're done, let's learn one more Git thing: **ignoring** files.
 
-Note that you should use a meaningful username that identifies who you
-are, and you must use your JCU email address. (If you already have a
-GitHub account with a non-JCU address, you can add your JCU email as a
-secondary email; you do not need to create a new account.)  
-Ideally, JCU staff should be able to tell who you are from your
-username. Your GitHub account is an important and professional record of
-your work. You will likely use it as an online portfolio in the future.
+You will have files in your project that you don't want stored in your
+repo (like PyCharm metadata files). You can just choose not to add them
+(as we've done until now) but they do show up as "unversioned files".   
+We'd prefer to only see files we should consider adding.
+
+![Unversioned Files window](../images/04image2.png)
+
+The solution is to add a file called `.gitignore` to your repository.  
+Note the exact spelling, including the dot at the start and no extension. On Unix-like
+systems (including Mac), the dot makes a file/folder _hidden_.
+
+`.gitignore` is just a plain text file that stores the names of any files or
+folders you want Git not to track and not to warn you about.  
+Your file will still exist in your _project_, but not in your _repository_.
+
+**Create a file called `.gitignore`** in the **root folder** (NOT inside `prac_03` or similar) of your pracs project/repo,
+and **add** it to Git.
+
+Then enter the following line (the trailing slash means it will match a directory
+but not a file with that name):
+
+    .idea/
+
+`.idea` is the directory (folder) that PyCharm stores its project metadata in.
+
+Now look at that Version Control tool window... problem solved!
+
+![No unversioned files](../images/04image3.png)
+
+Commit and Push.
+
+**Note:** if you have already committed your `.idea` folder to your
+repository, PyCharm does not seem to provide a way to stop tracking this.
+You use the Git command line (e.g., in PyCharm's Terminal, git bash, or Mac Terminal).  
+Ask your tutor if you've never done this before.  
+_Change into your project folder_ and run the following command:
+
+    git rm -r --cached .idea
+
+This removes (`rm`) recursively (`-r`) the `.idea` folder, but only from the
+index, not the local disk (`--cached`).
 
 # Practice & Extension Work
 
@@ -491,12 +452,12 @@ Use these exercises as normal practice and as ways to learn new things.
 
 ### Random Things
 
-Write 3 different versions of code to generate a random Boolean (True or False).
+Write 3 different versions of code to generate a random Boolean (`True` or `False`).
 
 ### More Random Conrad
 
 Replace the literal values for the constants at the top (like
-MAX_INCREASE) with randomly generated values (within sensible ranges)
+`MAX_INCREASE`) with randomly generated values (within sensible ranges).
 
 ### ASCII Table
 
@@ -507,8 +468,7 @@ since that is how string comparisons are made.
 Mr. Black the school teacher wants an educational program for his school
 students to explore the details of ASCII. He wants the app to allow a
 student to input a character and see the corresponding ASCII code, and
-vice versa. A sample run of the program should look like (where **g** and
-**100** are user inputs):
+vice versa. A sample run of the program should look like (where `g` and `100` are user inputs):
 
     Enter a character: g
     The ASCII code for g is 103
@@ -524,12 +484,12 @@ vice versa. A sample run of the program should look like (where **g** and
    values and use them in both your print statement and in your while
    loop condition. **That is, the numbers 33 and 127 should appear only
    once**.  
-   Use the **str.format()** method everywhere you print literals and
+   Use f-strings everywhere you print literals and
    variable values.
 
 3. Add on to this program by writing code that displays a table with
    two columns, one for the numeric ASCII value and the other for the
-   character itself. Use the string **format()** method to align the text
+   character itself. Use string formatting to align the text
    nicely in two columns. Print the values between LOWER and UPPER.  
    It should output like ("..." indicates parts that have been removed to
    save space):
@@ -586,7 +546,7 @@ Copy the code from [word_generator.py](word_generator.py)
 Things To Do:
 
 - Get the word format from the user so that they can customise it. Convert
-  it to lowercase using a str method.
+  it to lowercase using a string method.
 
 - Try and make the program more interesting. For example:
 
@@ -604,39 +564,6 @@ must have - requirements for upper/lower/numeric/special characters -
 then it should generate a password that matches.  
 Use your earlier program's checker functionality to validate the
 generated password.
-
-1. Copy your **word generator** program from last week into this
-   prac's folder. Commit.  
-   Add error-checking so that you repeatedly validate the user's input
-   until it is a valid sequence of just c's and v's. Create and use a
-   function `is_valid_format(...)` to return True or False for if
-   the word format is valid or not.  
-   **Tip:** use a for loop to iterate through each character in the
-   format sequence and return false if you see one that is not valid.
-
-2. Copy your **ascii_table.py** file from last week's prac into this
-   week's folder.  
-   Create a function called `get_number(lower, upper)` to get a
-   number, making sure that user input is numeric and within the given
-   range.  
-   You can use exceptions to check the string is a valid number.  
-   Repeatedly re-prompt for a number until a valid one is entered, then
-   return it.  
-   Example:
-
-       Enter a number (10-50):  
-       >>>abc  
-       Please enter a valid number!  
-       Enter a number (10-50):  
-       >>>75  
-       Please enter a valid number!  
-       Enter a number (10-50):  
-       >>>30
-       (then the function should return 30)
-
-   When this function works, use it in your program in place of the code
-   you used to get the number.  
-   Test it with both invalid and valid inputs.
 
 # Solutions to Selected Exercises
 
@@ -658,12 +585,16 @@ This section summarises the expectations for marking in this practical.
 - Ensure each file has the correct/exact name, including the extension.
 - Ensure your code is not commented-out (only comments should be commented).
 
+All your work must be committed and pushed to your GitHub account.
+
 Files required:
 
-- `string_formatting_examples.py`
+- Please type the URL of your GitHub practicals repository in the text box when you submit your practical on LearnJCU.
+- `string_formatting.py`
 - `randoms.py`
 - `capitalist_conrad.py`
 - `exceptions_demo.py`
 - `exceptions_to_complete.py`
 - `files.py`
 - `password_checker.py`
+- `.gitignore`
