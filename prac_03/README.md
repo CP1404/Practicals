@@ -1,4 +1,4 @@
-# Practical 03 - Strings, Files, Exceptions
+# Practical 03 - Files, Exceptions
 
 Now that you know how to use version control (Git and GitHub), please use it
 consistently for **all** your work. This should just be how you normally work now.  

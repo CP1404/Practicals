@@ -344,12 +344,17 @@ program.
 
 Write a complete Python program following the standard structure that uses a main and other functions.  
 Use a main menu following the
-[standard menu pattern](https://github.com/CP1404/Starter/wiki/Programming-Patterns#menus):
+[standard menu pattern](https://github.com/CP1404/Starter/wiki/Programming-Patterns#menus).  
 
-- get a valid score (must be 0-100 inclusive)
-- print result (copy or `import` your function from `score.py`)
-- print stars (this should print as many stars as the score)
-- quit
+The menu should have four separate options:
+
+- (G)et a valid score (must be 0-100 inclusive)
+- (P)rint result (copy or `import` your function to determine the result from `score.py`)
+- (S)how stars (this should print as many stars as the score)
+- (Q)uit
+
+Handle each of these (except quit) separately, and consider how you can reuse your functions.
+In `main()`, before the menu loop, get the valid score.  
 
 # Practice & Extension Work
 
