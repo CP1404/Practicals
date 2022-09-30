@@ -344,7 +344,7 @@ program.
 
 Write a complete Python program following the standard structure that uses a main and other functions.  
 Use a main menu following the
-[standard menu pattern](https://github.com/CP1404/Starter/wiki/Programming-Patterns#menus).  
+[standard menu pattern](https://github.com/CP1404/Starter/wiki/Programming-Patterns#menus).
 
 The menu should have four separate options:
 
@@ -355,6 +355,7 @@ The menu should have four separate options:
 
 Handle each of these (except quit) separately, and consider how you can reuse your functions.
 In `main()`, before the menu loop, get the valid score.  
+When the user quits, say some kind of "farewell".
 
 # Practice & Extension Work
 
@@ -440,7 +441,7 @@ Even if you just use the built-in tools in your IDE, you will be able to
 understand more of what's happening in Git Version Control if you know
 the command line tools. Over time, you should get experience using both.
 
-Try some of the websites and resources provided in the lecture materials.  
+Try some of the websites and resources provided in the lecture materials.
 
 You may also like to do one or more of the GitHub courses on [LinkedIn Learning](https://au.linkedin.com/learning/)
 

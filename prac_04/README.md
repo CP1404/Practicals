@@ -1,5 +1,8 @@
 # Practical 04 - Lists
 
+# Work in progress - stay tuned...
+
+
 **Please remember**, if you do not finish a practical during class time,
 it's not over... you need to complete it during the week so that you're
 all finished by the *start* of the next practical. If you need help with
