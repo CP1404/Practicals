@@ -594,18 +594,11 @@ Some solutions (not all) for practicals will be provided in the
 
 # Deliverables
 
-This section summarises the expectations for marking in this practical.
-
-- Do not zip up your files.
-- Please submit each file separately.
-- Ensure each file has the correct/exact name, including the extension.
-- Ensure your code is not commented-out (only comments should be commented).
-
-All your work must be committed and pushed to your GitHub account.
+This section summarises the expectations for marking in this practical.  
+Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.  
 
 Files required:
 
-- Please type the URL of your GitHub practicals repository in the text box when you submit your practical on LearnJCU.
 - `string_formatting.py`
 - `randoms.py`
 - `capitalist_conrad.py`
@@ -613,4 +606,4 @@ Files required:
 - `exceptions_to_complete.py`
 - `files.py`
 - `password_checker.py`
-- `.gitignore`
+- `.gitignore` on GitHub (you don't need to upload this to LearnJCU)

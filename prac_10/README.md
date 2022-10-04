@@ -303,12 +303,8 @@ E.g. for 6 rows, it is 6 + 5 + 4 + 3 + 2 + 1 = 21
 
 # Deliverables
 
-This section summarises the expectations for marking in this practical.
-
-- Do not zip up your files.
-- Please submit each file separately.
-- Ensure each file has the correct/exact name, including the extension.
-- Ensure your code is not commented-out (only comments should be commented).
+This section summarises the expectations for marking in this practical.  
+Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.  
 
 Files required:
 
