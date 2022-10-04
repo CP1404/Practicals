@@ -1,25 +1,16 @@
 # Practical 04 - Lists
 
-# Work in progress - stay tuned...
-
-
-**Please remember**, if you do not finish a practical during class time,
-it's not over... you need to complete it during the week so that you're
-all finished by the *start* of the next practical. If you need help with
-anything, bring those questions to your tutor the following
-week or ask us for help online.  
-And remember, everything you need to know has been taught in the lectures and pracs.
-
 # Warm-Up
 
-Create a Python file called `lists_warmup.py` and enter the following line:
+File: `lists_warmup.py`
+
+Create a new directory for this prac, then a new Python file called `lists_warmup.py` and enter the following line:
 
 `numbers = [3, 1, 4, 1, 5, 9, 2]`
 
-**What values do the following expressions have?**  
-Without running the code, write down your answers to these questions
-(on paper, or in your Python file as a comment),
-then use Python to see if you were correct.
+**What values do the following expressions have?**
+Without running the code, write down your answers to these questions in your Python file as a comment.  
+Then use the Python console to see if you were correct.
 
     numbers[0]
     numbers[-1]
@@ -31,18 +22,18 @@ then use Python to see if you were correct.
     "3" in numbers
     numbers + [6, 5, 3]
 
-Write Python expressions (in the same Python file) to achieve the following:
+In the same Python file, write statements to achieve the following:
 
-1. Change the first element of numbers to "ten" (the string, not the number 10)
-2. Change the last element of numbers to 1
-3. Get all the elements from numbers except the first two (slice)
-4. Check if 9 is an element of numbers
+1. Change the first element of numbers to `"ten"` (the string, not the number `10`)
+2. Change the last element of numbers to `1`
+3. Print all the elements from numbers except the first two (slice)
+4. Print whether `9` is an element of numbers
 
 # Walkthrough Example
 
 ## Calculating a List of Cumulative Totals
 
-*(Read the whole question before starting the work!)*
+*Please read the whole question before starting the work!*
 
 Accountant Annie wants you to write a program to calculate the monthly
 cumulative totals for incomes.  
@@ -50,8 +41,8 @@ The program should ask for the number of monthly incomes to enter, then
 get and store the incomes in a list.
 
 When the incomes have been entered, the program should display a list of
-the month's income next to the cumulative income at that point - for
-each month. Here's some sample output (for 5 months in this case):
+the month's income with cumulative totals.  
+Here's some sample output (for 5 months in this case):
 
     How many months? 5
     
@@ -69,62 +60,61 @@ each month. Here's some sample output (for 5 months in this case):
     Month  4 - Income: $   1205.56         Total: $   2470.96
     Month  5 - Income: $     12.35         Total: $   2483.31
 
-Have a think about how to do this before reading on...
+Think about how to do this before reading on...
 
-We need a **list** to store the incomes. How do you add values to a
-list?
+We need a **list** to store the incomes.  
+How do you add values to a list?
 
-We need a counter variable (int) for the month number (remember
-that list indexes start at 0 but we want to print from 1).
+We need a counter variable (int) for the month number.  
+Remember that list indexes start at 0, but we want to print from 1.
 
 How many loops will we need? What kind of loops?
 
-We need a cumulative total to update as we loop through the list to
-display the incomes.
+We need a cumulative total to update as we loop through the list to display the incomes.
 
-And lastly we need to format the output nicely, which we can use the
-string `format()` method for.
+And lastly we need to format the output nicely, which we can use f-strings for.
 
-**Things to do:**
+### Things to do:
 
 1. Copy the starter code from [total_income.py](total_income.py)
    (remember to use *Raw* mode) and commit it to your own prac repo:
 
 2. Study it to see how this code answers those questions so far.
 
-3. Change the line that gets the income input so that it uses the
-   string `format()` method instead of string concatenation (`+`).
+3. Change the line that gets the income input so that it uses an f-string instead of string concatenation (`+`).
 
 4. **Problem**: We have two variables that sound very similar: `incomes` and
-   `months`. They're both plural so they sound like they're both
-   lists. `incomes` is a list of incomes, so we might assume that months
+   `months`. They're both plural, so they sound like they're both
+   lists. `incomes` is a list of incomes, so we might assume that `months`
    is a list of months, but it's actually a scalar value that stores
-   the **number of months** - an int not a list.  
+   the **number of months** - an `int` not a `list`.  
    **Refactor the** `months` **variable to a better name**.  
    DO NOT just change it in 3 places or use find and replace... but
    **use refactoring** in PyCharm by clicking anywhere on the variable and
-   pressing Shift+F6 (or use the menu). Then rename it to something
+   pressing Shift+F6 (or use the context menu). Then rename it to something
    more meaningful, that sounds like a number not a list.  
-   Remember when naming **variables**, we can say, "This variable stores..." and
-   very often the completion of that statement is a good name for the variable.  
+   When naming **variables**, we can say, _"This variable stores..."_ and
+   the completion of that statement is usually a good name.  
    In this case, "This variable stores the... number of months". :)
 
-5. Run the program again with some sample data and make sure it's
-   still working well.  
+5. Run the program again with some sample data and make sure it still works.  
    This kind of "regression testing" is important. Make sure you don't break anything!
 
 6. Now, let's refactor (move) the report printing into its own
    function. Select those 6 lines and turn them into a new function
    with a good name.  
-   Remember when naming **functions**, we can say, "This function will..." and
-   very often the completion of that statement is a good name for the function.  
+   When naming **functions**, we can say, "This function will..." and
+   the completion of that statement is usually a good name for the function.  
    In this case, "This function will... print report". :)
 
 7. Test again and make sure it's all good.
 
+8. Double-check the report printing function you just wrote. Is it well-designed according to SRP? Does it take in _
+   only_ what it needs to know? Refactor it if you can make it better.
+
 ## Converting Data Strings to Lists
 
-A common way of storing data is in files, which we know means all the data is in string form (including numbers).  
+A common way of storing data is in files, which means the data is in string form. Even numbers are stored as string.  
 So, a data file storing subjects, lecturer and student numbers might look like:
 
     CP1401,Ada Lovelace,192
@@ -135,7 +125,7 @@ We can read a file like this line-by-line (`for line in file`) but we also need 
 So, `line.split(',')` would give us a list that contained the parts of this line...
 but each part would still be a string.
 
-**Things to do:**
+### Things to do:
 
 1. Copy the starter code and data file from [subject_reader.py](subject_reader.py)
    and [subject_data.txt](subject_data.txt)    
@@ -143,13 +133,12 @@ but each part would still be a string.
    Study the starter code and run it. There are comments and `print` calls to show you what's happening.
 
 2. The code reads the file data and processes it into the `parts` variable, but we want the `get_data` function
-   to `return` the data as a list of lists, like:  
+   to `return` the data as a list of lists (nested list), like:  
    `[['CP1401', 'Ada Lovelace', 192],['CP1404', 'Alan Turing', 98]]`  
-   Modify the function so it does this.
+   Modify the function so that it does this.
 
 3. Currently, main just prints `data`. Add a new function to display subject details that
-   produces something like the following:  
-   (Please don't worry about the lining up to begin with. Add that when it works.)
+   produces something like the following:
 
        CP1401 is taught by Ada Lovelace and has 192 students
        CP1404 is taught by Alan Turing  and has  98 students
@@ -158,15 +147,17 @@ but each part would still be a string.
 
 Here are some small problems to give you more practice working with
 lists.  
-Feel free to **check the solutions** for these so you can make sure you're on track.
+Feel free to **check the solutions** for these so that you can make sure you're on track.
 
-1. **Basic list operations**  
-   Create the file `list_exercises.py`  
-   Write a program that prompts the user for 5 numbers and then stores
-   each of these in a list called `numbers`.  
-   The program should then output various interesting things, as in the output below.  
-   Note that you can use the **functions** `min`, `max`, `sum` and `len`, and
-   you can use the `append` **method** to add a number to a list.
+## Basic list operations
+
+File: `list_exercises.py`
+
+Write a program that prompts the user for 5 numbers and then stores
+each of these in a list called `numbers`.  
+The program should then output information about these numbers, as in the output below.  
+Note that you can use the **functions** `min`, `max`, `sum` and `len`, and
+you can use the `append` **method** to add a number to a list.
 
        Number: 5
        Number: 20
@@ -179,34 +170,40 @@ Feel free to **check the solutions** for these so you can make sure you're on tr
        The largest number is 20
        The average of the numbers is 6.2
 
-2. **Woefully inadequate security checker**  
-   (Still in the same file)  
-   Copy the following list of usernames:
+## Woefully inadequate security checker
+
+Please use the same file, `list_exercises.py`
+
+Copy the following list of usernames:
 
        usernames = ['jimbo', 'giltson98', 'derekf', 'WhatSup', 'NicolEye', 'swei45', 'BaseInterpreterInterface', 'BaseStdIn', 'Command', 'ExecState', 'InteractiveConsole', 'InterpreterInterface', 'StartServer', 'bob'] 
 
-   Ask the user for their username. If the username is in the above
-   list of authorised users, print "Access granted", otherwise print
-   "Access denied".
+Ask the user for their username. If the username is in the above
+list of authorised users, print "Access granted", otherwise print
+"Access denied".
 
-3. **List comprehensions**  
-   Download/copy [list_comprehensions.py](list_comprehensions.py)  
-   and see how the example list comprehensions work.  
-   Write more list comprehensions (not loops) by completing the `TODO` instructions in the code.
+## List comprehensions
+
+File: `list_comprehensions.py`
+
+Download/copy [list_comprehensions.py](list_comprehensions.py)  
+and see how the example list comprehensions work.  
+Write more list comprehensions (not loops) by completing the `TODO` instructions in the code.
 
 # Do-from-scratch Exercises
 
 ## "Quick Pick" Lottery Ticket Generator
 
-Create the file `quick_picks.py`  
+File: `quick_picks.py`
+
 Write a program that asks the user how many "quick picks" they wish to
 generate. The program then generates that many lines of output. Each
 line consists of 6 random numbers between 1 and 45.  
 These values should be stored as `CONSTANTS`.
 
-- **Each line (quick pick) should not contain any repeated number.**
-
-- **Each line of numbers should be displayed in sorted (ascending) order.**
+- Each line (quick pick) should not contain any repeated number.
+- Each line of numbers should be displayed in sorted (ascending) order.
+- Note the formatting below so that numbers align neatly.
 
 **Note:** Python's random module has a `sample()` function, which
 returns a selection from a list. This is a nice way to solve this
@@ -329,7 +326,7 @@ teaching resources we have provided.
 # Deliverables
 
 This section summarises the expectations for marking in this practical.  
-Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.  
+Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.
 
 Files required:
 

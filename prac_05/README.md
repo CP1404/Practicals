@@ -1,8 +1,6 @@
 # Practical 05 - Dictionaries, Code Reviews with PRs
 
-**Did you finish last week's work? Including the practice section?**  
-If not, make sure to complete it during the week. The more you practise, the better you'll learn.   
-If you have any questions, ask your peers or tutor the following week.
+# Work in progress - stay tuned...
 
 _Your_ reason for doing this subject/degree probably has something to do with getting a job in the IT industry.
 
