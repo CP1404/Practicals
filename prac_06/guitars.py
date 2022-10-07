@@ -27,11 +27,12 @@ def main():
         # at least the __lt__ method must be defined in Guitar class
         guitars.sort()
         print("These are my guitars:")
-        for i, guitar in enumerate(guitars):
+        for i, guitar in enumerate(guitars, 1):
             vintage_string = ""
             if guitar.is_vintage():
                 vintage_string = " (vintage)"
-            print("Guitar {0}: {1.name:>20} ({1.year}), worth ${1.cost:10,.2f}{2}".format(i + 1, guitar, vintage_string))
+            # Note the use of the format method and numbered placeholders
+            print("Guitar {0}: {1.name:>20} ({1.year}), worth ${1.cost:10,.2f}{2}".format(i, guitar, vintage_string))
     else:
         print("No guitars :( Quick, go and buy one!")
 

@@ -49,11 +49,11 @@ def display_subject_details(scores_by_subject, subject_names):
     for i, scores_for_one_subject in enumerate(scores_by_subject):
         print(subject_names[i], "Scores:")
         for score in scores_for_one_subject:
-            print("{:>2}".format(score))
-        print("Max: {:3}".format(max(scores_for_one_subject)))
-        print("Min: {:3}".format(min(scores_for_one_subject)))
-        print("Avg: {:6.2f}\n".format(
-            (sum(scores_for_one_subject) / len(scores_for_one_subject))))
+            print(f"{score:>2}")
+        print(f"Max: {max(scores_for_one_subject):3}")
+        print(f"Min: {min(scores_for_one_subject):3}")
+        average = sum(scores_for_one_subject) / len(scores_for_one_subject)
+        print(f"Avg: {average:6.2f}\n")
 
 
 main()

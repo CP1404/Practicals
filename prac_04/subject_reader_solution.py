@@ -32,7 +32,10 @@ def get_data():
 def display_subjects(data):
     """Display data nicely."""
     for subject_data in data:
+        # Print using the format method and *unpacking
         print("{} is taught by {:12} and has {:3} students".format(*subject_data))
+        # Another way with f-string instead of format
+        # print(f"{subject_data[0]} is taught by {subject_data[1]:12} and has {subject_data[2]:3} students")
 
 
 main()

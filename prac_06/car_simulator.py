@@ -25,26 +25,24 @@ def main():
                 distance_to_drive = int(
                     input("How many km do you wish to drive? "))
             distance_driven = car.drive(distance_to_drive)
-            print("The car drove {}km".format(distance_driven), end="")
+            print(f"The car drove {distance_driven}km", end="")
             if car.fuel == 0:
                 print(" and ran out of fuel", end="")
             print(".")
         elif choice == "r":
-            fuel_to_add = int(input(
-                "How many units of fuel do you want to add to the car? "))
+            fuel_to_add = int(input("How many units of fuel do you want to add to the car? "))
             while fuel_to_add < 0:
                 print("Fuel amount must be >= 0")
-                fuel_to_add = int(input(
-                    "How many units of fuel do you want to add to the car? "))
+                fuel_to_add = int(input("How many units of fuel do you want to add to the car? "))
             car.add_fuel(fuel_to_add)
-            print("Added {} units of fuel.".format(fuel_to_add))
+            print(f"Added {fuel_to_add} units of fuel.")
         else:
             print("Invalid choice")
         print()
         print(car)
         print(MENU)
         choice = input("Enter your choice: ").lower()
-    print("\nGood bye {}'s driver.".format(car.name))
+    print(f"\nGood bye {car.name}'s driver.")
 
 
 main()

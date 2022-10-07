@@ -42,9 +42,7 @@ def build_pyramid():
     """Get user's pyramid size in rows and output the blocks needed."""
     # chosen_rows = 6
     chosen_rows = int(input("How many rows is your pyramid: "))
-    print("For {} rows, you need {} blocks".format(chosen_rows,
-                                                   calculate_blocks(
-                                                       chosen_rows)))
+    print(f"For {chosen_rows} rows, you need {calculate_blocks(chosen_rows)} blocks")
 
 
 build_pyramid()

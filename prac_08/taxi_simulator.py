@@ -39,18 +39,17 @@ def main():
                 distance_to_drive = float(input("Drive how far? "))
                 current_taxi.drive(distance_to_drive)
                 trip_cost = current_taxi.get_fare()
-                print("Your {} trip cost you ${:.2f}".format(current_taxi.name,
-                                                             trip_cost))
+                print(f"Your {current_taxi.name} trip cost you ${trip_cost:.2f}")
                 total_bill += trip_cost
             else:
                 print("You need to choose a taxi before you can drive")
         else:
             print("Invalid option")
-        print("Bill to date: ${:.2f}".format(total_bill))
+        print("Bill to date: ${total_bill:.2f}")
         print(MENU)
         menu_choice = input(">>> ").lower()
 
-    print("Total trip cost: ${:.2f}".format(total_bill))
+    print(f"Total trip cost: ${total_bill:.2f}")
     print("Taxis are now:")
     display_taxis(taxis)
 
@@ -58,7 +57,7 @@ def main():
 def display_taxis(taxis):
     """Display numbered list of taxis."""
     for i, taxi in enumerate(taxis):
-        print("{} - {}".format(i, taxi))
+        print(f"{i} - {taxi}")
 
 
 def run_tests():
@@ -75,8 +74,8 @@ def run_tests():
     # drive bus (input/loop is oblivious to fuel)
     distance = int(input("Drive how far? "))
     while distance > 0:
-        travelled = bus.drive(distance)
-        print("{} travelled {}".format(str(bus), travelled))
+        distance_travelled = bus.drive(distance)
+        print(f"{bus} travelled {distance_travelled}")
         distance = int(input("Drive how far? "))
 
     t = Taxi("Prius 1", 100)
@@ -93,4 +92,5 @@ def run_tests():
     print(sst, sst.get_fare())
 
 
+# run_tests()
 main()

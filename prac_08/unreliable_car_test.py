@@ -20,11 +20,13 @@ def main():
     # attempt to drive the cars many times
     # output what distance they drove
     for i in range(1, 12):
-        print("Attempting to drive {}km:".format(i))
-        print("{:12} drove {:2}km".format(good_car.name, good_car.drive(i)))
-        print("{:12} drove {:2}km".format(bad_car.name, bad_car.drive(i)))
+        print(f"Attempting to drive {i}km:")
+        print(f"{good_car.name:12} drove {good_car.drive(i):2}km")
+        print(f"{bad_car.name:12} drove {bad_car.drive(i):2}km")
 
     # print the final states of the cars
     print(good_car)
     print(bad_car)
+
+
 main()

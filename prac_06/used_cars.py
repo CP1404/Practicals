@@ -12,6 +12,8 @@ def main():
     print("odo =", my_car.odometer)
     print(my_car)
 
+    # Some different ways to print the same thing:
+    print(f"Car {my_car.fuel}, {my_car.odometer}")
     print("Car {}, {}".format(my_car.fuel, my_car.odometer))
     print("Car {self.fuel}, {self.odometer}".format(self=my_car))
 
