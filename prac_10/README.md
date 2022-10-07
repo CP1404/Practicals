@@ -169,7 +169,7 @@ routes and takes a parameter, like:
 @app.route('/greet')
 @app.route('/greet/<name>')
 def greet(name=""):
-    return "Hello {}".format(name)
+    return f"Hello {name}"
 ```
 
 Re-run and test with the URLs <http://127.0.0.1:5000/greet> and

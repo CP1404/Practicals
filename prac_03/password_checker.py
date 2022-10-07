@@ -23,8 +23,7 @@ def main():
     while not is_valid_password(password):
         print("Invalid password!")
         password = input("> ")
-    print("Your {}-character password is valid: {}".format(len(password),
-                                                           password))
+    print(f"Your {len(password)}-character password is valid: {password}")
 
 
 def is_valid_password(password):

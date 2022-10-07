@@ -29,23 +29,6 @@ how the class construct helps us combine data and functions in one entity. Ask q
 Get (remember to click Raw)
 [car.py](car.py) and [used_cars.py](used_cars.py) and add them to your PyCharm project in this week's prac folder.
 
-```python
-# used_cars.py
-from prac_06.car import Car
-
-
-def main():
-    """Demo test code to show how to use car class."""
-    my_car = Car(180)
-    my_car.drive(30)
-    print("fuel =", my_car.fuel)
-    print("odo =", my_car.odometer)
-    print(my_car)
-
-    print("Car {}, {}".format(my_car.fuel, my_car.odometer))
-    print("Car {self.fuel}, {self.odometer}".format(self=my_car))
-```
-
 Note that the import statement assumes you have your `car.py` file in a folder called `prac_06` as we suggested.
 
 Run your program and it should work.
