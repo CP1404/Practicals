@@ -39,7 +39,8 @@ or bug fixes, or in our case getting feedback.
 (When you do your work for subsequent pracs, you will use `prac_06_feedback` and so on...)
 
 It may look like nothing happened, but your local repository should now have a new branch, which currently has the same
-contents as the 'master' branch, and it is now the one that is "checked out". See this in the PyCharm footer.
+contents as the 'master' (or 'main') branch, and it is now the one that is "checked out". See this in the PyCharm
+footer.
 
 So now the work you do and commit will be in the `prac_05_feedback` branch, not `master`.  
 We will then do a pull request
@@ -266,53 +267,53 @@ Now that you've finished the coding work, it's time to request a code review...
 Our process is based on how code reviews and pull requests (PRs) happen in
 the IT industry, but is simplified to suit our teaching environment.
 
+## Request a code review
+
 1. Commit your changes, making sure to add any new files that you created today.  
    You have already created and switched to the `prac_05_feedback` branch so your commits will go only to
    this branch (not master).
 
-2. Open the repository in a web browser and you should see a notice like:
+2. Open your repository in a web browser, and you should see a notice about recent changes, with a button to create a
+   pull request:
 
-   ![GitHub recently pushed branch](../images/05image7.png)
-   Note: it's possible that your experience will be slightly different, so please try and understand what's happening -
-   don't just click things.
+   ![GitHub recently pushed branch](../images/05recent-changes.png)
+   What you see may be different, but please follow along adjusting for any differences.
 
 3. Click the green button to make a pull request from prac_05_feedback to master.  
-   If that notice doesn't appear, you can switch to the prac_05_feedback branch and click the button to create a new
-   Pull Request:  
-   ![GitHub New Pull Request](../images/05image8.png)  
-   Add a title like "Prac 5 code review request" and some detail like
-   "Please check formatting, naming and logic" (or anything else you want checked). In this description, *mention* the
-   reviewer with their GitHub username and the @ symbol - e.g. \@personname - so they will be notified (depending on
-   their GitHub preferences).
+   If that notice doesn't appear, you may need to switch to the prac_05_feedback branch first.  
+   Add a title like "Prac 5 code review request" and some detail about what you would like checked. In this description,
+   you must **mention** the
+   reviewer with their GitHub username and the @ symbol - e.g., \@personname so they will be notified.
 
    If you are the first to do this, you're finished for now... move on to the next section and come back here when you
    receive a mention to do a review for someone else...  
-   If you've already got a PR to review, then carry on with the next steps:
+   When you have someone else's PR to review, carry on with the next steps:
 
-4. (Note that you might see things a bit different, but the process is the same.)  
-   On the GitHub website, click on the notifications icon at the top:
+## Provide a code review
+
+1. On the GitHub website, click on the notifications icon at the top:
    which should have a dot on it if you've received your code review
    request. ![GitHub notification icon](../images/05image9.png)  
-   Open the PR you have been mentioned in by clicking the notification link there, e.g.:
-   ![GitHub Code review mention](../images/05image10.png)  
-   Read the request (see if there's anything specific to review), then click on Commits to see the commits:  
-   ![GitHub Code review commits](../images/05image11.png)  
+   Open the PR you have been mentioned in by clicking the notification link.  
+   Read the request (see if there's anything specific to review), then click on Commits to see the commits.
    Then click on the commit to see the code in "diff" view (old on the left, new on the right).
 
-5. Read through the code on GitHub and add line comments. Hover your mouse over the lines and look for the plus icon to
+2. Read through the code on GitHub and add line comments. Hover your mouse over the lines and look for the plus icon to
    add a comment.  
    ![GitHub add line comment](../images/05image12.png)
 
    Your job is to look for anything that could be improved including incorrect, inconsistent or non-ideal naming,
-   formatting, logic... anything relevant. Add clear explanations, suggestions or questions.  
+   formatting, logic... anything relevant. Add clear explanations, suggestions or questions.
+
    **Important:** this is not a trivial exercise. Don't just write "all good mate :)", but take your time and add
    thoughtful comments that help you and the requester to learn and improve.
 
-   At some point you will receive comments from the review you requested and you can respond to them by making changes
-   in your own code in PyCharm and replying to the comments on GitHub. Then commit your work back to GitHub, still in
+   At some point you will receive comments from the review you requested. You can respond to these by making changes
+   in your own code in PyCharm and replying to the comments on GitHub.  
+   Then commit your work back to GitHub, still in
    the prac_05_feedback branch.
 
-6. Ideally, the reviewer would re-check this new work after the updates and make more comments... then the author does
+3. Ideally, the reviewer would re-check this new work after the updates and make more comments... then the author does
    more work if need be... reviewer adds more comments... until all good (the reviewer decides when it's finished) ...
    then the reviewer would close the pull request.  
    In our simplified version of this process, you can just **Merge the pull request** now (add a comment if you want).
@@ -321,22 +322,19 @@ the IT industry, but is simplified to suit our teaching environment.
    GitHub will tell you that the prac_05_feedback branch can be deleted. You're welcome to delete it (both on GitHub and
    locally).
 
-7. Now the master branch has been updated on GitHub (remote), but not locally.  
+4. Now the master branch has been updated on GitHub (remote), but not locally.  
    In PyCharm, *switch back to the local master branch* by clicking in the footer where it shows the branch:  
    ![PyCharm change branch](../images/05image14.png)
 
-8. **Pull** your changes from master (remote) to update your local repo:
+5. **Pull** your changes from master (remote) to update your local repo:
    **Git > Pull** then click **Pull**.  
    You should now be on your local master branch and see all your up-to-date work.
 
 All done!  
-*What did you learn from this?*
 
 To read more about Pull Requests:
 [https://help.github.com/articles/using-pull-requests/](https://help.github.com/articles/using-pull-requests/)
 
-Not all done :)  
-Now on to more practice programming...
 
 # Practice & Extension Work
 
