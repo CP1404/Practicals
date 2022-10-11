@@ -52,7 +52,8 @@ Great! Let's write some code using **dictionaries**...
 
 # Walkthrough Example
 
-Copy the code from: [state_names.py](state_names.py)
+Copy the code from: [state_names.py](state_names.py)  
+Commit it as-is before you continue.
 
 This is a program that uses a 'constant' (name is ALL_CAPS) dictionary to store the Australian state abbreviations and
 names - e.g., QLD is Queensland. It asks the user for their 'short' state and prints the full state name by looking it
@@ -89,6 +90,14 @@ in the dictionary.
 5. This code uses the "Look Before You Leap" (LBYL) approach to checking `if` the key is in the dictionary. Change this
    to use exceptions and the "Easier to Ask Forgiveness than Permission" (EAFP) approach.
 
+## Are you committed?
+
+Remember to commit each "small milestone" as you work.  
+Now, and for each exercise, is a good time to commit.  
+Remember to use a good message in the imperative mood.  
+A reasonable message for the above work would be something like:  
+`Complete prac 5 state names exercise`
+
 # Intermediate Exercises
 
 File: `hex_colours.py`
@@ -108,6 +117,22 @@ Allow the user to enter names until they enter a blank one to stop the loop.
 think this is any kind of rule or pattern. Dictionaries that change would not be constants.
 
 # Do-from-scratch Exercises
+
+One very useful skill for programmers, and students, is the ability to **estimate** well.  
+**For each of the following exercises**, read the instructions then estimate how long you think the task will take to
+complete.  
+Record your estimation in the docstring at the top of your solution.  
+Set a timer when you start the work.  
+Then, when you finish, record how long it actually took in the same place.  
+Example:
+
+```python
+"""
+Word Occurrences
+Estimate: 20 minutes
+Actual:   32 minutes
+"""
+```
 
 ## Word Occurrences
 
@@ -153,6 +178,8 @@ Your output should then look something like:
       collection : 1
       fun        : 1
 
+Now that you've read the instructions, remember to record your time estimate in your docstring.
+
 ## Emails
 
 File: `emails.py`
@@ -185,28 +212,63 @@ them out.
 
 File: `wimbledon.py`
 
-Save the [wimbledon.csv](wimbledon.csv) data file provided, which is based on the Wikipedia entry
-for [Wimbledon gentlemen's singles champions](https://en.wikipedia.org/wiki/List_of_Wimbledon_gentlemen%27s_singles_champions)
+Save the [wimbledon.csv](wimbledon.csv) data file provided.  
+This is based on
+[the Wikipedia entry Wimbledon gentlemen's singles champions](https://en.wikipedia.org/wiki/List_of_Wimbledon_gentlemen%27s_singles_champions)
 .
 
-Write a program to read this file and store the data appropriately.  
-Then, print two things:
+Write a program to read this file, process the data and display processed information.
 
-- the winners in sorted order of who has won the most championships.
+- the champions and how many times they have won.
 - the countries of the champions in alphabetical order
+
+### Requirements and Hints
+
+You need to store the data in appropriate data structures.  
+The solution uses: a list of lists, a dictionary and a set.
+
+The file is not in simple ASCII format but UTF-8 with a byte order mark, or BOM.  
+You can account for this by setting the encoding like:
+
+```python
+with open(filename, "r", encoding="utf-8-sig") as in_file:
+```
+
+For the final output of countries, use the `join` method to create a single string.
+
+Use functions for each logical step/chunk of the program.  
+If you write it all in main to start with, that's fine, but then refactor it.  
+The solution uses 4 functions including `main`.
+
+### Sample output (truncated)
+
+```
+Wimbledon Champions: 
+Rod Laver 2
+...
+Lleyton Hewitt 1
+Roger Federer 8
+Rafael Nadal 2
+Novak Djokovic 7
+Andy Murray 2
+
+These 12 countries have won Wimbledon: 
+AUS, CRO, ESP, FRG, GBR, GER, NED, SRB, SUI, SWE, TCH, USA
+
+```
 
 ![GitHub Logo](../images/githublogo.png)
 
 # Code Reviews with Pull Requests
 
-Now that you've finished the main code, it's time to request a code review...
+Now that you've finished the coding work, it's time to request a code review...
 
-The following (and creating the branch earlier) is a process based on how code reviews and pull requests (PRs) happen in
-the IT industry but simplified to suit our teaching environment.
+Our process is based on how code reviews and pull requests (PRs) happen in
+the IT industry, but is simplified to suit our teaching environment.
 
 1. Commit your changes, making sure to add any new files that you created today.  
-   You have already created and switched to the 'prac_05_feedback' branch so your commits will go only to the
-   prac_05_feedback branch (not master).
+   You have already created and switched to the `prac_05_feedback` branch so your commits will go only to
+   this branch (not master).
 
 2. Open the repository in a web browser and you should see a notice like:
 
@@ -321,11 +383,13 @@ You should find that this is a very simple step for you, and your program can ha
 
 ### More Tennis
 
-Extend your Wimbledon program to display other useful information, like: 
+Extend your Wimbledon program to display other useful information, like:
 
-- Which players have lost the most finals
+- Sort the players by who has won the most championships
+- Which players have _lost_ the most finals
 - Countries listed by the number of times they've had a player in the final
 - Which were the longest matches by number of games played
+- ... anything else you find interesting
 
 Add a menu to your program to ask the user what they want to see displayed.
 
