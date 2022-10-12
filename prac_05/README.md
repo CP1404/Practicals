@@ -13,8 +13,8 @@ on some programs, then review another student's work.
 *You need to complete the tasks and do a **Pull Request** that *mentions*
 another student to get full marks for this practical.*
 
-xx Your lecturer may have provided you with details of
-[whom to mention](https://github.com/CP1404/Starter/wiki/Code-Review-Order), so please follow that.  
+Your lecturer may have provided you with [details of
+whom to mention](https://github.com/CP1404/Starter/wiki/Code-Review-Order), so please follow that.  
 Otherwise, follow your lecturer's instructions for whom to mention.
 
 **Remember**: Sometimes there will be changes to the GitHub website or PyCharm that can mean these instructions
@@ -419,7 +419,8 @@ Please follow the [submission guidelines](../README.md#submission) to ensure you
 Files required:
 
 - Practicals repository on GitHub and up-to-date (every week)
-- Pull Request that mentions another student properly
+- Pull Request (PR) that mentions another student properly
+  - Your PR URL will look something like: `https://github.com/lindsaymarkward/cp1404practicals/pull/1`
 - `state_names.py`
 - `hex_colours.py`
 - `word_occurrences.py`

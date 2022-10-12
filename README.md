@@ -49,6 +49,7 @@ Here are some reasons that you might lose marks for your practicals (and assignm
 Each prac includes a "Deliverables" section that tells you what to submit.
 
 - Most pracs require you to submit a GitHub URL. Please type the URL of your GitHub practicals repository or PR at the top of the text box when you submit your practical on LearnJCU.
+  - Your PR URL will look something like: `https://github.com/lindsaymarkward/cp1404practicals/pull/1`
 - Do not zip up your files.
 - Please attach each file separately.
 - Ensure each file has the correct/exact name, including the extension.
