@@ -9,7 +9,7 @@ Create a new directory for this prac, then a new Python file called `lists_warmu
 `numbers = [3, 1, 4, 1, 5, 9, 2]`
 
 **What values do the following expressions have?**
-Without running the code, write down your answers to these questions in your Python file as a comment.  
+Without running the code, record your answers to these questions in your Python file as a comment.  
 Then use the Python console to see if you were correct.
 
     numbers[0]

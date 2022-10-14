@@ -192,7 +192,15 @@ You should find the following methods useful: `split`, `join`, `title`.
 
 Notice the prompt to check if the name is correct: `Y/n`  
 This is used in console programs (like in Linux etc.) so you can just press Enter to accept the default of (Y)es.  
-If the user enters `n`, ask for their name.  
+Example from Linux:
+
+    > sudo apt-get upgrade
+    ...
+    After this operation, 267 kB of additional disk space will be used.
+    Do you want to continue? [Y/n] blah
+    Abort.
+
+In our program, if the user does not press Enter or `Y`, then ask for their name.  
 Once you have stored all the emails and names, just loop through the dictionary (use the `items` method) and print
 them out.
 

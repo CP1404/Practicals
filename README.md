@@ -50,8 +50,9 @@ Each prac includes a "Deliverables" section that tells you what to submit.
 
 - Most pracs require you to submit a GitHub URL. Please type the URL of your GitHub practicals repository or PR at the top of the text box when you submit your practical on LearnJCU.
   - Your PR URL will look something like: `https://github.com/lindsaymarkward/cp1404practicals/pull/1`
-- Do not zip up your files.
+- You always need to upload/attach your files in LearnJCU.
 - Please attach each file separately.
+- Do not zip up your files.
 - Ensure each file has the correct/exact name, including the extension.
 - Ensure your code is not commented-out (only comments should be commented).
 - Include a `# comment` for any parts of questions. E.g., if a question has parts `a.` and `b.` then add comments
