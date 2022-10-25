@@ -1,30 +1,38 @@
 # Practical 06 - Classes
 
-**Code Reviews help you learn!**
+## Code reviews help you learn!
+
 Each practical from now on, you will do your work in a **new branch**, then do a **pull request**, mentioning a
 new/different student to get (and give)
-a code review. So, this week, ***before*** starting the prac, create a new branch, `prac_06_feedback`.  
-See how this works? Please ask for help if you're not sure.
+a code review.
 
-When you have finished the code reviewing process, you can merge your changes to close the pull request.  
-It is desirable that everyone completes this properly with a decent code review, lessons from the experience, and
-improved code, but realistically some students will not do this. Merge your code without a review if you need to.  
-**Your** mark is not dependent on someone else's work. You must do the PR with a valid mention, but you don't need to
-rely on receiving a code review to complete your own work.
+So, every week, ***before*** starting the prac, ensure that your `master` branch is up-to-date, then create a new
+branch.
+
+You must merge your feedback branch on GitHub, then **pull** to update your local master branch.  
+Then, ensure you are on the master branch, not the feedback branch, and create a new one, `prac_06_feedback`.  
+See how this works?  
+Please ask for help if you're not sure.
+
+Expectations and marking for this prac include **doing a code review** not just requesting one.  
+Submit both your own PR URL where you **request** a review, and the PR URL of the code review you have done.  
+We understand that this means someone else must have requested that you do a review.
+
+## Classes
 
 We have seen how to work with lists, tuples and dictionaries to store and process data appropriate for those types:
 
-- `list` is useful for storing an ordered sequence of data (e.g. monthly rainfall data)
-
-- `tuple` is useful for storing fixed (not changing) data with multiple parts (e.g. date of birth)
-
-- `dict` is useful when the data has a 'mapping' relationship (e.g. name -> date of birth)
+- `list` is useful for storing an ordered sequence of data (e.g., monthly rainfall data)
+- `tuple` is useful for storing fixed (not changing) data with multiple parts (e.g., date of birth)
+- `dict` is useful when the data has a 'mapping' relationship (e.g., name -> date of birth)
 
 Very often we want to combine data into one object in a way that does not suit one of the built-in types, so we write
 our own **classes** for these situations. That's what this practical is all about. As you do the prac, pay attention to
 how the class construct helps us combine data and functions in one entity. Ask questions as needed!
 
 # Walkthrough Example
+
+First, please confirm that you are on an up-to-date feedback branch with all your previous work. OK?
 
 Get (remember to click Raw)
 [car.py](car.py) and [used_cars.py](used_cars.py) and add them to your PyCharm project in this week's prac folder.
@@ -41,27 +49,25 @@ In the used_cars program file, write one new line of code for each of the follow
 
 1. Create a new Car object called "limo" that is initialised with 100 units of fuel.
 
-2. Add 20 more units of fuel to this new car object using the add method.
+2. Add 20 more units of fuel to this new car object using the `add` method.
 
 3. Print the amount of fuel in the car.
 
-4. Attempt to drive the car 115 km using the drive method.
+4. Attempt to drive the car 115 km using the `drive` method.
 
-5. Print the car's odometer reading.
-
-6. Now add the `__str__` method to the Car class in `car.py`.  
-   Using {} string formatting, have it return a string in the following format:    
+5. Now add the `__str__` method to the Car class in `car.py`.  
+   Using f-string formatting. Make it return a string in the following format:    
    `Car, fuel=42, odometer=277`  
    Remember that you can run this method by **print**ing your car object, or passing the car object to the `str()`
    function.  
-   **Do NOT** call the method explicitly like `my_car.__str__()`
+   **Do NOT** call the method verbosely like `my_car.__str__()`
 
-7. Now add a `name` field to the Car class (in `car.py`), and adjust the `__init__` and `__str__` methods to set and
+6. Now add a `name` field to the Car class (in `car.py`), and adjust the `__init__` and `__str__` methods to set and
    display this respectively. Make the str method return the car's name instead of just "Car".  
    Now **add names** (literals) to the constructors where you create Car objects in the `used_cars.py` program.  
    Test your work and make sure you can now make and view named cars.
 
-8. In your `used_cars.py` program, just print your car object/s to make sure that the
+7In your `used_cars.py` program, print your car object/s to make sure that the
    `__str__` method is working as expected.
 
 # Intermediate Exercises
@@ -418,7 +424,12 @@ Then, next time you're ready to commit and push your practical work, try using t
 # Deliverables
 
 This section summarises the expectations for marking in this practical.  
-Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.  
+Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.
+
+This week, please submit two PR URLs:
+
+- Your own feedback branch PR with a mention of a reviewer
+- the PR that you reviewed
 
 Files required:
 
