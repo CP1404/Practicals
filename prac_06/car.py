@@ -15,11 +15,11 @@ class Car:
         """
         self.name = name
         self.fuel = fuel
-        self.odometer = 0
+        self._odometer = 0  # We name this with a leading _ as it is "non-public"
 
     def __str__(self):
         """Return a string representation of a Car object."""
-        return f"{self.name}, fuel={self.fuel}, odometer={self.odometer}"
+        return f"{self.name}, fuel={self.fuel}, odometer={self._odometer}"
 
     def add_fuel(self, amount):
         """Add amount to the car's fuel."""
@@ -36,5 +36,5 @@ class Car:
             self.fuel = 0
         else:
             self.fuel -= distance
-        self.odometer += distance
+        self._odometer += distance
         return distance
