@@ -35,7 +35,7 @@ def display_subjects(subjects):
         # Print using the format method and *unpacking
         print("{} is taught by {:12} and has {:3} students".format(*subject))
         # Another way with f-string instead of format
-        # print(f"{subject[0]} is taught by {subject_data[1]:12} and has {subject[2]:3} students")
+        # print(f"{subject[0]} is taught by {subject[1]:12} and has {subject[2]:3} students")
 
 
 main()
