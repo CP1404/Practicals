@@ -6,6 +6,8 @@ Each practical from now on, you will do your work in a **new branch**, then do a
 new/different student to get (and give)
 a code review.
 
+[Find the right student to mention here each week (different for each practical)](https://github.com/CP1404/Starter/wiki/Code-Review-Order#prac-6)
+
 So, every week, ***before*** starting the prac, ensure that your `master` branch is up-to-date, then create a new
 branch.
 
