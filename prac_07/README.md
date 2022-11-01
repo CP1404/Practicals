@@ -144,12 +144,14 @@ The first line is a header, explaining the fields for each project.
 
 Write a program in `project_management.py` to load and save a data file and use a list of `Project` objects.
 
+Load projects from the data file when the program starts and save them to it when the user quits.
+
 Your program should contain a menu with the following options:
 
 - Load projects  
-  (Load projects when the program runs and also when they choose this option)
+  (Prompt the user for a filename to load projects from and load them)
 - Save projects  
-  (Save projects when the program runs and also when they choose this option)
+  (Prompt the user for a filename to save projects to and save them)
 - Display projects  
   (Display two groups: incomplete projects; completed projects, both sorted by priority)
 - Filter projects by date  
@@ -166,7 +168,9 @@ Your program should contain a menu with the following options:
 - Use the [datetime](https://docs.python.org/3/library/datetime.html) module for the project start date
 - Write your class such that you are able to sort/compare `Project` objects based on priority order
 - Think about writing utility/helper methods in your class and main program.  
-  Think of our examples like `is_vintage` for Guitar and what you might use for a `Project`. 
+  Think of our examples like `is_vintage` for Guitar and what you might use for a `Project`.
+- Follow good design principles like SRP and DRY. Notice that there's two kinds of loading and write one function to
+  handle both. Same for saving.
 - Write good clean code (no pylint warnings) with good naming and design (as always!)
 
 Here are two suggestions to leave until last (iterative development):
@@ -185,9 +189,15 @@ date = datetime.datetime.strptime(date_string, "%d/%m/%Y")
 print(date.strftime("%d/%m/%Y"))
 ```
 
+Remember to enter your **actual time** in your module docstring.  
+Are you getting better at estimating?
+
 Is this exercise too big? Will it take too long? Probably.  
-Be systematic, thoughtful, use the patterns you've learned, copy from previous examples... be efficient.  
 Not every student can do every task in every subject. Some things are challenging and that's OK.
+
+Be systematic, thoughtful, use the patterns you've learned, copy from previous examples... be efficient.  
+Don't waste time reinventing new/different ways to do
+"standard" things like menus. Follow the patterns.
 
 ### Sample output
 
@@ -298,6 +308,17 @@ Not every student can do every task in every subject. Some things are challengin
 
 How did you go with this section from the last prac?  
 If you didn't complete all of that work, then go back and work on those exercises.
+
+## Extension
+
+"[Pickling](https://docs.python.org/3/library/pickle.html) is the process whereby a Python object hierarchy is converted
+into a byte stream, and “unpickling” is the inverse operation, whereby a byte stream (from a binary file or bytes-like
+object) is converted back into an object hierarchy."
+
+You can use Python's `pickle` module to load and save data from files without having to manually process data.  
+You essentially just "save" your variables in memory to a file.
+
+Write a new version of the Project Management Program to use pickling to load and save the data.
 
 # Deliverables
 

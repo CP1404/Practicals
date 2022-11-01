@@ -7,7 +7,7 @@ File and class example - opens/reads a file, stores in objects of custom class
 import csv
 from collections import namedtuple
 
-from prac_07.programming_language import ProgrammingLanguage
+from programming_language import ProgrammingLanguage
 
 
 def main():
@@ -15,30 +15,22 @@ def main():
     languages = []
     # Open the file for reading
     in_file = open('languages.csv', 'r')
-
     # File format is like: Language,Typing,Reflection,Year
     # 'Consume' the first line (header) - we don't need its contents
     in_file.readline()
-
     # All other lines are language data
     for line in in_file:
         # print(repr(line))  # debugging
-
         # Strip newline from end and split it into parts (CSV)
         parts = line.strip().split(',')
         # print(parts)  # debugging
-
         # Reflection is stored as a string (Yes/No) and we want a Boolean
         reflection = parts[2] == "Yes"
-
         # Construct a ProgrammingLanguage object using the elements
         # year should be an int
-        language = ProgrammingLanguage(parts[0], parts[1], reflection,
-                                       int(parts[3]))
-
+        language = ProgrammingLanguage(parts[0], parts[1], reflection, int(parts[3]))
         # Add the language we've just constructed to the list
         languages.append(language)
-
     # Close the file as soon as we've finished reading it
     in_file.close()
 
@@ -59,7 +51,6 @@ def using_csv():
     reader = csv.reader(in_file)  # use default dialect, Excel
     for row in reader:
         print(row)
-
     in_file.close()
 
 
