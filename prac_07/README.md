@@ -2,30 +2,30 @@
 
 # This prac is being updated currently. Try again shortly. Thank you...
 
-Remember to do this prac (as usual now) in a **new branch**, then do a **pull request**, mentioning
+Remember to do your work for this prac (as is usual now) in a **new branch**, then do a **pull request**, mentioning
 the correct student to get a code review.  
 Remember to check and do your code review when requested.
 
-[Find the right student to mention here each week (different for each practical)](https://github.com/CP1404/Starter/wiki/Code-Review-Order#prac-6)
+[Find the right student to mention here](https://github.com/CP1404/Starter/wiki/Code-Review-Order#prac-7)
 
 Let's run through the process again:
 
-- Ensure that your `master` branch is up-to-date: **Merge** your PR on GitHub. This updates your `master` branch to
-  contain the work from your last feedback branch.
+- Ensure that your `master` branch is up-to-date: **Merge** your PR on GitHub.
+  This updates your remote `master` branch to contain the work from your last feedback branch.
 - Locally, in PyCharm, **Checkout** your `master` branch.
-- **Pull** to update your local `master` branch. This pulls in the changes from GitHub including the merge.
+- **Pull** to update your local `master` branch.
+  This pulls in the changes from GitHub including the merge.
 - (Double-check that you are on the `master` branch, not the feedback branch.)
 - Create a new branch, `prac_07_feedback`.
 
 Expectations and marking for this prac include **doing a code review** not just requesting one.  
-Submit both your own PR URL where you **request** a review, and the PR URL of the code review you have done.  
-We understand that this means someone else must have requested that you do a review.
+See submission details at the end of the prac.
 
 # README
 
-As you will have seen, a "README" file is a common aspect of a project.  
+As you will have seen, a "README" file is a common aspect of a software project.  
 A good README usually introduces a project, provides details about the author, and includes any instructions needed for
-someone else to benefit from.  
+someone else to benefit from your project.  
 We will now add a README to our practicals repository.
 
 New > File `README.md` (exact spelling) in your practicals main/root directory (not in prac_07 or similar).  
@@ -77,8 +77,6 @@ Notice how:
 
 # Intermediate Exercises
 
-# Do-from-scratch Exercises
-
 ## More Guitars!
 
 File: `myguitars.py`
@@ -128,6 +126,52 @@ write all of your guitars to the data file `guitars.csv`.
 
 Test that this worked by opening the file, and also by running the program again to make sure it reads the new
 guitars.
+
+# Do-from-scratch Exercises
+
+## Project Management Program
+
+File: `project.py`  
+File: `project_management.py`
+
+Read the instructions, then enter a time estimate in your module docstring.
+
+The instructions for this exercise are intentionally not step-by-step.  
+We want you to use what you've learned about good program and class design, iterative development, version control,
+clean code, etc. to determine the best approach.
+
+Save the [projects.txt](projects.txt) data file to your prac folder.  
+This file contains the data for this exercise delimited by tabs.  
+The first line is a header, explaining the fields for each project.
+
+Write a program in `project_management.py` to load and save a data file and use a list of `Project` objects.
+
+Your program should contain a menu with the following options:
+
+- Load projects  
+  (Load projects when the program runs and also when they choose this option)
+- Save projects  
+  (Save projects when the program runs and also when they choose this option)
+- Add new project  
+  (Ask the user for the inputs and add a new project to memory)
+- Display projects  
+  (Display two groups: incomplete projects; completed projects, both sorted by priority)
+- Show projects by time
+  (Ask the user for a date and display all projects that start after that date)
+- Update project  
+  (Choose a project, then modify the completion % and/or priority)
+
+### Expectations:
+
+- Commit your work as you go (iterative development)
+- Some of this could be considered relatively "hard" - do the easy bits first, then add more as you go
+- Use the [datetime](https://docs.python.org/3/library/datetime.html) module for the project start date
+- Write your class such that you are able to sort/compare `Project` objects based on priority order
+- Write good clean code (no pylint warnings) with good naming and design (as always!)
+
+Is this exercise to big? Will it take too long? Probably.  
+Be systematic, thoughtful, use the patterns you've learned, copy from previous examples... be efficient.  
+Not every student can do every task in every subject. Some things are challenging.
 
 # Practice & Extension Work
 
