@@ -165,6 +165,8 @@ Your program should contain a menu with the following options:
 - Some of this could be considered relatively "hard" - do the easy bits first, then add more as you go
 - Use the [datetime](https://docs.python.org/3/library/datetime.html) module for the project start date
 - Write your class such that you are able to sort/compare `Project` objects based on priority order
+- Think about writing utility/helper methods in your class and main program.  
+  Think of our examples like `is_vintage` for Guitar and what you might use for a `Project`. 
 - Write good clean code (no pylint warnings) with good naming and design (as always!)
 
 Here are two suggestions to leave until last (iterative development):
@@ -183,7 +185,7 @@ date = datetime.datetime.strptime(date_string, "%d/%m/%Y")
 print(date.strftime("%d/%m/%Y"))
 ```
 
-Is this exercise to big? Will it take too long? Probably.  
+Is this exercise too big? Will it take too long? Probably.  
 Be systematic, thoughtful, use the patterns you've learned, copy from previous examples... be efficient.  
 Not every student can do every task in every subject. Some things are challenging and that's OK.
 
@@ -248,6 +250,40 @@ Not every student can do every task in every subject. Some things are challengin
     Mow Lawn, start: 31/10/2022, priority 3, estimate: $3.00, completion: 0%
     Practical 7, start: 01/11/2022, priority 1, estimate: $0.00, completion: 32%
     Record Music Video, start: 01/12/2022, priority 9, estimate: $250000.00, completion: 20%
+    - (L)oad projects  
+    - (S)ave projects  
+    - (D)isplay projects  
+    - (F)ilter projects by date
+    - (A)dd new project  
+    - (U)pdate project
+    - (Q)uit
+    >>> u
+    0 Build Car Park, start: 12/09/2021, priority 2, estimate: $600000.00, completion: 95%
+    1 Mow Lawn, start: 31/10/2022, priority 3, estimate: $3.00, completion: 0%
+    2 Organise Pantry, start: 20/07/2022, priority 1, estimate: $25.00, completion: 55%
+    3 Record Music Video, start: 01/12/2022, priority 9, estimate: $250000.00, completion: 20%
+    4 Read 7 Habits Book, start: 13/12/2021, priority 6, estimate: $99.00, completion: 100%
+    5 Practical 7, start: 01/11/2022, priority 1, estimate: $0.00, completion: 32%
+    Project choice: 0
+    Build Car Park, start: 12/09/2021, priority 2, estimate: $600000.00, completion: 95%
+    New Percentage: 100
+    New Priority: 3
+    - (L)oad projects  
+    - (S)ave projects  
+    - (D)isplay projects  
+    - (F)ilter projects by date
+    - (A)dd new project  
+    - (U)pdate project
+    - (Q)uit
+    >>> d
+    Incomplete projects: 
+      Organise Pantry, start: 20/07/2022, priority 1, estimate: $25.00, completion: 55%
+      Practical 7, start: 01/11/2022, priority 1, estimate: $0.00, completion: 32%
+      Mow Lawn, start: 31/10/2022, priority 3, estimate: $3.00, completion: 0%
+      Record Music Video, start: 01/12/2022, priority 9, estimate: $250000.00, completion: 20%
+    Completed projects: 
+      Build Car Park, start: 12/09/2021, priority 3, estimate: $600000.00, completion: 100%
+      Read 7 Habits Book, start: 13/12/2021, priority 6, estimate: $99.00, completion: 100%
     - (L)oad projects  
     - (S)ave projects  
     - (D)isplay projects  
