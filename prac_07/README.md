@@ -304,6 +304,15 @@ Don't waste time reinventing new/different ways to do
     >>> q
     Thank you for using custom-built project management software.
 
+# Ready for Kivy?
+
+Next week, we will be writing and running programs with the **Kivy** GUI toolkit.
+
+Please test you can run successfully [this test code](https://github.com/CP1404/Starter/blob/master/check_setup.py).
+
+If you cannot run the above code, please complete the setup this week:  
+[Follow these instructions](https://github.com/CP1404/Starter/wiki/Software-Setup)
+
 # Practice & Extension Work
 
 How did you go with this section from the last prac?  
