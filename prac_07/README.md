@@ -150,14 +150,14 @@ Your program should contain a menu with the following options:
   (Load projects when the program runs and also when they choose this option)
 - Save projects  
   (Save projects when the program runs and also when they choose this option)
-- Add new project  
-  (Ask the user for the inputs and add a new project to memory)
 - Display projects  
   (Display two groups: incomplete projects; completed projects, both sorted by priority)
-- Show projects by time
-  (Ask the user for a date and display all projects that start after that date)
+- Filter projects by date  
+  (Ask the user for a date and display only projects that start after that date, sorted by date)
+- Add new project  
+  (Ask the user for the inputs and add a new project to memory)
 - Update project  
-  (Choose a project, then modify the completion % and/or priority)
+  (Choose a project, then modify the completion % and/or priority - leave blank to retain existing values)
 
 ### Expectations:
 
@@ -167,9 +167,96 @@ Your program should contain a menu with the following options:
 - Write your class such that you are able to sort/compare `Project` objects based on priority order
 - Write good clean code (no pylint warnings) with good naming and design (as always!)
 
+Here are two suggestions to leave until last (iterative development):
+
+- Error checking. Do no error checking to start with.
+- Date formatting. Just use a string until most everything else works, then, here are some suggestions.
+
+The following code reads a string from user input, converts it to a `datetime` object and then prints it back as a
+string:
+
+```python
+import datetime
+
+date_string = input("Date (dd/mm/yyyy): ")  # e.g., "31/10/2022"
+date = datetime.datetime.strptime(date_string, "%d/%m/%Y")
+print(date.strftime("%d/%m/%Y"))
+```
+
 Is this exercise to big? Will it take too long? Probably.  
 Be systematic, thoughtful, use the patterns you've learned, copy from previous examples... be efficient.  
 Not every student can do every task in every subject. Some things are challenging and that's OK.
+
+### Sample output
+
+    - (L)oad projects  
+    - (S)ave projects  
+    - (D)isplay projects  
+    - (F)ilter projects by date
+    - (A)dd new project  
+    - (U)pdate project
+    - (Q)uit
+    >>> d
+    Incomplete projects: 
+      Organise Pantry, start: 20/07/2022, priority 1, estimate: $25.00, completion: 55%
+      Build Car Park, start: 12/09/2021, priority 2, estimate: $600000.00, completion: 95%
+      Mow Lawn, start: 31/10/2022, priority 3, estimate: $3.00, completion: 0%
+      Record Music Video, start: 01/12/2022, priority 9, estimate: $250000.00, completion: 0%
+    Completed projects: 
+      Read 7 Habits Book, start: 13/12/2021, priority 6, estimate: $99.00, completion: 100%
+    - (L)oad projects  
+    - (S)ave projects  
+    - (D)isplay projects  
+    - (F)ilter projects by date
+    - (A)dd new project  
+    - (U)pdate project
+    - (Q)uit
+    >>> u
+    0 Build Car Park, start: 12/09/2021, priority 2, estimate: $600000.00, completion: 95%
+    1 Mow Lawn, start: 31/10/2022, priority 3, estimate: $3.00, completion: 0%
+    2 Organise Pantry, start: 20/07/2022, priority 1, estimate: $25.00, completion: 55%
+    3 Record Music Video, start: 01/12/2022, priority 9, estimate: $250000.00, completion: 0%
+    4 Read 7 Habits Book, start: 13/12/2021, priority 6, estimate: $99.00, completion: 100%
+    Project choice: 3
+    Record Music Video, start: 01/12/2022, priority 9, estimate: $250000.00, completion: 0%
+    New Percentage: 20
+    New Priority: 
+    - (L)oad projects  
+    - (S)ave projects  
+    - (D)isplay projects  
+    - (F)ilter projects by date
+    - (A)dd new project  
+    - (U)pdate project
+    - (Q)uit
+    >>> a
+    Let's add a new project
+    Name: Practical 7
+    Start date (dd/mm/yy): 1/11/2022
+    Priority: 1
+    Cost estimate: $0
+    Percent complete: 32
+    - (L)oad projects  
+    - (S)ave projects  
+    - (D)isplay projects  
+    - (F)ilter projects by date
+    - (A)dd new project  
+    - (U)pdate project
+    - (Q)uit
+    >>> f
+    Show projects that start after date (dd/mm/yy): 20/7/2022
+    Organise Pantry, start: 20/07/2022, priority 1, estimate: $25.00, completion: 55%
+    Mow Lawn, start: 31/10/2022, priority 3, estimate: $3.00, completion: 0%
+    Practical 7, start: 01/11/2022, priority 1, estimate: $0.00, completion: 32%
+    Record Music Video, start: 01/12/2022, priority 9, estimate: $250000.00, completion: 20%
+    - (L)oad projects  
+    - (S)ave projects  
+    - (D)isplay projects  
+    - (F)ilter projects by date
+    - (A)dd new project  
+    - (U)pdate project
+    - (Q)uit
+    >>> q
+    Thank you for using custom-built project management software.
 
 # Practice & Extension Work
 
