@@ -1,4 +1,4 @@
-# Practical 10 - Testing, API, Flask
+# Practical 10 - Databases, APIs, Flask
 
 Don't forget to make a new branch, `prac_10_feedback` _before_ you start!  
 You will put some files into that branch for your normal practicals project/repo, but you will also have a separate

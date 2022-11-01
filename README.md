@@ -13,10 +13,10 @@ Some code files contain `# TODO` comments, which are part of the instructions fo
 * [Practical 04 - Lists](./prac_04)
 * [Practical 05 - Dictionaries, Code Reviews with PRs](./prac_05)
 * [Practical 06 - Classes](./prac_06)
-* [Practical 07 - Kivy](./prac_07)
-* [Practical 08 - Inheritance](./prac_08)
-* [Practical 09 - OS](./prac_09)
-* [Practical 10 - Testing, API, Flask](./prac_10)
+* [Practical 07 - Classes 2](./prac_08)
+* [Practical 08 - Kivy](./prac_09)
+* [Practical 09 - Inheritance](./prac_os)
+* [Practical 10 - Databases, APIs, Flask](./prac_10)
 
 ## Practical Marking
 

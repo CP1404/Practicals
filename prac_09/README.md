@@ -1,201 +1,565 @@
-# Practical 09 - OS
+# Practical 09 - Inheritance
 
-Don't forget to make a new branch, `prac_09_feedback` _before_ you start!
+Don't forget to make a new branch (starting from `master`), `prac_09_feedback` _before_ you start!
 
-Today we will explore Python as an automation tool to help us automate repetitive tasks with files and the **os**
-module.
+In this practical, you will work on extending classes with inheritance.  
+There's a lot of _teaching_ in this prac, so make sure you read carefully and do a lot of _learning!_
+
+# Inheritance
+
+We recently started making our own classes and objects:
+
+- A **class** is a blueprint (the code) for creating an **object**
+  (an object is also known as an **instance**).
+
+- A class is a new **type**.
+
+- **Objects** store data in instance variables (`self.something`) and provide access to the **methods** (functions)
+  defined in the class.
+
+Inheritance is (only) appropriate where you are building a more specialised version of a class. Inheritance can be
+described as an "is a" relationship.  
+When class Y inherits from class X, it should always be the case that an
+**is a** relationship holds (Y "is a" X).
+
+For example, a Tree is a Plant, but it's not true to say a Cat is a Dog. So, it is appropriate for a **Tree** class to
+inherit from a **Plant**
+class, but not appropriate for a **Cat** class to inherit from a **Dog**
+class. Both Cat and Dog could inherit from **Animal**.
 
 # Walkthrough Example
 
-Download all the files from this prac folder.
+In a previous practical, we looked at a **Car** class. This time we will see that we can extend the Car class to make
+a **Taxi** class, which is a more specialised version of a Car.
 
-- Extract the **Lyrics.zip** file so that it's in a subdirectory called `Lyrics` inside this prac folder.
+You can use your car from last week, or the finished version in the solutions. Either way, copy your `car.py` file to
+your `prac_09` folder.
 
-- Open the directory Lyrics/Christmas so that you can see the files listed in your file browser or PyCharm  
-  (but note that PyCharm doesn't always refresh as often as you might like).
+Download [taxi.py](taxi.py)
 
-- Open the [os_demos.py](os_demos.py) file, read the code and comments to see what it's demoing, then run it.  
-  Notice that it imports the `os` and `shutil` modules for working with the operating system and files.
+Read the code and note that the **Taxi** class *extends* the **Car**
+class in two ways:
 
-## Modifications:
+- it adds new attributes (**`price_per_km`**,
+  **`current_fare_distance`**) and methods (**`get_fare`**,
+  **`start_fare`**)
 
-(Follow the TODO comments in the code.)
+- it *overrides* methods (**`drive`**, **`__init__`** and
+  **`__str__`**) to take account of the characteristics of a Taxi
 
-1. Run the program again, and you should get a crash due to trying to create an existing directory.  
-   Use exception handling to avoid this crash. Remember that you can read the crash message to see what exception you
-   need to handle.
+Notice that the `drive` method still works the same way in terms of its ***interface*** - it takes in a distance
+parameter, and it returns the distance driven. This is important for *polymorphism* - so we can treat all subclasses
+of **Car** in the same way - we `drive()` a taxi the same way we `drive()` any other car.
 
-2. There are two commented-out options. Try each, one at a time:  
-   **Note:** renaming or moving files changes their names (amazing!), so to re-run your code with the files in their
-   original state, you can just re-copy them from the Lyrics.zip file provided.
+## Test Taxi
 
-   a.  **rename** files (in same directory) using `os.rename()`
+File: `taxi_test.py`
 
-   b.  **move** files to a subdirectory with the new name using
-   `shutil.move()`
+Create a separate file to try out your taxi.  
+Generally we don't write client code in class files, but rather we use separate files.
 
-3. Restore your original files (extract the zip file again).  
-   The last part of this file demonstrates the `os.walk()` function that "walks"
-   through all subdirectories returning useful information about the contents...  
-   Comment out the call to `main()` and uncomment `demo_walk()`.  
-   Run the code to see how walk works.
+Write lines of code for each of the following (**hint**: use the methods available in the Taxi class):
 
-4. Add a loop that renames all the files in `filenames`.  
-   This should rename every file in every subdirectory... but
-   (depending on how you did this...) you will likely find that you get an error like
+1. Create a new taxi with name "Prius 1", 100 units of fuel and price of $1.23/km
 
-       FileNotFoundError: [Errno 2] No such file or directory: 'MySaviourLives.txt' -> 'MySaviourLives.txt'
+2. Drive the taxi 40 km
 
-   This is because `os.walk()` does NOT actually change into the directories. So, we can either do that manually or in
-   our rename, we can use the path.
+3. Print the taxi's details and the current fare
 
-5. To get a file reference that `os.rename()` can work correctly with, add the path like:
-   `os.path.join(directory_name, filename)`  
-   First print this, so you can see what it looks like, then change the code so you actually rename the file - making
-   sure to add the path in both the `src` and `dst` parameters for `os.rename()`.
+4. Restart the meter (start a new fare) and then drive the car 100 km
+
+5. Print the details and the current fare
+
+## Class Variables
+
+_Are you reading carefully and learning? Don't skim this!_
+
+Depending on what kind of system you're modelling with **Taxi**, it might make sense that all taxis have the same price
+per km. (We don't want to get into one taxi and pay $2.20, then find another one was only $1.20.) So, we can use a **
+class variable**, which is a variable that is ***shared*** between all instances of that class. You define class
+variables directly _after_ the class header line and _before_ any method definitions.
+
+1. Add the **class variable** `price_per_km` to the Taxi class (in
+   `taxi.py`) and set it to 1.23
+
+2. Change the **`__init__`** function so that it does *not* take in the price_per_km, which means it doesn't need to set
+   self.price_per_km because that's already set by the class variable.
+
+   ```python
+   class Taxi(Car):
+       """Specialised version of a Car that includes fare costs."""
+       price_per_km = 1.23
+   
+       def __init__(self, name, fuel):
+           ...
+   ```
+3. Change any client code (where you create your Taxi objects)
+   so that you don't pass in this value.
+
+4. Test your code and see if you get the same output (you should).
+
+   Note: when using class variables, you can either:
+
+    - refer to the variable as `Taxi.price_per_km`, which explicitly refers to the class variable shared by any Taxi
+      instances, or
+
+    - use `self.price_per_km`, which refers to the instance variable that may or may not exist... Python looks for an
+      instance variable in the object and if it doesn't find it there, then it looks up to the class variable, then it
+      looks up to the parent class...  
+      *This is usually preferred*, because it allows you to update the value for each object if needed (as we will see
+      later with the SilverServiceTaxi).
 
 # Intermediate Exercises
 
-File: `cleanup_files.py`
+## UnreliableCar
 
-_(Please read this whole section before starting work on it!)_  
-**Note:** Set yourself a 30-minute timer and if you get stuck on this, just save your work and come back to it later.  
-The next (do-from-scratch) exercises are another great example of os automation based on a real-world need, so get
-moving on them.
+File: `unreliable_car.py` and `unreliable_car_test.py`
 
-The files we're working with today are from a **real-world example**. Lindsay uses words projection software at church
-that takes these files. The lyrics files had all kinds of different naming formats, and he wanted them to follow the
-same format.  
-So, Lindsay wrote a Python script to rename the files to be consistent. This is another example of using programming to
-automate tasks in your everyday life! Nice :)  
-Now it's your turn to write this script...
+Let's make our own derived class for an **UnreliableCar** that inherits from **Car**. Write Python code for this class
+in a new file,
+`unreliable_car.py`, and write some testing code in
+`unreliable_car_test.py` to verify each method.
 
-This program will be very similar to the walkthrough we just did, but the focus is now on the renaming part:  
-the `get_fixed_filename()` function.
+**UnreliableCar** has an additional attribute:
 
-- *Commit your work.*  
-  Copy the code from os_demos.py to a new file called
-  `cleanup_files.py`.  
-  Clean up (remove) any commented-out code or TODOs/comments from the demo that you don't need in this program.  
-  *Commit your work.*
+- **reliability**: a **float** between 0 and 100, that represents the percentage chance that the `drive` method will
+  actually drive the car
 
-- Notice that the existing files have been named inconsistently, e.g., some are PascalCase like `SilentNight.txt` and
-  some have spaces like
-  `Away In A Manger.txt` or are not in Title Case like  
-  `O little town of bethlehem.TXT`  
-  Write code to make them consistently use the format like
-  `Away_In_A_Manger.txt`, `Silent_Night.txt` and
-  `O_Little_Town_Of_Bethlehem.txt` respectively:
+**UnreliableCar** should override the following methods:
 
-|**Existing Filename (inconsistent format)**  | **Desired Filename (consistent)**
-  |---------------------------------------------| ------------------------------------
-|Away In A Manger.txt                         | Away_In_A_Manger.txt
-|SilentNight.txt                              | Silent_Night.txt
-|O little town of bethlehem.TXT               | O_Little_Town_Of_Bethlehem.txt
-|ItIsWell (oh my soul).txt                    | It_Is_Well_(Oh_My_Soul).txt
+- **`__init__(self, name, fuel, reliability)`**
 
-### Important
+    - call the Car's version of **`__init__`**, and then set the reliability to the value passed in
 
-Do NOT try and solve all of these cases at once. Rather, work up to them, building the **`get_fixed_filename()`**
-function that returns a fixed filename. Test just printing the names before renaming the files. When it works for one
-case, make it handle another one and so on... iterative development!
+- **`drive(self, distance)`**
 
-### Hints
+    - generate a random number between 0 and 100, and only drive the car if that number is less than the car's
+      reliability.  
+      Don't store the random number! It's not a self/instance variable that you want to remember, it's a temporary value
+      you generate and use once, every time you call `drive()`.
 
-- You will **not** find simple string methods like **`replace()`** that can solve all of this problem for you.
+    - **Super Important Note:** the drive method in the base class
+      (Car) ***always*** returns the distance driven, so your derived class
+      (UnreliableCar) must also return a distance. You must match the "signature" of any method you override.  
+      This is true, even if your UnreliableCar drives 0 km.
 
-- A good approach would be to **step through each character with its index** with **`enumerate()`** and consider how it
-  relates to the character before or after it, since the context is what matters here.  
-  E.g., if the current character **`islower()`** and the next character
-  **`isupper()`** such as with the "tN" in "SilentNight"), then you know you need to put '_' between them.
+## SilverServiceTaxi
 
-- You can start with an empty string `""` and build it using string concatenation step-by-step as you determine what the
-  next character should be. E.g. for the above case, you can add the 't', then the
-  '_' to your new filename string, then move on to the next iteration in the for loop where you will add the 'N'.
+File: `silver_service_taxi.py`
+
+Now create a new class for a **SilverServiceTaxi** that inherits from
+**Taxi**. Do you see the pattern for naming class files?
+
+So **SilverServiceTaxi** *is a* **Taxi** and **Taxi** *is a* **Car**
+(which means **SilverServiceTaxi** is a **Car**)
+
+This allows you to have a different effective `price_per_km`, based on the fanciness of the **SilverServiceTaxi**.
+
+1. Add a new *attribute*, `fanciness`, which is a `float` that scales (multiplies) the `price_per_km`. Pass
+   the `fanciness` value into the constructor and multiply
+   `self.price_per_km` by it.  
+   Note that here we can get the initial base price using
+   `Taxi.price_per_km`, then customise our object's instance variable,
+   `self.price_per_km`. So, if the class variable (for all taxis) goes up, the price change is ***inherited*** by all
+   SilverServiceTaxis.  
+   If you're not sure about this, please ask! Don't go on without "getting it".
+
+2. **SilverServiceTaxis** also have an extra charge for each new fare, so add a `flagfall` *class variable* set to
+   $4.50.
+
+3. Add or override whatever method you need to (think about it...) in order to calculate the fare.
+
+4. Create an overridden `__str__` method so that you can add the `flagfall`
+   to the end. E.g., for a Hummer with a fanciness of 4, it should display like:
+
+       Hummer, fuel=200, odo=0, 0km on current fare, $4.92/km plus flagfall of $4.50
+
+   Note that you can reuse the parent class's `__str__` method like:
+   `super().__str__()`
+
+5. Write some test code in a file called `silver_service_taxi_test.py` to see that your
+   **SilverServiceTaxi** calculates fares correctly.  
+   For an 18 km trip in a **SilverServiceTaxi** with fanciness of 2, the fare should be $48.78 (yikes!)
+
+Let's stop and think about what we've done and (hopefully) learned so far:
+
+- We can create new classes by *extending* existing ones - e.g. Taxi extends Car
+
+- Derived (child) classes inherit all the attributes and behaviours of their base (parent) classes - e.g. we do not need
+  to write a new
+  **`add_fuel()`** method for Taxi because it comes from Car already, and we don't need anything different in a taxi.
+
+- We can *override* (customise) derived classes by modifying existing methods so that they do different (but similar)
+  things.  
+  We should always make sure that the signature of overridden methods matches the base class - e.g., the **`drive()`**
+  method in Taxi also calculates a fare, and in UnreliableCar it may or may not drive any distance... but in ***all***
+  cases, the method takes in a distance value and returns the distance driven.
+
+Here is what the **class hierarchy** looks like now for **Car** and its related classes (remember you can "read" these
+arrows like "Taxi *is a* Car"):
+
+![Car class hierarchy diagram](../images/09image1.png)
+
+## Inheriting Enhancements
+
+One more thing before we move on... (_Are you still reading/learning carefully?_)
+
+It's important to see how using inheritance actually benefits the systems we model with classes.  
+Currently, all Taxis (including SilverServiceTaxis and any other derived classes we might make) calculate the fare
+as `price_per_km * current_fare_distance`, and you can get results like $48.78 in the example above...
+
+What if we decided that all taxis should have final fares that are rounded to the nearest 10c (so that $48.78 would
+change to $48.80)?  
+Well, we should only need to make this change to the base Taxi class, and it will be inherited by
+SilverServiceTaxis... *but only if* we have called **`super().get_fare()`** and not rewritten the calculation in our new
+classes. That is, we should only need to change one place because we should have practised the "Don't Repeat Yourself" (
+DRY) principle.  
+If we didn't call the super method, but just repeated the calculation, then changing the base class will *not* change
+the derived class!
+Make sense? Let's do it.
+
+- First, run your silver_service_taxi_test program from above and make sure your output produces something that's not
+  already a multiple of 10c (such as the example above that produces $48.78).
+
+- Now update the **`get_fare()`** method in Taxi and make it use the
+  **`round()`** function to return a value rounded to 10c.
+
+- Re-run your test, and you should get a result rounded to 10c (e.g., $48.80). If it worked, you should see that we only
+  changed Taxi and that enhancement was inherited by SilverServiceTaxi. Nice :)
+
+### Yet Another Important Note About Functions
+
+**`get_fare()`** must return a *number*, not a *string*!  
+Even though we may want to format the result like currency (e.g. `"$48.80"`), that's not this function's single
+responsibility. What if we wanted to add fares together? They must be numbers. Do your string formatting *outside* this
+function.
+
+*Keep going!*
 
 # Do-from-scratch Exercises
 
-- Extract the `FilesToSort.zip` file, which contains files with various names and extensions.
+File: `taxi_simulator.py`
 
-- Write code to sort these files into subdirectories for each extension.
+Write a taxi simulator program that uses your **Taxi** and
+**SilverServiceTaxi** classes.
 
-- **Note:** The provided files are samples. Your solutions must be able to work for any files with any extensions.  
-  Do not hard-code any file names or extensions.
+Each time, until they quit:
 
-## Version 1
+- The user should be able to choose froma *list* of available taxis,
 
-File: `sort_files_1.py`
+- They can choose how far they want to drive,
 
-Use **`os.mkdir()`** to create a directory with for each new extension that your program finds and
-use **`shutil.move()`** to move files into these new directories.  
-E.g. move all files ending in ".txt" to a directory you create called
-"txt", and all ".doc" files to a "doc" directory.
+- At the end of each trip, show them the trip cost and add it to their bill.
 
-Do not try and create directories you've already made.
+Note: Use a list of taxi objects, which you create in main and pass to functions that need it. When you choose the taxi
+object, your code will call the `drive()` method on that object, and it will use the right method for that class... so
+from the client code point of view, driving a taxi will work the same whether the object is a Taxi or a
+SilverServiceTaxi, but the results (including the price) depend on the class.  
+This is ***polymorphism***.
 
-**Tip:** You might like to add the extensions to a list or a **set** as you process the files.
+Another note: In this program, there's the chance the user will  
+drive a taxi before choosing one. This shouldn't crash.  
+A good option is to maintain something like a `current_taxi`... but what will the initial value of this variable be?  
+When you want a default starting value for an object, you use `None`:
 
-|**Before:**                                   | **After:**
-| ---------------------------------------------| ---------------------------------------------
-|![FilesToSort before](../images/09image1.png) | ![FilesToSort after](../images/09image2.png)
+    current_taxi = None
 
-## Version 2
+The taxis used in the example below would be like:
 
-File: `sort_files_2.py`
+    taxis = [Taxi("Prius", 100), SilverServiceTaxi("Limo", 100, 2), SilverServiceTaxi("Hummer", 200, 4)]
 
-Let the user categorise different extensions as the program encounters these, then move them all into those
-subdirectories. E.g.
+### Sample Output (to show you how to write your program):
 
-- one user might want a category "docs" containing all .doc, .docx, .rtf, .txt... and an "images" folder containing
-  .jpg, .gif, .png.
-
-- another user might want a category "office" containing .doc, .docx, .xls, but put the .txt files in a "text" category
-  directory.
-
-**Tip:** Add the extensions to a **dictionary** and make a list of the categories as you process the files.
-
-**Note:** there are two parts to this - **categorising the extensions**
-and **moving the files**. You should approach them as separate steps in your iterative problem-solving process, but the
-final resulting code should be efficient
-(e.g., don't use unnecessary loops).
-
-For one _example_ run with these files (user input in **bold**):
-
-<pre>
-What category would you like to sort doc files into? <strong>Docs</strong>
-What category would you like to sort docx files into? <strong>Docs</strong>
-What category would you like to sort png files into? <strong>Images</strong>
-What category would you like to sort gif files into? <strong>Images</strong>
-What category would you like to sort txt files into? <strong>Docs</strong>
-What category would you like to sort xls files into? <strong>Spreadsheets</strong>
-What category would you like to sort xlsx files into? <strong>Spreadsheets</strong>
-What category would you like to sort jpg files into? <strong>Images</strong>
-</pre>
-
-|**Before:**                                   | **After:**
-| ---------------------------------------------| ---------------------------------------------
-|![FilesToSort before](../images/09image1.png) | ![FilesToSort after](../images/09image3.png)
+    Let's drive!
+    q)uit, c)hoose taxi, d)rive
+    >>> d
+    You need to choose a taxi before you can drive
+    Bill to date: $0.00
+    q)uit, c)hoose taxi, d)rive
+    >>> P
+    Invalid option
+    Bill to date: $0.00
+    q)uit, c)hoose taxi, d)rive
+    >>> c
+    Taxis available: 
+    0 - Prius, fuel=100, odometer=0, 0km on current fare, $1.23/km
+    1 - Limo, fuel=100, odometer=0, 0km on current fare, $2.46/km plus flagfall of $4.50
+    2 - Hummer, fuel=200, odometer=0, 0km on current fare, $4.92/km plus flagfall of $4.50
+    Choose taxi: 3
+    Invalid taxi choice
+    Bill to date: $0.00
+    q)uit, c)hoose taxi, d)rive
+    >>> c
+    Taxis available: 
+    0 - Prius, fuel=100, odometer=0, 0km on current fare, $1.23/km
+    1 - Limo, fuel=100, odometer=0, 0km on current fare, $2.46/km plus flagfall of $4.50
+    2 - Hummer, fuel=200, odometer=0, 0km on current fare, $4.92/km plus flagfall of $4.50
+    Choose taxi: 0
+    Bill to date: $0.00
+    q)uit, c)hoose taxi, d)rive
+    >>> d
+    Drive how far? 333
+    Your Prius trip cost you $123.00
+    Bill to date: $123.00
+    q)uit, c)hoose taxi, d)rive
+    >>> c
+    Taxis available: 
+    0 - Prius, fuel=0, odometer=100, 100km on current fare, $1.23/km
+    1 - Limo, fuel=100, odometer=0, 0km on current fare, $2.46/km plus flagfall of $4.50
+    2 - Hummer, fuel=200, odometer=0, 0km on current fare, $4.92/km plus flagfall of $4.50
+    Choose taxi: 1
+    Bill to date: $123.00
+    q)uit, c)hoose taxi, d)rive
+    >>> d
+    Drive how far? 60
+    Your Limo trip cost you $152.10
+    Bill to date: $275.10
+    q)uit, c)hoose taxi, d)rive
+    >>> c
+    Taxis available: 
+    0 - Prius, fuel=0, odometer=100, 100km on current fare, $1.23/km
+    1 - Limo, fuel=40.0, odometer=60.0, 60.0km on current fare, $2.46/km plus flagfall of $4.50
+    2 - Hummer, fuel=200, odometer=0, 0km on current fare, $4.92/km plus flagfall of $4.50
+    Choose taxi: 2
+    Bill to date: $275.10
+    q)uit, c)hoose taxi, d)rive
+    >>> d
+    Drive how far? 61
+    Your Hummer trip cost you $304.60
+    Bill to date: $579.70
+    q)uit, c)hoose taxi, d)rive
+    >>> c
+    Taxis available: 
+    0 - Prius, fuel=0, odometer=100, 100km on current fare, $1.23/km
+    1 - Limo, fuel=40.0, odometer=60.0, 60.0km on current fare, $2.46/km plus flagfall of $4.50
+    2 - Hummer, fuel=139.0, odometer=61.0, 61.0km on current fare, $4.92/km plus flagfall of $4.50
+    Choose taxi: 1
+    Bill to date: $579.70
+    q)uit, c)hoose taxi, d)rive
+    >>> d
+    Drive how far? 59
+    Your Limo trip cost you $102.90
+    Bill to date: $682.60
+    q)uit, c)hoose taxi, d)rive
+    >>> Q
+    Total trip cost: $682.60
+    Taxis are now:
+    0 - Prius, fuel=0, odometer=100, 100km on current fare, $1.23/km
+    1 - Limo, fuel=0, odometer=100.0, 40.0km on current fare, $2.46/km plus flagfall of $4.50
+    2 - Hummer, fuel=139.0, odometer=61.0, 61.0km on current fare, $4.92/km plus flagfall of $4.50
 
 # Practice & Extension Work
 
-## Practice
+## First, a Walkthrough Example - Files & Classes
 
-1. **Check files for missing data**  
-   The song lyric text files should all have copyright information in them on a line that starts with **.i** like:
+This example program loads a number of "Programming Languages" from a file and saves them in objects using the class we
+wrote recently.
 
-       .i (c) 2011 Thankyou Music (Admin. by Crossroad Distributors Pty. Ltd.)
+Download 3 files from this folder. For now let's start with:
 
-   Write a program that reports the names and directories of all the files that are missing this line.
+- [language_file_reader.py](language_file_reader.py) (the client program)
 
-## Extension
+- [programming_language.py](programming_language.py) (the class)
 
-1. Write a program to find certain kinds of files on your hard drive.  
-   E.g., you could look for files:
+- [languages.csv](languages.csv) (the data file)
 
-    - over or within a certain size
-    - with a certain extension
-    - containing certain text
-    - etc.
+Read the comments and the code in `language_file_reader.py` to see how it works.
+
+Notice how:
+
+- the file is opened and closed
+
+- `readline()` is used to read (only) the first line, which just ignores the header in the CSV file
+
+- a for loop is used to read the rest of the file
+
+- reflection is stored in the file as a string, but this client code converts it to a Boolean ready for the class. It's
+  not the class's job to do this conversion but the client's.
+
+- There are also a few other versions included that use Python's `csv`
+  module and a `namedtuple`. Read through them if you're interested!
+
+## Modifications
+
+1. Add another language to the file - and make sure it still works properly. Use data from
+   [this Programming Language Comparison page](http://www.jvoegele.com/software/langcomp.html)
+
+2. Add another attribute to your ProgrammingLanguage class: **Pointer Arithmetic** (see that page or search to find is
+   the language has it or not).  
+   This will take a bit of effort, as you need to update the class and any code that uses it. You also need to add the
+   correct values to your data file (it's similar to reflection).
+
+## More Guitars!
+
+Open the file: `guitars.csv`  
+This file contains lines like:
+
+`Fender Stratocaster,2014,765.4`
+
+So, the format/protocol is:
+
+`Name,Year,Cost`
+
+1. Write a program to read all of these guitars in and store them in a list of tuples.  
+   Display all the tuples using a loop.
+
+2. Write another version (save a new copy) that stores them in a list of Guitar objects, using the class that you wrote
+   in practical 6 recently.  
+   Display these using a loop.
+
+   Now **sort** the list by year (oldest to newest) and display them in sorted order...  
+   How do you do that? Sorting requires that Python knows how to compare objects...  
+   If we just use:
+
+   `guitars.sort()`
+
+   We get an error like:
+
+   `TypeError: unorderable types: Guitar() < Guitar()`
+
+   So we need to define how the `<` operator should work.  
+   Do you remember how?
+
+   Write code for the `__lt__` (less than) method. You should be able to figure this out...  
+   Then test and see if it sorts correctly now.
+
+3. Save a copy of this program as `myguitars.py` then modify this version so that it does the above, then asks the user
+   to enter their new guitars (just like your practical 6 code).  
+   Store these in your list of guitar objects, then  
+   write all of your guitars to the file `myguitars.csv`.  
+   Test that this worked by opening the file, and also by running the program again to make sure it reads the new
+   guitars.
+
+## Inheritance
+
+### Cars
+
+Create more kinds of cars that make sense to you and test them, e.g. select from:
+
+a.  **GasGussler** - uses more fuel than it should
+
+b.  **Bomb** - doesn't actually move when you drive it, but still uses the fuel
+
+c.  **EcoTaxi** - uses half the fuel and gives a percentage discount on the price per fare
+
+d.  [CrazyTaxi](https://en.wikipedia.org/wiki/Crazy_Taxi)
+
+### Trees
+
+The focus of this exercise is on inheritance - looking for what methods need to be changed (overridden) in the derived
+classes. Don't get hung up on the details of the methods...
+
+Trees: some grow wide, some grow thin; some grow fast, some grow slow.
+
+**Open these two files:** [trees.py](trees.py) and [trees_tester.py](trees_tester.py)
+
+trees.py contains the **Tree** class. A Tree object has a
+**trunk_height**, and a number of **leaves**.  
+The **`__str__`** method of **Tree** returns a string representation of the **Tree**. For example, if **trunk_height**
+is 2, and leaves is 8, the Tree would look like
+
+    ##
+    ###
+    ###
+     |
+     |
+
+The size of a **Tree** can be changed by calling the **grow** method, which takes in **sunlight** and **water** and
+randomly increases the
+**trunk_height** and leaves.
+
+Not all Trees look the same or grow the same, however, so we're going to build specialised classes to represent
+different types of trees. To achieve this, we're going to use inheritance.
+
+There are already two completed subclasses of **Tree** in trees.py:
+
+**EvenTree**
+Even trees only grow leaves in multiples of three, that way the leaves always appear in clean rows.
+
+**UpsideDownTree**
+Upside-down trees are drawn upside-down.
+
+`trees_tester.py` grows **seven** types of trees. Try running it now. The final four types of trees are subclasses of **
+Tree** for you to complete:
+
+1. **WideTree**
+
+   a. Wide trees grow their leaves in rows of six, and have a trunk that is twice as wide as normal trees
+
+   b. You will need to redefine the `get_ascii_trunk` and
+   `get_ascii_leaves` methods
+
+   c. Example drawing:
+
+         ####
+         ######
+         ######
+           ||
+           ||
+
+2. **QuickTree**
+
+   a. Quick trees grow much quicker than normal trees - their leaves always increase by however much sunlight falls on
+   them, and their trunks always grow by however much water they receive.
+
+   b. You will need to redefine the **grow** method.
+
+   c. Quick trees look exactly the same as normal trees, they just grow differently.
+
+3. **FruitTree**
+
+   a. Fruit trees have a number of `fruit`
+
+   b. Add a `fruit` variable to the **FruitTree** class; initialise it as 1
+
+   c. Fruit trees sometimes gain an additional fruit when the **grow**
+   method is called, the chance is 1 in 2
+
+   d. Fruit trees sometimes lose a fruit when the `grow` method is called, the chance is 1 in 5
+
+   e. Example drawing (fruit are represented by a dot `.`)    
+   the fruit should be displayed the same way as the leaves, wrapping within the maximum width
+
+        ..
+        ###
+        ###
+         |
+         |
+         |
+
+4. **PineTree (challenge)**
+
+   a. pine trees look like
+
+           *
+          ***
+         *****
+        *******
+           |
+           |    
+
+   b. pine trees start off with four leaves (1 + 3)
+
+   c. pine trees only ever add as many leaves as would make a full new row at the bottom of the tree
+
+   i. i.e. they must form a triangle shape
+
+   ii. row 1 always has 1 leaf, then 3 for row 2, 5 for row 3, 7 for row 4, 9 for row 5 and so on
+
+   iii. every time the `grow` method is called, the pine tree should add a new row of leaves if a random number between
+   0 and sunlight is bigger than 2
+
+### Taxi Simulator Enhancements
+
+Enhance your taxi driving program so that it:
+
+- doesn't let you drive until you've chosen a taxi
+
+- has error-checking for choosing a valid taxi
+
+- keeps track of the number of km you've done (actual distance driven not total requested)
+
+- displays the taxis with their costs (`flagfall` and `fanciness`)
 
 # Deliverables
 
@@ -204,7 +568,8 @@ Please follow the [submission guidelines](../README.md#submission) to ensure you
 
 Files required:
 
-- `os_demos.py` & modifications
-- `cleanup_files.py`
-- `sort_files_1.py`
-- `sort_files_2.py`
+- `taxi_test.py`
+- `taxi.py` modifications (including class variable)
+- `unreliable_car.py` & `unreliable_car_test.py`
+- `silver_service_taxi.py` & `silver_service_taxi_test.py`
+- `taxi_simulator.py`
