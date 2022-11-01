@@ -1,5 +1,7 @@
 # Practical 07 - Classes 2
 
+# This prac is being updated currently. Try again shortly. Thank you...
+
 Remember to do this prac (as usual now) in a **new branch**, then do a **pull request**, mentioning
 the correct student to get a code review.  
 Remember to check and do your code review when requested.
@@ -19,9 +21,25 @@ Expectations and marking for this prac include **doing a code review** not just 
 Submit both your own PR URL where you **request** a review, and the PR URL of the code review you have done.  
 We understand that this means someone else must have requested that you do a review.
 
-# This prac is being updated currently. Try again shortly. Thank you.
+# README
 
-...
+As you will have seen, a "README" file is a common aspect of a project.  
+A good README usually introduces a project, provides details about the author, and includes any instructions needed for
+someone else to benefit from.  
+We will now add a README to our practicals repository.
+
+New > File `README.md` (exact spelling) in your practicals main/root directory (not in prac_07 or similar).  
+If you already have one, just edit it - you don't need to create a new one.  
+PyCharm knows about markdown files, so it will give you syntax highlighting and other features as you type.
+
+Include at least the following in your practicals README:
+
+- Headings 1 and 2. These lines will start with `#` and `##` respectively. Use headings appropriately.
+- Brief information about the repo and yourself.
+- A list (markdown `-`) of at least 3 main lessons you have learned about "clean code" in this subject.
+- Links to the Programming Patterns page and the CP1404 Practicals instructions.
+
+Please "Reformat Code" to ensure your formatting is correct before you finish and commit your README.
 
 # Walkthrough Example
 
@@ -50,11 +68,12 @@ Notice how:
 
 1. Add another language to the file - and make sure it still works properly. Use data from
    [this Programming Language Comparison page](http://www.jvoegele.com/software/langcomp.html)
-2. Add another field to your ProgrammingLanguage class: **Pointer Arithmetic** (see that page or search to find if
+2. Add another field to your `ProgrammingLanguage` class: **Pointer Arithmetic** (see that page or search to find if
    the language has it or not). This will be a Boolean variable.  
    This may take a bit of effort, as you need to update the class and any code that uses it. You also need to add the
    correct values to your data file (in a form similar to reflection).
-3. Update any docstrings
+3. Check that your code is complete including updating any docstrings.  
+   Are `__str__` and other methods complete and good?
 
 # Intermediate Exercises
 
@@ -120,12 +139,17 @@ If you didn't complete all of that work, then go back and work on those exercise
 This section summarises the expectations for marking in this practical.  
 Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.
 
+You may not receive your code review request in time to submit each week,
+so we ask for the code review you did from the previous week.
+
 This week, please submit two PR URLs:
 
-- Your own feedback branch PR with a mention of a reviewer
-- the PR that you reviewed. You need to do a **good** code review!
+- Your own feedback branch PR with a mention of a reviewer **for this prac**.
+- The PR that you reviewed **for the last prac**.
 
 Files required:
 
 - Practicals repository on GitHub and up-to-date (every week)
+- `README.md` (submitted and on GitHub, as with all the files)
 - `myguitars.py`
+- `language_file_reader.py`, `programming_language.py`, `languages.csv`

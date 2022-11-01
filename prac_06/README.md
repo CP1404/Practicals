@@ -427,10 +427,13 @@ Then, next time you're ready to commit and push your practical work, try using t
 This section summarises the expectations for marking in this practical.  
 Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.
 
+You may not receive your code review request in time to submit each week,
+so we ask for the code review you did from the previous week.
+
 This week, please submit two PR URLs:
 
-- Your own feedback branch PR with a mention of a reviewer
-- the PR that you reviewed. You need to do a **good** code review!
+- Your own feedback branch PR with a mention of a reviewer **for this prac**.
+- The PR that you reviewed **for the last prac**. (It's fine if you already submitted this.)
 
 Files required:
 
