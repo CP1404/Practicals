@@ -318,7 +318,10 @@ object) is converted back into an object hierarchy."
 You can use Python's `pickle` module to load and save data from files without having to manually process data.  
 You essentially just "save" your variables in memory to a file.
 
-Write a new version of the Project Management Program to use pickling to load and save the data.
+Study [the provided pickling demo](pickle_demo.py) to see how to use pickling and JSON to load and dump objects to and
+from memory.
+
+Now, write a new version of the Project Management Program to use pickling to load and save the data.
 
 # Deliverables
 
