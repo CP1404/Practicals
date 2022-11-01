@@ -13,10 +13,15 @@ Some code files contain `# TODO` comments, which are part of the instructions fo
 * [Practical 04 - Lists](./prac_04)
 * [Practical 05 - Dictionaries, Code Reviews with PRs](./prac_05)
 * [Practical 06 - Classes](./prac_06)
-* [Practical 07 - Classes 2](./prac_08)
-* [Practical 08 - Kivy](./prac_09)
-* [Practical 09 - Inheritance](./prac_os)
+* [Practical 07 - Classes 2](./prac_07)
+* [Practical 08 - Kivy](./prac_08)
+* [Practical 09 - Inheritance](./prac_09)
 * [Practical 10 - Databases, APIs, Flask](./prac_10)
+
+and if you're really keen, here's another practical that we used to have in the subject, focused on using the os
+(operating system) module:
+
+* [Practical - OS](./prac_os)
 
 ## Practical Marking
 
@@ -34,7 +39,7 @@ the practice/extension section. You will be marked as follows:
 Python.  
 It is important that you learn these foundations according to the teaching philosophy of the
 subject. So, to help you learn well, you will not achieve full marks for working/complete practicals
-that are not done in the way that we teach.  
+that are not done in the way that we teach.
 
 Here are some reasons that you might lose marks for your practicals (and assignments):
 
@@ -48,8 +53,9 @@ Here are some reasons that you might lose marks for your practicals (and assignm
 
 Each prac includes a "Deliverables" section that tells you what to submit.
 
-- Most pracs require you to submit a GitHub URL. Please type the URL of your GitHub practicals repository or PR at the top of the text box when you submit your practical on LearnJCU.
-  - Your PR URL will look something like: `https://github.com/lindsaymarkward/cp1404practicals/pull/1`
+- Most pracs require you to submit a GitHub URL. Please type the URL of your GitHub practicals repository or PR at the
+  top of the text box when you submit your practical on LearnJCU.
+    - Your PR URL will look something like: `https://github.com/lindsaymarkward/cp1404practicals/pull/1`
 - You always need to upload/attach your files in LearnJCU.
 - Please attach each file separately.
 - Do not zip up your files.
