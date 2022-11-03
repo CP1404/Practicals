@@ -178,14 +178,15 @@ Here are two suggestions to leave until last (iterative development):
 - Error checking. Do no error checking to start with.
 - Date formatting. Just use a string until most everything else works, then, here are some suggestions.
 
-The following code reads a string from user input, converts it to a `datetime` object and then prints it back as a
-string:
+The following code reads a string from user input, converts it to a `date` object (using the `strptime` method from
+the `datetime` type), prints the day of the week (`%A`) and then prints the date as a string:
 
 ```python
 import datetime
 
-date_string = input("Date (dd/mm/yyyy): ")  # e.g., "31/10/2022"
-date = datetime.datetime.strptime(date_string, "%d/%m/%Y")
+date_string = input("Date (d/m/yyyy): ")  # e.g., "30/9/2022"
+date = datetime.datetime.strptime(date_string, "%d/%m/%Y").date()
+print(f"That day is/was {date.strftime('%A')}")
 print(date.strftime("%d/%m/%Y"))
 ```
 
