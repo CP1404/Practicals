@@ -17,6 +17,11 @@ start_string = '[{"name": "Python", "typing": "Dynamic", "reflection": true, "ye
 languages = json.loads(start_string)
 print(languages, type(languages))
 
+# Since these are dictionaries and not our ProgrammingLanguage objects,
+# let's make objects from those values now
+for i, language in enumerate(languages):
+    languages[i] = ProgrammingLanguage(*language.values())
+
 # We should now have a list variable called languages, which we can treat like any list
 # Let's add another language to it
 visual_basic = ProgrammingLanguage("Visual Basic", "Static", False, 1991)
