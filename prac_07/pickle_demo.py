@@ -20,7 +20,11 @@ print(languages, type(languages))
 # Since these are dictionaries and not our ProgrammingLanguage objects,
 # let's make objects from those values now
 for i, language in enumerate(languages):
-    languages[i] = ProgrammingLanguage(*language.values())
+    # The following line unpacks the language dictionary using keyword argument
+    languages[i] = ProgrammingLanguage(**language)
+    # The following line unpacks the language dictionary values only,
+    # which would require the order to match the constructor
+    # languages[i] = ProgrammingLanguage(*language.values())
 
 # We should now have a list variable called languages, which we can treat like any list
 # Let's add another language to it
@@ -29,6 +33,7 @@ languages.append(visual_basic)
 
 # Convert ("dump") our data in memory to a JSON string
 # Note that we could have done this without ever having a JSON string to begin with
+# default=vars specifies what to do when an object (like a ProgrammingLanguage) is not serialisable by default
 json_string = json.dumps(languages, default=vars)
 print("JSON string: ")
 print(json_string)
