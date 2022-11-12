@@ -20,25 +20,25 @@ described as an "is a" relationship.
 When class Y inherits from class X, it should always be the case that an
 **is a** relationship holds: Y "is a" X.
 
-For example, a Tree is a Plant, but it's not true to say a Cat is a Dog. So, it is appropriate for a **Tree** class to
-inherit from a **Plant**
-class, but not appropriate for a **Cat** class to inherit from a **Dog**
+For example, a Tree is a Plant, but it's not true to say a Cat is a Dog. So, it is appropriate for a `Tree` class to
+inherit from a `Plant`
+class, but not appropriate for a `Cat` class to inherit from a `Dog`
 class.  
-Both Cat and Dog could inherit from **Animal**.
+Both Cat and Dog could inherit from `Animal`.
 
 # Walkthrough Example
 
-In a previous practical, we looked at a **Car** class. This time we will see that we can extend the Car class to make
-a **Taxi** class, which is a more specialised version of a Car.  
+In a previous practical, we looked at a `Car` class. This time we will see that we can extend the Car class to make
+a `Taxi` class, which is a more specialised version of a Car.  
 **Taxi is a Car**  
-(In Java, you would say `Taxi extends Car`.)
+In Java, you would write the code: `Taxi extends Car`.
 
 You can use your car from last week, or the finished version in the solutions. Either way, copy your `car.py` file to
 your `prac_09` folder.
 
 Download [taxi.py](taxi.py)
 
-Read the code and note that the **Taxi** class *extends* the **Car**
+Read the code and note that the `Taxi` class *extends* the `Car`
 class in two ways:
 
 - it adds new attributes (`price_per_km`,
@@ -236,6 +236,53 @@ Even though we may want to format the result like currency (e.g. `"$48.80"`), th
 responsibility. What if we wanted to add fares together? They must be numbers. Do your string formatting *outside* this
 function.
 
+## Composition, not inheritance
+
+Before we do our final exercise(s) using inheritance, let's build something using **composition**, which is not
+inheritance, but sometimes mistaken for it.
+
+Composition is a "has a" relationship.
+
+In the same way that a `Car` has a `name` or a `Project` has a `start_date`, any object can have an attribute that's an
+instance of another class.
+
+Let's see how a `Musician` "has a" `Guitar`.  
+**Download**:
+
+- [guitar.py](guitar.py)
+- [musician.py](musician.py)
+- [my_band.py](my_band.py)
+
+We've seen `Guitar` before, but now we have a `Musician` class and a musician "has" a list of instruments, which could
+be `Guitar` objects.
+
+Have a look at the testing code at the bottom of `Musician` and note some things:
+
+- the `import` is NOT at the top like usual. The reason we don't import the `Guitar` class at the top, is because we
+  only need it when we run the testing code.
+- `assert` is used to ensure that a default-value `Musician` is setup correctly.
+- We add `Guitar` objects to the `Musician` object's list of instruments. This is the "Musician has Guitar" composition
+  relationship.
+
+### Band
+
+Now, write the missing `Band` class that `my_band.py` uses.
+
+"Band has Musicians" in much the same way that "Musician has Guitars" (composition).  
+Here's what you should see when your `Band` class is correct:
+
+    band.play()
+    Nuno Bettencourt is playing: Washburn N4 (1990) : $2,499.95
+    Gary Cherone needs an instrument!
+    Pat Badger is playing: Mouradian CS-74 Bass (2009) : $1,500.00
+    Kevin Figueiredo needs an instrument!
+    band (str)
+    Extreme (Nuno Bettencourt ([Washburn N4 (1990) : $2,499.95, Takamine acoustic (1986) : $1,200.00]), Gary Cherone ([]), Pat Badger ([Mouradian CS-74 Bass (2009) : $1,500.00]), Kevin Figueiredo ([]))
+
+There are plenty of fun extension exercises in this prac, including one to use inheritance with this example by creating
+different "types" of `Musician`, like "Guitarist is a Musician" and "Drummer is a Musician" (well, a drummer hangs
+around with musicians).
+
 # Do-from-scratch Exercises
 
 File: `taxi_simulator.py`
@@ -361,6 +408,25 @@ b.  `Bomb` - doesn't actually move when you drive it, but still uses the fuel
 c.  `EcoTaxi` - uses half the fuel and gives a percentage discount on the price per fare
 
 d.  [CrazyTaxi](https://en.wikipedia.org/wiki/Crazy_Taxi)
+
+## Musicians
+
+Create different "types" of `Musician`, like:
+
+- `Guitarist`
+- `Drummer` 
+- `Singer`
+
+For each one, consider **overriding** their `play` method to do something relevant to their role. E.g., a singer won't "need an instrument" but might be like, "Gary Cherone is singing".  
+You don't need to override the `play` method if the one in `Musician` is already satisfactory for the role.
+
+Then, copy your `my_band.py` program to create a new version that creates the band Extreme with more specific roles. E.g., instead of:  
+
+    kevin = Musician("Kevin Figueiredo")
+
+You'll write:
+
+    kevin = Drummer("Kevin Figueiredo")
 
 ## Trees
 
