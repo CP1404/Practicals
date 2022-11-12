@@ -14,7 +14,7 @@ class Tree:
     def __init__(self):
         """Initialise a Tree with trunk_height of 1 and full row of leaves."""
         self._trunk_height = 1
-        self._leaves = TREE_LEAVES_PER_ROW
+        self._number_of_leaves = TREE_LEAVES_PER_ROW
 
     def __str__(self):
         """Return a string representation of the full Tree, e.g.
@@ -27,10 +27,10 @@ class Tree:
     def get_ascii_leaves(self):
         """Return a string representation of the tree's leaves."""
         result = ""
-        if self._leaves % TREE_LEAVES_PER_ROW > 0:
-            result += "#" * (self._leaves % TREE_LEAVES_PER_ROW)
+        if self._number_of_leaves % TREE_LEAVES_PER_ROW > 0:
+            result += "#" * (self._number_of_leaves % TREE_LEAVES_PER_ROW)
             result += "\n"
-        for i in range(self._leaves // TREE_LEAVES_PER_ROW):
+        for i in range(self._number_of_leaves // TREE_LEAVES_PER_ROW):
             result += "#" * TREE_LEAVES_PER_ROW
             result += "\n"
         return result
@@ -48,7 +48,7 @@ class Tree:
         Randomly grow the trunk height by a number between 0 and water.
         Randomly increase the leaves by a number between 0 and sunlight."""
         self._trunk_height += random.randint(0, water)
-        self._leaves += random.randint(0, sunlight)
+        self._number_of_leaves += random.randint(0, sunlight)
 
 
 class EvenTree(Tree):
@@ -57,8 +57,8 @@ class EvenTree(Tree):
     def grow(self, sunlight, water):
         """Grow like a normal tree, but fill out each row of leaves."""
         Tree.grow(self, sunlight, water)
-        while self._leaves % 3 != 0:
-            self._leaves += 1
+        while self._number_of_leaves % 3 != 0:
+            self._number_of_leaves += 1
 
 
 class UpsideDownTree(Tree):
