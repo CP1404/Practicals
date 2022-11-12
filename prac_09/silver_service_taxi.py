@@ -3,7 +3,7 @@ CP1404/CP5632 Practical - Suggested Solution
 SilverServiceTaxi class, derived from Taxi
 """
 
-from prac_08.taxi import Taxi
+from prac_09.taxi import Taxi
 
 
 class SilverServiceTaxi(Taxi):

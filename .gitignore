@@ -3,6 +3,6 @@
 */__pycache__
 prac_02/*.txt
 prac_03/temps_output.txt
-prac_09/Lyrics/
-prac_09/FilesToSort/
+prac_os/Lyrics/
+prac_os/FilesToSort/
 temp.py

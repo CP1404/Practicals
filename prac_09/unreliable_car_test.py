@@ -7,7 +7,7 @@ So, these tests run several times in order to see that randomness.
 We expect the good car (high reliability) to drive more often than the bad car.
 """
 
-from prac_08.unreliable_car import UnreliableCar
+from prac_09.unreliable_car import UnreliableCar
 
 
 def main():

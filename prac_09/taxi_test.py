@@ -3,7 +3,7 @@ CP1404/CP5632 Practical - Suggested Solution
 Test taxi
 """
 
-from prac_08.taxi import Taxi
+from prac_09.taxi import Taxi
 
 
 def main():
