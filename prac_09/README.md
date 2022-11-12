@@ -271,13 +271,13 @@ Now, write the missing `Band` class that `my_band.py` uses.
 "Band has Musicians" in much the same way that "Musician has Guitars" (composition).  
 Here's what you should see when your `Band` class is correct:
 
+    band (str)
+    Extreme (Nuno Bettencourt ([Washburn N4 (1990) : $2,499.95, Takamine acoustic (1986) : $1,200.00]), Gary Cherone ([]), Pat Badger ([Mouradian CS-74 Bass (2009) : $1,500.00]), Kevin Figueiredo ([]))
     band.play()
     Nuno Bettencourt is playing: Washburn N4 (1990) : $2,499.95
     Gary Cherone needs an instrument!
     Pat Badger is playing: Mouradian CS-74 Bass (2009) : $1,500.00
     Kevin Figueiredo needs an instrument!
-    band (str)
-    Extreme (Nuno Bettencourt ([Washburn N4 (1990) : $2,499.95, Takamine acoustic (1986) : $1,200.00]), Gary Cherone ([]), Pat Badger ([Mouradian CS-74 Bass (2009) : $1,500.00]), Kevin Figueiredo ([]))
 
 There are plenty of fun extension exercises in this prac, including one to use inheritance with this example by creating
 different "types" of `Musician`, like "Guitarist is a Musician" and "Drummer is a Musician" (well, a drummer hangs
@@ -411,22 +411,26 @@ d.  [CrazyTaxi](https://en.wikipedia.org/wiki/Crazy_Taxi)
 
 ## Musicians
 
-Create different "types" of `Musician`, like:
+Create different "types" (subclasses) of `Musician`, like:
 
 - `Guitarist`
-- `Drummer` 
+- `Drummer`
 - `Singer`
 
-For each one, consider **overriding** their `play` method to do something relevant to their role. E.g., a singer won't "need an instrument" but might be like, "Gary Cherone is singing".  
+For each one, consider **overriding** their `play` method to do something relevant to their role. E.g., a singer won't "
+need an instrument" but might be like, "Gary Cherone is singing".  
 You don't need to override the `play` method if the one in `Musician` is already satisfactory for the role.
 
-Then, copy your `my_band.py` program to create a new version that creates the band Extreme with more specific roles. E.g., instead of:  
+Then, copy your `my_band.py` program to create a new version that creates the band Extreme with more specific roles.  
+E.g., instead of:
 
     kevin = Musician("Kevin Figueiredo")
 
 You'll write:
 
     kevin = Drummer("Kevin Figueiredo")
+
+Once you've done that. Make the program as interesting as you can.
 
 ## Trees
 
