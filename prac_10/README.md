@@ -305,6 +305,10 @@ E.g. for 6 rows, it is 6 + 5 + 4 + 3 + 2 + 1 = 21
 
 This section summarises the expectations for marking in this practical.  
 Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.  
+Please submit two PR URLs:
+
+- Your own feedback branch PR with a mention of a reviewer **for this prac**.
+- The PR that you reviewed **for the last prac**.
 
 Files required:
 

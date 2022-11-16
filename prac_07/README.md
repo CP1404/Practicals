@@ -341,7 +341,7 @@ Please follow the [submission guidelines](../README.md#submission) to ensure you
 You may not receive your code review request in time to submit each week,
 so we ask for the code review you did from the previous week.
 
-This week, please submit two PR URLs:
+Please submit two PR URLs:
 
 - Your own feedback branch PR with a mention of a reviewer **for this prac**.
 - The PR that you reviewed **for the last prac**.

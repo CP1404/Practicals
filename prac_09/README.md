@@ -236,12 +236,16 @@ Even though we may want to format the result like currency (e.g. `"$48.80"`), th
 responsibility. What if we wanted to add fares together? They must be numbers. Do your string formatting *outside* this
 function.
 
-## Composition, not inheritance
+## Association, not inheritance
 
-Before we do our final exercise(s) using inheritance, let's build something using **composition**, which is not
+Before we do our final exercise(s) using inheritance, let's build something using **association**, which is not
 inheritance, but sometimes mistaken for it.
 
-Composition is a "has a" relationship.
+There are two kinds of association.  
+Both are **"has a"** relationships. 
+
+- **Aggregation** - e.g., "Musician has a Guitar". Objects can be "inside" another, but it's possible for them to exist without the object they aggregate under. They have their own life cycles. A guitar can exist without the musician. 
+- **Composition** - e.g., "Person has a Heart". This is a strong type of aggregation. The objects "inside" do not have their own life cycle. A heart cannot exist without its person.  
 
 In the same way that a `Car` has a `name` or a `Project` has a `start_date`, any object can have an attribute that's an
 instance of another class.
@@ -261,14 +265,14 @@ Have a look at the testing code at the bottom of `Musician` and note some things
 - the `import` is NOT at the top like usual. The reason we don't import the `Guitar` class at the top, is because we
   only need it when we run the testing code.
 - `assert` is used to ensure that a default-value `Musician` is setup correctly.
-- We add `Guitar` objects to the `Musician` object's list of instruments. This is the "Musician has Guitar" composition
+- We add `Guitar` objects to the `Musician` object's list of instruments. This is the "Musician has Guitar" association
   relationship.
 
 ### Band
 
 Now, write the missing `Band` class that `my_band.py` uses.
 
-"Band has Musicians" in much the same way that "Musician has Guitars" (composition).  
+"Band has Musicians" in much the same way that "Musician has Guitars" (association).  
 Here's what you should see when your `Band` class is correct:
 
     band (str)
@@ -552,7 +556,11 @@ Enhance your taxi driving program so that it:
 # Deliverables
 
 This section summarises the expectations for marking in this practical.  
-Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.
+Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.  
+Please submit two PR URLs:
+
+- Your own feedback branch PR with a mention of a reviewer **for this prac**.
+- The PR that you reviewed **for the last prac**.
 
 Files required:
 

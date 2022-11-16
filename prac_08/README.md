@@ -355,7 +355,11 @@ Here's a suggested kv file you could use. Notice how simple it is, but it does h
 # Deliverables
 
 This section summarises the expectations for marking in this practical.  
-Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.
+Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.  
+Please submit two PR URLs:
+
+- Your own feedback branch PR with a mention of a reviewer **for this prac**.
+- The PR that you reviewed **for the last prac**.
 
 Files required:
 
