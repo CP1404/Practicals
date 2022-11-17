@@ -1,5 +1,7 @@
 # Practical 10 - Databases, APIs, Flask
 
+# DRAFT - This prac will be updated. 
+
 Don't forget to make a new branch, `prac_10_feedback` _before_ you start!  
 You will put some files into that branch for your normal practicals project/repo, but you will also have a separate
 project/repo for the Flask task.
@@ -305,10 +307,12 @@ E.g. for 6 rows, it is 6 + 5 + 4 + 3 + 2 + 1 = 21
 
 This section summarises the expectations for marking in this practical.  
 Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.  
-Please submit two PR URLs:
 
-- Your own feedback branch PR with a mention of a reviewer **for this prac**.
-- The PR that you reviewed **for the last prac**.
+Since this is the **final practical**, your requirements for pull requests are a bit different.  
+Please submit **three** URLs: 
+
+- Your own feedback branch PR with a mention of a reviewer for this prac.
+- Two (2) PRs that show you doing good code reviews for any of the past pracs.
 
 Files required:
 
