@@ -1,15 +1,11 @@
-# Practical 10 - Databases, APIs, Flask
-
-# DRAFT - This prac will be updated. 
+# Practical 10 - APIs, Flask
 
 Don't forget to make a new branch, `prac_10_feedback` _before_ you start!  
 You will put some files into that branch for your normal practicals project/repo, but you will also have a separate
-project/repo for the Flask task.
+project and repository for the Flask task.
 
 Today we will explore the use of tools for **testing**, an **API** for Wikipedia and the very cool **Flask** Web
-framework.  
-This is the final marked practical for the subject, and must be satisfactorily attempted during the prac time (no
-marking next week). You don't have to finish it, but you have to do good work.
+framework.
 
 # Testing
 
@@ -32,7 +28,7 @@ the code shows you examples to learn form.
 5. Write and test (using doctest) a function to format a phrase as a sentence - starting with a capital and ending with
    a single full stop. See the comments for how to do this step by step, taking note that you should write your tests _
    before_ your code.  
-   E.g. the function should change "hello" into "Hello."
+   E.g., the function should change "hello" into "Hello."
 
 # Wikipedia API & Python Library
 
@@ -41,9 +37,10 @@ File: `wiki.py`
 Until now, we've only worked on our local computers, interacting with local files, but never talking to the great big
 computer in the sky... so let's do that now :)
 
-Many systems have public **APIs** (Application Programmer Interfaces) that we can use. An API is a set of functions that
+Many systems have public **APIs** (Application Programmer Interfaces) that we can use. An API is usually a set of
+functions that
 we can call to send and receive data to and from a system. You can write code to interact with things like Twitter,
-Flickr, weather services, government databases, NSA spy satellites and more...
+Slack, weather services, government databases, NSA spy satellites and more...
 
 We'll start with Wikipedia.
 
@@ -51,10 +48,10 @@ Instead of writing our own HTTP calls to the Wikipedia API, we can make use of a
 details away and presents a simpler, Python-based, API for us. *We need to install that now*.
 
 The lab PCs should let us install packages. If it looks like the package is still installing (infinitely), just carry on
-as if it were finished and it should work... or just restart PyCharm if you'd like it to stop telling you it's
+as if it were finished, and it should work... or just restart PyCharm if you'd like it to stop telling you it's
 installing! If you really can't install the wikipedia package, then skip those parts of the prac that use it.
 
-In PyCharm, go to Settings/Preferences > Project: Practicals > Project Interpreter (it might look a bit different but
+In PyCharm, go to Settings/Preferences > Project: Practicals > Project Interpreter (it might look a bit different, but
 you should have been here before) and click the plus button to install a package. Type "wikipedia"
 to find the one we want, and then click "Install Package".  
 **Note:** If you don't have permission to install this, try it with the option to install to user's site packages
@@ -73,9 +70,11 @@ Get a page and see what properties it has.
 then prints the summary of that page. Use a simple loop that continues doing this until the user enters blank input.
 
 Try this with a few page titles and see what happens.  
-(Note that you might get a warning about an outdated use of the BeautifulSoup package. We can't fix that so ignore it.)
+(Note that you might get a warning about an outdated use of the `BeautifulSoup` package. We can't fix that so ignore
+it.)
 
-Try it with the search/title "Monty", and you should find that the Wikipedia API returns a "disambiguation" page, so you
+Try it with the search/title "Python", and you should find that the Wikipedia API returns a "disambiguation" page, so
+you
 need to handle that **exception** as explained in the API's docs.
 
 When getting a `page`, you might find that you get an unexpected result because the API has used `suggest()`
@@ -87,24 +86,29 @@ Now **modify** your program so that when it gets the page, it prints the title, 
 
 # Flask Web Framework
 
-Until now, we have made only one type of project, "Pure Python", and we always interacted via PyCharm with the console -
-or using a GUI we made with Kivy. A very common way to deliver software these days is via a Web browser. Some
-programming languages are designed for the Web - like JavaScript for the browser and PHP for Web servers, but we can
+Until now, we have made only one type of project, "Pure Python", and we always interacted via PyCharm with the console
+or using a GUI we made with Kivy.  
+A very common way to deliver software these days is via a Web browser.  
+Some programming languages are designed for the Web - like JavaScript for the browser and PHP for Web servers, but we
+can
 also use Python... if we use it via a "Web Framework".
 
-There are a number of great frameworks, like Django, Web2Py and Pyramid, but today we will use **Flask**.  
+There are a number of great frameworks, like Django, Web2Py and Pyramid, Today we will use **Flask**.  
 (You may be interested to know that [WakaTime](https://wakatime.com)
 is written in Python and uses Flask.)
 
-Flask docs are at: <http://flask.pocoo.org/docs> and Flask is also covered in the textbook in **Appendix E**.
+Flask docs are at: <http://flask.pocoo.org/docs>.
 
-In PyCharm, create a new project and choose Flask. (Note that you need the Professional edition, not the Community
-edition to see this screen when making a new project.) If this is the first time you've done this, PyCharm should
-install the Flask package and other dependencies like Jinja for templating.
+In PyCharm, create a new project, choosing Flask.  
+Note that you need the Professional edition, not the Community
+edition to see this screen when making a new project.
+
+If this is the first time you've done this, PyCharm should
+install the Flask package and other dependencies, like Jinja for templating.
 
 ![New Flask Project window](../images/10image4.png)
 
-The default project comes with a folder structure and a simple "hello world" example:
+The default project comes with a folder structure and a simple "hello world" example like:
 
 ```python
 from flask import Flask
@@ -124,23 +128,25 @@ if __name__ == '__main__':
 
 ## Explanation
 
-After importing the flask class, we create an instance of the Flask class called `app`, passing the name of this file
+After importing, we create an instance of the `Flask` class called `app`, passing the name of this module.
 
-`@` is used for what's called a **"decorator"**.                              
-This is metadata about the following function.  
-In Flask, the `@app.route` decorator specifies the URL that will result in the function following it being called.
+`@` is used for what's called a **"decorator"**.
+
+This decorator is metadata about the function below it.  
+In Flask, the `@app.route` decorator specifies the URL that will result in that function being called.
 
 Then we have a normal function (`hello_world()`), but importantly it returns a string.                          
 All Flask "views" (functions that will be displayed in the browser) must return strings.
 
 Running a Flask app (`app.run()`) looks similar to Kivy, doesn't it?
 
-Run the code and you should see output like the following, including a link to click on to see your amazing new
+Run the code, and you should see output like the following, including a link to click on to see your amazing new
 Python-based website. Click the link in the Python console to view "Hello World!" in your browser.
 
 `* Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)`
 
-Modify the function output to return `<h1>Hello World :)</h1>` and rerun the program by pressing Ctrl+F5.  
+Modify the function output to return `<h1>Hello World :)</h1>` and rerun the program by pressing Ctrl+F5 (or your IDE's
+rerun shortcut).  
 To see the new results, you'll need to go back to your browser and hit refresh, so do this now.
 
 As you should see, pages/views are created using HTML. Learning HTML is beyond the scope of this prac, so hopefully you
@@ -151,11 +157,11 @@ the first option by pressing Enter... and PyCharm will create the decorator and 
 
 ![route autocomplete in PyCharm](../images/10image5.png)
 
-Type 'greet' as the function name and route name (these can be different, but we'll keep them the same). Replace 'pass'
+Type 'greet' as the function name and route name (these can be different, but we'll keep them the same). Replace `pass`
 with a simple
 `return "Hello"` statement.
 
-Re-run the program, then change your browser's URL by adding /greet to the end, like:
+Re-run the program, then change your browser's URL by adding `/greet` to the end, like:
 
 <http://127.0.0.1:5000/greet>
 
@@ -177,15 +183,21 @@ def greet(name=""):
 Re-run and test with the URLs <http://127.0.0.1:5000/greet> and
 <http://127.0.0.1:5000/greet/Yourname>
 
-This is one way that you can pass parameters (all strings) to Flask view functions.
+This is one way that you can pass string parameters to Flask view functions.
 
 ## Challenge
 
-In an earlier prac, you wrote a function to convert between Fahrenheit and Celsius. Copy or rewrite this function as a
-regular function (not a route). It should take a Celsius float value and return a Fahrenheit float.
+In an earlier prac, you wrote a function to convert between Fahrenheit and Celsius. Copy this function (as a
+regular function, not a route) into your program.  
+It should take a Celsius float value and return a Fahrenheit float.
 
 Now, create a new route so that you can enter Celsius values in the URL and see the Fahrenheit values in the Web page,
-like below. Note that the parameter passed via the URL (100.2 in this case) is a string.
+like below. Note that the parameter passed via the URL (`100.2` in this case) is a string.
+
+SRP! Note that if you wrote the temperature conversion function correctly before... here's another great example of how
+SRP works. We don't know or even care what the function will be used for - Flask, Kivy, Console... that's why we design
+the function to do one job - just the conversion.  
+If you did not write it correctly, then notice how you cannot reuse it.
 
 ![Fahrenheit conversion in website view](../images/10image6.png)
 
@@ -200,7 +212,7 @@ Clone or download the demo from
 
 Run it and test it, then study the code to find a few new things:
 
-- This demo uses **Jinja** HTML templates, which makes formatting Web page outputs much nicer than hard-coding them in
+- This demo uses **Jinja** HTML templates, which make formatting Web page outputs much nicer than hard-coding them in
   Python.
 
 - It also uses "template inheritance", so that you can reuse parts of templates in other templates. That's how the
@@ -215,7 +227,7 @@ Run it and test it, then study the code to find a few new things:
 
 ### Modifications
 
-Right, so now it's your turn to make this more interesting and appealing. What else could you do to it?
+Now it's your turn to make this more interesting and appealing. What else could you do to it?
 
 - Start by adding the page title to the results
 
@@ -231,16 +243,15 @@ If not, please do that right now on LearnJCU.
 
 # Practice & Extension Work
 
-1. Add **`assert`** and **`doctest`** testing to your work from an earlier prac - e.g. the `is_valid_password()`
-   function from prac 2 and the
-   `get_fixed_filename()` function from prac 9.
+1. Add `assert` and `doctest` testing to your work from an earlier prac - e.g., the `is_valid_password()`
+   function.
 
 2. During the holidays you might like to experiment with Flask and see if you can make some cool Web interfaces for your
    existing programs...
 
-   A **great idea** would be to make programs with 3 interfaces: console, Kivy and Web, and reuse as much common code as
-   you can. That should help you see how modular your work is. This would help you understand the **MVC** (
-   Model-View-Controller) pattern more, as you just want to create 3 different views that use the same model.
+   A **great idea** would be to make programs with 3 interfaces: Console, Kivy and Web, and reuse as much common code as
+   you can. That should help you see how modular your work is. This would help you understand "separation of concerns"
+   more, as you just want to create 3 different views that use the same core functionality.
 
 # Recursion
 
@@ -265,7 +276,7 @@ until the maximum recursion limit is reached...
 **Fix this.**
 
 Write another version of this that recursively prints the squares backwards
-(i.e. on the way back after hitting the base case).
+(i.e., on the way back after hitting the base case).
 
 ### Pyramid program
 
@@ -282,12 +293,12 @@ The number of blocks for n rows is:
 
 `n + (n-1) + (n-2) + ... 2 + 1`
 
-E.g. for 6 rows, it is 6 + 5 + 4 + 3 + 2 + 1 = 21
+E.g., for 6 rows, it is 6 + 5 + 4 + 3 + 2 + 1 = 21
 
 ### Other recursive challenges
 
 1. Write a recursive program that prints a string from the outside in.  
-   E.g. if the string to print is `"Programming"`, your program should print: `"P g r n o i g m r m a"`.  
+   E.g., if the string to print is `"Programming"`, your program should print: `"P g r n o i g m r m a"`.  
    Another example:
 
        Enter a string: 123456  
@@ -296,7 +307,7 @@ E.g. for 6 rows, it is 6 + 5 + 4 + 3 + 2 + 1 = 21
    Remember to analyse and design this problem first. Think about the base and recursive cases - when will it stop (
    base) and how will it reduce the problem (recursive) each time?
 
-2. Write a recursive function to check whether or not a string is a palindrome.  
+2. Write a recursive function to check whether a string is a palindrome.  
    A palindrome is a word or phrase that reads the same forwards as backwards. The following are examples:
 
     - Hannah
@@ -306,13 +317,14 @@ E.g. for 6 rows, it is 6 + 5 + 4 + 3 + 2 + 1 = 21
 # Deliverables
 
 This section summarises the expectations for marking in this practical.  
-Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.  
+Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.
 
 Since this is the **final practical**, your requirements for pull requests are a bit different.  
-Please submit **three** URLs: 
+Please submit **three** URLs:
 
 - Your own feedback branch PR with a mention of a reviewer for this prac.
-- Two (2) PRs that show you doing good code reviews for any of the past pracs.
+- Two (2) PRs that show you doing good code reviews for any of the past pracs (even if you've already submitted these
+  before).
 
 Files required:
 
@@ -320,12 +332,7 @@ Your work for `testing.py` and `wiki.py` go in your normal practicals repo and s
 there's two separate Flask projects, which do not go in your practicals repo.  
 Submit three URLs for these three (practicals PR, Flask project from demo, Flask + Wiki project)
 
-Finished:
-
 - `testing.py`
 - `wiki.py`
 - Flask project with modifications
-
-At least started:
-
 - Flask + Wiki project 
