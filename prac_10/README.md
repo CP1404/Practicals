@@ -1,8 +1,8 @@
 # Practical 10 - APIs, Flask
 
 Don't forget to make a new branch, `prac_10_feedback` _before_ you start!  
-You will put some files into that branch for your normal practicals project/repo, but you will also have a separate
-project and repository for the Flask task.
+You will put some files into that branch for your normal practicals project/repo, but you will also have separate
+projects and repositories for the Flask tasks.
 
 Today we will explore the use of tools for **testing**, an **API** for Wikipedia and the very cool **Flask** Web
 framework.
@@ -203,12 +203,17 @@ If you did not write it correctly, then notice how you cannot reuse it.
 
 That's version 1... Once it works, modify it so the output shows the input value and the result with useful text.
 
+Share this project on GitHub.  
+You should submit the URL to this repo.
+
 ## Flask + Wikipedia API
 
 Now let's combine the Wikipedia API with our new-found Web programming powers...
 
-Clone or download the demo from
+**Fork** the demo from
 <https://github.com/lindsaymarkward/flaskdemo>
+
+Then **clone** it so that you can work on it locally.  
 
 Run it and test it, then study the code to find a few new things:
 
