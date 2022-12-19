@@ -1,7 +1,7 @@
 # Practical 08 - Kivy
 
 Check the instructions from previous pracs to remind you how to correctly merge and update `master` before starting this
-prac. In a new branch, `prac_08_feedback`.
+prac in a new branch, `prac_08_feedback`.
 
 **Note**: This is a fairly long practical, so allocate more than the usual time for it.  
 There are a lot of demos to learn and copy from in <https://github.com/CP1404/KivyDemos>.
@@ -270,7 +270,7 @@ The important aspects of this demo are:
 
       temp_button.bind(on_release=self.press_entry)
 
-Something else of interest is that we dynamically set the `background_color` of the `Buttons`.  
+Something else of interest is that we dynamically set the `background_color` of the `Buttons`.
 
 ### Dynamic Labels
 
@@ -320,37 +320,37 @@ Here's a suggested kv file you could use. Notice how simple it is, but it does h
 
 ## Extension
 
-1. Do you have an **Android** device? If so, run one or more of your Kivy apps on it using **Kivy Launcher**, as
-   described at:
-   <http://kivy.org/docs/guide/packaging-android.html#packaging-your-application-for-the-kivy-launcher>
+### Kivy on Android
 
-   ![Kivy app running on Android tablet with joy](../images/08image8.jpg)
+Do you have an **Android** device?  
+If so, run one or more of your Kivy apps on it, as
+described in the [Kivy docs: Create a package for Android](https://kivy.org/doc/stable/guide/packaging-android.html)
 
-   If your Android device does not have an SD Card installed, then place your Kivy apps within internal storage, in a
-   folder called kivy, with a subfolder for your project, and make sure you have a `main.py` and
-   `android.txt` (as explained at the link above) in that folder, like this:
+![Kivy app running on Android tablet with joy](../images/08image8.jpg)
 
-   ![Kivy on Android file folder structure](../images/08image9.png)
+Then you'll experience much joy with your (first!) Android app!
 
-   Then you'll experience much joy with your (first!) Android app!
+You may also want to look at [python-for-android](https://github.com/kivy/python-for-android)
 
-   You may also want to look at [python-for-android](https://github.com/kivy/python-for-android)
+### Customise your views
 
-2. **Customise your views**
-   Open, run and inspect Jason's QuickSum Kivy app from (two files, `quick_sum.py/kv`). As explained in the lectures,
-   notice the way it uses:
-    - class rules like `<Button>`
-    - `canvas.before` and `canvas.after` to change the background colour or other aspects of a widget Use these
-      techniques to change your miles->kilometres converter to use black text on white background widgets - or something
-      else that you'd like visually.  
-      Play around as much as you like with this, but don't worry about all the details of getting exactly the style you
-      want.
+Open, run and inspect Jason's QuickSum Kivy app from (two files, `quick_sum.py/kv`) in the demos.  
+As explained in the lectures, notice the way it uses:
 
-3. **Implement our "GuessingGame" app**
-   We started working on a simple guessing game Kivy app here: <https://github.com/CP1404/GuessingGame>
-    - Form a team of two students for some **pair programming**
-    - Have a look at the repo, and try your hand at making the app work
-    - Then make a Pull Request back to us.
+- class rules like `<Button>`
+- `canvas.before` and `canvas.after` to change the background colour or other aspects of a widget. Use these
+  techniques to change your miles->kilometres converter to use black text on white background widgets - or something
+  else that you'd like visually.  
+  Play around as much as you like with this, but don't worry about all the details of getting exactly the style you
+  want.
+
+### Implement our "GuessingGame" app
+
+We started working on a [simple guessing game Kivy app here](https://github.com/CP1404/GuessingGame)
+
+- Form a team of two students for some **pair programming**
+- Have a look at the repo, and try your hand at making the app work
+- Then make a Pull Request back to us.
 
 # Deliverables
 
@@ -366,4 +366,4 @@ Files required:
 - `box_layout_demo.py/kv` with modifications (greet, clear)
 - `squaring.py/kv` with modifications
 - `convert_miles_km.py/kv`
-- `dynamic_labels.py/kv` with Labels (not Buttons)
+- `dynamic_labels.py/kv` (with Labels, not Buttons)
