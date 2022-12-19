@@ -177,14 +177,34 @@ Then, you will clone this as a new PyCharm project and move your existing work i
 - Name your repo "cp1404practicals"
 - Your repo must be public!
 
-![New repo from template](../images/repotemplate.png)
+![New repo from template](../images/githubrepotemplate.png)
 
-Now let's use this for your practicals:
+This next step is a bit advanced, but we need to do it first when our repo is "fresh".  
+We're going to create a new branch and then a pull request for staff to provide feedback on prac work.
+
+- On GitHub, click on "1 branch" then "New branch", type "review" as the name, then click "Create branch"
+
+![GitHub create new branch](../images/githubcreatebranch.png)
+
+Now let's use this repo for your practicals:
 
 - In PyCharm, select **Git > Clone** and enter the URL of your new repository.
 - This will open your new repository as a PyCharm project complete with folders.
-- Now, copy all of your prac 1 work into the `prac_01` folder in your new project.
-- Commit these files with a message like "Add prac 1 files".
+- Copy all of your prac 1 work into the `prac_01` folder in your new project.
+- Commit (all your prac 1 files) with a message like "Add prac 1 files".
+- Push (if you didn't push in the previous step) this commit to GitHub.
+
+(Again, the following is a bit advanced, but we'll do it now.)
+
+- In GitHub, click on "Pull requests" then "New pull request".
+- Change the "base" drop-down to select "review", then click "Create pull request".
+
+![GitHub new pull request](../images/githubnewpullrequest.png)
+
+- In the next screen, change the text in the text box, which is whatever your last commit message was to "Review" and
+  click the "Create pull request" button.
+- We'll learn more about Pull Requests (PRs) later, but for now just click on the name of your repo to return to the
+  main page in GitHub.
 
 **For every prac for the rest of the subject**,
 when you finish a task, do a commit with a meaningful message.  
