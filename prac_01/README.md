@@ -32,7 +32,8 @@ enough for you to follow.
 
 2. Click on **Create New Project**. and choose **Pure Python**. PyCharm
    asks you where to store your new project and to choose an
-   interpreter. Name your new project (folder) for your **cp1404practicals**.
+   interpreter. Name your new project (folder) for your `pracs` (we will make a new project next week when we learn
+   version control with Git).
 
     - the **location** can be changed to any place you have access to. Use a folder that you will be able to find later
 

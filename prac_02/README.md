@@ -35,8 +35,10 @@ and brackets.
 
 ![GitHub logo](../images/githublogo.png)
 
-Let's start with the basics of **Git** version control.  
-***Git and GitHub are different things!***  
+Let's start with the basics of **Git** version control.
+
+***Git and GitHub are different things!***
+
 These instructions are from the point of view of someone working on a JCU lab computer.  
 Please keep learning and practising with Git and GitHub.
 
@@ -145,9 +147,9 @@ Keep it separate.
 We covered a fair bit in that walkthrough. Hopefully you can see
 the process for working on your projects:
 
-- Initialise any new projects (Create Git Repository) at the beginning
+- Initialise a new project (Create Git Repository) at the beginning
 - **Add** new files when you create them
-- **Commit** every time you make significant changes (small milestone), using good messages in the imperative voice
+- **Commit** every time you make significant changes (small milestone), using good messages in the imperative mood
 - **Push** to GitHub so that you have an up-to-date online copy
 
 Then when you want to keep working on the project again on a different
@@ -167,21 +169,22 @@ want there... but do not put your practical work in Sandbox or vice versa.
 
 ## Now let's get your practicals on GitHub
 
-Before you follow the same process as above, it is ***essential***
-that you have a single project for practicals that has the same folder structure as
-<https://github.com/CP1404/cp1404practicals>.  
-Check to make sure none of your prac folders contain `.idea` folders.  
-If they do, you probably made a "Prac 2" project or something, and you can now delete the `.idea` folder.  
-Please tidy up your project or make a new one and copy your Python files
-into the correct folders.
+You will create a new repository from a "template" on GitHub so that you have a complete and correct folder structure.  
+Then, you will clone this as a new PyCharm project and move your existing work into it.
 
-Now, for your practicals project, we can Add it to both Git and GitHub in one step.  
-**VCS > GitHub > Share Project on GitHub**.
+- On GitHub, click the + button to add a new repository.
+- Select the **Repository template** CP1404/cp1404practicals (https://github.com/CP1404/cp1404practicals)
+- Name your repo "cp1404practicals"
+- Your repo must be public!
 
-### Your repo must be public!
+![New repo from template](../images/repotemplate.png)
 
-**It is essential that you leave your practicals repo public.**  
-**Do NOT make your repository private, or it will not be assessed.**
+Now let's use this for your practicals:
+
+- In PyCharm, select **Git > Clone** and enter the URL of your new repository.
+- This will open your new repository as a PyCharm project complete with folders.
+- Now, copy all of your prac 1 work into the `prac_01` folder in your new project.
+- Commit these files with a message like "Add prac 1 files".
 
 **For every prac for the rest of the subject**,
 when you finish a task, do a commit with a meaningful message.  
@@ -448,7 +451,7 @@ You may also like to do one or more of the GitHub courses on [LinkedIn Learning]
 # Deliverables
 
 This section summarises the expectations for marking in this practical.  
-Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.  
+Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.
 
 Files required:
 

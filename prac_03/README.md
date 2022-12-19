@@ -20,10 +20,9 @@ you need to.
 # Remarkably Important!
 
 - **DO NOT make a new project for each practical!**
-- **Create a new folder called `prac_03`** in your existing practicals project.
+- If you don't already have one, create a new folder called `prac_03` in your existing practicals project.
 - Keep using the same PyCharm project for all practicals.
-- Please don't use spaces in file or folder names as then they are invalid module names (important for importing in prac
-  6).
+- We don't use spaces in file or folder names as then they are invalid module names (important for importing in prac 6).
 
 If you correctly shared your practicals repository on GitHub, then you can **clone** your repo to continue your work on
 a new computer any time you need to.
@@ -424,12 +423,15 @@ We'd prefer to only see files we should consider adding.
 ![Unversioned Files window](../images/04image2.png)
 
 The solution is to add a file called `.gitignore` to your repository.  
-Note the exact spelling, including the dot at the start and no extension. On Unix-like
-systems (including Mac), the dot makes a file/folder _hidden_.
+Note the exact spelling, including the dot at the start and no extension.  
+On Unix-like systems (including Mac), the dot makes a file/folder _hidden_.
 
 `.gitignore` is just a plain text file that stores the names of any files or
 folders you want Git not to track and not to warn you about.  
 Your file will still exist in your _project_, but not in your _repository_.
+
+If you created your project from our template repository, then you already have this file.  
+If not...
 
 **Create a file called `.gitignore`** in the **root folder** (NOT inside `prac_03` or similar) of your pracs
 project/repo,
@@ -595,7 +597,7 @@ Some solutions (not all) for practicals will be provided in the
 # Deliverables
 
 This section summarises the expectations for marking in this practical.  
-Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.  
+Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.
 
 Files required:
 
