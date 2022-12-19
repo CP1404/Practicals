@@ -203,14 +203,16 @@ Ah, that's better :)
 
 Files: `convert_miles_km.py` and `convert_miles_km.kv`
 
-Create a Python program (.py) and Kivy kv language file (.kv)
-to recreate the following layout.  
-(The dark grey with white boxes are Buttons, the black with yellow text is a Label and the black on white one is a
-TextInput.)
+Create a Python program (.py) and Kivy kv language file (.kv) for an app that converts miles to kilometres.
+
+First, recreate the following layout shown in the image below.  
+The dark grey with white text are Buttons, the black with yellow text is a Label and the black on white one is a
+TextInput.
 
 ![Convert Miles to Kilometres screenshot](../images/08image6.png)
 
-When you have created the layout, write the functionality for the whole program. As always, do this in small steps.
+When you have created the layout, write the functionality for the whole program.  
+As always, do this in small steps.
 
 - Use a `StringProperty` for the text on the output (km) label.  
   Then in the app you can set this property variable without having to manually update the text of the label. It will
@@ -219,11 +221,9 @@ When you have created the layout, write the functionality for the whole program.
 
 - You should be able to type a number in the text entry field.
 
-- Pressing the "Convert" button should calculate the conversion from miles to kilometres and display this in the bottom
-  label. (Oops, "m"
-  in the screenshot is not a good abbreviation for "miles". Why not?)
+- Pressing the "Convert" button should calculate the conversion from miles to kilometres.
 
-- Pressing the Up or Down buttons should make this (miles) number go up/down by 1
+- Pressing the Up or Down buttons should make the miles number go up or down by 1.
 
     - Note: You can handle both of these with the same function by passing a value, e.g.,  
       `handle_increment(-1)`
@@ -232,44 +232,45 @@ When you have created the layout, write the functionality for the whole program.
 
 ### Stage 2 - Handle invalid inputs
 
-- If the text entered is not a valid number, just set the output result to 0.0.  
+- If the text entered is not a valid number, just set the output result to `0.0`.  
   It should not crash or produce errors in the console.
 
-- Pressing Up/Down when the box is empty or invalid should assume the value is 0 and change it to 1/-1.
+- Pressing Up or Down when the box is empty or invalid should assume the value is 0 and change it to 1 or -1.
 
-- Now, remove the convert button (just comment it out) and make the result appear immediately when either text is
-  entered (you can handle this with Kivy's `on_text` event) or the
-  up/down buttons are pressed
+- Now, comment out the convert button in your kv file and make the result appear immediately when either text is
+  entered or the
+  up or down buttons are pressed. You can use Kivy's `on_text` event to respond to changes in the `TextInput`.
 
 - Did you use a `CONSTANT` in your conversion calculation?  
   Do this now if you haven't already.
 
 **Note:** The solution to this is provided (`convert_miles_km.py/kv`).  
-Don't just copy it, but do use it if you get stuck, and/or to compare your solution to ours.
+Don't just copy it, but you're welcome to use it if you get stuck, or to compare your solution to ours.
 
 ## Dynamic Kivy Widgets
 
 All of these programs so far have had the widgets "hard-coded" in the kv file, but what if we want to create dynamic
 widgets based on a variable or the contents of a file or something?
 
-Open `dynamic_widgets.py/kv` to learn how this can be done.
+First, open and study `dynamic_widgets.py/kv` in the demos to learn how to dynamically create widgets.  
+The important aspects of this demo are:
 
-The important aspects of this are:
+- We set an `id` for the `BoxLayout` widget that we will add items to
+  in the kv file. Note that this cannot be the root widget!
 
-- Give an `id` to the layout widget that you want to add items to
-  (in the kv file). Note that this cannot be the root widget!
-
-- Create the widgets (e.g., buttons) in Python code, e.g.,
+- We create the widgets (e.g., buttons) in Python code, e.g.,
 
       temp_button = Button(text=name)
 
-- Add these new widgets using the `add_widget` method, e.g.,
+- We add these new widgets using the `add_widget` method, e.g.,
 
       self.root.ids.entries_box.add_widget(temp_button)
 
-- Bind a function callback when you make the widget object to add event handler code, e.g.,
+- We bind a callback function when you make the widget object to add event handler code, e.g.,
 
       temp_button.bind(on_release=self.press_entry)
+
+Something else of interest is that we dynamically set the `background_color` of the `Buttons`.  
 
 ### Dynamic Labels
 
@@ -277,17 +278,16 @@ Files: `dynamic_labels.py` and `dynamic_labels.kv`
 
 Now it's your turn...
 
-Create a **very simple app** that has a list of names (strings) and displays each one as a separate *Label*.
+Create a **very simple app** that has a list of names (strings) and dynamically creates a separate `Label` for each one.
 
-Notice some things in dynamic_widgets demo that will be very similar in yours:
+Notice some things in dynamic_widgets demo that will be very similar (but not the same) in yours:
 
-- the dictionary is defined in the `init` function
-- the widgets (Buttons, but yours will be Labels) are made with a loop between loading the kv file and returning
-  from `build`
+- the dictionary is defined in the `init` function (this is the data, or model)
+- the widgets (`Buttons` in the demo, but yours will be `Labels`) are made with a loop in the  `build` function
 
-**Note:** Start a new blank Python program for this; do not copy the dynamic_widgets example as it is too different.
-Your app won't have any buttons or interactivity. Use the example as a reference and copy small sections or ideas from
-it.
+**Note:** Start a new blank Python program for this; **do not copy the dynamic_widgets example** as it is too different.
+Your app won't have any buttons or interactivity.  
+Use the example as a reference and copy small sections or ideas from it.
 
 Here's a suggested kv file you could use. Notice how simple it is, but it does have a child `BoxLayout` with an `id`.
 
