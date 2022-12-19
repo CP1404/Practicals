@@ -5,7 +5,20 @@ You will put some files into that branch for your normal practicals project/repo
 projects and repositories for the Flask tasks.
 
 Today we will explore the use of tools for **testing**, an **API** for Wikipedia and the very cool **Flask** Web
-framework.
+framework, but first, let's reflect on the subject so far...
+
+# Reflection
+
+Create a markdown file in your `prac_10` repo, `REFLECTION.md`.
+
+Write some short but thoughtful comments about each of the following:
+
+- regarding the **estimates** that you did for practical tasks, how was your accuracy and did your accuracy improve
+  during the course of the subject?
+- regarding **code reviews**, what have you learned from both being reviewed and doing reviews?
+- regarding the **practical tasks** overall, what would you change if you were in charge of the subject?
+
+Include proper markdown links to two (2) PRs that show you doing good code reviews for any of the past pracs.
 
 # Testing
 
@@ -213,7 +226,7 @@ Now let's combine the Wikipedia API with our new-found Web programming powers...
 **Fork** the demo from
 <https://github.com/lindsaymarkward/flaskdemo>
 
-Then **clone** it so that you can work on it locally.  
+Then **clone** it so that you can work on it locally.
 
 Run it and test it, then study the code to find a few new things:
 
@@ -333,10 +346,11 @@ Please submit **three** URLs:
 
 Files required:
 
-Your work for `testing.py` and `wiki.py` go in your normal practicals repo and should be part of a code review PR. Then
-there's two separate Flask projects, which do not go in your practicals repo.  
+Your non-Flask work goes in your normal practicals repo and should be part of a code review PR.  
+Then, there's two separate Flask projects, which do not go in your practicals repo.  
 Submit three URLs for these three (practicals PR, Flask project from demo, Flask + Wiki project)
 
+- `REFLECTION.md`
 - `testing.py`
 - `wiki.py`
 - Flask project with modifications
