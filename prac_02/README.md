@@ -201,7 +201,7 @@ Now let's use this repo for your practicals:
 
 ![GitHub new pull request](../images/githubnewpullrequest.png)
 
-- In the next screen, change the text in the text box, which is whatever your last commit message was to "Review" and
+- In the next screen, change the text in the text box (which is whatever your last commit message was) to "Review" and
   click the "Create pull request" button.
 - We'll learn more about Pull Requests (PRs) later, but for now just click on the name of your repo to return to the
   main page in GitHub.

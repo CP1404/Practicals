@@ -1,4 +1,4 @@
-# Practical 10 - APIs, Flask
+# Practical 10 - Testing, APIs, Flask
 
 Don't forget to make a new branch, `prac_10_feedback` _before_ you start!  
 You will put some files into that branch for your normal practicals project/repo, but you will also have separate
@@ -18,7 +18,7 @@ Write some short but thoughtful comments about each of the following:
 - regarding **code reviews**, what have you learned from both being reviewed and doing reviews?
 - regarding the **practical tasks** overall, what would you change if you were in charge of the subject?
 
-Include proper markdown links to two (2) PRs that show you doing good code reviews for any of the past pracs.
+Include proper Markdown links to two (2) PRs that show you doing good code reviews for any of the past pracs.
 
 # Testing
 
