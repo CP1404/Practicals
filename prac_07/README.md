@@ -6,6 +6,10 @@ Remember to check and do your code review when requested.
 
 [Find the right student to mention here](https://github.com/CP1404/Starter/wiki/Code-Review-Order#prac-7)
 
+Firstly, you do not need to wait to receive your code review before starting. If you haven't received a review, you can
+still complete this process. The PR URL is still the same and the reviewer can still review the code even though it has
+been merged.
+
 Let's run through the process:
 
 - **Merge** your PR on GitHub to ensure that your remote `master` branch is up-to-date.
