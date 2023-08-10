@@ -77,9 +77,13 @@ Notice how:
 
 ## More Guitars!
 
+File: `guitar.py`  
 File: `myguitars.py`
 
-Open the file: [guitars.csv](guitars.csv)  
+Start by copying `guitar.py` from your `prac_06` folder into this week's prac.  
+We could import it, but we want to modify it, so we'll leave the old one unchanged.
+
+Save the file: [guitars.csv](guitars.csv) to your prac folder.  
 This file contains lines like:
 
 `Fender Stratocaster,2014,765.4`
@@ -106,7 +110,7 @@ We get an error like:
 So we need to define how the `<` operator should work.  
 Do you remember how?
 
-Write code for the `__lt__` (less than) method. You should be able to figure this out...  
+Write code for the `__lt__` (less than) method so that it compares Guitars by year.    
 Then test and see if it sorts correctly now.
 
 ### Commit as you go
@@ -351,5 +355,5 @@ Files required:
 - Practicals repository on GitHub and up-to-date (every week)
 - `README.md` (submitted and on GitHub, as with all the files)
 - `language_file_reader.py`, `programming_language.py`, `languages.csv`
-- `myguitars.py`
-- `project`, `project_management.py`
+- `guitar.py`, `myguitars.py`
+- `project.py`, `project_management.py`
