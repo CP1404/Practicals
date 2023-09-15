@@ -202,9 +202,9 @@ sales = float(input("Enter sales: $"))
 
 Run and **test** the code with a few different values to verify that
 it works.  
-Whenever you are testing code, you should not just use random values
+Whenever you are testing code, don't just use random values
 but values that you know the expected output for and that test all
-paths of execution, including the **boundary or edge case**.  
+paths of execution, including the **boundary or edge cases**.  
 So, for this program we could use the following (we're only
 interested in the values, not the format):
 
@@ -219,11 +219,12 @@ so it repeatedly asks for the user's sales and prints the bonus
 **until** they enter a negative number. Note the boundary carefully.  
 Remember that **until** is the opposite of **while**, and if you need help,
 please [check the patterns](https://github.com/CP1404/Starter/wiki/Programming-Patterns#while-loops-indefinite-iteration)
-. Here's (only) some pseudocode to help you:
+. Here's some pseudocode to help you:
 
     get sales
     while sales >= 0
-        calculate bonus
+        calculate bonus (this line is intentionally incomplete pseudocode)
+        print bonus
         get sales
     do next thing
 
@@ -462,31 +463,32 @@ Save each program in a different file within the `prac_01` folder.
 
 ## Extension
 
-1. **Menu-driven number sequence generator:**  `sequences.py`    
-   A school teacher requires a small program that would allow primary
-   school students to learn about various number sequences. The teacher
-   is interested in a simple menu-driven program that has the following
-   choices (where x and y are inputs the user enters once at the start
-   of the program):
+### Menu-driven number sequence generator
+
+`sequences.py`    
+
+A school teacher requires a small program that would allow primary
+school students to learn about various number sequences. The teacher
+is interested in a simple menu-driven program that has the following
+choices (where x and y are inputs the user enters once at the start
+of the program):
 
     1. Show the even numbers from x to y
     2. Show the odd numbers from x to y
-    3. Show the squares from x to y
+    3. Show the squares of the numbers from x to y (e.g., if x, y = 2, 4 then: 4 9 16)
     4. Exit the program
 
 # Solutions?
 
-Remember that solutions are provided for most prac exercises... to help you learn, not just for copying :)  
-See the solutions branch here in this repository. Change the **branch** to "solutions" at the top of the page.
+Remember that solutions are provided for most prac exercises.  
+These exist to help you learn, not just for copying :)  
+See the solutions branch here in this repository. Change the **branch** to "solutions" at the top of the page.  
+Compare your work to the provided solutions and see if there are any significant differences that you can learn from. 
 
 # Deliverables
 
-This section summarises the expectations for marking in this practical.
-
-- Do not zip up your files.
-- Please submit each file separately.
-- Ensure each file has the correct/exact name, including the extension.
-- Ensure your code is not commented-out (only comments should be commented).
+This section summarises the expectations for marking in this practical.  
+Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.
 
 Files required:
 
