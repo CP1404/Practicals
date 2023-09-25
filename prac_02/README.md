@@ -169,11 +169,14 @@ want there... but do not put your practical work in Sandbox or vice versa.
 
 ## Now let's get your practicals on GitHub
 
-You will create a new repository from a "template" on GitHub so that you have a complete and correct folder structure.  
+You will create a new repository from a "template" on GitHub so that you have a complete and correct folder structure.      
 Then, you will clone this as a new PyCharm project and move your existing work into it.
 
-- On GitHub, click the + button to add a new repository.
-- Select the **Repository template** CP1404/cp1404practicals (https://github.com/CP1404/cp1404practicals)
+- Go to the [CP1404 practicals template repo](https://github.com/CP1404/cp1404practicals)
+- Click "Use this template" > "Create a new repository"
+
+![Use this template > Create a new repository](../images/github-use-this-template.png)
+
 - Name your repo "cp1404practicals"
 - Your repo must be public!
 
