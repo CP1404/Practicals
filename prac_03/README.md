@@ -237,9 +237,6 @@ floating-point number)
 
       `out_file.close()`
 
-    - This version uses the `.format()` method when printing the price. Change this to use f-string formatting (keep the
-      same output).
-
 ## Exceptions Demo
 
 File: `exceptions_demo.py`
@@ -416,13 +413,13 @@ text and variables with nice string formatting using f-strings.
 Before we're done, let's learn one more Git thing: **ignoring** files.
 
 You will have files in your project that you don't want stored in your
-repo (like PyCharm metadata files). You can just choose not to add them
+repo, like PyCharm metadata files. You can just choose not to add them
 (as we've done until now) but they do show up as "unversioned files".   
 We'd prefer to only see files we should consider adding.
 
 ![Unversioned Files window](../images/04image2.png)
 
-The solution is to add a file called `.gitignore` to your repository.  
+The solution is to use a file called `.gitignore` in your repository.  
 Note the exact spelling, including the dot at the start and no extension.  
 On Unix-like systems (including Mac), the dot makes a file/folder _hidden_.
 
@@ -430,11 +427,10 @@ On Unix-like systems (including Mac), the dot makes a file/folder _hidden_.
 folders you want Git not to track and not to warn you about.  
 Your file will still exist in your _project_, but not in your _repository_.
 
-If you created your project from our template repository, then you already have this file.  
+If you created your project from our template repository, then you already have this file. Well done.  
 If not...
 
-**Create a file called `.gitignore`** in the **root folder** (NOT inside `prac_03` or similar) of your pracs
-project/repo,
+**Create a file called `.gitignore`** in the **root folder** (NOT inside a subfolder) of your pracs project,
 and **add** it to Git.
 
 Then enter the following line (the trailing slash means it will match a directory
@@ -450,7 +446,7 @@ Now look at that Version Control tool window... problem solved!
 
 Commit and Push.
 
-**Note:** if you have already committed your `.idea` folder to your
+**Note:** if you had already committed your `.idea` folder to your
 repository, PyCharm does not seem to provide a way to stop tracking this.
 You use the Git command line (e.g., in PyCharm's Terminal, git bash, or Mac Terminal).  
 Ask your tutor if you've never done this before.  
