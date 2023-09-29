@@ -597,6 +597,8 @@ Please follow the [submission guidelines](../README.md#submission) to ensure you
 
 Files required:
 
+For all pracs, including this one, include your GitHub repo URL.
+
 - `string_formatting.py`
 - `randoms.py`
 - `capitalist_conrad.py`
