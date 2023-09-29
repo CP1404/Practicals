@@ -146,7 +146,7 @@ about a couple of these functions:
         This fixes the problem with randint() which includes the
         endpoint; in Python this is usually not what you want.
 
-Note: the name of a function can be used without the brackets here, but this
+The name of a function can be used without the brackets here, but this
 does not execute the function.
 
 **Never** name a file the same as a module;
@@ -264,7 +264,7 @@ crash when a non-number is entered. Copy the code from
 [exceptions_to_complete.py](exceptions_to_complete.py)
 and complete the program by following the `TODO` comment instructions.
 
-Note: PyCharm will probably give you a warning that `result` "may be undefined". This is safe to ignore.  
+[!NOTE] PyCharm will probably give you a warning that `result` "may be undefined". This is safe to ignore.  
 It's not a PEP8 formatting warning, it's PyCharm thinking that you might somehow exit the loop before defining `result`
 .  
 Since we're controlling how we exit the loop, we know this problem will not occur.
@@ -284,7 +284,7 @@ When you execute a Python program that contains a line like
 same folder as the Python file in your PyCharm project.
 
 Create a new file called `files.py` and do all the following *separate questions* in it:  
-Note: the intention is to give you experience using different ways to read files.  
+The intention here is to give you experience using different ways to read files.  
 Make sure you're confident with:
 
 - `read()`
@@ -376,9 +376,10 @@ constants (special characters are not required in this version):
     > 1aB
     Your 3 character password is valid: 1aB
 
-**Important Note:** Do not just try and Google "Python password checker"
-or something, but think about doing this step by step. We have started
-this for you with `TODO` comments in the code provided. Follow these.
+[!NOTE] Do not just try and Google "Python password checker"
+or something, but think about doing this step by step.  
+We have provided a suitable structure for you with `TODO` comments in the code provided.  
+Follow these.
 
 - First, just check if a string has at least one lowercase character.  
   You can do this by looping through the string (`for character in password:`) and testing each character... count the
@@ -410,9 +411,12 @@ text and variables with nice string formatting using f-strings.
 ## .gitignore
 
 ![GitHub logo](../images/githublogo.png)  
-Before we're done, let's learn one more Git thing: **ignoring** files.
+Before we're done, let's learn one more Git thing: **ignoring** files.  
+If you created your project from our template repository, then you already have this file, so there's no more to do.  
+The following details are here to help you understand how `.gitignore` works.  
+If you did not use the template, then you need to do this manually now...
 
-You will have files in your project that you don't want stored in your
+You have files in your project that you don't want stored in your
 repo, like PyCharm metadata files. You can just choose not to add them
 (as we've done until now) but they do show up as "unversioned files".   
 We'd prefer to only see files we should consider adding.
@@ -427,10 +431,8 @@ On Unix-like systems (including Mac), the dot makes a file/folder _hidden_.
 folders you want Git not to track and not to warn you about.  
 Your file will still exist in your _project_, but not in your _repository_.
 
-If you created your project from our template repository, then you already have this file. Well done.  
-If not...
-
-**Create a file called `.gitignore`** in the **root folder** (NOT inside a subfolder) of your pracs project,
+(If you don't already have one)  
+**Create a file called `.gitignore`** in the **root folder** (NOT inside a subfolder) of your project,
 and **add** it to Git.
 
 Then enter the following line (the trailing slash means it will match a directory
@@ -446,7 +448,7 @@ Now look at that Version Control tool window... problem solved!
 
 Commit and Push.
 
-**Note:** if you had already committed your `.idea` folder to your
+[!NOTE] If you had already committed your `.idea` folder to your
 repository, PyCharm does not seem to provide a way to stop tracking this.
 You use the Git command line (e.g., in PyCharm's Terminal, git bash, or Mac Terminal).  
 Ask your tutor if you've never done this before.  
@@ -581,7 +583,7 @@ generated password.
 
 # Solutions to Selected Exercises
 
-**Note:** it is ***super important*** that you use any provided
+[!NOTE] It is ***super important*** that you use any provided
 solutions to **help you learn**, not to avoid learning!  
 Do the work yourself first, and *only* check the solutions to evaluate
 your own work - not to do it for you. **OK?**
@@ -606,4 +608,3 @@ For all pracs, including this one, include your GitHub repo URL.
 - `exceptions_to_complete.py`
 - `files.py`
 - `password_checker.py`
-- `.gitignore` on GitHub (you don't need to upload this to LearnJCU)
