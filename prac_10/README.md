@@ -33,8 +33,8 @@ the code shows you examples to learn form.
 2. Write at least two `assert` statements to show if Car sets the fuel correctly.
 
 3. Uncomment the `doctest.runmod()` line to see how the doctests run.
-
-   Note: PyCharm might detect your tests and automatically run your program in doctest mode.
+   > [!NOTE]
+   > PyCharm might detect your tests and automatically run your program in doctest mode.
 
 4. Fix the failing `is_long_word` function.
 
@@ -46,6 +46,10 @@ the code shows you examples to learn form.
 # Wikipedia API & Python Library
 
 File: `wiki.py`
+
+> [!NOTE]
+> We are interfacing with things outside our control.
+> Some of the specific details here may change with different versions of the APIs we use.
 
 Until now, we've only worked on our local computers, interacting with local files, but never talking to the great big
 computer in the sky... so let's do that now :)
@@ -66,9 +70,10 @@ installing! If you really can't install the wikipedia package, then skip those p
 
 In PyCharm, go to Settings/Preferences > Project: Practicals > Project Interpreter (it might look a bit different, but
 you should have been here before) and click the plus button to install a package. Type "wikipedia"
-to find the one we want, and then click "Install Package".  
-**Note:** If you don't have permission to install this, try it with the option to install to user's site packages
-directory.
+to find the one we want, and then click "Install Package".
+
+> [!NOTE]
+> If you don't have permission to install this, try it with the option to install to user's site packages directory.
 
 ![PyCharm install package](../images/10image3.png)
 
@@ -83,8 +88,7 @@ Get a page and see what properties it has.
 then prints the summary of that page. Use a simple loop that continues doing this until the user enters blank input.
 
 Try this with a few page titles and see what happens.  
-(Note that you might get a warning about an outdated use of the `BeautifulSoup` package. We can't fix that so ignore
-it.)
+(You might get a warning about an outdated use of the `BeautifulSoup` package. We can't fix that so please ignore it.)
 
 Try it with the search/title "Python", and you should find that the Wikipedia API returns a "disambiguation" page, so
 you
@@ -112,9 +116,10 @@ is written in Python and uses Flask.)
 
 Flask docs are at: <http://flask.pocoo.org/docs>.
 
-In PyCharm, create a new project, choosing Flask.  
-Note that you need the Professional edition, not the Community
-edition to see this screen when making a new project.
+In PyCharm, create a new project, choosing Flask.
+> [!NOTE]
+> You need the Professional edition, not the Community
+> edition to see this screen when making a new project.
 
 If this is the first time you've done this, PyCharm should
 install the Flask package and other dependencies, like Jinja for templating.
@@ -180,8 +185,9 @@ Re-run the program, then change your browser's URL by adding `/greet` to the end
 
 This is a bit simple so far... but we're getting there...
 
-Note: If you ever get an "Internal Server Error" in the browser... this is *your* server (Python program)!  
-Go back to PyCharm and look for error messages in the console.
+> [!NOTE] 
+> If you ever get an "Internal Server Error" in the browser... this is *your* server (Python program)!  
+> Go back to PyCharm and look for error messages in the console.
 
 Add another decorator so that the greet function runs for multiple "sub"
 routes and takes a parameter, like:
@@ -207,7 +213,7 @@ It should take a Celsius float value and return a Fahrenheit float.
 Now, create a new route so that you can enter Celsius values in the URL and see the Fahrenheit values in the Web page,
 like below. Note that the parameter passed via the URL (`100.2` in this case) is a string.
 
-SRP! Note that if you wrote the temperature conversion function correctly before... here's another great example of how
+**SRP!** If you wrote the temperature conversion function correctly before... here's another great example of how
 SRP works. We don't know or even care what the function will be used for - Flask, Kivy, Console... that's why we design
 the function to do one job - just the conversion.  
 If you did not write it correctly, then notice how you cannot reuse it.

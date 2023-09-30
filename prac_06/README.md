@@ -11,14 +11,14 @@ a code review.
 So, every week, ***before*** starting the prac, ensure that your `master` branch is up-to-date, then create a new
 branch.
 
-You must merge your feedback branch on GitHub, then **pull** to update your local master branch.  
-Then, ensure you are on the master branch, not the feedback branch, and create a new one, `prac_06_feedback`.  
+You must **merge** your feedback branch on GitHub, then **pull** to update your local master branch.  
+Then, ensure you are on the `master` branch, not the feedback branch.  
+Then create a new branch, `prac_06_feedback`.  
 See how this works?  
-Please ask for help if you're not sure.
+If you're not sure, please ask for help.
 
 Expectations and marking for this prac include **doing a code review** not just requesting one.  
-Submit both your own PR URL where you **request** a review, and the PR URL of the code review you have done.  
-We understand that this means someone else must have requested that you do a review.
+See the [submission deliverables](#deliverables) below.
 
 ## Classes
 
@@ -39,7 +39,7 @@ First, please confirm that you are on an up-to-date feedback branch with all you
 Get (remember to click Raw)
 [car.py](car.py) and [used_cars.py](used_cars.py) and add them to your PyCharm project in this week's prac folder.
 
-Note that the import statement assumes you have your `car.py` file in a folder called `prac_06` as we suggested.
+The `import` statement assumes you have your `car.py` file in a folder called `prac_06` as we suggested.
 
 Run your program and it should work.
 
@@ -83,15 +83,17 @@ File: `programming_language.py`
 File: `languages.py`
 
 Let's make our own simple class for a **programming language** in the file
-`programming_language.py` (note that the file/module name is the same as the class but in lower case and with
-optional `_` for readability)
+`programming_language.py`
 
-Call your class `ProgrammingLanguage` (using Python's recommended "CapWords" style).
+> [!NOTE]
+> Remember that file/module names are always the same as the class but in lower case,
+> with optional `_` for readability.
 
-There are lots of things we could store, but we'll consider only the following, based mostly on the information found at
-this [Programming Language Comparison](http://www.jvoegele.com/software/langcomp.html) page.
+Follow Python's recommended "CapWords" style and call your class `ProgrammingLanguage`.
 
-For each language, we want to store the following fields - the row names from this table:
+For each language, we want to store the following fields - the row names from this table,
+based mostly on the information found at
+[this Programming Language Comparison](http://www.jvoegele.com/software/langcomp.html) page.
 
 | (Field)          | **Java** | **C++** | **Python** | **Visual Basic** | **Ruby** |
 |------------------|----------|---------|------------|------------------|----------|
@@ -101,15 +103,17 @@ For each language, we want to store the following fields - the row names from th
 
 Define the following **methods**:
 
-- `__init__` - like most init functions, create the fields and set them to the parameters passed in
+- `__init__` - like most init functions, create the fields and set them to the parameters passed in.
 
-- `is_dynamic()` - which returns True/False if the programming language is dynamically typed or not  
-  **Note**: it's ***really important*** that you understand this function will take no parameters (other than `self`).
-  The
-  information is already stored *inside* the object, so you don't need to tell the object its own data. This function's
-  purpose is to encapsulate the functionality that would make the class more helpful. See how the function name
-  starts with `is`, like `isupper()`,
-  `isnumeric()`, etc.? So, it returns a Boolean.
+- `is_dynamic()` - which returns True/False if the programming language is dynamically typed or not.
+
+> [IMPORTANT]
+> Please understand that this function will take no parameters other than `self`.
+> The data is already *inside* the object, so you don't need to tell the object its own data.
+
+This function's purpose is to encapsulate the functionality that would make the class more helpful.  
+See how the function name starts with `is`, like `isupper()`, `isnumeric()`, etc.?  
+So, it returns a Boolean.
 
 Create a simple program in `languages.py`
 
@@ -128,7 +132,7 @@ Now add the `__str__` method to the class (not the client code), which should re
 
 See if your `__str__` function is working properly by running the program to check that printing works as expected.
 
-Now create a new list that contains these three existing ProgrammingLanguage objects.
+Now create a new list that contains these three existing `ProgrammingLanguage` objects.
 
 ![Pencil Icon](../images/pencil.png)
 
@@ -220,8 +224,9 @@ This program should use a list to store all the user's guitars (keep inputting u
 print
 their details.
 
-***Read the full question*** including the notes *before* starting.  
-We've written helpful comments to make it easier and to teach you useful lessons.
+> [!IMPORTANT]
+> Read the full question including the notes *before* starting.  
+> We've written helpful guidance to make this easier and to teach you valuable lessons.
 
 **Sample Output** (**bold** is user entry):
 
@@ -297,114 +302,122 @@ Use these exercises as much-needed practice and as ways to learn new things.
 
 ## Practice
 
-1. Similar to the practice question with friends' names and addresses in prac 5, create a program that uses a list
-   of `Person` objects.  
-   Each Person object includes first-name, last-name and age.  
-   The user can type in the details of any number of people. The code generates a table formatted with the first-names,
-   last-names, and ages of the people (perhaps sort the people into order based on their ages).
+### Persons
 
-2. Create a **car driving simulator** in `car_simulator.py` that uses the Car class that works like the following sample
-   output...
+Similar to the practice question with friends' names and addresses in prac 5,
+create a program that uses a list of `Person` objects.  
+Each `Person` object includes first-name, last-name and age.  
+The user can type in the details of any number of people. The code generates a table formatted with the first-names,
+last-names, and ages of the people (perhaps sort the people into order based on their ages).
 
-   **Note:** Please do this (and every problem of significant size)
-   incrementally:
+### Driving Simulator
+
+Create a car driving simulator in `car_simulator.py` that uses the `Car` class that works like the following sample
+output...
+
+> [!NOTE]
+> Please do this (and every problem of significant size) incrementally:
 
     - Start by just testing one method call,
     - then another,
     - then write the menu and put it all together.  
       (Do not start with the menu.)
 
-   Remember to use the class's functionality - don't rewrite anything you've already got.
+Remember to use the class's functionality.  
+Don't rewrite anything you've already got.
 
-   Do you remember how to construct a simple menu-driven program? If not, it's very important that you revise earlier
-   lectures and practicals.  
-   You will need to `import` the car module, create a `Car` object, and use appropriate methods on that object.
+Do you remember how to construct a simple menu-driven program? If not, revise earlier
+lectures and practicals.
 
-        Let's drive!
-        Enter your car name: The bomb
-        The bomb, fuel=100, odo=0
-        Menu:
-        d) drive
-        r) refuel
-        q) quit
-        Enter your choice: f
-        Invalid choice
-        
-        The bomb, fuel=100, odo=0
-        Menu:
-        d) drive
-        r) refuel
-        q) quit
-        Enter your choice: d
-        How many km do you wish to drive? 39
-        The car drove 39km.
-        
-        The bomb, fuel=61, odo=39
-        Menu:
-        d) drive
-        r) refuel
-        q) quit
-        Enter your choice: d
-        How many km do you wish to drive? -25
-        Distance must be >= 0
-        How many km do you wish to drive? 100
-        The car drove 61km and ran out of fuel.
-        
-        The bomb, fuel=0, odo=100
-        Menu:
-        d) drive
-        r) refuel
-        q) quit
-        Enter your choice: r
-        How many units of fuel do you want to add to the car? -80
-        Fuel amount must be >= 0
-        How many units of fuel do you want to add to the car? 120
-        Added 120 units of fuel.
-        
-        The bomb, fuel=120, odo=100
-        Menu:
-        d) drive
-        r) refuel
-        q) quit
-        Enter your choice: d
-        How many km do you wish to drive? 25
-        The car drove 25km.
-        
-        The bomb, fuel=95, odo=125
-        Menu:
-        d) drive
-        r) refuel
-        q) quit
-        Enter your choice: q
-        
-        Good bye The bomb's driver.
+You will need to `import` the `car` module, create a `Car` object, and use appropriate methods on that object.
+
+    Let's drive!
+    Enter your car name: The bomb
+    The bomb, fuel=100, odo=0
+    Menu:
+    d) drive
+    r) refuel
+    q) quit
+    Enter your choice: f
+    Invalid choice
+    
+    The bomb, fuel=100, odo=0
+    Menu:
+    d) drive
+    r) refuel
+    q) quit
+    Enter your choice: d
+    How many km do you wish to drive? 39
+    The car drove 39km.
+    
+    The bomb, fuel=61, odo=39
+    Menu:
+    d) drive
+    r) refuel
+    q) quit
+    Enter your choice: d
+    How many km do you wish to drive? -25
+    Distance must be >= 0
+    How many km do you wish to drive? 100
+    The car drove 61km and ran out of fuel.
+    
+    The bomb, fuel=0, odo=100
+    Menu:
+    d) drive
+    r) refuel
+    q) quit
+    Enter your choice: r
+    How many units of fuel do you want to add to the car? -80
+    Fuel amount must be >= 0
+    How many units of fuel do you want to add to the car? 120
+    Added 120 units of fuel.
+    
+    The bomb, fuel=120, odo=100
+    Menu:
+    d) drive
+    r) refuel
+    q) quit
+    Enter your choice: d
+    How many km do you wish to drive? 25
+    The car drove 25km.
+    
+    The bomb, fuel=95, odo=125
+    Menu:
+    d) drive
+    r) refuel
+    q) quit
+    Enter your choice: q
+    
+    Good bye The bomb's driver.
 
 ## Extension
 
-1. Create a `Date` class, storing the fields:
+### Date
 
-    - `day`
-    - `month`
-    - `year`
+> [!NOTE]
+> Python has good modules for dates, like `date` and `datetime`.  
+> You would usually use these, not write your own. This is a practice question.
 
-   Write some useful methods, including:
+Create a `Date` class, storing the fields:
 
-    - `__init__` and `__str__`
-    - `add_days(n)` - which should add n days to the stored date
-      (perhaps harder than it seems)
+- `day`
+- `month`
+- `year`
 
-   Test the class.
+Write some useful methods, including:
 
-   Note: Python has built in date and time functionality in the
-   `datetime` module, so you would not usually write your own class to store a date, but this is a good practice
-   exercise.
+- `__init__` and `__str__`
+- `add_days(n)` - which should add n days to the stored date (perhaps harder than it seems)
+
+Test the class.
 
 ![GitHub logo](../images/githublogo.png)
 
 ## Try using the command line for Git
 
 It's a valuable skill! On the lab computers, you should be able to use **"Git Bash"**. Right-click on the folder where
-your files are and select "Git Bash here". On a Mac, just use **Terminal**.
+your files are and select "Git Bash here".  
+On a Mac, just use **Terminal**.
 
 **Why?** Here's a quote from one of our students who completed this subject:
 > "Now I'm moving into 2nd yr subjects, I found the integrated
@@ -433,7 +446,7 @@ so we ask for the code review you did from the previous week.
 This week, please submit two PR URLs:
 
 - Your own feedback branch PR with a mention of a reviewer **for this prac**.
-- The PR that you reviewed **for the last prac**. (It's fine if you already submitted this.)
+- The PR that you reviewed **for the last prac**.
 
 Files required:
 

@@ -1,7 +1,6 @@
 # Practical 05 - Dictionaries, Code Reviews with PRs
 
-_Your_ reason for doing this subject/degree probably has something to do with getting a job in the IT industry.
-
+_Your_ reason for doing this subject/degree probably has something to do with getting a job in the IT industry.  
 _Our_ reason for teaching you things like we are today is the same - to prepare you for work in the industry.
 
 A common and important part of development jobs in the IT industry is doing **code reviews**, where a developer
@@ -114,8 +113,10 @@ code, e.g., entering
 Entering an invalid colour name should not crash the program.  
 Allow the user to enter names until they enter a blank one to stop the loop.
 
-**Note:** We have just done two exercises that use dictionaries that are constants and named in ALL_CAPS. Please don't
-think this is any kind of rule or pattern. Dictionaries that change would not be constants.
+> [!NOTE]
+> We have just done two exercises that use dictionaries that are constants and named in ALL_CAPS.  
+> Please don't think this is any kind of rule or pattern.  
+> Dictionaries that change would not be constants.
 
 # Do-from-scratch Exercises
 
@@ -270,8 +271,13 @@ AUS, CRO, ESP, FRG, GBR, GER, NED, SRB, SUI, SWE, TCH, USA
 
 # Code Reviews with Pull Requests
 
-Now that you've finished the coding work, it's time to request a code review...
+First, here are some recent student comments about the value of doing code reviews:
 
+- _After getting some code reviews I have started to think "what would this look like to someone else", 
+  which motivates me to make cleaner code._
+- _While doing code reviews I often realised that I had made a mistake in my own work/could improve it_
+
+Now that you've finished the coding work, it's time to request a code review...  
 Our process is based on how code reviews and pull requests (PRs) happen in
 the IT industry, but is simplified to suit our teaching environment.
 
@@ -313,8 +319,10 @@ the IT industry, but is simplified to suit our teaching environment.
    Your job is to look for anything that could be improved including incorrect, inconsistent or non-ideal naming,
    formatting, logic... anything relevant. Add clear explanations, suggestions or questions.
 
-   **Important:** this is not a trivial exercise. Don't just write "all good mate :)", but take your time and add
-   thoughtful comments that help you and the requester to learn and improve.
+   > [!IMPORTANT]
+   > This is not a trivial exercise. Don't just write "all good mate :)", but take your time and add
+   > thoughtful comments that help you and the requester to learn and improve.
+   > Make this a valuable experience by adding value
 
    At some point you will receive comments from the review you requested. You can respond to these by making changes
    in your own code in PyCharm and replying to the comments on GitHub.  
@@ -338,11 +346,10 @@ the IT industry, but is simplified to suit our teaching environment.
    **Git > Pull** then click **Pull**.  
    You should now be on your local master branch and see all your up-to-date work.
 
-All done!  
+All done!
 
 To read more about Pull Requests:
 [https://help.github.com/articles/using-pull-requests/](https://help.github.com/articles/using-pull-requests/)
-
 
 # Practice & Extension Work
 
@@ -428,7 +435,7 @@ Files required:
 
 - Practicals repository on GitHub and up-to-date (every week)
 - Pull Request (PR) that mentions another student properly
-  - Your PR URL will look something like: `https://github.com/lindsaymarkward/cp1404practicals/pull/1`
+    - Your PR URL will look something like: `https://github.com/lindsaymarkward/cp1404practicals/pull/1`
 - `state_names.py`
 - `hex_colours.py`
 - `word_occurrences.py`

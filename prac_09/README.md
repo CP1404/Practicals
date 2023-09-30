@@ -38,7 +38,7 @@ your `prac_09` folder.
 
 Download [taxi.py](taxi.py)
 
-Read the code and note that the `Taxi` class *extends* the `Car`
+Read the code and see that the `Taxi` class *extends* the `Car`
 class in two ways:
 
 - it adds new attributes (`price_per_km`,
@@ -100,7 +100,7 @@ variables directly _after_ the class header line and _before_ any method definit
 
 4. Test your code and see if you get the same output (you should).
 
-Note: when using class variables, you can either:
+When using class variables, you can either:
 
 - refer to the variable as `Taxi.price_per_km`, which explicitly refers to the class variable shared by any Taxi
   instances, or
@@ -133,10 +133,12 @@ Let's make our own derived class for an `UnreliableCar` that inherits from `Car`
       reliability.  
       Don't store the random number! It's not a self/instance variable that you want to remember, it's a temporary value
       you generate and use once, every time you call `drive()`.
-    - **Super Important Note:** the drive method in the base class
-      `Car` ***always*** returns the distance driven, so your derived class
-      `UnreliableCar` must also return a distance. You must match the "signature" of any method you override.  
-      This is true, even if your `UnreliableCar` drives 0 km.
+  > [!IMPORTANT]
+  > The `drive` method in the base class
+  > `Car` ***always*** returns the distance driven, so your derived class
+  > `UnreliableCar` must also return a distance.  
+  > This is true, even if your `UnreliableCar` drives 0 km.
+  > You must match the "signature" of any method you override.  
 
 ## SilverServiceTaxi
 
@@ -156,7 +158,7 @@ This allows you to have a different effective `price_per_km`, based on the fanci
    Note that here we can get the initial base price using
    `Taxi.price_per_km`, then customise our object's instance variable,
    `self.price_per_km`. So, if the class variable (for all taxis) goes up, the price change is ***inherited*** by all
-   SilverServiceTaxis.  
+   `SilverServiceTaxi`s.  
    If you're not sure about this, please ask! Don't go on without "getting it".
 
 2. `SilverServiceTaxi` also has an extra charge for each new fare, so add a `flagfall` *class variable* set to `4.50`.
@@ -242,10 +244,12 @@ Before we do our final exercise(s) using inheritance, let's build something usin
 inheritance, but sometimes mistaken for it.
 
 There are two kinds of association.  
-Both are **"has a"** relationships. 
+Both are **"has a"** relationships.
 
-- **Aggregation** - e.g., "Musician has a Guitar". Objects can be "inside" another, but it's possible for them to exist without the object they aggregate under. They have their own life cycles. A guitar can exist without the musician. 
-- **Composition** - e.g., "Person has a Heart". This is a strong type of aggregation. The objects "inside" do not have their own life cycle. A heart cannot exist without its person.  
+- **Aggregation** - e.g., "Musician has a Guitar". Objects can be "inside" another, but it's possible for them to exist
+  without the object they aggregate under. They have their own life cycles. A guitar can exist without the musician.
+- **Composition** - e.g., "Person has a Heart". This is a strong type of aggregation. The objects "inside" do not have
+  their own life cycle. A heart cannot exist without its person.
 
 In the same way that a `Car` has a `name` or a `Project` has a `start_date`, any object can have an attribute that's an
 instance of another class.
@@ -300,14 +304,14 @@ Each time, until they quit:
 - They can choose how far they want to drive,
 - At the end of each trip, show them the trip cost and add it to their bill.
 
-Note: Use a list of taxi objects, which you create in main and pass to functions that need it.  
+Use a list of taxi objects, which you create in main and pass to functions that need it.  
 When you choose the taxi
 object, your code will call the `drive()` method on that object, and it will use the right method for that class... so
 from the client code point of view, driving a taxi will work the same whether the object is a `Taxi` or a
 `SilverServiceTaxi`, but the results (including the price) depend on the class.  
 This is ***polymorphism***.
 
-Another note: In this program, there's the chance the user will  
+In this program, there's the chance the user will  
 drive a taxi before choosing one. This shouldn't crash.  
 A good option is to maintain something like a `current_taxi`... but what will the initial value of this variable be?  
 When you want a default starting value for an object, don't use a string or other unrelated type...  

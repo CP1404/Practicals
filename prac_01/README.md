@@ -368,7 +368,7 @@ The general pattern of a menu-driven program is as follows:
         get choice
     do final thing, if needed
 
-> [!NOTE]
+> [!WARNING]
 > A common error when writing menus is to forget to repeat the menu display and prompt at the end (inside) the loop.  
 > Follow the pattern.
 

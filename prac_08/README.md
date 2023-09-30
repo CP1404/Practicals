@@ -1,18 +1,20 @@
 # Practical 08 - Kivy
 
+> [!NOTE]
+> This is a fairly long practical, so allocate more than the usual time for it.  
+> There are a lot of demos to learn and copy from in <https://github.com/CP1404/KivyDemos>.
+
 Check the instructions from previous pracs to remind you how to correctly merge and update `master` before starting this
 prac in a new branch, `prac_08_feedback`.
-
-**Note**: This is a fairly long practical, so allocate more than the usual time for it.  
-There are a lot of demos to learn and copy from in <https://github.com/CP1404/KivyDemos>.
 
 If you're using your own computer, and you haven't already done so, please follow the setup instructions for installing
 Kivy at:
 <https://github.com/CP1404/Starter/wiki/Software-Setup>
 
-If you haven't already, **please save yourself time and make life easier**
-by adding kv language syntax highlighting and auto-completion
-(since PyCharm does not know about kv language by default):
+> [!IMPORTANT]
+> If you haven't already, **please save yourself time and make life easier**
+> by adding kv language syntax highlighting and auto-completion
+> (since PyCharm does not know about kv language by default):
 
 - Download: <https://github.com/Zen-CODE/kivybits/blob/master/IDE/PyCharm_kv_completion.jar?raw=true>
 
@@ -225,10 +227,11 @@ As always, do this in small steps.
 
 - Pressing the Up or Down buttons should make the miles number go up or down by 1.
 
-    - Note: You can handle both of these with the same function by passing a value, e.g.,  
-      `handle_increment(-1)`
-      Or, you may like to pass the text of the input field when you call this, like:
-      `handle_increment(whatever_your_input_id_is.text, -1)`
+> [!NOTE]
+> You can handle both of these with the same function by passing a value, e.g.,  
+`handle_increment(-1)`
+> Or, you may like to pass the text of the input field when you call this, like:
+`handle_increment(whatever_your_input_id_is.text, -1)`
 
 ### Stage 2 - Handle invalid inputs
 
@@ -244,8 +247,9 @@ As always, do this in small steps.
 - Did you use a `CONSTANT` in your conversion calculation?  
   Do this now if you haven't already.
 
-**Note:** The solution to this is provided (`convert_miles_km.py/kv`).  
-Don't just copy it, but you're welcome to use it if you get stuck, or to compare your solution to ours.
+> [!NOTE]
+> The solution to this is provided (`convert_miles_km.py/kv`).  
+> Don't just copy it, but you're welcome to use it if you get stuck, or to compare your solution to ours.
 
 ## Dynamic Kivy Widgets
 
@@ -256,7 +260,10 @@ First, open and study `dynamic_widgets.py/kv` in the demos to learn how to dynam
 The important aspects of this demo are:
 
 - We set an `id` for the `BoxLayout` widget that we will add items to
-  in the kv file. Note that this cannot be the root widget!
+  in the kv file.
+
+  > [!WARNING]
+  > You cannot use the root as your widget to add items to
 
 - We create the widgets (e.g., buttons) in Python code, e.g.,
 
@@ -285,9 +292,11 @@ Notice some things in dynamic_widgets demo that will be very similar (but not th
 - the dictionary is defined in the `init` function (this is the data, or model)
 - the widgets (`Buttons` in the demo, but yours will be `Labels`) are made with a loop in the  `build` function
 
-**Note:** Start a new blank Python program for this; **do not copy the dynamic_widgets example** as it is too different.
-Your app won't have any buttons or interactivity.  
-Use the example as a reference and copy small sections or ideas from it.
+> [!NOTE]
+> Start a new blank Python program for this.
+> **Do not copy the dynamic_widgets example**, because it is too different.
+> Your app won't have any buttons or interactivity.  
+> Use the example as a reference and copy small sections or ideas from it.
 
 Here's a suggested kv file you could use. Notice how simple it is, but it does have a child `BoxLayout` with an `id`.
 

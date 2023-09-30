@@ -17,15 +17,10 @@ When you're about to make a change, like refactoring, commit first so that you
 can track the differences, and you can go back to a previous version if
 you need to.
 
-# Remarkably Important!
-
-- **DO NOT make a new project for each practical!**
-- If you don't already have one, create a new folder called `prac_03` in your existing practicals project.
-- Keep using the same PyCharm project for all practicals.
-- We don't use spaces in file or folder names as then they are invalid module names (important for importing in prac 6).
-
-If you correctly shared your practicals repository on GitHub, then you can **clone** your repo to continue your work on
-a new computer any time you need to.
+> [!IMPORTANT]
+> Do Not make a new project for each practical.  
+> Keep using the same PyCharm project and GitHub repo for all practicals.  
+> If you need to work on a new computer, you can **clone** your repo.  
 
 # Walkthrough Example
 
