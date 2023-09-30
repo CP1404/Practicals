@@ -264,10 +264,11 @@ crash when a non-number is entered. Copy the code from
 [exceptions_to_complete.py](exceptions_to_complete.py)
 and complete the program by following the `TODO` comment instructions.
 
-[!NOTE] PyCharm will probably give you a warning that `result` "may be undefined". This is safe to ignore.  
-It's not a PEP8 formatting warning, it's PyCharm thinking that you might somehow exit the loop before defining `result`
-.  
-Since we're controlling how we exit the loop, we know this problem will not occur.
+> [!NOTE]
+> PyCharm will probably give you a warning that `result` "may be undefined". This is safe to ignore.  
+> It's not a PEP8 formatting warning.
+> It's PyCharm thinking that you might somehow exit the loop before defining `result`.  
+> Since we are controlling how we exit the loop, we know that this problem will not occur.
 
 *You're doing well. Keep it up...*
 
@@ -339,8 +340,8 @@ b. whether a special character (not alphabetical or numerical) is required
 
 Remember when a program has CONSTANTS, you should use them everywhere you can so that if you change them at the top,
 this change affects the whole program as expected.  
-E.g., if you changed the minimum length to 5, the program should print 5 and should check to make sure the password is >
-= 5 characters long.
+E.g., if you changed the minimum length to 5, the program should print 5 and should check to make sure the password
+is >= 5 characters long.
 
 Output should look something like this:
 
@@ -376,7 +377,7 @@ constants (special characters are not required in this version):
     > 1aB
     Your 3 character password is valid: 1aB
 
-[!NOTE] Do not just try and Google "Python password checker"
+Do not just try and Google "Python password checker"
 or something, but think about doing this step by step.  
 We have provided a suitable structure for you with `TODO` comments in the code provided.  
 Follow these.
@@ -448,7 +449,7 @@ Now look at that Version Control tool window... problem solved!
 
 Commit and Push.
 
-[!NOTE] If you had already committed your `.idea` folder to your
+If you had already committed your `.idea` folder to your
 repository, PyCharm does not seem to provide a way to stop tracking this.
 You use the Git command line (e.g., in PyCharm's Terminal, git bash, or Mac Terminal).  
 Ask your tutor if you've never done this before.  
@@ -583,12 +584,11 @@ generated password.
 
 # Solutions to Selected Exercises
 
-[!NOTE] It is ***super important*** that you use any provided
+It is ***super important*** that you use any provided
 solutions to **help you learn**, not to avoid learning!  
-Do the work yourself first, and *only* check the solutions to evaluate
-your own work - not to do it for you. **OK?**
+Do the work yourself first, and *only* check the solutions to evaluate your work - not to do it for you. **OK?**
 
-Some solutions (not all) for practicals will be provided in the
+Some solutions (not all) for practicals are provided in the
 **solutions** branch of the Practicals repository on GitHub:
 <https://github.com/CP1404/Practicals/tree/solutions>
 
