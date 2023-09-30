@@ -318,10 +318,9 @@ output...
 > [!NOTE]
 > Please do this (and every problem of significant size) incrementally:
 
-    - Start by just testing one method call,
-    - then another,
-    - then write the menu and put it all together.  
-      (Do not start with the menu.)
+- Start by just testing one method call,
+- then another,
+- then write the menu and put it all together.  
 
 Remember to use the class's functionality.  
 Don't rewrite anything you've already got.
