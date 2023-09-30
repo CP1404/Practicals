@@ -48,7 +48,7 @@ the code shows you examples to learn form.
 File: `wiki.py`
 
 > [!NOTE]
-> We are interfacing with things outside our control.
+> We are interfacing with things outside our control.  
 > Some of the specific details here may change with different versions of the APIs we use.
 
 Until now, we've only worked on our local computers, interacting with local files, but never talking to the great big

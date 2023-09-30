@@ -229,9 +229,9 @@ As always, do this in small steps.
 
 > [!NOTE]
 > You can handle both of these with the same function by passing a value, e.g.,  
-`handle_increment(-1)`
-> Or, you may like to pass the text of the input field when you call this, like:
-`handle_increment(whatever_your_input_id_is.text, -1)`
+`handle_increment(-1)`  
+> Or, you may like to pass the text of the input field when you call this, like:  
+> `handle_increment(whatever_your_input_id_is.text, -1)`
 
 ### Stage 2 - Handle invalid inputs
 
@@ -293,8 +293,8 @@ Notice some things in dynamic_widgets demo that will be very similar (but not th
 - the widgets (`Buttons` in the demo, but yours will be `Labels`) are made with a loop in the  `build` function
 
 > [!NOTE]
-> Start a new blank Python program for this.
-> **Do not copy the dynamic_widgets example**, because it is too different.
+> Start a new blank Python program for this.  
+> **Do not copy the dynamic_widgets example**, because it is too different.  
 > Your app won't have any buttons or interactivity.  
 > Use the example as a reference and copy small sections or ideas from it.
 

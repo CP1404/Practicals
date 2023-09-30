@@ -261,7 +261,7 @@ and complete the program by following the `TODO` comment instructions.
 
 > [!NOTE]
 > PyCharm will probably give you a warning that `result` "may be undefined". This is safe to ignore.  
-> It's not a PEP8 formatting warning.
+> It's not a PEP8 formatting warning.  
 > It's PyCharm thinking that you might somehow exit the loop before defining `result`.  
 > Since we are controlling how we exit the loop, we know that this problem will not occur.
 
