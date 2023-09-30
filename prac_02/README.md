@@ -42,9 +42,10 @@ Let's start with the basics of **Git** version control.
 These instructions are from the point of view of someone working on a JCU lab computer.  
 Please keep learning and practising with Git and GitHub.
 
-**Note**: It's not easy to provide exact instructions that cover multiple versions
-of PyCharm. Your experience may be a bit different depending
-on your OS, version of PyCharm and any settings.
+> [!NOTE]
+> It's not easy to provide exact instructions that cover multiple versions of PyCharm.  
+> Your experience may be a bit different depending
+> on your OS, version of PyCharm and settings.
 
 First, we are going to create a new project just to test using Git and GitHub.  
 This will not be inside your existing practicals or other projects.  
@@ -169,7 +170,8 @@ want there... but do not put your practical work in Sandbox or vice versa.
 
 ## Now let's get your practicals on GitHub
 
-You will create a new repository from a "template" on GitHub so that you have a complete and correct folder structure.      
+You will create a new repository from a "template" on GitHub so that you have a complete and correct folder
+structure.      
 Then, you will clone this as a new PyCharm project and move your existing work into it.
 
 - Go to the [CP1404 practicals template repo](https://github.com/CP1404/cp1404practicals)
@@ -295,10 +297,11 @@ your `prac_02` folder and commit (with a message like "Add password check progra
 Now let's modify this program.
 
 1. Move all the code inside a `main()` function and call `main()` at the
-   bottom. Run it to make sure it works.  
-   **Note:** if you don't have a main function, the refactoring below will
-   use global variables. So, it's an important first step to use `main` before
-   adding other functions.
+   bottom. Run it to make sure it works.
+
+   > [!NOTE]
+   > If you don't have a `main` function, the refactoring below will use global variables.  
+   > So, it's an important first step to use `main` before adding other functions.
 
 2. **Refactor** the part that gets the password into a separate function...  
    You could do this manually, but let's use PyCharm's refactoring tool:  
@@ -380,7 +383,8 @@ The menu should have four separate options:
 - (Q)uit
 
 Handle each of these (except quit) separately, and consider how you can reuse your functions.
-In `main()`, before the menu loop, get the valid score.  
+
+In `main()`, before the menu loop, **get a valid score** using your function.  
 When the user quits, say some kind of "farewell".
 
 # Practice & Extension Work
@@ -412,9 +416,7 @@ floats of any values between -200 and +200. Where will you get these numbers fro
 Write a Python script to create the text file, of course!
 
 Now write a program, `convert_temps.py` , that uses the functions you made to convert temperatures.  
-Read the values in `temps_input.txt` as Fahrenheit values and write the converted Celsius values to `temps_output.txt`
-.  
-(Note: you could just change the function call to convert C->F instead of F->C.)
+Read the values in `temps_input.txt` as Fahrenheit values and write the converted Celsius values to `temps_output.txt`.
 
 Example, if your file `temps_input.txt` contained:
 

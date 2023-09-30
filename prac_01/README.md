@@ -2,8 +2,8 @@
 
 **Welcome to CP1404 practicals!**
 
-If you haven't read the introduction to pracs and marking, please [read this now](../README.md).  
-**Note: All students (internal and external), please submit your prac work via LearnJCU each week by the due date.**
+If you haven't read the introduction to practicals, including marking and submission guidelines,
+please [read this now](../README.md).
 
 # Walkthrough Example
 
@@ -15,8 +15,9 @@ up all the required software at:
 <https://github.com/CP1404/Starter/wiki/Software-Setup>  
 To start with, you don't need Git or Kivy, just Python 3 and PyCharm.
 
-Note: Your version of PyCharm may look different from our images and instructions below, but hopefully they are close
-enough for you to follow.
+> [!NOTE]  
+> Your version of PyCharm may look different from our images and instructions below,
+> but hopefully they are close enough for you to follow.
 
 1. Run PyCharm.  
    When PyCharm first starts you should have a window with a link to
@@ -216,10 +217,11 @@ interested in the values, not the format):
 
 Now (only when the above part is finished), add a loop to this,
 so it repeatedly asks for the user's sales and prints the bonus
-**until** they enter a negative number. Note the boundary carefully.  
+**until** they enter a negative number.  
+Be careful with the boundary.  
 Remember that **until** is the opposite of **while**, and if you need help,
-please [check the patterns](https://github.com/CP1404/Starter/wiki/Programming-Patterns#while-loops-indefinite-iteration)
-. Here's some pseudocode to help you:
+please [check the patterns](https://github.com/CP1404/Starter/wiki/Programming-Patterns#while-loops-indefinite-iteration).  
+Here's some pseudocode to help you:
 
     get sales
     while sales >= 0
@@ -258,27 +260,32 @@ for i in range(1, 21, 2):
 print()
 ```
 
-Now **write more for loops** (using `range`) to do the following:  
-Note that for marking, we expect to see a complete file with each loop still in it.
+Now **write more for loops** (using `range`) to do the following:
+
+> [!NOTE]  
+> For marking, we expect to see a complete file with each loop still in it.  
+> Label each of your questions (a, b, c, d)
 
 a. count in 10s from 0 to 100: `0 10 20 30 40 50 60 70 80 90 100`
 
 b. count down from 20 to 1: `20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1`
 
 c. print n stars. Ask the user for a number, then print that many stars
-(`*`), all on one line.  
-*Note: this is a very simple loop for repeating n times. We use for
-loops for "definite" iteration like this. while loops are used for
-"indefinite" iteration (like repeating while a user input is
-incorrect).*  
-Sample output:
+(`*`), all on one line.
+
+> [!NOTE]  
+> This is a very simple loop for repeating n times.  
+> We use `for` loops for "definite" iteration like this.  
+> `while` loops are used for "indefinite" iteration, like error-checking a user input.
+
+**Sample output:**
 
     Number of stars: 4
     ****
 
 d. print n lines of increasing stars. Using the same number as above,
-print lines of increasing stars, starting at 1. E.g. if **4** was
-the number entered, your single loop should print:
+print lines of increasing stars, starting at 1 with no blank line.  
+E.g., if the user entered `4`, your single loop should print:
 
     *
     **
@@ -312,8 +319,9 @@ Then the program computes and displays the total price of those items.
 If the total price is over $100, then a 10% discount is applied to that
 total before the amount is displayed on the screen.
 
-The output should look something like (**bold text** represents user
-input):
+**Sample output:**  
+The output should look something like belof (**bold text** represents user input).  
+This uses string formatting to set the currency to 2 decimal places.
 
 <pre>
 Number of items: <strong>3</strong>  
@@ -323,10 +331,10 @@ Price of item: <strong>3.24</strong>
 Total price for 3 items is $124.92  
 </pre>
 
-Create the file `shop_calculator.py` and write this program.  
-Note: start with the main logic, then adjust your program to improve the
-formatting if you need to.  
-Note that the example output above uses string formatting to set the currency to 2 decimal places.
+Create the file `shop_calculator.py` and write this program.
+
+> [!NOTE]
+> Start with the main logic, then adjust your program to improve the formatting if you need to.
 
 ### + Error checking (input validation loop)
 
@@ -360,8 +368,9 @@ The general pattern of a menu-driven program is as follows:
         get choice
     do final thing, if needed
 
-Note that a common error when writing menus is to forget to repeat the
-menu display and prompt at the end (inside) the loop.
+> [!NOTE]
+> A common error when writing menus is to forget to repeat the menu display and prompt at the end (inside) the loop.  
+> Follow the pattern.
 
 Use this pattern to create a very simple menu-driven program according
 to the pseudocode below:
@@ -465,7 +474,7 @@ Save each program in a different file within the `prac_01` folder.
 
 ### Menu-driven number sequence generator
 
-`sequences.py`    
+`sequences.py`
 
 A school teacher requires a small program that would allow primary
 school students to learn about various number sequences. The teacher
@@ -483,7 +492,7 @@ of the program):
 Remember that solutions are provided for most prac exercises.  
 These exist to help you learn, not just for copying :)  
 See the solutions branch here in this repository. Change the **branch** to "solutions" at the top of the page.  
-Compare your work to the provided solutions and see if there are any significant differences that you can learn from. 
+Compare your work to the provided solutions and see if there are any significant differences that you can learn from.
 
 # Deliverables
 

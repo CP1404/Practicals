@@ -156,7 +156,7 @@ File: `list_exercises.py`
 Write a program that prompts the user for 5 numbers and then stores
 each of these in a list called `numbers`.  
 The program should then output information about these numbers, as in the output below.  
-Note that you can use the **functions** `min`, `max`, `sum` and `len`, and
+You can use the **functions** `min`, `max`, `sum` and `len`, and
 you can use the `append` **method** to add a number to a list.
 
        Number: 5
@@ -203,11 +203,13 @@ These values should be stored as `CONSTANTS`.
 
 - Each line (quick pick) should not contain any repeated number.
 - Each line of numbers should be displayed in sorted (ascending) order.
-- Note the formatting below so that numbers align neatly.
+- Study the formatting below so that numbers align neatly.
 
-**Note:** Python's random module has a `sample()` function, which
-returns a selection from a list. This is a nice way to solve this
-problem... but it's too easy :) Do not use it for this program.
+> [!NOTE]
+> Python's `random` module has a `sample()` function, which
+> returns a selection from a list.  
+> This is a nice way to solve this problem... but it's too easy :)  
+> Do not use it for this program.
 
 Your code should produce output that matches this sample output
 (except the numbers are random):
