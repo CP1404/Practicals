@@ -1,8 +1,13 @@
 .idea/
 .DS_Store
 */__pycache__
-prac_02/*.txt
-prac_03/temps_output.txt
+temp/*
 prac_os/Lyrics/
 prac_os/FilesToSort/
-temp.py
+prac_02/*.txt
+prac_03/temps_input.txt
+prac_03/temps_output.txt
+prac_07/project.py
+prac_07/project_management.py
+prac_07/data.dat
+prac_09/band.py
