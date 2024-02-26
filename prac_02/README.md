@@ -296,12 +296,12 @@ Copy `password_stars.py` that you wrote earlier from Sandbox into
 your `prac_02` folder and commit (with a message like "Add password check program").  
 Now let's modify this program.
 
+> [!NOTE]
+> If you don't have a `main` function, the refactoring below will use global variables.  
+> So, it's an important first step to use `main` before adding other functions.
+
 1. Move all the code inside a `main()` function and call `main()` at the
    bottom. Run it to make sure it works.
-
-   > [!NOTE]
-   > If you don't have a `main` function, the refactoring below will use global variables.  
-   > So, it's an important first step to use `main` before adding other functions.
 
 2. **Refactor** the part that gets the password into a separate function...  
    You could do this manually, but let's use PyCharm's refactoring tool:  
