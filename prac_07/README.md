@@ -98,7 +98,8 @@ So, the format/protocol is:
 
 Write a program to read all of these guitars and store them in a list of `Guitar` objects,
 using the class that you wrote recently.  
-Display these using a loop.
+Display these using a loop.  
+Use a `main` and other appropriate functions.
 
 Now **sort** the list by year (oldest to newest) and display them in sorted order...  
 How do you do that?  
@@ -152,7 +153,9 @@ The first line is a header, explaining the fields for each project.
 
 Write a program in `project_management.py` to load and save a data file and use a list of `Project` objects.
 
-Load projects from the data file when the program starts and save them to it when the user quits.
+Load projects from the default data file, `projects.txt`, when the program starts, before the menu.  
+When the user quits, give them the choice of saving to the default file.  
+Note that there are two menu options for loading from and saving to different files.
 
 Your program should contain a menu with the following options:
 
@@ -210,6 +213,8 @@ Don't waste time reinventing new/different ways to do
 
 ### Sample output
 
+    Welcome to Pythonic Project Management
+    Loaded 5 projects from projects.txt
     - (L)oad projects  
     - (S)ave projects  
     - (D)isplay projects  
@@ -311,6 +316,7 @@ Don't waste time reinventing new/different ways to do
     - (U)pdate project
     - (Q)uit
     >>> q
+    Would you like to save to projects.txt? no, I think not.
     Thank you for using custom-built project management software.
 
 # Ready for Kivy?
