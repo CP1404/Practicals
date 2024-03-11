@@ -175,6 +175,7 @@ This allows you to have a different effective `price_per_km`, based on the fanci
 
 5. Write some test code in a file called `silver_service_taxi_test.py` to see that your
    `SilverServiceTaxi` calculates fares correctly.  
+   Use `assert` tests to ensure that your code does what it is supposed to.  
    For an 18 km trip in a `SilverServiceTaxi` with fanciness of 2, the fare should be $48.78 (yikes!)
 
 ## Pause and reflect
