@@ -1,28 +1,32 @@
 # Practical 10 - Testing, APIs, Flask
 
-Don't forget to make a new branch, `prac_10_feedback` _before_ you start!  
+Don't forget to make a new branch, `prac_10_feedback` _before_ you start.  
 You will put some files into that branch for your normal practicals project/repo, but you will also have separate
 projects and repositories for the Flask tasks.
 
 Today we will explore the use of tools for **testing**, an **API** for Wikipedia and the very cool **Flask** Web
-framework, but first, let's reflect on the subject so far...
+framework.  
+But first, let's reflect on the subject so far...
 
 # Reflection
 
-Create a markdown file in your `prac_10` repo, `REFLECTION.md`.
+Create a `README.md` markdown file in your `prac_10` folder.
 
-Write some short but thoughtful comments about each of the following:
+Add the heading, `# Reflection`.  
+Write short but thoughtful answers to each of the following:
 
-- regarding the **estimates** that you did for practical tasks, how was your accuracy and did your accuracy improve
-  during the course of the subject?
-- regarding **code reviews**, what have you learned from both being reviewed and doing reviews?
-- regarding the **practical tasks** overall, what would you change if you were in charge of the subject?
+1. Regarding the **estimates** that you did for practical tasks, how was your accuracy and did your accuracy improve
+  during the course of the subject? What did you learn from doing the estimates?
+2. Regarding **code reviews**, what have you learned from both being reviewed and doing reviews? 
+3. Regarding the **practical tasks** overall, what would you change if you were in charge of the subject?
 
-Include proper Markdown links to two (2) PRs that show you doing good code reviews for any of the past pracs.
+Next, add the heading, `# Code Reviews`.  
+Provide proper Markdown links (not bare URLs) to two (2) PRs that show you doing good code reviews for any of the past pracs.  
+For each one, write a short explanation of what was good about your review.  
 
 # Testing
 
-Copy [testing.py](testing.py) to your practicals project, then follow the `TODO` instructions in it, taking note that
+Copy [testing.py](testing.py) into your `prac_10` folder, then follow the `TODO` instructions in it, taking note that
 the code shows you examples to learn form.
 
 1. Fix the `repeat_string` function so that it passes the `assert` test.
@@ -30,7 +34,7 @@ the code shows you examples to learn form.
    **Don't change the test!**  
    The failing test shows that the function is broken; fix the function.
 
-2. Write at least two `assert` statements to show if Car sets the fuel correctly.
+2. Write at least two `assert` statements to show if `Car` sets the fuel correctly.
 
 3. Uncomment the `doctest.runmod()` line to see how the doctests run.
    > [!NOTE]
@@ -48,7 +52,7 @@ the code shows you examples to learn form.
 File: `wiki.py`
 
 > [!NOTE]
-> We are interfacing with things outside our control.  
+> We are interfacing with systems outside our control.  
 > Some of the specific details here may change with different versions of the APIs we use.
 
 Until now, we've only worked on our local computers, interacting with local files, but never talking to the great big
@@ -343,12 +347,7 @@ E.g., for 6 rows, it is 6 + 5 + 4 + 3 + 2 + 1 = 21
 This section summarises the expectations for marking in this practical.  
 Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.
 
-Since this is the **final practical**, your requirements for pull requests are a bit different.  
-Please submit **three** URLs:
-
-- Your own feedback branch PR with a mention of a reviewer for this prac.
-- Two (2) PRs that show you doing good code reviews for any of the past pracs (even if you've already submitted these
-  before).
+Please submit the URL of your own feedback branch PR with a mention of a reviewer for this prac.
 
 Files required:
 
@@ -356,8 +355,8 @@ Your non-Flask work goes in your normal practicals repo and should be part of a 
 Then, there's two separate Flask projects, which do not go in your practicals repo.  
 Submit three URLs for these three (practicals PR, Flask project from demo, Flask + Wiki project)
 
-- `REFLECTION.md`
+- `README.md`
 - `testing.py`
 - `wiki.py`
-- Flask project with modifications
-- Flask + Wiki project 
+- Flask project with modifications URL
+- Flask + Wiki project URL
