@@ -1,0 +1,18 @@
+# This is a Kv file.
+# It contains the declarations of the widgets that will be displayed.
+BoxLayout:
+    orientation: 'vertical'
+    Label:
+        text: app.status_text
+        font_size: 60
+        size_hint_y: 0.2
+    BoxLayout:
+        orientation: 'horizontal'
+        Button:
+            text: "Up"
+            on_press: app.handle_press(1)
+        Button:
+            text: "Down"
+            on_press: app.handle_press(-1)
+    BoxLayout:
+        id: names_box

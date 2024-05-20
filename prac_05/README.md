@@ -218,6 +218,40 @@ them out.
     Abe (Abe@gmail.com)
     Jim Boh (jimbo546@hotmail.com)
 
+## Kivy Demo
+
+Before we do our last big question, let's try something fun to prepare for our Kivy topic coming in a few weeks.  
+We hope you're looking forward to writing GUI (Graphical User Interface) programs :)  
+One of the reasons we do this quick task now is to ensure you've correctly set up your computer to run and edit Kivy
+code.  
+If you have not done so yet, install Kivy and the KV language auto-completion and syntax highlighting according
+to [our installation instructions](https://github.com/CP1404/Starter/wiki/Software-Setup#kivy)
+
+Save the two files provided to your prac_05 directory:
+
+- [kivy_demo.py](kivy_demo.py)
+- [kivy_layout.kv](kivy_layout.kv)
+
+Run the Python file.  
+If it does not work, complete the setup instructions above.
+
+Explore the code for between 3 and 7 minutes and see what you can figure out just from reading it.
+
+### Things to do
+
+The kv file is where we declare the layout of the widgets in our GUI programming.  
+**Add a new Label** widget at the bottom like this.  
+We've included the last couple of lines of the existing file. Don't duplicate this.
+
+    BoxLayout:
+        id: names_box
+    Label:
+        text: "I did this :)"
+
+Run that and see if you get a new widget at the bottom with the text "I did this :)".  
+Now, make that label smaller so that it only takes up 10% of the vertical space.  
+**Hint**: The existing `status_text` label only takes up 20% of the space.
+
 ## Game, Set, Match
 
 File: `wimbledon.py`
@@ -273,7 +307,7 @@ AUS, CRO, ESP, FRG, GBR, GER, NED, SRB, SUI, SWE, TCH, USA
 
 First, here are some recent student comments about the value of doing code reviews:
 
-- _After getting some code reviews I have started to think "what would this look like to someone else", 
+- _After getting some code reviews I have started to think "what would this look like to someone else",
   which motivates me to make cleaner code._
 - _While doing code reviews I often realised that I had made a mistake in my own work/could improve it_
 
@@ -373,13 +407,11 @@ To read more about Pull Requests:
    TARIFF_31 = 0.136928
    ```
 
-   <pre>
    Electricity bill estimator 2.0   
    Which tariff? 11 or 31: 11       
    Enter daily use in kWh: 13.4     
-   Enter number of billing days: 90 
-   Estimated bill: $295.01         
-   </pre>
+   Enter number of billing days: 90
+   Estimated bill: $295.01
 
 Now create a version of the above electricity program that uses a
 **dictionary** to store the tariffs and the corresponding cost.  
@@ -441,3 +473,4 @@ Files required:
 - `word_occurrences.py`
 - `emails.py`
 - `wimbledon.py`
+- `kivy_layout.kv`

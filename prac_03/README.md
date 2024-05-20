@@ -605,5 +605,5 @@ For all pracs, including this one, include your GitHub repo URL.
 - `capitalist_conrad.py`
 - `exceptions_demo.py`
 - `exceptions_to_complete.py`
-- `files.py`
 - `password_checker.py`
+- `files.py`

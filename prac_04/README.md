@@ -132,7 +132,7 @@ but each part would still be a string.
    Remember to commit these before modifying them any further.   
    Study the starter code and run it. There are comments and `print` calls to show you what's happening.
 
-2. The code reads the file data and processes it into the `parts` variable, but we want the `get_data` function
+2. The code reads the file data and processes it into the `parts` variable, but we want the `load_data` function
    to `return` the data as a list of lists (nested list), like:  
    `[['CP1401', 'Ada Lovelace', 192],['CP1404', 'Alan Turing', 98]]`  
    Modify the function so that it does this.
