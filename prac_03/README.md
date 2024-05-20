@@ -20,7 +20,7 @@ you need to.
 > [!IMPORTANT]
 > Do Not make a new project for each practical.  
 > Keep using the same PyCharm project and GitHub repo for all practicals.  
-> If you need to work on a new computer, you can **clone** your repo.  
+> If you need to work on a new computer, you can **clone** your repo.
 
 # Walkthrough Example
 
@@ -67,16 +67,23 @@ Use f-string formatting to produce the output:
 (Notice where the values go and also the float formatting / number of decimal places.)
 
 ```
-1922 Gibson L-5 CES for about $16,035!
+1922 Gibson L-5 CES for about $16,036!
 ```
 
-Using a **for** loop with the **range** function and **string
-formatting** (DO NOT use a list), produce the following output (right-aligned numbers):
+Using a `for` loop with the `range` function and **f-string formatting**, produce the following output.  
+Do not use a list and notice that both variable numbers are right-aligned:
 
-      0
-     50
-    100
-    150
+    2 ^ 0 is    1
+    2 ^ 1 is    2
+    2 ^ 2 is    4
+    2 ^ 3 is    8
+    2 ^ 4 is   16
+    2 ^ 5 is   32
+    2 ^ 6 is   64
+    2 ^ 7 is  128
+    2 ^ 8 is  256
+    2 ^ 9 is  512
+    2 ^10 is 1024
 
 ## Random Numbers
 
@@ -205,23 +212,21 @@ floating-point number)
        On day 424 price is: $915.71  
        On day 425 price is: $1,001.60  
 
-2. Notice how the use of `CONSTANTS` makes the program easier to read and
-   customise.  
-   Try changing these so the allowed price range is $1 to $100 and
+2. Notice how the use of `CONSTANTS` makes the program easier to read and customise.  
+   Change these so that the allowed price range is $1 to $100 and
    the increase could be up to 17.5% (remember to change any comments
    that refer to constant values).   
    Run the program with these new values.
 
-3. Update your program so that it prints (writes) the output to a
-   **file**.
+3. Update your program so that it writes the output to a **file**.
 
     - First you need to `open` the file for writing. You only need
       to do this once, so add this line before your loop starts:
 
-      `out_file = open(OUTPUT_FILE, 'w')`
+      `out_file = open(FILENAME, 'w')`
 
       Note that this code line expects you to define the constant
-      `OUTPUT_FILE`, so do that above.
+      `FILENAME`, so do that above.
 
     - Update any print statements, so they output to the file.  
       Here's an (incomplete) example:
@@ -245,8 +250,7 @@ and run it, then answer the following questions in comments in your file...
 2. When will a `ZeroDivisionError` occur?
 3. Could you change the code to avoid the possibility of a `ZeroDivisionError`?
 
-If you could figure out the answer to question 3, then **make this
-change now**.
+If you could figure out the answer to question 3, then **make this change now**.
 
 # Intermediate Exercises
 
@@ -496,8 +500,7 @@ vice versa. A sample run of the program should look like (where `g` and `100` ar
    values and use them in both your print statement and in your while
    loop condition. **That is, the numbers 33 and 127 should appear only
    once**.  
-   Use f-strings everywhere you print literals and
-   variable values.
+   Use f-strings everywhere you print literals and variable values together.
 
 3. Add on to this program by writing code that displays a table with
    two columns, one for the numeric ASCII value and the other for the
