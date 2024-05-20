@@ -387,6 +387,14 @@ Handle each of these (except quit) separately, and consider how you can reuse yo
 In `main()`, before the menu loop, **get a valid score** using your function.  
 When the user quits, say some kind of "farewell".
 
+# Reflection
+
+Even though we've only done two practicals so far, it's helpful to stop and reflect, and adjust as needed.  
+
+Download and save the template markdown file [REFLECTION.md](REFLECTION.md) to your `prac_02` folder.  
+Write short but meaningful answers to the questions in that file.  
+
+
 # Practice & Extension Work
 
 ## Practice
@@ -485,3 +493,4 @@ Files required:
 - `temperatures.py`
 - `score.py`
 - `score_menu.py`
+- `REFLECTION.md`

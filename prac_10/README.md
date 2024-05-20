@@ -10,7 +10,7 @@ But first, let's reflect on the subject so far...
 
 # Reflection
 
-Download and save the template markdown file [REFLECTION.md](REFLECTION.md) to your `prac_10` folder.
+Download and save the template markdown file [REFLECTION.md](REFLECTION.md) to your `prac_10` folder.  
 Write short but meaningful answers to the questions in that file.  
 
 
