@@ -10,19 +10,9 @@ But first, let's reflect on the subject so far...
 
 # Reflection
 
-Create a `README.md` markdown file in your `prac_10` folder.
+Download and save the template markdown file [REFLECTION.md](REFLECTION.md) to your `prac_10` folder.
+Write short but meaningful answers to the questions in that file.  
 
-Add the heading, `# Reflection`.  
-Write short but thoughtful answers to each of the following:
-
-1. Regarding the **estimates** that you did for practical tasks, how was your accuracy and did your accuracy improve
-  during the course of the subject? What did you learn from doing the estimates?
-2. Regarding **code reviews**, what have you learned from both being reviewed and doing reviews? 
-3. Regarding the **practical tasks** overall, what would you change if you were in charge of the subject?
-
-Next, add the heading, `# Code Reviews`.  
-Provide proper Markdown links (not bare URLs) to two (2) PRs that show you doing good code reviews for any of the past pracs.  
-For each one, write a short explanation of what was good about your review.  
 
 # Testing
 
@@ -189,7 +179,7 @@ Re-run the program, then change your browser's URL by adding `/greet` to the end
 
 This is a bit simple so far... but we're getting there...
 
-> [!NOTE] 
+> [!NOTE]
 > If you ever get an "Internal Server Error" in the browser... this is *your* server (Python program)!  
 > Go back to PyCharm and look for error messages in the console.
 
@@ -226,8 +216,7 @@ If you did not write it correctly, then notice how you cannot reuse it.
 
 That's version 1... Once it works, modify it so the output shows the input value and the result with useful text.
 
-Share this project on GitHub.  
-You should submit the URL to this repo.
+Share this project on GitHub.
 
 ## Flask + Wikipedia API
 
@@ -355,8 +344,8 @@ Your non-Flask work goes in your normal practicals repo and should be part of a 
 Then, there's two separate Flask projects, which do not go in your practicals repo.  
 Submit three URLs for these three (practicals PR, Flask project from demo, Flask + Wiki project)
 
-- `README.md`
+- `REFLECTION.md`
 - `testing.py`
 - `wiki.py`
-- Flask project with modifications URL
-- Flask + Wiki project URL
+- URL of Flask project with modifications
+- URL of Flask + Wiki project

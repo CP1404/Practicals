@@ -136,7 +136,7 @@ but each part would still be a string.
    to `return` the data as a list of lists (nested list), like:  
    `[['CP1401', 'Ada Lovelace', 192],['CP1404', 'Alan Turing', 98]]`  
    Modify the function so that it does this.
-
+   
 3. Currently, main just prints `data`. Add a new function to display subject details that
    produces something like the following:
 
