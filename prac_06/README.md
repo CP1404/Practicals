@@ -296,6 +296,13 @@ the [abstraction principle](https://en.wikipedia.org/wiki/Abstraction_principle_
       # do something with i (the index) and guitar (the element)
   ```
 
+# Reflection
+
+We are just past halfway, so it's helpful to stop and reflect, and adjust as needed.
+
+Download and save the template markdown file [REFLECTION.md](REFLECTION.md) to your `prac_06` folder.  
+Write short but meaningful answers to the questions in that file.
+
 # Practice & Extension Work
 
 Use these exercises as much-needed practice and as ways to learn new things.
@@ -320,7 +327,7 @@ output...
 
 - Start by just testing one method call,
 - then another,
-- then write the menu and put it all together.  
+- then write the menu and put it all together.
 
 Remember to use the class's functionality.  
 Don't rewrite anything you've already got.
@@ -454,3 +461,4 @@ Files required:
 - `used_cars.py` modifications (cars have names)
 - `programming_language.py` (the class), `languages.py` (the client program)
 - `guitar.py` (the class), `guitar_test.py` (the tests), `guitars.py` (the client program)
+- `REFLECTION.md`
