@@ -11,8 +11,7 @@ But first, let's reflect on the subject so far...
 # Reflection
 
 Download and save the template markdown file [REFLECTION.md](REFLECTION.md) to your `prac_10` folder.  
-Write short but meaningful answers to the questions in that file.  
-
+Write short but meaningful answers to the questions in that file.
 
 # Testing
 
@@ -53,12 +52,14 @@ functions that
 we can call to send and receive data to and from a system. You can write code to interact with things like Twitter,
 Slack, weather services, government databases, NSA spy satellites and more...
 
-We'll start with Wikipedia.
+Let's use an API for Wikipedia.
 
 Instead of writing our own HTTP calls to the Wikipedia API, we can make use of a Python library that abstracts the
-details away and presents a simpler, Python-based, API for us. *We need to install that now*.
+details away and presents a simpler, Python-based, API for us.  
+**Let's install that now**.
 
-The lab PCs should let us install packages. If it looks like the package is still installing (infinitely), just carry on
+The JCU lab PCs should let us install packages. If it looks like the package is still installing (infinitely), just
+carry on
 as if it were finished, and it should work... or just restart PyCharm if you'd like it to stop telling you it's
 installing! If you really can't install the wikipedia package, then skip those parts of the prac that use it.
 
@@ -72,28 +73,63 @@ to find the one we want, and then click "Install Package".
 ![PyCharm install package](../images/10image3.png)
 
 The quick start documentation for the wikipedia package can be found at:
-<https://wikipedia.readthedocs.io/en/latest/quickstart.html>
+[wikipedia.readthedocs.io](https://wikipedia.readthedocs.io/en/latest/quickstart.html)
 
-As this documentation shows, a good way to learn a new package like this is via the console. Open the console in
-PyCharm, then follow the docs and quickly try out functions like `search()`, `summary()` and `page()`.  
+As this documentation shows, a good way to learn a new package like this is via the console.  
+Open the console in PyCharm, then follow the docs and quickly try out functions like `search`, `summary` and `page`.  
 Get a page and see what properties it has.
 
-**Create a new file** called `wiki.py` and write a small script that prompts the user for a page title or search phrase,
-then prints the summary of that page. Use a simple loop that continues doing this until the user enters blank input.
+**Create a new file** called `wiki.py` and write a program that prompts the user for a page title or search phrase,
+then prints some details of that page. Use a loop that continues doing this until the user enters blank input.
 
 Try this with a few page titles and see what happens.  
-(You might get a warning about an outdated use of the `BeautifulSoup` package. We can't fix that so please ignore it.)
-
-Try it with the search/title "Python", and you should find that the Wikipedia API returns a "disambiguation" page, so
-you
-need to handle that **exception** as explained in the API's docs.
-
+You might get a warning about an outdated use of the `BeautifulSoup` package. We can't fix that so please ignore it.  
 When getting a `page`, you might find that you get an unexpected result because the API has used `suggest()`
-to suggest a particular page, different from what you asked for. You can customise how the page is determined, example:
+to suggest a particular page, different from what you asked for.  
+You can customise how the page is determined, example:
 
     wikipedia.page(title, autosuggest=False)
 
-Now **modify** your program so that when it gets the page, it prints the title, summary and the URL.
+### Exception Handling
+
+Try it with the search/title "Python", and you should find that the API raises a `DisambiguationError` exception.  
+Try it with the search/title "jcu", and you should find that the API raises a `PageError` exception.
+
+You need to handle these exceptions as explained in the API's docs.
+
+### Sample Output
+
+**Modify** your program so that it handles the exceptions like in the sample below, and when it gets a page,
+it prints the title, summary and the URL.
+
+Here's some example output showing user input that's not found ("jcu"), that needs disambiguation ("python"),
+and that works first time ("townsville").  
+Some of the output has been truncated.
+
+    Enter page title: jcu
+    Page id "jcu" does not match any pages. Try another id!
+
+    Enter page title: python
+    We need a more specific title. Try one of the following, or a new search:
+    (BeautifulSoup warning) 
+    ['Pythonidae', 'Python (genus)', 'Python (mythology)', 'Python (programming language)', 'CMU Common Lisp'...]
+
+    Enter page title: python programming
+    Python (programming language)
+    Python is a high-level, general-purpose programming language...
+    https://en.wikipedia.org/wiki/Python_(programming_language)
+
+    Enter page title: townsville
+    Townsville
+    Townsville is a city on the north-eastern coast of Queensland, Australia. With a population of 179,011 as of the 2021
+    census, it is the largest settlement in North Queensland and Northern Australia (specifically, the parts of Australia
+    north of the Sunshine Coast). It is unofficially considered the capital of North Queensland. Townsville hosts a
+    significant number of governmental, community and major business administrative offices for the northern half of the
+    state.
+    https://en.wikipedia.org/wiki/Townsville
+
+    Enter page title:
+    Thank you.
 
 # Flask Web Framework
 
@@ -101,8 +137,7 @@ Until now, we have made only one type of project, "Pure Python", and we always i
 or using a GUI we made with Kivy.  
 A very common way to deliver software these days is via a Web browser.  
 Some programming languages are designed for the Web - like JavaScript for the browser and PHP for Web servers, but we
-can
-also use Python... if we use it via a "Web Framework".
+can also use Python... if we use it via a "Web Framework".
 
 There are a number of great frameworks, like Django, Web2Py and Pyramid, Today we will use **Flask**.  
 (You may be interested to know that [WakaTime](https://wakatime.com)
