@@ -271,47 +271,6 @@ and complete the program by following the `TODO` comment instructions.
 
 *You're doing well. Keep it up...*
 
-# Do-from-scratch Exercises
-
-## Files
-
-File: `files.py`
-
-The solutions for these programs are provided, to
-help you get going - or to confirm that your solution was valid.    
-When you execute a Python program that contains a line like
-`open('data.txt', 'w')` the new file "data.txt" is created in the
-same folder as the Python file in your PyCharm project.
-
-Create a new file called `files.py` and do all the following *separate questions* in it:  
-The intention here is to give you experience using different ways to read files.  
-Make sure you're confident with:
-
-- `read()`
-- `readline()`
-- `readlines()`
-- `for line in file`
-
-1. Write code that asks the user for their name, then opens a file
-   called "name.txt" and writes that name to it. Remember to close your file.
-
-2. (In the same file, but as if it were a separate program) Write code that opens "name.txt" and reads the name (as
-   above)
-   then prints,  
-   "Your name is Bob" (or whatever the name is in the file).
-
-3. Create a text file called `numbers.txt` and save it in your prac directory. Put the following three numbers on
-   separate lines in the file
-   and save it:  
-   17  
-   42  
-   400  
-   Write code that opens "numbers.txt", reads only the first two numbers and adds
-   them together then prints the result, which should be... 59.
-
-4. Now write a fourth block of code that prints the total for all lines in `numbers.txt`
-   or a file with *any* number of numbers.
-
 ## Password Checker
 
 File: `password_checker.py`
@@ -330,19 +289,20 @@ All passwords must contain **at least one** each of:
 - lowercase letter
 - uppercase letter
 
-The starter code uses constants (variables at the top of the code, named
-in ALL_CAPS) to store:
+The starter code uses constants to store:
 
-a. the minimum and maximum length of the password
-
-b. whether a special character (not alphabetical or numerical) is required
+1. the minimum and maximum length of the password
+2. whether a special character is required (note the Boolean naming)
+3. the special characters (as a string; a list is not necessary)
 
 Remember when a program has CONSTANTS, you should use them everywhere you can so that if you change them at the top,
 this change affects the whole program as expected.  
 E.g., if you changed the minimum length to 5, the program should print 5 and should check to make sure the password
 is >= 5 characters long.
 
-Output should look something like this:
+### Sample Output
+
+Your output should look something like this:
 
     Please enter a valid password
     Your password must be between 5 and 15 characters, and contain:
@@ -376,37 +336,78 @@ constants (special characters are not required in this version):
     > 1aB
     Your 3 character password is valid: 1aB
 
-Do not just try and Google "Python password checker"
-or something, but think about doing this step by step.  
+Do not just try and Google "Python password checker" or something, but think about doing this step by step.  
 We have provided a suitable structure for you with `TODO` comments in the code provided.  
 Follow these.
 
 - First, just check if a string has at least one lowercase character.  
   You can do this by looping through the string (`for character in password:`) and testing each character... count the
-  ones that match
-  (using `character.islower()`)... At the end you know how many
-  lowercase characters there are.
+  ones that match (using `character.islower()`)...    
+  At the end you know how many lowercase characters there are.
 
 - Only when you are able to count lowercase, then, **in the same loop**,
   count the uppercase characters  
   That is, **do not** try and get all the checks working before you
-  know the first one works. **Do** one at a time.
+  know that the first one works. **Do** one at a time.
 
 - *Then*, count the numbers...  
   Test your code for each of these changes as you write them.
 
 - For special characters, remember you can use the `in` operator to
-  see if the character is `in` another string (like a constant called
-  `SPECIAL_CHARACTERS`)
+  see if the character is `in` another string (our `SPECIAL_CHARACTERS` constant).
 
 - ... keep going until you can tell how many of each kind of character there are.
 
 - Then put it all together and test with some different settings.
 
-**We hope this incremental approach makes sense and that you use it regularly.**
+**We hope that you use this incremental approach regularly.**
 
-When you have the program working, replace the inconsistent printing of
-text and variables with nice string formatting using f-strings.
+# Do-from-scratch Exercises
+
+## Files
+
+File: `files.py`
+
+The solutions for these programs are provided, to help confirm that your solution was valid.
+
+When you execute a Python program that contains a line like
+`open('data.txt', 'w')` the new file "data.txt" is created in the
+same folder as the Python file in your PyCharm project.
+
+Create a new file called `files.py` and do all the following *separate questions* in it:  
+The intention here is to give you experience using different ways to read files.  
+Make the appropriate choice of file-reading technique for each of these questions:
+
+- `read()`
+- `readline()`
+- `readlines()`
+- `for line in file`
+
+1. Write code that asks the user for their name, then opens a file
+   called `name.txt` and **writes** that name to it. Use `open` and `close` for this question.
+
+2. In the same file, but as if it were a separate program, write code that opens "name.txt" and reads the name (as
+   above)
+   then prints (note the exact output),  
+   `Hi Bob!` (or whatever the name is in the file). Do not simply print the user's input variable!  
+   Use `open` and `close` for this question.
+
+3. Create a text file called `numbers.txt` and save it in your prac directory. Put the following three numbers on
+   separate lines in the file
+   and save it:  
+   17  
+   42  
+   400  
+   Write code that opens `numbers.txt`, reads **only** the first two numbers, adds
+   them together then prints the result, which should be... 59.
+   Use `with` instead of `open` and `close` for this question.
+
+4. Now write a fourth block of code that prints the total for **all lines** in `numbers.txt`.
+   This should work for a file with *any* number of numbers.
+   Use `with` instead of `open` and `close` for this question.
+
+Remember that understanding and choosing "the right tool for the job" is a primary focus for you as a programmer.   
+In the questions above, you should have used `read`, `readline` and `for line in file` for reading.
 
 ## .gitignore
 
