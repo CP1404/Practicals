@@ -352,17 +352,8 @@ Now, write a new version of the Project Management Program to use pickling to lo
 This section summarises the expectations for marking in this practical.  
 Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.
 
-You may not receive your code review request in time to submit each week,
-so we ask for the code review you did from the previous week.
-
-Please submit two PR URLs:
-
-- Your own feedback branch PR with a mention of a reviewer **for this prac**.
-- The PR that you reviewed **for the last prac**.
-
-Files required:
-
-- Practicals repository on GitHub and up-to-date (every week)
+- Type the URL of your Pull Request (PR) that mentions another student **for this prac**.
+- Type the URL of the PR that you reviewed **for the previous prac**.
 - `README.md` (submitted and on GitHub, as with all the files)
 - `language_file_reader.py`, `programming_language.py`, `languages.csv`
 - `guitar.py`, `myguitars.py`

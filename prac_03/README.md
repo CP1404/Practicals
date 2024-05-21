@@ -596,10 +596,7 @@ Some solutions (not all) for practicals are provided in the
 This section summarises the expectations for marking in this practical.  
 Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.
 
-Files required:
-
-For all pracs, including this one, include your GitHub repo URL.
-
+- Type the URL of your GitHub practicals repository in the text box when you submit your practical.
 - `string_formatting.py`
 - `randoms.py`
 - `capitalist_conrad.py`

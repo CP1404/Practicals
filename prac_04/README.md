@@ -330,9 +330,7 @@ teaching resources we have provided.
 This section summarises the expectations for marking in this practical.  
 Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.
 
-Files required:
-
-- Please type the URL of your GitHub practicals repository in the text box when you submit your practical on LearnJCU.
+- Type the URL of your GitHub practicals repository in the text box when you submit your practical.
 - `lists_warmup.py`
 - `total_income.py`
 - `subject_reader.py`

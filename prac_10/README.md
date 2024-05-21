@@ -371,16 +371,14 @@ E.g., for 6 rows, it is 6 + 5 + 4 + 3 + 2 + 1 = 21
 This section summarises the expectations for marking in this practical.  
 Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.
 
-Please submit the URL of your own feedback branch PR with a mention of a reviewer for this prac.
-
-Files required:
-
 Your non-Flask work goes in your normal practicals repo and should be part of a code review PR.  
 Then, there's two separate Flask projects, which do not go in your practicals repo.  
 Submit three URLs for these three (practicals PR, Flask project from demo, Flask + Wiki project)
 
+- Type the URL of your Pull Request (PR) that mentions another student **for this prac**.
+- Type the URL of the PR that you reviewed **for the previous prac**.
+- Type the URL of your Flask project with modifications
+- Type the URL of your Flask + Wiki project
 - `REFLECTION.md`
 - `testing.py`
 - `wiki.py`
-- URL of Flask project with modifications
-- URL of Flask + Wiki project

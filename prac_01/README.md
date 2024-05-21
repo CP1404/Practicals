@@ -499,8 +499,6 @@ Compare your work to the provided solutions and see if there are any significant
 This section summarises the expectations for marking in this practical.  
 Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.
 
-Files required:
-
 - `temperatures.py`
 - `sales_bonus.py`
 - `broken_score.py`

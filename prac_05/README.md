@@ -463,10 +463,7 @@ Extend your name & address program with file loading and saving
 This section summarises the expectations for marking in this practical.  
 Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.
 
-Files required:
-
-- Practicals repository on GitHub and up-to-date (every week)
-- Pull Request (PR) that mentions another student properly
+- Type the URL of your Pull Request (PR) that mentions another student properly.
     - Your PR URL will look something like: `https://github.com/lindsaymarkward/cp1404practicals/pull/1`
 - `state_names.py`
 - `hex_colours.py`
