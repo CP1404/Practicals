@@ -31,18 +31,27 @@ the practice/extension section. You will be marked as follows:
 - 4 = Excellent response to all requirements (Always aim for this!)
 - 3 = Good response to most or all requirements, but some omissions or problems
 - 2 = Reasonable response to some requirements, but some significant omissions or problems
-- 1 = Reasonable response to at least one requirement
+- 1 = Reasonable response to at least one requirement, or LATE submission
 - 0 = Minimal or no attempt
 - LATE practicals will receive 1 mark for decent work, or 0 marks for poor work. **Do not be late**.
 
-**Note**: This subject is all about learning best-practices and clean coding using the patterns taught. It is important
-that you learn these important foundations according to the teaching philosophy of the
-subject.  
-For this reason (to help you learn properly!), you will not achieve full marks for working/complete practicals
-that are not done in the way that we prescribe.  
+For practicals that have a code review component, this part will be marked as follows:
+
+- 2 = Good code review with well-written, thoughtful comments
+- 1 = Adequate code review
+- 0 = No code review, or no URL submitted
+
+Each prac marks will be
+
+> [! NOTE]
+> This subject is all about learning best-practices and clean coding using the patterns taught.
+> It is important that you learn these important foundations according to the teaching of the subject.    
+> For this reason (to help you learn properly!), you will not achieve full marks for working/complete practicals that
+> are not done in the way that we prescribe.
+
 Here are some reasons that you might lose marks for your practicals and assignments:
 
-- Your work looks too similar to any provided solutions, code found online or made by services like ChatGPT
+- Your work looks too similar to any provided solutions, code found online or answers made by services like ChatGPT
 - You miss or skip part of a question (you must attempt all requirements)
 - Your work includes concepts and code not taught in the subject
 - Your work does not follow the core concepts and patterns - even if they work!
@@ -57,22 +66,24 @@ Each prac includes a "Deliverables" section that tells you what to submit.
   top of the text box when you submit your practical on LearnJCU.
     - Your PR URLs will look something like: `https://github.com/lindsaymarkward/cp1404practicals/pull/1`
     - Your code review URLs will be very similar but with the other student's repo. The link should take us directly to
-      the PR where you have done a good review
+      the PR where you have done your code review
 - Do not zip up your files.
 - Submit your practical with each file attached to one submission.
 - If you need to resubmit additional attempts, you must include all files in the new submission.
 - Ensure each file has the correct name, including the extension. If you don't use the right extensions, we cannot read
   your work in LearnJCU.
 - Ensure your code is not commented-out. Only comments should be commented.
-- Include a `# comment` for any parts of questions. E.g., if a question has parts `a.` and `b.` then add comments
-  like `# a.` and `# b.` to make it clear where your answers are, and to show you what you need to complete.
+- Include a `# comment` for any parts of questions that need separate answers. E.g., if a question has parts `a.`
+  and `b.` then add comments like `# a.` and `# b.` to make it clear where your answers are, and to show you what you
+  need to complete.
 - Rewrite any `# TODO` comments as appropriate.
 
 ## Solutions
 
-Selected (not all) practical solutions are provided here, in the **"solutions"** branch.  
+Selected (not all) practical solutions are provided here, in the **solutions** branch.  
 These are to help you learn by evaluating your own work and seeing our suggested ways of solving the practical problems.
 
-**Important**: Please use the solutions in a mature and honest way, as helpful learning tools... _after_ you complete
-your own work, _not_ as something to simply copy into your own prac work. OK?  
-Seriously, **never copy the solutions** as this will not help you learn as much as doing your own coding.
+> [!IMPORTANT]
+> Please use the solutions in a mature and honest way, as helpful learning tools... only _after_ you complete
+> your own work, _not_ as something to simply copy into your own prac work. OK?  
+> Seriously, **never copy the solutions** as this will not help you learn as much as doing your own coding.
