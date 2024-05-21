@@ -41,20 +41,17 @@ For practicals that have a code review component, this part will be marked as fo
 - 1 = Adequate code review
 - 0 = No code review, or no URL submitted
 
-Each prac marks will be
-
-> [! NOTE]
+> [!NOTE]
 > This subject is all about learning best-practices and clean coding using the patterns taught.
 > It is important that you learn these important foundations according to the teaching of the subject.    
-> For this reason (to help you learn properly!), you will not achieve full marks for working/complete practicals that
-> are not done in the way that we prescribe.
+> So, to help your learning, prac work must be done in the way that we prescribe to achieve full marks.
 
-Here are some reasons that you might lose marks for your practicals and assignments:
-
-- Your work looks too similar to any provided solutions, code found online or answers made by services like ChatGPT
-- You miss or skip part of a question (you must attempt all requirements)
-- Your work includes concepts and code not taught in the subject
-- Your work does not follow the core concepts and patterns - even if they work!
+> [!CAUTION]
+> Here are some reasons that you might lose marks for your practicals and assignments: 
+> - Your work looks too similar to any provided solutions, code found online or answers made by services like ChatGPT
+> - You miss or skip part of a question (you must attempt all requirements)
+> - Your work includes concepts and code not taught in the subject
+> - Your work does not follow the core concepts and patterns - even if they work!
 
 ## Submission
 
