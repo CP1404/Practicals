@@ -320,8 +320,11 @@ If the total price is over $100, then a 10% discount is applied to that
 total before the amount is displayed on the screen.
 
 **Sample output:**  
-The output should look something like belof (**bold text** represents user input).  
-This uses string formatting to set the currency to 2 decimal places.
+The output should look like the sample below (where **bold text** represents user input).  
+This uses f-string formatting to set the currency to 2 decimal places.
+
+> [!NOTE]
+> Whenever we provide sample output, it is a requirement that your solution matches it.
 
 <pre>
 Number of items: <strong>3</strong>  
