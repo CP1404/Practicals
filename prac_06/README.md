@@ -3,22 +3,27 @@
 ## Code reviews help you learn!
 
 Each practical from now on, you will do your work in a **new branch**, then do a **pull request**, mentioning a
-new/different student to get (and give)
-a code review.
+new/different student to get (and give) a code review.
 
 [Find the right student to mention here each week (different for each practical)](https://github.com/CP1404/Starter/wiki/Code-Review-Order#prac-6)
 
-So, every week, ***before*** starting the prac, ensure that your `master` branch is up-to-date, then create a new
-branch.
+You do not need to wait to receive your code review before starting.  
+If you have not received a review, you can still complete this process. 
+The PR URL is still the same and the reviewer can still review the code even though it has been merged.
 
-You must **merge** your feedback branch on GitHub, then **pull** to update your local master branch.  
-Then, ensure you are on the `master` branch, not the feedback branch.  
-Then create a new branch, `prac_06_feedback`.  
-See how this works?  
-If you're not sure, please ask for help.
+Let's run through the process:
 
-Expectations and marking for this prac include **doing a code review** not just requesting one.  
-See the [submission deliverables](#deliverables) below.
+- **Merge** your PR on GitHub.  
+  This updates your remote `master` branch to contain the work from your last feedback branch.
+- In PyCharm, **Checkout** your local `master` branch.
+- **Pull** to update your local `master` branch.
+  This pulls in the changes from GitHub including the merge.
+- (Double-check that you are on the `master` branch, not the feedback branch.)
+- Create a new branch, `prac_06_feedback`.
+- Do your prac work.
+
+Expectations and marking for this prac include both requesting and doing a code review.  
+See submission details at the end of the prac.
 
 ## Classes
 
