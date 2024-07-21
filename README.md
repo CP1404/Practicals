@@ -47,7 +47,7 @@ For practicals that have a code review component, this part will be marked as fo
 > So, to help your learning, prac work must be done in the way that we prescribe to achieve full marks.
 
 > [!CAUTION]
-> Here are some reasons that you might lose marks for your practicals and assignments: 
+> Here are some reasons that you might lose marks for your practicals and assignments:
 > - Your work looks too similar to any provided solutions, code found online or answers made by services like ChatGPT
 > - You miss or skip part of a question (you must attempt all requirements)
 > - Your work includes concepts and code not taught in the subject
@@ -63,7 +63,9 @@ Each prac includes a "Deliverables" section that tells you what to submit.
   top of the text box when you submit your practical on LearnJCU.
     - Your PR URLs will look something like: `https://github.com/lindsaymarkward/cp1404practicals/pull/1`
     - Your code review URLs will be very similar but with the other student's repo. The link should take us directly to
-      the PR where you have done your code review
+      the PR where you have done your code review.
+    - [@Mention the appropriate student from the list](https://github.com/CP1404/Starter/wiki/Code-Review-Order) in your
+      PR.
 - Do not zip up your files.
 - Submit your practical with each file attached to one submission.
 - If you need to resubmit additional attempts, you must include all files in the new submission.
