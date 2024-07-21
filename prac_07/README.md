@@ -69,8 +69,7 @@ Notice how:
 
 ## Modifications
 
-1. Add another language to the file - and make sure it still works properly. Use data from
-   [this Programming Language Comparison page](http://www.jvoegele.com/software/langcomp.html)
+1. Add another language to the file - and make sure it still works properly.
 2. Add another field to your `ProgrammingLanguage` class: **Pointer Arithmetic** (see that page or search to find if
    the language has it or not). This will be a Boolean variable.  
    This may take a bit of effort, as you need to update the class and any code that uses it. You also need to add the
