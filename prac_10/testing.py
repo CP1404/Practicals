@@ -1,6 +1,6 @@
 """
 CP1404/CP5632 Practical
-Testing demo using assert and doctest
+Testing code using assert and doctest
 """
 
 import doctest
@@ -38,14 +38,14 @@ def run_tests():
     # assert test with custom message,
     # used to see if Car's init method sets the odometer correctly
     # this should pass (no output)
-    test_car = Car()
-    assert test_car._odometer == 0, "Car does not set odometer correctly"
+    car = Car()
+    assert car._odometer == 0, "Car does not set odometer correctly"
 
     # TODO: 2. write assert statements to show if Car sets the fuel correctly
     # Note that Car's __init__ function sets the fuel in one of two ways:
     # using the value passed in or the default
     # You should test both of these
-    test_car = Car(fuel=10)
+    car = Car(fuel=10)
 
 
 run_tests()
@@ -55,14 +55,14 @@ run_tests()
 # doctest.testmod()
 
 # TODO: 4. Fix the failing is_long_word function
-# (don't change the tests, change the function!)
+# (Don't change the tests, change the function!)
 
 # TODO: 5. Write and test a function to format a phrase as a sentence,
 # starting with a capital and ending with a single full stop.
 # Important: start with a function header and just use pass as the body
 # then add doctests for 3 tests:
-# 'hello' -> 'Hello.'
-# 'It is an ex parrot.' -> 'It is an ex parrot.'
-# and one more you decide (one that is valid!)
-# test this and watch the tests fail
-# then write the body of the function so that the tests pass
+#   'hello' -> 'Hello.'
+#   'It is an ex parrot.' -> 'It is an ex parrot.'
+# and one more that you decide is a useful test.
+# Run your doctests and watch the tests fail.
+# Then write the body of the function so that the tests pass.
