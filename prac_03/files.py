@@ -1,38 +1,41 @@
 """
-CP1404/CP5632 - Practical - Suggested Solution
-Quick file opening/writing/reading exercises
+CP1404/CP5632 Practical - Suggested Solution
+Make the appropriate choice of file-reading technique for each of these questions:
+- read()
+- readline()
+- readlines()
+- for line in file
 """
 
-# Quick Program 1
+# 1.
+# We can write using print or write, out_file.write(name)
+# In most cases, print is easier and more familiar
 out_file = open("name.txt", "w")
 name = input("What is your name? ")
-print(name, file=out_file)  # or out_file.write(name)
+print(name, file=out_file)
 out_file.close()
 
-# Quick Program 2
+# 2.
+# Here we choose read() because we want the whole contents
 in_file = open("name.txt", "r")
 name = in_file.read().strip()
 in_file.close()
-print("Your name is", name)
+print(f"Hi {name}!")
 
-# Quick Program 2 using "with"
-with open("name.txt", "r") as in_file:
-    name = in_file.read().strip()
-print("Your name is", name)
-
-# Quick Program 3
+# 3.
+# Here we choose readline() because we need separate lines, and we don't want every line
+# It would be inefficient to use readlines() and then select only the first 2 values
 # Note that .strip() is unnecessary since int() handles that whitespace
-in_file = open("numbers.txt", "r")
-number1 = int(in_file.readline())
-number2 = int(in_file.readline())
-in_file.close()
+with open("numbers.txt", "r") as in_file:
+    number1 = int(in_file.readline())
+    number2 = int(in_file.readline())
 print(number1 + number2)
 
-# Quick Program 3 extended - sum of all numbers
-in_file = open("numbers.txt", "r")
+# 4.
+# Here we choose for line in file because we want every line
 total = 0
-for line in in_file:
-    number = int(line)
-    total += number
-in_file.close()
+with open("numbers.txt", "r") as in_file:
+    for line in in_file:
+        number = int(line)
+        total += number
 print(total)
