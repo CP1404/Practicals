@@ -5,6 +5,8 @@ University.
 Instructions are found in each prac folder.  
 Some code files contain `# TODO` comments, which are part of the instructions for what students need to do.
 
+[Looking for the Programming Guides, including patterns?](https://github.com/CP1404/Starter/wiki/Programming-Patterns)
+
 ## Practical Content
 
 * [Practical 01 - PyCharm, Control](./prac_01)
@@ -42,7 +44,8 @@ For practicals that have a code review component, this part will be marked as fo
 - 0 = No code review, or no URL submitted
 
 > [!NOTE]
-> This subject is all about learning best-practices and clean coding using the patterns taught.
+> This subject is all about learning best-practices and clean coding using
+> the [patterns taught](https://github.com/CP1404/Starter/wiki/Programming-Patterns).
 > It is important that you learn these important foundations according to the teaching of the subject.    
 > So, to help your learning, prac work must be done in the way that we prescribe to achieve full marks.
 
