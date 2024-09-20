@@ -215,7 +215,9 @@ interested in the values, not the format):
 | 2000             | 300             |
 | 1000 (edge case) | 150             |
 
-Now (only when the above part is finished), add a loop to this,
+_Please only do the following loop modification when the above part is finished and working._
+
+Now **add a loop to this**,
 so it repeatedly asks for the user's sales and prints the bonus
 **until** they enter a negative number.  
 Be careful with the boundary.  
@@ -242,8 +244,11 @@ excellent, but their code doesn't work.
 efficient `if, elif, else` structure you can. The code is available
 here at: [broken_score.py](broken_score.py)  
 Remember to click **Raw** before copying and pasting so that you get proper formatting!  
+
 The _intention_ is that the score must be between 0 and 100 inclusive;
-90 or more is excellent; 50 or more is a pass; below 50 is bad.  
+90 or more is excellent; 50 or more is a pass; below 50 is bad. 
+There is no intention to do any repetition.
+
 Be very careful of your boundary conditions... and **test systematically**.
 
 ## 3. Loops
