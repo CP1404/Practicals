@@ -507,6 +507,10 @@ Compare your work to the provided solutions and see if there are any significant
 This section summarises the expectations for marking in this practical.  
 Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.
 
+We have not learned about using Git and GitHub this week, so we do not expect you to use GitHub at all yet.  
+Next week you will learn how to use version control properly.
+Do not submit a GitHub URL this week.   
+
 - `temperatures.py`
 - `sales_bonus.py`
 - `broken_score.py`

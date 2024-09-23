@@ -60,9 +60,9 @@ For practicals that have a code review component, this part will be marked as fo
 
 Each prac includes a "Deliverables" section that tells you what to submit.
 
-- Submit your files **and** any requested GitHub URLs.
-- Most pracs require you to submit one or more GitHub URLs.  
-  Please type the URL/s of your GitHub practicals repository or PR at the
+- Submit your files **and** any requested GitHub URLs. _(No GitHub in prac 1.)_
+- Most pracs (not prac 1) require you to submit one or more GitHub URLs.  
+  Please type the URL(s) of your GitHub practicals repository or PR at the
   top of the text box when you submit your practical on LearnJCU.
     - Your PR URLs will look something like: `https://github.com/lindsaymarkward/cp1404practicals/pull/1`
     - Your code review URLs will be very similar but with the other student's repo. The link should take us directly to
@@ -70,7 +70,7 @@ Each prac includes a "Deliverables" section that tells you what to submit.
     - [@Mention the appropriate student from the list](https://github.com/CP1404/Starter/wiki/Code-Review-Order) in your
       PR.
 - Do not zip up your files.
-- Submit your practical with each file attached to one submission.
+- Submit your practical on LearnJCU with each file attached to one submission.
 - If you need to resubmit additional attempts, you must include all files in the new submission.
 - Ensure each file has the correct name, including the extension. If you don't use the right extensions, we cannot read
   your work in LearnJCU.
