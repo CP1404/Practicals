@@ -96,11 +96,9 @@ Let's make our own simple class for a **programming language** in the file
 
 Follow Python's recommended "CapWords" style and call your class `ProgrammingLanguage`.
 
-For each language, we want to store the following fields - the row names from this table,
-based mostly on the information found at
-[this Programming Language Comparison](http://www.jvoegele.com/software/langcomp.html) page.
+For each language, we want to store the following fields:
 
-| (Field)          | **Java** | **C++** | **Python** | **Visual Basic** | **Ruby** |
+|                  | **Java** | **C++** | **Python** | **Visual Basic** | **Ruby** |
 |------------------|----------|---------|------------|------------------|----------|
 | ***Typing***     | Static   | Static  | Dynamic    | Static           | Dynamic  |
 | ***Reflection*** | Yes      | No      | Yes        | No               | Yes      |
