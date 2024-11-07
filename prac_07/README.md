@@ -7,7 +7,7 @@ Remember to check and do your code review when requested.
 [Find the right student to mention here](https://github.com/CP1404/Starter/wiki/Code-Review-Order#prac-7)
 
 You do not need to wait to receive your code review before starting.  
-If you have not received a review, you can still complete this process. 
+If you have not received a review, you can still complete this process.
 The PR URL is still the same and the reviewer can still review the code even though it has been merged.
 
 Let's run through the process:
@@ -70,12 +70,17 @@ Notice how:
 ## Modifications
 
 1. Add another language to the file - and make sure it still works properly.
-2. Add another field to your `ProgrammingLanguage` class: **Pointer Arithmetic** (see that page or search to find if
-   the language has it or not). This will be a Boolean variable.  
-   This may take a bit of effort, as you need to update the class and any code that uses it. You also need to add the
+2. Add another field to your `ProgrammingLanguage` class: **Pointer Arithmetic**.
+   This will be a Boolean variable.  
+   This work may take a bit of effort, as you need to update the class and any code that uses it. You also need to add
+   the
    correct values to your data file (in a form similar to reflection).
 3. Check that your code is complete including updating any docstrings.  
    Are `__str__` and other methods complete and good?
+
+Languages that support pointer arithmetic include C, C++, C# and D.  
+Go, Rust and Swift have pointers but no pointer arithmetic.  
+Many languages, including Python, Java and JavaScript, have no pointers.
 
 # Intermediate Exercises
 
