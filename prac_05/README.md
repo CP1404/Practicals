@@ -27,8 +27,8 @@ Select the "On GitHub" and "Email" options so that you will receive notification
 
 Code reviews are often done via **pull requests** on GitHub **branches**.
 
-A branch is another copy or version of an entire repository. Branches are useful for things like working on new features
-or bug fixes, or in our case getting feedback.
+A branch is another version of a repository, stored within that same repository. Branches are useful for things like
+working on new features or bug fixes, or in our case getting feedback.
 
 1. Open your PyCharm Practicals project. (If it's not already up to date on GitHub, then commit and push your current
    work now.)
@@ -186,8 +186,12 @@ Now that you've read the instructions, remember to record your time estimate in 
 
 File: `emails.py`
 
+**Remember to include your estimate and actual time in the module docstring.**
+
 Write a program that stores users' emails (unique keys) and names (values) in a dictionary.  
-Ask the user for their email until they enter a blank one.  
+Remember to use our naming convention for dictionaries, `key_to_value`.  
+
+Ask the user for an email until they enter a blank one.  
 Use a separate function to extract a name from the email as in the example below.  
 You should find the following methods useful: `split`, `join`, `title`.
 
@@ -252,16 +256,18 @@ Run that and see if you get a new widget at the bottom with the text "I did this
 Now, make that label smaller so that it only takes up 10% of the vertical space.  
 **Hint**: The existing `status_text` label only takes up 20% of the space.
 
-## Game, Set, Match
+## Wimbledon
 
 File: `wimbledon.py`
+
+**Remember to include your estimate and actual time in the module docstring.**
 
 Save the [wimbledon.csv](wimbledon.csv) data file provided.  
 This is based on
 [the Wikipedia entry Wimbledon gentlemen's singles champions](https://en.wikipedia.org/wiki/List_of_Wimbledon_gentlemen%27s_singles_champions)
 .
 
-Write a program to read this file, process the data and display processed information.
+Write a program to read this file, process the data and display processed information: 
 
 - the champions and how many times they have won.
 - the countries of the champions in alphabetical order
@@ -339,6 +345,12 @@ the IT industry, but is simplified to suit our teaching environment.
 
 ## Provide a code review
 
+> [!NOTE]
+> We do not expect you to complete the code review of someone else this week.   
+> We expect that you will review another student's prac during next week.
+> This week, you will submit your request for prac 5.  
+> Next week, you will submit your request for prac 6 and your review of someone's prac 5.
+
 1. On the GitHub website, click on the notifications icon at the top:
    which should have a dot on it if you've received your code review
    request. ![GitHub notification icon](../images/05image9.png)  
@@ -347,7 +359,7 @@ the IT industry, but is simplified to suit our teaching environment.
    Then click on the commit to see the code in "diff" view (old on the left, new on the right).
 
 2. Read through the code on GitHub and add line comments. Hover your mouse over the lines and look for the plus icon to
-   add a comment.  
+   add a comment. Choose to **"Add single comment"**. Do not choose "Start a review".   
    ![GitHub add line comment](../images/05image12.png)
 
    Your job is to look for anything that could be improved including incorrect, inconsistent or non-ideal naming,
@@ -356,7 +368,7 @@ the IT industry, but is simplified to suit our teaching environment.
    > [!IMPORTANT]
    > This is not a trivial exercise. Don't just write "all good mate :)", but take your time and add
    > thoughtful comments that help you and the requester to learn and improve.
-   > Make this a valuable experience by adding value
+   > Make this a valuable experience by doing it well.
 
    At some point you will receive comments from the review you requested. You can respond to these by making changes
    in your own code in PyCharm and replying to the comments on GitHub.  

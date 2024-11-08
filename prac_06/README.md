@@ -79,6 +79,8 @@ In the used_cars program file, write one new line of code for each of the follow
 
 # Intermediate Exercises
 
+**Include your estimate and actual time in the module docstring.**  
+
 For each of the remaining exercises (as we've done before), read the question, then put an estimate of how long it will
 take you in the module docstring.  
 Record the current time here in your comment.  
@@ -152,6 +154,8 @@ method!), which should produce output like:
 
 # Do-from-scratch Exercises
 
+**Remember to include your estimate and actual time in the module docstrings.**
+
 ## Guitars!
 
 File: `guitar.py`
@@ -192,6 +196,12 @@ Remember that methods should not take in any data that the object already knows 
 ### Testing
 
 File: `guitar_test.py`
+
+> [!IMPORTANT]
+> Take testing seriously. 
+> If your code prints "Expected 100. Got 102" then something is wrong!  
+> You need to notice when your tests fail and fix the problem.  
+> The problem is either the code, or the tests.
 
 Now write a program with at least enough code to test that the last two methods work as expected.  
 To test `get_age()`, you could test that the above example guitar does indeed output 100 as
@@ -245,9 +255,9 @@ Name:
 <em>... snip ...</em>
 
 These are my guitars:
-Guitar 1:       Gibson L-5 CES (1922), worth $ 16,035.40 (vintage)
-Guitar 2:        Line 6 JTV-59 (2010), worth $  1,512.90
-Guitar 3:  Fender Stratocaster (2014), worth $    765.40
+Guitar 1:  Fender Stratocaster (2014), worth $    765.40
+Guitar 2:       Gibson L-5 CES (1922), worth $ 16,035.40 (vintage)
+Guitar 3:        Line 6 JTV-59 (2010), worth $  1,512.90
 </pre>
 
 #### Programmer Efficiency Note
@@ -301,7 +311,7 @@ the [abstraction principle](https://en.wikipedia.org/wiki/Abstraction_principle_
 
 # Reflection
 
-We are just past halfway, so it's helpful to stop and reflect, and adjust as needed.
+We are just past halfway in the subject, so it's helpful to stop and reflect, and adjust as needed.
 
 Download and save the template markdown file [REFLECTION.md](REFLECTION.md) to your `prac_06` folder.  
 Write short but meaningful answers to the questions in that file.
