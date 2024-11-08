@@ -80,7 +80,8 @@ Notice how:
 
 Languages that support pointer arithmetic include C, C++, C# and D.  
 Go, Rust and Swift have pointers but no pointer arithmetic.  
-Many languages, including Python, Java and JavaScript, have no pointers.
+Many languages, including Python, Visual Basic, Java and JavaScript, have no pointers, 
+so do not (really) have pointer arithmetic.
 
 # Intermediate Exercises
 
