@@ -9,7 +9,7 @@ INDEX_CHAMPION = 2
 
 def main():
     """Read data file and print details about Wimbledon champions and countries."""
-    records = get_records(FILENAME)
+    records = load_records(FILENAME)
     champion_to_count, countries = process_records(records)
     display_results(champion_to_count, countries)
 
@@ -33,14 +33,14 @@ def display_results(champion_to_count, countries):
     for name, count in champion_to_count.items():
         print(name, count)
     print(f"\nThese {len(countries)} countries have won Wimbledon: ")
-    print(", ".join(country for country in sorted(countries)))
+    print(", ".join(sorted(countries)))
 
 
-def get_records(filename):
-    """Get records from file in list of lists form."""
+def load_records(filename):
+    """Load records from file in list of lists form."""
     records = []
     with open(filename, "r", encoding="utf-8-sig") as in_file:
-        in_file.readline()  # Remove header
+        in_file.readline()  # Remove CSV header row
         for line in in_file:
             parts = line.strip().split(",")
             records.append(parts)
