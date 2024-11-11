@@ -184,13 +184,6 @@ Then, you will clone this as a new PyCharm project and move your existing work i
 
 ![New repo from template](../images/githubrepotemplate.png)
 
-This next step is a bit advanced, but we need to do it first when our repo is "fresh".  
-We're going to create a new branch and then a pull request for staff to provide feedback on prac work.
-
-- On GitHub, click on "1 branch" then "New branch", type "review" as the name, then click "Create branch"
-
-![GitHub create new branch](../images/githubcreatebranch.png)
-
 Now let's use this repo for your practicals:
 
 - In PyCharm, select **Git > Clone** and enter the URL of your new repository.
@@ -199,25 +192,14 @@ Now let's use this repo for your practicals:
 - Commit (all your prac 1 files) with a message like "Add prac 1 files".
 - Push (if you didn't push in the previous step) this commit to GitHub.
 
-(Again, the following is a bit advanced, but we'll do it now.)
-
-- In GitHub, click on "Pull requests" then "New pull request".
-- Change the "base" drop-down to select "review", then click "Create pull request".
-
-![GitHub new pull request](../images/githubnewpullrequest.png)
-
-- In the next screen, change the text in the text box (which is whatever your last commit message was) to "Review" and
-  click the "Create pull request" button.
-- We'll learn more about Pull Requests (PRs) later, but for now just click on the name of your repo to return to the
-  main page in GitHub.
-
 **For every prac for the rest of the subject**,
 when you finish a task, do a commit with a meaningful message.  
 Push your prac work to GitHub at least at the end of each prac.
 
 You do not need to commit or push for every little change, just for
 decent-sized changes, **small milestones**, or before you start
-making major changes.
+making major changes.  
+Each question for a prac could be considered a small milestone.
 
 Do you understand that if you always keep your work up-to-date on GitHub,
 you will _never_ have the problem of not having access to your work?  
@@ -321,29 +303,22 @@ Now let's modify this program.
 4. Commit with a meaningful message in the imperative voice.  
    This could be something like "Refactor password check program to use functions"
 
-If you have not done so already, please *upgrade* your GitHub account to a free
-student account at:
-<https://education.github.com/discount_requests/new>  
-(You may need to upload a photo of your JCU student ID.)  
-This allows you to have private repositories for free, and you can get the GitHub
-Education Pack!
+Now we'll refactor two programs from prac 1 to use functions (with suitable verb-phrase function names)...
 
-Now we'll refactor two programs from prac 1 to use functions (with suitable
-verb-phrase function names)...  
-Copy both of these from `prac_01` into `prac_02`, **commit**, then update
-them. We do the commit first before updating so that we can see clearly what we have
-changed in the "diff".  
-We copy (instead of move) them because we want each week's prac folder to
-contain that week's prac work (don't change prac 1).
+**Copy both `temperatures.py` and `score.py` from `prac_01` into `prac_02` now, then commit**.  
+We do the commit first before updating so that we can see clearly what we have changed in the "diff".  
+We copy (instead of move) them because we want each week's prac folder to contain that week's prac work (don't change
+prac 1).
 
 ### Temperatures
 
 File: `temperatures.py`
 
-Use 2 functions (NOT one!) for converting Celsius to Fahrenheit and vice versa.  
-**Important:** Remember SRP - functions should do one thing, so
-these should be simple calculation functions.  
-Do not get user input or print output in the functions - do those things outside.
+Refactor this to use 2 functions (NOT one!) for converting Celsius to Fahrenheit and vice versa.
+
+> [!IMPORTANT]
+> Remember SRP - functions should do one thing, so these should be simple calculation functions.  
+> **Do not get user input or print output in the functions** - do those things outside.
 
 ### Scores
 
@@ -389,11 +364,10 @@ When the user quits, say some kind of "farewell".
 
 # Reflection
 
-Even though we've only done two practicals so far, it's helpful to stop and reflect, and adjust as needed.  
+Even though we've only done two practicals so far, it's helpful to stop and reflect, and adjust as needed.
 
 Download and save the template markdown file [REFLECTION.md](REFLECTION.md) to your `prac_02` folder.  
-Write short but meaningful answers to the questions in that file.  
-
+Write short but meaningful answers to the questions in that file.
 
 # Practice & Extension Work
 
