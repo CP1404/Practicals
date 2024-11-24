@@ -131,14 +131,21 @@ Let's make our own derived class for an `UnreliableCar` that inherits from `Car`
 - `drive(self, distance)`
     - generate a random number between 0 and 100, and only drive the car if that number is less than the car's
       reliability.  
-      Don't store the random number! It's not a self/instance variable that you want to remember, it's a temporary value
+      Don't store the random number! It's not a self/instance variable that you want to remember, it's a temporary value that
       you generate and use once, every time you call `drive()`.
-  > [!IMPORTANT]
-  > The `drive` method in the base class
-  > `Car` ***always*** returns the distance driven, so your derived class
-  > `UnreliableCar` must also return a distance.  
-  > This is true, even if your `UnreliableCar` drives 0 km.
-  > You must match the "signature" of any method you override.  
+
+> [!IMPORTANT]
+> The `drive` method in the base class
+> `Car` ***always*** returns the distance driven, so your derived class
+> `UnreliableCar` must also return a distance.  
+> This is true, even if your `UnreliableCar` drives 0 km.
+> You must match the "signature" of any method you override.  
+
+### Test
+
+In `unreliable_car_test.py` write tests that demonstrate the functionality of the class work. You do not need to test base class methods, only those specific to this class.  
+Since the functionality involves randomness, we can't reliably ensure that our test passes with just one method call, can we?  
+If we have a 30% reliable car, and we attempt to drive it, should it drive or not? It might... or it might not. So, consider using a loop to test many iterations of driving. If you drive it 100 times and the 30% reliable car drives 100 times, or 1 time, is it working? Probably not.  
 
 ## SilverServiceTaxi
 
