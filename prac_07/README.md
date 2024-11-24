@@ -40,7 +40,9 @@ Include at least the following in your practicals README:
 - Headings 1 and 2. These lines will start with `#` and `##` respectively. Use headings appropriately and semantically.
 - Brief information about the repo and yourself.
 - A list (markdown `-`) of at least 3 main lessons you have learned about "clean code" in this subject.
-- Links to the Programming Patterns page and the CP1404 Practicals instructions repo.
+- Proper links (names and links, not 'bare URLs') to the Programming Patterns page and the CP1404 Practicals instructions repo.
+
+[Here's the official Markdown syntax guide](https://daringfireball.net/projects/markdown/syntax) to help you learn how to do lists, links, etc.
 
 Please "Reformat Code" to ensure your formatting is correct before you finish and commit your README.
 
@@ -161,7 +163,7 @@ Write a program in `project_management.py` to load and save a data file and use 
 
 Load projects from the default data file, `projects.txt`, when the program starts, before the menu.  
 When the user quits, give them the choice of saving to the default file.  
-Note that there are two menu options for loading from and saving to different files.
+Note that there are menu options for loading from and saving to different files.
 
 Your program should contain a menu with the following options:
 
@@ -176,18 +178,22 @@ Your program should contain a menu with the following options:
 - Add new project  
   (Ask the user for the inputs and add a new project to memory)
 - Update project  
-  (Choose a project, then modify the completion % and/or priority - leave blank to retain existing values)
+  (Choose a project, then modify the completion % and/or priority - the user can leave either input blank to retain existing values)
+
+> [!NOTE]  
+> You should notice that there are two different scenarios for both loading and saving.
+> Consider **SRP** and how you can write a single function for loading that you use in both scenarios: the default filename and the user-selected filename.
+
 
 ### Expectations:
 
-- Commit your work as you go (iterative development)
-- Some of this could be considered relatively "hard" - do the easy bits first, then add more as you go
-- Use the [datetime](https://docs.python.org/3/library/datetime.html) module for the project start date
-- Write your class such that you are able to sort/compare `Project` objects based on priority order
-- Think about writing utility/helper methods in your class and main program.  
+- Commit your work as you go (iterative development).
+- Some of this could be considered relatively "hard" - do the easy bits first, then add more as you go.
+- Use the [datetime](https://docs.python.org/3/library/datetime.html) module for the project start date.
+- Write your class such that you are able to sort/compare `Project` objects based on priority order.
+- Use at least one utility/helper method in your class.  
   Think of our examples like `is_vintage` for Guitar and what you might use for a `Project`.
-- Follow good design principles like SRP and DRY. Notice that there's two kinds of loading and write one function to
-  handle both. Same for saving.
+- Follow good design principles like SRP and DRY. Notice that there's two kinds of loading, so write one function to handle both. Same for saving.
 - Write good clean code (no pylint warnings) with good naming and design (as always!)
 
 Here are two suggestions to leave until last (iterative development):
@@ -329,7 +335,7 @@ Don't waste time reinventing new/different ways to do
 
 Next week, we will be writing and running programs with the **Kivy** GUI toolkit.
 
-Please test you can run successfully [this test code](https://github.com/CP1404/Starter/blob/master/check_setup.py).
+Please test you can successfully run [this test code](https://github.com/CP1404/Starter/blob/master/check_setup.py).
 
 If you cannot run the above code, please complete the setup this week:  
 [Follow these instructions](https://github.com/CP1404/Starter/wiki/Software-Setup)
@@ -360,7 +366,7 @@ Please follow the [submission guidelines](../README.md#submission) to ensure you
 
 - Type the URL of your Pull Request (PR) that mentions another student **for this prac**.
 - Type the URL of the PR that you reviewed **for the previous prac**.
-- `README.md` (submitted and on GitHub, as with all the files)
+- `README.md` (submitted and on GitHub, as with all the files; note this is the main README you did in this prac, not the nearly-empty prac_07 README)
 - `language_file_reader.py`, `programming_language.py`, `languages.csv`
 - `guitar.py`, `myguitars.py`
 - `project.py`, `project_management.py`
