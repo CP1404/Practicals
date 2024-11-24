@@ -4,13 +4,14 @@ Remember to do your work for this prac (as is usual now) in a **new branch**, th
 the correct student to get a code review.  
 Remember to check and do your code review when requested.
 
-[Find the right student to mention here](https://github.com/CP1404/Starter/wiki/Code-Review-Order#prac-7)
+[Find the right student to mention here](https://github.com/CP1404/Starter/wiki/Code-Review-Order#prac-7) (this is the
+same file/link every prac)
 
 You do not need to wait to receive your code review before starting.  
 If you have not received a review, you can still complete this process.
 The PR URL is still the same and the reviewer can still review the code even though it has been merged.
 
-Let's run through the process:
+Let's run through the process again:
 
 - **Merge** your PR on GitHub.  
   This updates your remote `master` branch to contain the work from your last feedback branch.
@@ -40,11 +41,16 @@ Include at least the following in your practicals README:
 - Headings 1 and 2. These lines will start with `#` and `##` respectively. Use headings appropriately and semantically.
 - Brief information about the repo and yourself.
 - A list (markdown `-`) of at least 3 main lessons you have learned about "clean code" in this subject.
-- Proper links (names and links, not 'bare URLs') to the Programming Patterns page and the CP1404 Practicals instructions repo.
+- Proper links (linked names, not 'bare URLs') to the Programming Patterns page and the CP1404 Practicals instructions
+  repo.
 
-[Here's the official Markdown syntax guide](https://daringfireball.net/projects/markdown/syntax) to help you learn how to do lists, links, etc.
+[Here's the official Markdown syntax guide](https://daringfireball.net/projects/markdown/syntax) to help you learn how
+to do lists, links, etc.
 
-Please "Reformat Code" to ensure your formatting is correct before you finish and commit your README.
+Please take this task seriously. Good developers care about documentation, following conventions, correctly-formatted
+code, user experience...
+"Reformat Code" to ensure your formatting is correct before you finish and commit your README.  
+After you've committed, review your README on GitHub and check that it looks good. If it doesn't, fix it and update it.
 
 # Walkthrough Example
 
@@ -72,17 +78,17 @@ Notice how:
 ## Modifications
 
 1. Add another language to the file - and make sure it still works properly.
-2. Add another field to your `ProgrammingLanguage` class: **Pointer Arithmetic**.
+2. Add another field to your `ProgrammingLanguage` class for **Pointer Arithmetic**.
    This will be a Boolean variable.  
    This work may take a bit of effort, as you need to update the class and any code that uses it. You also need to add
    the
-   correct values to your data file (in a form similar to reflection).
+   appropriate values to your data file (in a form like reflection).
 3. Check that your code is complete including updating any docstrings.  
    Are `__str__` and other methods complete and good?
 
 Languages that support pointer arithmetic include C, C++, C# and D.  
 Go, Rust and Swift have pointers but no pointer arithmetic.  
-Many languages, including Python, Visual Basic, Java and JavaScript, do not (really) have pointers, 
+Many languages, including Python, Visual Basic, Java and JavaScript, do not (really) have pointers,
 so they do not have pointer arithmetic.
 
 # Intermediate Exercises
@@ -142,6 +148,9 @@ write all of your guitars to the data file `guitars.csv`.
 Test that this worked by opening the data file, and also by running the program again to make sure it reads the new
 guitars.
 
+At this stage, you should have a reasonable quantity of code.  
+If you have not yet implemented separate functions for separate tasks, then refactor your code to use functions appropriately.  
+
 # Do-from-scratch Exercises
 
 ## Project Management Program
@@ -167,23 +176,24 @@ Note that there are menu options for loading from and saving to different files.
 
 Your program should contain a menu with the following options:
 
-- Load projects  
+- **Load projects**  
   (Prompt the user for a filename to load projects from and load them)
-- Save projects  
+- **Save projects**  
   (Prompt the user for a filename to save projects to and save them)
-- Display projects  
+- **Display projects**  
   (Display two groups: incomplete projects; completed projects, both sorted by priority)
-- Filter projects by date  
+- **Filter projects by date**  
   (Ask the user for a date and display only projects that start after that date, sorted by date)
-- Add new project  
+- **Add new project**  
   (Ask the user for the inputs and add a new project to memory)
-- Update project  
-  (Choose a project, then modify the completion % and/or priority - the user can leave either input blank to retain existing values)
+- **Update project**  
+  (Choose a project, then modify the completion % and/or priority - the user can leave either input blank to retain
+  existing values)
 
 > [!NOTE]  
-> You should notice that there are two different scenarios for both loading and saving.
-> Consider **SRP** and how you can write a single function for loading that you use in both scenarios: the default filename and the user-selected filename.
-
+> You should notice that there are two different scenarios for both loading and saving.  
+> Consider **SRP** and how you can write a single function for loading that you use in both scenarios: the default
+> filename and the user-selected filename.
 
 ### Expectations:
 
@@ -193,7 +203,8 @@ Your program should contain a menu with the following options:
 - Write your class such that you are able to sort/compare `Project` objects based on priority order.
 - Use at least one utility/helper method in your class.  
   Think of our examples like `is_vintage` for Guitar and what you might use for a `Project`.
-- Follow good design principles like SRP and DRY. Notice that there's two kinds of loading, so write one function to handle both. Same for saving.
+- Follow good design principles like SRP and DRY. Notice that there's two kinds of loading, so write one function to
+  handle both. Same for saving.
 - Write good clean code (no pylint warnings) with good naming and design (as always!)
 
 Here are two suggestions to leave until last (iterative development):
@@ -366,7 +377,8 @@ Please follow the [submission guidelines](../README.md#submission) to ensure you
 
 - Type the URL of your Pull Request (PR) that mentions another student **for this prac**.
 - Type the URL of the PR that you reviewed **for the previous prac**.
-- `README.md` (submitted and on GitHub, as with all the files; note this is the main README you did in this prac, not the nearly-empty prac_07 README)
+- `README.md` (submitted and on GitHub, as with all the files; note this is the main README you did in this prac, not
+  the nearly-empty prac_07/README)
 - `language_file_reader.py`, `programming_language.py`, `languages.csv`
 - `guitar.py`, `myguitars.py`
 - `project.py`, `project_management.py`
