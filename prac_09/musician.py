@@ -32,8 +32,8 @@ if __name__ == '__main__':
     from guitar import Guitar
 
     musician = Musician()
-    assert not musician.name
-    assert not musician.instruments
+    assert musician.name == ""
+    assert musician.instruments == []
 
     musician.name = "Lincoln Brewster"
     musician.instruments.append(Guitar("Fender Lincoln Brewster Stratocaster", 2020, 3419.0))
