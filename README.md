@@ -28,19 +28,20 @@ and if you're really keen, here's another practical that we used to have in the 
 ## Marking
 
 Assessment will be based on completing the tasks up to but not including
-the practice/extension section. You will be marked as follows:
+the practice/extension section. You will be marked according to the rubric, which is usually follows:
 
-- 4 = Excellent response to all requirements (Always aim for this!)
-- 3 = Good response to most or all requirements, but some omissions or problems
-- 2 = Reasonable response to some requirements, but some significant omissions or problems
-- 1 = Reasonable response to at least one requirement, or LATE submission
+- 100 = Excellent response to all requirements (Always aim for this!)
+- 75 = Good response to most or all requirements, but some omissions or problems
+- 50 = Reasonable response to some requirements, but some significant omissions or problems
+- 25 = Reasonable response to at least one requirement, or LATE submission
 - 0 = Minimal or no attempt
-- LATE practicals will receive 1 mark for decent work, or 0 marks for poor work. **Do not be late**.
+- LATE practicals will receive 25/100 for decent work, or 0 marks for poor work. **Do not be late**.
 
-For practicals that have a code review component, this part will be marked as follows:
+For practicals that require a code review, the prac work will be worth 80% and the code review worth 20%.  
+Code reviews will be marked as follows:
 
-- 2 = Good code review with well-written, thoughtful comments
-- 1 = Adequate code review
+- 100 = Good code review with well-written, thoughtful comments
+- 50 = Adequate code review
 - 0 = No code review, or no URL submitted
 
 > [!NOTE]
@@ -54,7 +55,8 @@ For practicals that have a code review component, this part will be marked as fo
 > - Your work looks too similar to any provided solutions, code found online or answers made by services like ChatGPT
 > - You miss or skip part of a question (you must attempt all requirements)
 > - Your work includes concepts and code not taught in the subject
-> - Your work does not follow the core concepts and patterns - even if they work!
+> - Your work does not follow the core concepts and patterns taught (e.g., using global variables, while True loops or
+    similar techniques), even if they work!
 
 ## Submission
 
