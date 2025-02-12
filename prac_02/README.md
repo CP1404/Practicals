@@ -298,14 +298,20 @@ Now let's modify this program.
 3. Now refactor the part that prints the asterisks into a function that
    takes 1 parameter: the password. PyCharm will see that password needs
    to be an input parameter and create the function accordingly.  
-   This will be a very simple function, but that's fine.
+   This will be a very simple function, but that's fine.*
 
 4. Commit with a meaningful message in the imperative voice.  
    This could be something like "Refactor password check program to use functions"
 
+> [!NOTE]
+> *We are OK with the simple function for printing asterisks because we know the limited context we'll use it in.
+> If you would like to make it more reusable, you are welcome to give it a second parameter for what symbol to print. 
+> Use a default argument so that it prints * when we don't provide that argument.  
+
 Now we'll refactor two programs from prac 1 to use functions (with suitable verb-phrase function names)...
 
-**Copy both `temperatures.py` and `score.py` from `prac_01` into `prac_02` now, then commit**.  
+**Copy both `temperatures.py` and `broken_score.py` from `prac_01` into `prac_02`.**  
+Rename `broken_score.py` to `score.py`, then commit these two files.  
 We do the commit first before updating so that we can see clearly what we have changed in the "diff".  
 We copy (instead of move) them because we want each week's prac folder to contain that week's prac work (don't change
 prac 1).
@@ -323,8 +329,6 @@ Refactor this to use 2 functions (NOT one!) for converting Celsius to Fahrenheit
 ### Scores
 
 File: `score.py`
-
-Copy `broken_score.py` from prac 1 and rename it to `score.py`, then commit.
 
 Your `main` function should ask the user for their score and print the result.  
 Write a new function that takes in the user's score
