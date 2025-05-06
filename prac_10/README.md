@@ -277,6 +277,18 @@ Run it and test it, then study the code to find a few new things:
 - `url_for()` is a function that returns the correct URL for a given view/route function so that you don't have to know
   the exact path.
 
+> [!WARNING]
+> The Flask app sets `app.secret_key`, which is an encryption key
+> used ["to sign cookies and other things"](https://flask.palletsprojects.com/en/stable/api/#flask.Flask.secret_key).  
+> Our app will work without it, but not completely. Without the secret key, we receive an error when searching:  
+`RuntimeError: The session is unavailable because no secret key was set.`  
+> Storing secrets in plain code like this is not good practice. We know it. But we don't want you to think we're
+> endorsing this practice!  
+> We don't need to concern ourselves with security at this level of development, but it would be foolish to ignore
+> it for long. If you're keen, you can look into secure secret storage using environment variables, secret vaults,
+> or similar.  
+> [Here's an article on How to handle Secrets in Python](https://medium.com/bluetuple-ai/secure-python-secret-management-cloud-local-e80cfa986d4c)
+
 ### Modifications
 
 Now it's your turn to make this more interesting and appealing. What else could you do to it?
