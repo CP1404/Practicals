@@ -15,10 +15,9 @@ your work. You will likely use it as an online portfolio in the future.
 
 ![Pencil Icon](../images/pencil.png)
 
-In one of our end-of-subject YourJCU
-student feedback surveys, a student suggested that we do more
-hand-writing code to help prepare for the final examination. Great idea!  
-And it shows it's a great idea for you to provide us with your feedback --
+In one of our end-of-subject YourJCU student feedback surveys, a student suggested that we do more
+hand-writing code to help learning. Great idea!    
+And it shows it's a great idea for you to provide us with your feedback -
 during the semester anytime, and especially in our main surveys.
 
 **On paper**, write a program that asks the user for a password, with
@@ -26,7 +25,7 @@ error-checking to repeat if the password doesn't meet a minimum length set by a 
 The program should then print asterisks as long as the word.  
 Example: if the user enters `Pythonista` (10 characters), the program should print `**********`.
 
-It's a valuable skill to be able to write code with pen and paper --
+It's a valuable skill to be able to write code with pen and paper -
 without the support of an IDE. Watch out for things like consistent
 variable names and clear indenting as well as basic syntax like colons
 and brackets.
@@ -305,8 +304,8 @@ Now let's modify this program.
 
 > [!NOTE]
 > *We are OK with the simple function for printing asterisks because we know the limited context we'll use it in.
-> If you would like to make it more reusable, you are welcome to give it a second parameter for what symbol to print. 
-> Use a default argument so that it prints * when we don't provide that argument.  
+> If you would like to make it more reusable, you are welcome to give it a second parameter for what symbol to print.
+> Use a default argument so that it prints * when we don't provide that argument.
 
 Now we'll refactor two programs from prac 1 to use functions (with suitable verb-phrase function names)...
 
