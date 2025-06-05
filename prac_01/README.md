@@ -243,10 +243,10 @@ excellent, but their code doesn't work.
 **Rewrite** the following program using the most
 efficient `if, elif, else` structure you can. The code is available
 here at: [broken_score.py](broken_score.py)  
-Remember to click **Raw** before copying and pasting so that you get proper formatting!  
+Remember to click **Raw** before copying and pasting so that you get proper formatting!
 
 The _intention_ is that the score must be between 0 and 100 inclusive;
-90 or more is excellent; 50 or more is a pass; below 50 is bad. 
+90 or more is excellent; 50 or more is a pass; below 50 is bad.
 There is no intention to do any repetition.
 
 Be very careful of your boundary conditions... and **test systematically**.
@@ -296,6 +296,17 @@ E.g., if the user entered `4`, your single loop should print:
     **
     ***
     ****
+
+> [!NOTE]  
+> We just asked you to "print n stars/lines".
+> `n` is a common name for a value like this. As our [Style Guide](https://github.com/CP1404/Starter/wiki/Style-Guide)
+> shows, we like readable unambiguous names like `number_of_stars` and we generally avoid abbreviations.  
+> When there are "world standard" abbreviations like `n` here, or `i` for index, we're OK with those.  
+> Since these single-character names have been used in mathematics for hundreds of years, we can safely assume that most
+> readers will understand them.  
+> But this is not licence to use terse names! Using `a` for age or `x` for number of chickens is not OK.  
+> It's not about blindly following arbitrary rules but knowing what will work well for an appropriate audience.  
+> If in doubt, choose the more descriptive name.
 
 We've now had the walkthrough and the intermediate exercises where you
 mostly have existing code to modify and extend, or you have to write
@@ -509,7 +520,7 @@ Please follow the [submission guidelines](../README.md#submission) to ensure you
 
 We have not learned about using Git and GitHub this week, so we do not expect you to use GitHub at all yet.  
 Next week you will learn how to use version control properly.
-Do not submit a GitHub URL this week.   
+Do not submit a GitHub URL this week.
 
 - `temperatures.py`
 - `sales_bonus.py`
