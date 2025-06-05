@@ -304,8 +304,10 @@ E.g., if the user entered `4`, your single loop should print:
 > When there are "world standard" abbreviations like `n` here, or `i` for index, we're OK with those.  
 > Since these single-character names have been used in mathematics for hundreds of years, we can safely assume that most
 > readers will understand them.  
-> But this is not licence to use terse names! Using `a` for age or `x` for number of chickens is not OK.  
-> It's not about blindly following arbitrary rules but knowing what will work well for an appropriate audience.  
+> But this is not licence to use terse names!  
+> Using `a` for age or `x` for number of chickens is not OK.  
+> It's not about blindly following arbitrary rules, but about learning what will work well for an appropriate
+> audience.  
 > If in doubt, choose the more descriptive name.
 
 We've now had the walkthrough and the intermediate exercises where you
