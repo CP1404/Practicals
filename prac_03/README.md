@@ -371,10 +371,16 @@ File: `files.py`
 The solutions for these programs are provided, to help confirm that your solution was valid.
 
 When you execute a Python program that contains a line like
-`open('data.txt', 'w')` the new file "data.txt" is created in the
+`open("data.txt", "w")` the new file `data.txt` is created in the
 same folder as the Python file in your PyCharm project.
 
-Create a new file called `files.py` and do all the following *separate questions* in it:  
+Create a new file called `files.py` and do all the following *separate questions* in it.
+
+> [!NOTE]
+> With this, and any question that has multiple parts, please label the parts with simple headings, like
+> ```# 1. ```
+
+
 The intention here is to give you experience using different ways to read files.  
 Make the appropriate choice of file-reading technique for each of these questions:
 
