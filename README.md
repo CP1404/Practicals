@@ -84,10 +84,16 @@ Each prac includes a "Deliverables" section that tells you what to submit.
 
 ## Solutions
 
-Selected (not all) practical solutions are provided here, in the **solutions** branch.  
-These are to help you learn by evaluating your own work and seeing our suggested ways of solving the practical problems.
+Selected practical solutions are provided here, in the **"solutions"** branch.  
+These are to help you learn from evaluating your own work and seeing our suggested ways of solving the practical
+problems.
+
+Not all solutions are provided.  
+Not all provided solutions are complete.
+E.g., a question may require pseudocode and code, but its solution may only have code.  
+This is on purpose.
 
 > [!IMPORTANT]
-> Please use the solutions in a mature and honest way, as helpful learning tools... only _after_ you complete
-> your own work, _not_ as something to simply copy into your own prac work. OK?  
-> Seriously, **never copy the solutions** as this will not help you learn as much as doing your own coding.
+> Please use the solutions in a mature and honest way, as helpful learning tools...  
+> _after_ you complete your own work, _not_ as something to simply copy into your own prac work. OK?  
+> Seriously, **never copy the solutions** as this will not help you learn as much as doing your own work.
