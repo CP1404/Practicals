@@ -1,18 +1,20 @@
-"""
-CP1404/CP5632 Practical
-State names in a dictionary
-File needs reformatting
-"""
+# state_names.py
 
-# TODO: Reformat this file so the dictionary code follows PEP 8 convention
-CODE_TO_NAME = {"QLD": "Queensland", "NSW": "New South Wales", "NT": "Northern Territory", "WA": "Western Australia",
-                "ACT": "Australian Capital Territory", "VIC": "Victoria", "TAS": "Tasmania", "SA": "South Australia"}
-print(CODE_TO_NAME)
+STATE_ABBREVIATIONS = {
+    "QLD": "Queensland",
+    "NSW": "New South Wales",
+    "VIC": "Victoria",
+    "TAS": "Tasmania",
+    "WA": "Western Australia",
+    "SA": "South Australia",
+    "ACT": "Australian Capital Territory",
+    "NT": "Northern Territory"
+}
 
-state_code = input("Enter short state: ")
-while state_code != "":
-    if state_code in CODE_TO_NAME:
-        print(state_code, "is", CODE_TO_NAME[state_code])
-    else:
-        print("Invalid short state")
-    state_code = input("Enter short state: ")
+user_input = input("Enter short state (e.g., QLD): ").upper()
+
+if user_input in STATE_ABBREVIATIONS:
+    print(f"{user_input} is {STATE_ABBREVIATIONS[user_input]}")
+else:
+    print("Invalid short state")
+
