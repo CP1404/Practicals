@@ -1,5 +1,5 @@
 """
-CP1404/CP5632 Practical Suggested Solution
+CP1404 Practical Suggested Solution
 Data file -> lists program
 """
 
@@ -8,14 +8,14 @@ FILENAME = "subject_data.txt"
 
 def main():
     """Read subject data and display neatly."""
-    subjects = load_subjects()
+    subjects = load_subjects(FILENAME)
     display_subjects(subjects)
 
 
-def load_subjects():
+def load_subjects(filename=FILENAME):
     """Load data from file formatted like: code,lecturer,number_of_students."""
     subject = []
-    input_file = open(FILENAME)
+    input_file = open(filename)
     for line in input_file:
         # print(line)  # See what a line looks like
         # print(repr(line))  # See what a line really looks like
@@ -30,7 +30,7 @@ def load_subjects():
 
 
 def display_subjects(subjects):
-    """Display data nicely."""
+    """Display subject data nicely."""
     for subject in subjects:
         # Print using the format method and *unpacking
         print("{} is taught by {:12} and has {:3} students".format(*subject))
