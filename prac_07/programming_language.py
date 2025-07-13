@@ -1,3 +1,41 @@
+"""START
+
+DEFINE a class called ProgrammingLanguage
+    METHOD __init__(self, name, typing, reflection, year)
+        SET self.name TO name
+        SET self.typing TO typing
+        SET self.reflection TO reflection
+        SET self.year TO year
+
+    METHOD __repr__(self)
+        RETURN formatted string with name, typing, reflection, and year
+
+    METHOD is_dynamic(self)
+        IF self.typing EQUALS "Dynamic"
+            RETURN True
+        ELSE
+            RETURN False
+
+DEFINE FUNCTION run_tests()
+    CREATE an object called ruby from ProgrammingLanguage with values: "Ruby", "Dynamic", True, 1995
+    CREATE an object called python from ProgrammingLanguage with values: "Python", "Dynamic", True, 1991
+    CREATE an object called visual_basic from ProgrammingLanguage with values: "Visual Basic", "Static", False, 1991
+
+    STORE all language objects in a LIST called languages
+
+    PRINT the string representation of the python object
+
+    PRINT "The dynamically typed languages are:"
+    FOR EACH language IN languages
+        IF language.is_dynamic() IS True
+            PRINT language.name
+
+IF script is run as main program
+    CALL run_tests()
+
+END
+"""
+
 """
 CP1404/CP5632 Practical - Suggested Solution
 Programming Language class with tests.
