@@ -14,7 +14,7 @@ def main():
     classes. Each time, until they quit:
     The user should be presented with a list of available taxis and get to
     choose one. Then they should say how far they want to drive.
-    At the end of each trip, show them the price and add it to their bill.
+    At the end of each trip, show them the cost and add it to their bill.
     """
     total_bill = 0
     taxis = [Taxi("Prius", 100), SilverServiceTaxi("Limo", 100, 2),
@@ -27,11 +27,11 @@ def main():
         if menu_choice == "c":
             print("Taxis available: ")
             display_taxis(taxis)
-            # no error-checking
-            taxi_choice = int(input("Choose taxi: "))
             try:
+                taxi_choice = int(input("Choose taxi: "))
                 current_taxi = taxis[taxi_choice]
-            except IndexError:
+            except (ValueError, IndexError):
+                # Handle both kinds of exceptions in the same way
                 print("Invalid taxi choice")
         elif menu_choice == "d":
             if current_taxi:
@@ -45,7 +45,7 @@ def main():
                 print("You need to choose a taxi before you can drive")
         else:
             print("Invalid option")
-        print("Bill to date: ${total_bill:.2f}")
+        print(f"Bill to date: ${total_bill:.2f}")
         print(MENU)
         menu_choice = input(">>> ").lower()
 
@@ -64,14 +64,13 @@ def run_tests():
     """Run tests to show workings of Car and Taxi classes."""
     bus = Car("Datsun", 180)
     bus.drive(30)
-    print("fuel =", bus.fuel)
-    print("odo =", bus._odometer)
+    print(vars(bus))
+    assert bus.fuel == 150
+    assert bus._odometer == 30
     bus.drive(55)
-    print("fuel =", bus.fuel)
-    print("odo = ", bus._odometer)
     print(bus)
 
-    # drive bus (input/loop is oblivious to fuel)
+    # Drive bus (input/loop is oblivious to fuel)
     distance = int(input("Drive how far? "))
     while distance > 0:
         distance_travelled = bus.drive(distance)
@@ -92,5 +91,5 @@ def run_tests():
     print(sst, sst.get_fare())
 
 
-# run_tests()
-main()
+run_tests()
+# main()
