@@ -25,7 +25,7 @@ program run... but it's more than that.
 **Always do your coding in files that are part of a project - NOT just
 individual files you open.**
 
-For this week, we will just make a project and work on a few files.  
+For this week, we will just make a project called `prac_01` and work on a few files.  
 Next week, we will learn to use version control with Git, and we will make a new project for your practicals. 
 
 
@@ -38,8 +38,8 @@ Next week, we will learn to use version control with Git, and we will make a new
 
     - the **location** can be changed to any place you have access to. Use a folder that you will be able to find later
 
-    - the **interpreter** is the version of Python we need to run our code on the computer.  
-      Select *"Custom environment"* and *"Select existing*" for Python 3.  
+    - the **interpreter** is the version of Python used to run our code.  
+      Select *"Custom environment"* and *"Select existing"* for Python 3.  
 
    ![New project window - select existing interpreter](../images/PyCharm-Project-Custom-Environment.png)
 
@@ -70,30 +70,25 @@ Next week, we will learn to use version control with Git, and we will make a new
 
 In the next example, we will write a program that can convert between Celsius and Fahrenheit temperatures.
 
-1. If you don't have your first prac folder (directory) yet, create
-   one called `prac_01` and drag your `hello.py` file into it...
-
-2. Right-click on your prac_01 folder and create a
+1. Right-click on your project folder and create a
    new Python file here called `temperatures.py`
    Copy the raw version of the code found at the link below and paste
    into your file...  
    Click on the link below, then click the Raw button to get a version
    suitable for copying.  
-   ![Raw in GitHub](../images/01image4.png)  
+   ![Raw in GitHub](../images/GitHub-Raw.png)  
    Don't just copy from the normal view without clicking Raw, or you
    will *not* get proper formatting. OK?
 
    Download or copy [temperatures.py](temperatures.py)  
    This file is hosted on GitHub in our subject's practicals "repository"
    (or "repo" for short).  
-   Bookmark the top level of this repo as we will be
-   using it throughout the subject.
 
-3. **Run** this program by right-clicking in the code window and
+2. **Run** this program by right-clicking in the code window and
    choosing **run**. Try converting a couple of Celsius values to
    Fahrenheit.
 
-4. Now complete the `TODO`. Replace `pass` with your
+3. Now complete the `TODO`. Replace `pass` with your
    code to do the opposite temperature conversion (F to C). Test your code.
 
 ## Productivity Tips
@@ -101,20 +96,17 @@ In the next example, we will write a program that can convert between Celsius an
 Good programmers (that's you!) don't waste time. Here are some
 important tips to save you time...
 
-- As you are typing code, notice that PyCharm is trying to
-  help you with suggestions and highlights.
+- As you are typing code, notice PyCharm's suggestions and highlights.
 
 - As you type in the name of an existing identifier, PyCharm will show you a list of matching names that
-  you can select from by simply pressing ENTER  
-  *Don't use your mouse to click on these. Shortcuts aren't shortcuts
-  if you use them the long way!*
+  you can select from by simply pressing ENTER.  
+  *Don't use your mouse to click on these. Shortcuts aren't shortcuts if you use them the long way!*
 
 - The more you type in, the more specific the list becomes  
-  ![Autocomplete identifier names](../images/01image5.png)
+  ![Autocomplete identifier names](../images/PyCharm-Autocomplete.png)
 
 - Notice also that PyCharm colours different parts of the code to help
-  you understand what they are - variables in black, functions in
-  blue, etc.
+  you understand what they are - variables, literals, comments, etc.
 
 - You may also notice that the `# TODO` comment is special. PyCharm
   knows you want to come back to this. You can list all of your TODOs
@@ -129,6 +121,25 @@ important tips to save you time...
 
 - Please make use of PyCharm's useful support features so that you can work better and faster. It's not cheating; it's
   good practice!
+
+> [!WARNING]
+> We love being productive, and we don't want you to waste time, BUT...  
+> We're not here trying to get through this work as quickly as possible. What we really want is to learn.  
+> With this in mind, we are purposely choosing NOT to use AI in this subject at all.  
+> So, turn off PyCharm's very handy AI autocompletion now.
+
+Open the settings:  
+File (or PyCharm on Mac) > Settings > Editor > General > Inline Completion  
+Untick "Enable local Full Line completion suggestions"
+
+![PyCharm full line completion settings](../images/PyCharm-Inline-Completion.png)
+
+Here's a quick story to help illustrate the point.  
+Lindsay was working with a student in a prac recently whose code had some problems.  
+He asked the student why they had chosen to implement the code that way, and the student replied:  
+*"Not gonna lie, I just pressed Tab multiple times."*  
+If you want to finish the job quickly, get AI to do it... but learn very little.  
+If you want to learn and build your own skills, don't use AI and choose to learn all you can.
 
 While we're thinking about being more productive...  
 A good way to organise your workspace is to put these instructions on
