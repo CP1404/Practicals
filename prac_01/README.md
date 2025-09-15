@@ -113,11 +113,10 @@ important tips to save you time...
   in a project, and it can warn you of unfinished or new TODOs when
   you commit your work to version control.
 
-- If you see an underline, move your mouse over it to see what the
+- If you see an underline, move your mouse over it (**but don't click!**) to see what the
   issue is, and look at the action item light bulb icon to see if
   PyCharm can automatically fix it for you. Example:  
-  ![Highlight suggestion in PyCharm](../images/01image6.png)
-  ![Highlight suggestion in PyCharm](../images/01image7.png)
+  ![Highlight suggestion in PyCharm](../images/PyCharm-Formatting-Warning.png)
 
 - Please make use of PyCharm's useful support features so that you can work better and faster. It's not cheating; it's
   good practice!
@@ -126,15 +125,15 @@ important tips to save you time...
 > We love being productive, and we don't want you to waste time, BUT...  
 > We're not here trying to get through this work as quickly as possible. What we really want is to learn.  
 > With this in mind, we are purposely choosing NOT to use AI in this subject at all.  
-> So, turn off PyCharm's very handy AI autocompletion now.
+> So, turn off PyCharm's very handy AI full line completion now.
 
 Open the settings:  
 File (or PyCharm on Mac) > Settings > Editor > General > Inline Completion  
-Untick "Enable local Full Line completion suggestions"
+**Untick** "Enable local Full Line completion suggestions"
 
-![PyCharm full line completion settings](../images/PyCharm-Inline-Completion.png)
+![PyCharm full line completion settings](../images/PyCharm-Full-Line-Completion.png)
 
-Here's a quick story to help illustrate the point.  
+**Here's a quick story to help illustrate the point.**
 Lindsay was working with a student in a prac recently whose code had some problems.  
 He asked the student why they had chosen to implement the code that way, and the student replied:  
 *"Not gonna lie, I just pressed Tab multiple times."*  
