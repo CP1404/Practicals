@@ -170,15 +170,14 @@ want there... but do not put your practical work in Sandbox or vice versa.
 ## Now let's get your practicals on GitHub
 
 You will create a new repository from a "template" on GitHub so that you have a complete and correct folder
-structure.      
-Then, you will clone this as a new PyCharm project and move your existing work into it.
+structure. Then you will clone this as a new PyCharm project and move your existing work into it.
 
 - Go to the [CP1404 practicals template repo](https://github.com/CP1404/cp1404practicals)
 - Click "Use this template" > "Create a new repository"
 
 ![Use this template > Create a new repository](../images/github-use-this-template.png)
 
-- Name your repo "cp1404practicals"
+- Name your repo `cp1404practicals`
 - Your repo must be public!
 
 ![New repo from template](../images/githubrepotemplate.png)
@@ -203,6 +202,20 @@ Each question for a prac could be considered a small milestone.
 Do you understand that if you always keep your work up-to-date on GitHub,
 you will _never_ have the problem of not having access to your work?  
 You will _always_ have your work available on GitHub. Nice!
+
+## Project Structure: Use this one project for all practicals
+
+**Your project name and structure should now look like our template:
+<https://github.com/CP1404/cp1404practicals>**  
+So you will have **ONE** correctly-named folder for each prac with
+well-named files inside those folders.  
+Names like `prac_01` conform with Python module name conventions: we use underscore_lowercase for file and
+folder names.  
+If you choose different names from what we have shown, you _will_ have problems later on.
+
+**DO** use this one project for all practicals.  
+**DO NOT** create new projects for each separate practical.  
+**Do** use separate projects for each assignment and any other side 'projects' including lectures and seminars.  
 
 # Intermediate Exercises - Functions:
 

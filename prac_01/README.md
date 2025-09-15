@@ -5,7 +5,7 @@
 If you haven't read the introduction to practicals, including marking and submission guidelines,
 please [read this now](../README.md).
 
-# Walkthrough Example
+# PyCharm Project Setup
 
 Let's start by getting you used to working with the PyCharm IDE
 (Integrated Development Environment).
@@ -19,60 +19,46 @@ To start with, you don't need Git or Kivy, just Python 3 and PyCharm.
 > Your version of PyCharm may look different from our images and instructions below,
 > but hopefully they are close enough for you to follow.
 
+A PyCharm **project** is a folder on the computer that contains
+Python source code files and related resource files to make your
+program run... but it's more than that.  
+**Always do your coding in files that are part of a project - NOT just
+individual files you open.**
+
+For this week, we will just make a project and work on a few files.  
+Next week, we will learn to use version control with Git, and we will make a new project for your practicals. 
+
+
 1. Run PyCharm.  
-   When PyCharm first starts you should have a window with a link to
-   create a new project.
+   You should see a window with a link to create a new project.
 
-    - A PyCharm **project** is a folder on the computer that contains
-      Python source code files and related resource files to make your
-      program run... but it's more than that. Always do your coding in files that are part of a project - not just
-      individual files you open.
-
-    - the **Quick Start** window lists several useful tasks like creating a new project or adjusting the configuration
-      of PyCharm
-
-2. Click on **Create New Project**. and choose **Pure Python**. PyCharm
-   asks you where to store your new project and to choose an
-   interpreter. Name your new project (folder) for your `pracs` (we will make a new project next week when we learn
-   version control with Git).
+2. Click on **Create New Project** (not notebook) and choose **Pure Python**.  
+   PyCharm lets you choose where to store your new project and what
+   interpreter to use.
 
     - the **location** can be changed to any place you have access to. Use a folder that you will be able to find later
 
-    - use the **... button** ("meatball menu") to select the location
-
     - the **interpreter** is the version of Python we need to run our code on the computer.  
-      Use the *previously configured interpreter* for Python 3.  
-      **DO NOT use a virtual environment (Virtualenv).** They're cool, but we don't
-      need them in this subject... they make things harder for you.
+      Select *"Custom environment"* and *"Select existing*" for Python 3.  
 
-   ![New project window - choose previously configured interpreter](../images/Python-Windows-Install-3-Project-1.png)
-
-    - Click the ... menu button to choose a new interpreter and select the System Interpreter you installed earlier.  
-      (This is why it's useful to install Python in a directory you can find.)
-      Select the Previously Configured Interpreter you have installed (not a Virtualenv).
-
-   ![Select system interpreter](../images/Python-Windows-Install-4-Project-2.png)
+   ![New project window - select existing interpreter](../images/PyCharm-Project-Custom-Environment.png)
 
 3. Next, let's add our first source code file to the project.  
    **Right-click** on the project name and select  
    **New > Python File**  
-   ![New file](../images/01image2.png)
+   ![New file](../images/PyCharm-New-Python-File.png)
 
-4. This opens a window where you can define the name of the file - call
-   it `hello.py` and hit the **OK** button. Always give your files
-   descriptive names so that they're easy to find again.
+4. Enter the name `hello.py`. Always give your files descriptive names that are easy to understand.
 
-5. PyCharm created a new source code file in the project folder and
-   opened the editor window:
-   ![Editor window](../images/01image3.png)
-   Have a look at the interface and see what information you can identify (row/column, syntax errors, etc.)
+5. PyCharm created a new source code file in the project folder and opened the editor window.
+   Look at the interface and see what information you can identify: row/column, syntax errors, Python version...
 
 6. Let's learn our first shortcut! Press **Shift+Enter** to add a blank
-   line below the one you're on (no matter where the cursor is). Nice!
+   line below the one you're on (no matter where the cursor is). Nice!  
    Do it again, then add the famous line:
 
    ```python
-   print('Hello world')
+   print("Hello world")
    ```
 
 7. To **run** this standard first program, **right-click** in the code
@@ -80,25 +66,9 @@ To start with, you don't need Git or Kivy, just Python 3 and PyCharm.
    If it didn't work, please check for what the problem might be, then
    if you need to, ask the nearest person for help.
 
+   ![Run Program](../images/PyCharm-Run-Right-Click.png)
+
 In the next example, we will write a program that can convert between Celsius and Fahrenheit temperatures.
-
-## Project Structure: Use one project for all practicals
-
-**Your project name and structure should look like our template:
-<https://github.com/CP1404/cp1404practicals>**  
-So you will have **ONE** correctly-named folder for each prac with
-well-named files inside those
-folders. Names like `prac_01` conform with Python module name conventions, so use underscore_lowercase for file and
-folder names.  
-If you choose different names from what we have shown, you _will_ have problems later on.
-
-### Seriously!
-
-**DO NOT** create new projects for each separate practical.  
-**PLEASE** get this right the first time to save wasted effort fixing it later!
-
-**Do** use separate projects for each assignment and any other side
-'projects'.
 
 1. If you don't have your first prac folder (directory) yet, create
    one called `prac_01` and drag your `hello.py` file into it...
@@ -123,7 +93,7 @@ If you choose different names from what we have shown, you _will_ have problems 
    choosing **run**. Try converting a couple of Celsius values to
    Fahrenheit.
 
-4. Now see if you can complete the `TODO`. Replace `pass` with your
+4. Now complete the `TODO`. Replace `pass` with your
    code to do the opposite temperature conversion (F to C). Test your code.
 
 ## Productivity Tips
@@ -168,7 +138,7 @@ Now you don't have to waste time switching back and forth between these two scre
 Drag the bar between your project files and your code so that you
 can see lots of code (or hide the project window altogether with Alt+1).
 
-![Screen layout](../images/01image8.png)
+![Screen layout](../images/PyCharm-Screen-Layout.png)
 
 Got your windows organised? Let's keep going...
 
@@ -180,10 +150,8 @@ Okay, let's practise using PyCharm to write simple programs.
 
 File: `sales_bonus.py`
 
-Create a new Python file in the `prac_01` directory called
-`sales_bonus.py`, and copy the following **docstring** at the top
-of the file. A docstring is a triple-quoted special comment
-"doc(umentation) string".
+Create a new Python file called `sales_bonus.py`, and copy the following **docstring** at the top
+of the file. A docstring is a triple-quoted special comment "doc(umentation) string".
 
 ```python
 """
@@ -193,8 +161,7 @@ If sales are $1,000 or over, the bonus is 15%.
 """
 ```
 
-Now write the Python code to complete the program according to that
-docstring.  
+Now write the Python code to complete the program according to that docstring.  
 The first line might look like:
 
 ```python
@@ -269,27 +236,31 @@ Now **write more for loops** (using `range`) to do the following:
 
 > [!NOTE]  
 > For marking, we expect to see a complete file with each loop still in it.  
-> Label each of your questions (a, b, c, d)
+> Label each of your questions: a, b, c, d
 
 a. count in 10s from 0 to 100: `0 10 20 30 40 50 60 70 80 90 100`
 
 b. count down from 20 to 1: `20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1`
 
-c. print n stars. Ask the user for a number, then print that many stars
-(`*`), all on one line.
+c. print a number of stars.  
+Ask the user for a number, then print that many stars (`*`), all on one line.  
+
+Here's a good time to refer to the [Style Guide](https://github.com/CP1404/Starter/wiki/Style-Guide).  
+You need a variable to store the "number of stars". As our guide shows, a good name for this is...  
+`number_of_stars`.
 
 > [!NOTE]  
-> This is a very simple loop for repeating n times.  
+> This is a very simple loop for repeating a number of times.  
 > We use `for` loops for "definite" iteration like this.  
 > `while` loops are used for "indefinite" iteration, like error-checking a user input.
 
-**Sample output:**
+**Sample output (showing the user input is 4):**
 
     Number of stars: 4
     ****
 
-d. print n lines of increasing stars. Using the same number as above,
-print lines of increasing stars, starting at 1 with no blank line.  
+d. print lines of increasing stars.  
+Ask the user for a number of lines, then print lines of increasing stars, starting at 1 with no blank line.  
 E.g., if the user entered `4`, your single loop should print:
 
     *
@@ -311,12 +282,12 @@ E.g., if the user entered `4`, your single loop should print:
 > If in doubt, choose the more descriptive name.
 
 We've now had the walkthrough and the intermediate exercises where you
-mostly have existing code to modify and extend, or you have to write
+mostly modify and extend existing code, or you have to write
 something really similar to working code you've been given...  
-Now we move on to the section where you are given a task/goal to
-complete with no starting code. Remember to use the examples above
-as a guide, and if you're not sure how to do it, go back to the subject
-materials. For example, the question below asks for an error-checking
+Now we move on to the section where you are given a task to
+complete with no starting code.  
+Remember to use the examples above as a guide, and if you're not sure how to do it, go back to the subject
+teaching. For example, the question below asks for an error-checking
 loop, which is summarised as one of our standard patterns at:
 <https://github.com/CP1404/Starter/wiki/Programming-Patterns>
 
@@ -338,7 +309,7 @@ If the total price is over $100, then a 10% discount is applied to that
 total before the amount is displayed on the screen.
 
 **Sample output:**  
-The output should look like the sample below (where **bold text** represents user input).  
+The output should look like the sample below, where **bold text** represents user input.  
 This uses f-string formatting to set the currency to 2 decimal places.
 
 > [!NOTE]
@@ -369,9 +340,10 @@ it is valid.
 File: `menus.py`
 
 One very common programming task is to make menus by combining
-looping (repeat the program until the user quits) with selection
+repetition (repeat the program until the user quits) with decision
 (let the user decide what to do).  
-The general pattern of a menu-driven program is as follows:
+The general [pattern of a menu-driven program](https://github.com/CP1404/Starter/wiki/Programming-Patterns#menus) 
+is as follows:
 
     display menu
     get choice
@@ -412,29 +384,27 @@ to the pseudocode below:
 
 Sample output for this program should look like:
 
-<pre>
-Enter name: Guido
-(H)ello
-(G)oodbye
-(Q)uit
->>> A
-Invalid choice
-(H)ello
-(G)oodbye
-(Q)uit
->>> H
-Hello Guido
-(H)ello
-(G)oodbye
-(Q)uit
->>> G
-Goodbye Guido
-(H)ello
-(G)oodbye
-(Q)uit
->>> Q
-Finished.
-</pre>
+    Enter name: Guido
+    (H)ello
+    (G)oodbye
+    (Q)uit
+    >>> A
+    Invalid choice
+    (H)ello
+    (G)oodbye
+    (Q)uit
+    >>> H
+    Hello Guido
+    (H)ello
+    (G)oodbye
+    (Q)uit
+    >>> G
+    Goodbye Guido
+    (H)ello
+    (G)oodbye
+    (Q)uit
+    >>> Q
+    Finished.
 
 Before you finish or start the practice and extension work, please check the **Deliverables** section below to ensure
 your work is complete.
@@ -449,8 +419,6 @@ You will learn better if you spread your work over multiple sessions
 instead of trying to do all of this in one go.  
 There are two subsections - *practice*, with easier questions for you to get more... practice  
 and *extension*, with harder questions for you to stretch yourself.
-
-Save each program in a different file within the `prac_01` folder.
 
 ## Practice
 
