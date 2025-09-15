@@ -114,8 +114,7 @@ important tips to save you time...
   you commit your work to version control.
 
 - If you see an underline, move your mouse over it (**but don't click!**) to see what the
-  issue is, and look at the action item light bulb icon to see if
-  PyCharm can automatically fix it for you. Example:  
+  issue is, and look at the action PyCharm suggests to fix it for you. Example:  
   ![Highlight suggestion in PyCharm](../images/PyCharm-Formatting-Warning.png)
 
 - Please make use of PyCharm's useful support features so that you can work better and faster. It's not cheating; it's
@@ -123,7 +122,7 @@ important tips to save you time...
 
 > [!WARNING]
 > We love being productive, and we don't want you to waste time, BUT...  
-> We're not here trying to get through this work as quickly as possible. What we really want is to learn.  
+> We're not just trying to get through this work as quickly as possible. What we really want is to learn.  
 > With this in mind, we are purposely choosing NOT to use AI in this subject at all.  
 > So, turn off PyCharm's very handy AI full line completion now.
 
