@@ -26,8 +26,7 @@ program run... but it's more than that.
 individual files you open.**
 
 For this week, we will just make a project called `prac_01` and work on a few files.  
-Next week, we will learn to use version control with Git, and we will make a new project for your practicals. 
-
+Next week, we will learn to use version control with Git, and we will make a new project for your practicals.
 
 1. Run PyCharm.  
    You should see a window with a link to create a new project.
@@ -39,7 +38,7 @@ Next week, we will learn to use version control with Git, and we will make a new
     - the **location** can be changed to any place you have access to. Use a folder that you will be able to find later
 
     - the **interpreter** is the version of Python used to run our code.  
-      Select *"Custom environment"* and *"Select existing"* for Python 3.  
+      Select *"Custom environment"* and *"Select existing"* for Python 3.
 
    ![New project window - select existing interpreter](../images/PyCharm-Project-Custom-Environment.png)
 
@@ -68,21 +67,15 @@ Next week, we will learn to use version control with Git, and we will make a new
 
    ![Run Program](../images/PyCharm-Run-Right-Click.png)
 
+### Temperatures
+
 In the next example, we will write a program that can convert between Celsius and Fahrenheit temperatures.
 
-1. Right-click on your project folder and create a
-   new Python file here called `temperatures.py`
-   Copy the raw version of the code found at the link below and paste
-   into your file...  
-   Click on the link below, then click the Raw button to get a version
-   suitable for copying.  
-   ![Raw in GitHub](../images/GitHub-Raw.png)  
-   Don't just copy from the normal view without clicking Raw, or you
-   will *not* get proper formatting. OK?
-
-   Download or copy [temperatures.py](temperatures.py)  
-   This file is hosted on GitHub in our subject's practicals "repository"
-   (or "repo" for short).  
+1. Right-click on your project folder and create a new Python file here called `temperatures.py`  
+   To copy the starter code for this program, click on the file link below, then click the **Raw** button in GitHub to
+   get a version suitable for copying. Don't just copy from the normal view without clicking Raw, or you will *not* get
+   proper formatting. OK?  
+   Download or copy [temperatures.py](temperatures.py)
 
 2. **Run** this program by right-clicking in the code window and
    choosing **run**. Try converting a couple of Celsius values to
@@ -91,10 +84,10 @@ In the next example, we will write a program that can convert between Celsius an
 3. Now complete the `TODO`. Replace `pass` with your
    code to do the opposite temperature conversion (F to C). Test your code.
 
-## Productivity Tips
+## Productivity Tips & PyCharm Configuration
 
-Good programmers (that's you!) don't waste time. Here are some
-important tips to save you time...
+Good programmers (that's you!) don't waste time.  
+Here are some important tips and settings to be efficient...
 
 - As you are typing code, notice PyCharm's suggestions and highlights.
 
@@ -120,36 +113,45 @@ important tips to save you time...
 - Please make use of PyCharm's useful support features so that you can work better and faster. It's not cheating; it's
   good practice!
 
+If you don't see underlines for formatting warnings, change the following setting:  
+**File (or PyCharm on Mac) > Settings > Editor > Inspections**  
+Search for "PEP" and select "PEP 8 Coding Style Violation" then change the severity to "Weak Warning" as in this
+screenshot:
+![Inspections settings in PyCharm](../images/PyCharm-Inspections.png)
+
+
 > [!WARNING]
 > We love being productive, and we don't want you to waste time, BUT...  
-> We're not just trying to get through this work as quickly as possible. What we really want is to learn.  
+> We're not just trying to get through this work as quickly as possible. What we really want is to **learn**.  
 > With this in mind, we are purposely choosing NOT to use AI in this subject at all.  
 > So, turn off PyCharm's very handy AI full line completion now.
 
 Open the settings:  
-File (or PyCharm on Mac) > Settings > Editor > General > Inline Completion  
+**File (or PyCharm on Mac) > Settings > Editor > General > Inline Completion**  
 **Untick** "Enable local Full Line completion suggestions"
 
-![PyCharm full line completion settings](../images/PyCharm-Full-Line-Completion.png)
+![PyCharm Full Line completion settings](../images/PyCharm-Full-Line-Completion.png)
 
 **Here's a quick story to help illustrate the point.**
+
 Lindsay was working with a student in a prac recently whose code had some problems.  
 He asked the student why they had chosen to implement the code that way, and the student replied:  
-*"Not gonna lie, I just pressed Tab multiple times."*  
-If you want to finish the job quickly, get AI to do it... but learn very little.  
-If you want to learn and build your own skills, don't use AI and choose to learn all you can.
+*"Not gonna lie, I just pressed Tab multiple times."*
+
+* If you want to finish the job quickly, get AI to do it... but you will not learn much.  
+* If you want to learn and build your own skills, don't use AI... but choose to learn all you can.
 
 While we're thinking about being more productive...  
 A good way to organise your workspace is to put these instructions on
 one side of your screen, and your code (PyCharm) on the other side.
 Windows users can use the Windows key + arrow shortcuts for this.  
-Now you don't have to waste time switching back and forth between these two screens!  
+Now you don't have to waste time switching back and forth between these two windows!  
 Drag the bar between your project files and your code so that you
 can see lots of code (or hide the project window altogether with Alt+1).
 
 ![Screen layout](../images/PyCharm-Screen-Layout.png)
 
-Got your windows organised? Let's keep going...
+Got PyCharm configured and your windows organised? Let's keep going...
 
 # Intermediate Exercises
 
@@ -193,8 +195,7 @@ interested in the values, not the format):
 
 _Please only do the following loop modification when the above part is finished and working._
 
-Now **add a loop to this**,
-so it repeatedly asks for the user's sales and prints the bonus
+Now **add a loop to this**, so that it repeatedly asks for the user's sales and prints the bonus
 **until** they enter a negative number.  
 Be careful with the boundary.  
 Remember that **until** is the opposite of **while**, and if you need help,
@@ -252,7 +253,7 @@ a. count in 10s from 0 to 100: `0 10 20 30 40 50 60 70 80 90 100`
 b. count down from 20 to 1: `20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 4 3 2 1`
 
 c. print a number of stars.  
-Ask the user for a number, then print that many stars (`*`), all on one line.  
+Ask the user for a number, then print that many stars (`*`), all on one line.
 
 Here's a good time to refer to the [Style Guide](https://github.com/CP1404/Starter/wiki/Style-Guide).  
 You need a variable to store the "number of stars". As our guide shows, a good name for this is...  
@@ -351,7 +352,7 @@ File: `menus.py`
 One very common programming task is to make menus by combining
 repetition (repeat the program until the user quits) with decision
 (let the user decide what to do).  
-The general [pattern of a menu-driven program](https://github.com/CP1404/Starter/wiki/Programming-Patterns#menus) 
+The general [pattern of a menu-driven program](https://github.com/CP1404/Starter/wiki/Programming-Patterns#menus)
 is as follows:
 
     display menu
