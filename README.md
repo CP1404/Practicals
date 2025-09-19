@@ -64,7 +64,7 @@ Each prac includes a "Deliverables" section that tells you what to submit.
 
 - Submit your files **and** any requested GitHub URLs. _(No GitHub in prac 1.)_
 - Most pracs require you to submit one or more GitHub URLs.  
-  Please type the URL(s) of your **GitHub practicals repository** (pracs 2-5) or PR (pracs 5-10) at the
+  Please type the URL(s) of your **GitHub practicals repository** (pracs 2-4) or PR (pracs 5-10) at the
   top of the text box when you submit your practical on LearnJCU.
 - If the prac (5-10) requires a code review pull request (PR):
     - Your PR URLs will look something like: `https://github.com/lindsaymarkward/cp1404practicals/pull/1`

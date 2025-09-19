@@ -322,35 +322,38 @@ Now let's modify this program.
 
 Now we'll refactor two programs from prac 1 to use functions (with suitable verb-phrase function names)...
 
-**Copy both `temperatures.py` and `broken_score.py` from `prac_01` into `prac_02`.**  
-Rename `broken_score.py` to `score.py`, then commit these two files.  
+**Download or copy the two files from this prac folder:  
+
+* [temperatures.py](temperatures.py)
+* [score.py](score.py)
+
+Commit these two files with an appropriate imperative mood message, probably starting with "Add".  
 We do the commit first before updating so that we can see clearly what we have changed in the "diff".  
-We copy (instead of move) them because we want each week's prac folder to contain that week's prac work (don't change
-prac 1).
 
 ### Temperatures
 
 File: `temperatures.py`
 
-Refactor this to use 2 functions (NOT one!) for converting Celsius to Fahrenheit and vice versa.
+Refactor this to use 2 functions (NOT one!) for converting Celsius to Fahrenheit and vice versa.  
+You will need a `main` function that contains the main menu.  
 
 > [!IMPORTANT]
 > Remember SRP - functions should do one thing, so these should be simple calculation functions.  
 > **Do not get user input or print output in the functions** - do those things outside.
 
-### Scores
+### Score
 
 File: `score.py`
 
 Your `main` function should ask the user for their score and print the result.  
 Write a new function that takes in the user's score
-as a parameter and returns the result to be printed.  
-**Follow SRP**: The *function* should not print it.
+as a **parameter** and **returns** the result to be printed.  
+**Follow SRP**: This *function* must not print the result.
 
 Now add a new part to the bottom of your main function that generates a
-***random*** score and prints the result.  
+`random` score and prints the result.  
 You do NOT need to write a different function to determine the result for the random score.  
-If you've written your new function properly, you can use it.  
+If you've written your new function properly, you can use it again.  
 If you've breached SRP, then you'll see that you can't.
 
 # Do-from-scratch Exercises
