@@ -322,7 +322,7 @@ Now let's modify this program.
 
 Now we'll refactor two programs from prac 1 to use functions (with suitable verb-phrase function names)...
 
-**Download or copy the two files from this prac folder:  
+Download or copy the two files from this prac folder:  
 
 * [temperatures.py](temperatures.py)
 * [score.py](score.py)

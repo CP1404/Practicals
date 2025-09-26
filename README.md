@@ -33,9 +33,10 @@ the practice/extension section. You will be marked according to the rubric, whic
 - 100 = Excellent response to all requirements (Always aim for this!)
 - 75 = Good response to most or all requirements, but some omissions or problems
 - 50 = Reasonable response to some requirements, but some significant omissions or problems
-- 25 = Reasonable response to at least one requirement, or LATE submission
+- 25 = Reasonable response to at least one requirement
 - 0 = Minimal or no attempt
-- LATE practicals will receive 25/100 for decent work, or 0 marks for poor work. **Do not be late**.
+- LATE practicals will receive no more than 50/100 for decent work, or down to 0 marks for poor work.  
+  **Do not be late**.
 
 For practicals that require a code review, the prac work will be worth 80% and the code review worth 20%.  
 Code reviews will be marked as follows:
