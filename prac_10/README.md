@@ -1,8 +1,8 @@
 # Practical 10 - Testing, APIs, Flask
 
-Don't forget to make a new branch, `prac_10_feedback` _before_ you start.  
-You will put some files into that branch for your normal practicals project/repo, but you will also have separate
-projects and repositories for the Flask tasks.
+You do not need to do a pull request for this final practical.  
+You can work directly in your main branch for your normal practicals repository.  
+You will also use separate projects and repositories for the Flask tasks.
 
 Today we will explore the use of tools for **testing**, an **API** for Wikipedia and the very cool **Flask** Web
 framework.  
@@ -11,7 +11,8 @@ But first, let's reflect on the subject so far...
 # Reflection
 
 Download and save the template markdown file [REFLECTION.md](REFLECTION.md) to your `prac_10` folder.  
-Write short but meaningful answers to the questions in that file.
+Write short but meaningful answers to the questions in that file.  
+This will include links to your best code reviews with explanations.
 
 # Testing
 
@@ -233,8 +234,6 @@ Re-run and test with the URLs <http://127.0.0.1:5000/greet> and
 
 This is one way that you can pass string parameters to Flask view functions.
 
-## Challenge
-
 In an earlier prac, you wrote a function to convert between Fahrenheit and Celsius. Copy this function (as a
 regular function, not a route) into your program.  
 It should take a Celsius float value and return a Fahrenheit float.
@@ -383,14 +382,9 @@ E.g., for 6 rows, it is 6 + 5 + 4 + 3 + 2 + 1 = 21
 This section summarises the expectations for marking in this practical.  
 Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.
 
-Your non-Flask work goes in your normal practicals repo and should be part of a code review PR.  
-Then, there's two separate Flask projects, which do not go in your practicals repo.  
-Submit three URLs for these three (practicals PR, Flask project from demo, Flask + Wiki project)
-
-- Type the URL of your Pull Request (PR) that mentions another student **for this prac**.
-- Type the URL of the PR that you reviewed **for the previous prac**.
+- Type the URL of your practicals repo.
 - Type the URL of your Flask project with modifications
 - Type the URL of your Flask + Wiki project
-- `REFLECTION.md`
+- `REFLECTION.md`, which should contain links to two good code reviews
 - `testing.py`
 - `wiki.py`
