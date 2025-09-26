@@ -85,6 +85,8 @@ Notice how:
    appropriate values to your data file (in a form like reflection).
 3. Check that your code is complete including updating any docstrings.  
    Are `__str__` and other methods complete and good?
+4. Run the `language_file_reader.py` program again to test that it works correctly with your modified
+   `ProgrammingLanguage` class. Change this client code as needed so that it works.
 
 Languages that support pointer arithmetic include C, C++, C# and D.  
 Go, Rust and Swift have pointers but no pointer arithmetic.  
@@ -149,7 +151,8 @@ Test that this worked by opening the data file, and also by running the program 
 guitars.
 
 At this stage, you should have a reasonable quantity of code.  
-If you have not yet implemented separate functions for separate tasks, then refactor your code to use functions appropriately.  
+If you have not yet implemented separate functions for separate tasks, then refactor your code to use functions
+appropriately.
 
 # Do-from-scratch Exercises
 
@@ -211,6 +214,12 @@ Here are two suggestions to leave until last (iterative development):
 
 - Error checking. Do no error checking to start with.
 - Date formatting. Just use a string until most everything else works, then, here are some suggestions.
+
+> [!NOTE]
+> Remember how in our walkthrough above, we saw that it is not the class's job to convert the file's "Yes" string into
+> the Boolean `True` for the class? That's the job of the client code.   
+> Here, when you create a `Project` object, you will want to convert the date string to a `datetime` object, but it's
+> not the class's job - it's the client code's job.
 
 The following code reads a string from user input, converts it to a `date` object (using the `strptime` method from
 the `datetime` type), prints the day of the week (`%A`) and then prints the date as a string:
