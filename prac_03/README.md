@@ -419,7 +419,9 @@ In the questions above, you should have used `read`, `readline` and `for line in
 
 ![GitHub logo](../images/githublogo.png)  
 Before we're done, let's learn one more Git thing: **ignoring** files.  
-If you created your project from our template repository, then you already have this file, so there's no more to do.  
+**If you created your project from our template repository, then you already have this file, so there's no more to do,
+just learn.**
+
 The following details are here to help you understand how `.gitignore` works.  
 If you did not use the template, then you need to do this manually now...
 
@@ -438,9 +440,8 @@ On Unix-like systems (including Mac), the dot makes a file/folder _hidden_.
 folders you want Git not to track and not to warn you about.  
 Your file will still exist in your _project_, but not in your _repository_.
 
-(If you don't already have one)  
-**Create a file called `.gitignore`** in the **root folder** (NOT inside a subfolder) of your project,
-and **add** it to Git.
+If you don't already have one, you can **create a file called `.gitignore`** in the **root folder** (NOT inside a
+subfolder) of your project, and **add** it to Git.
 
 Then enter the following line (the trailing slash means it will match a directory
 but not a file with that name):
