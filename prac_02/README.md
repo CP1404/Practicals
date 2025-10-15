@@ -310,15 +310,15 @@ Now let's modify this program.
 3. Now refactor the part that prints the asterisks into a function that
    takes 1 parameter: the password. PyCharm will see that password needs
    to be an input parameter and create the function accordingly.  
-   This will be a very simple function, but that's fine.*
+   This will be a very simple function, but that's fine (see the note below).
 
 4. Commit with a meaningful message in the imperative voice.  
    This could be something like "Refactor password check program to use functions"
 
 > [!NOTE]
-> *We are OK with the simple function for printing asterisks because we know the limited context we'll use it in.
-> If you would like to make it more reusable, you are welcome to give it a second parameter for what symbol to print.
-> Use a default argument so that it prints * when we don't provide that argument.
+> We are OK with the very simple function for printing asterisks because we know the limited context we'll use it in.  
+> If you would like to make it more reusable, you are welcome to give it a second parameter for what symbol to print.  
+> Use a default argument so that it prints `*` when we don't provide that argument.
 
 Now we'll refactor two programs from prac 1 to use functions (with suitable verb-phrase function names)...
 
