@@ -53,12 +53,12 @@ Here's some sample output (for 5 months in this case):
     Enter income for month 5: 12.35
 
     Income Report
-    -------------    
-    Month  1 - Income: $    120.00         Total: $    120.00
-    Month  2 - Income: $    245.40         Total: $    365.40
-    Month  3 - Income: $    900.00         Total: $   1265.40
-    Month  4 - Income: $   1205.56         Total: $   2470.96
-    Month  5 - Income: $     12.35         Total: $   2483.31
+    -------------
+    Month  1 - Income: $    120.00 Total: $    120.00
+    Month  2 - Income: $    245.40 Total: $    365.40
+    Month  3 - Income: $    900.00 Total: $   1265.40
+    Month  4 - Income: $   1205.56 Total: $   2470.96
+    Month  5 - Income: $     12.35 Total: $   2483.31
 
 Think about how to do this before reading on...
 
@@ -109,8 +109,10 @@ And lastly we need to format the output nicely, which we can use f-strings for.
 
 7. Test again and make sure it's all good.
 
-8. Double-check the report printing function you just wrote. Is it well-designed according to SRP? Does it take in _
-   only_ what it needs to know? Refactor it if you can make it better.
+8. Double-check the report printing function you just wrote.  
+   Is it well-designed according to SRP?  
+   Does it take in _only_ what it needs to know?  
+   Refactor it if you can make it better.
 
 ## Converting Data Strings to Lists
 
