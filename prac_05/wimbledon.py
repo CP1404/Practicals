@@ -1,6 +1,6 @@
 """
 CP1404/CP5632 Practical - Suggested Solution
-Wimbledon data-reading, processing and displaying
+Wimbledon CSV file data loading, processing and displaying
 """
 FILENAME = "wimbledon.csv"
 INDEX_COUNTRY = 1
@@ -8,10 +8,21 @@ INDEX_CHAMPION = 2
 
 
 def main():
-    """Read data file and print details about Wimbledon champions and countries."""
+    """Load data file and print details about Wimbledon champions and countries."""
     records = load_records(FILENAME)
     champion_to_count, countries = process_records(records)
     display_results(champion_to_count, countries)
+
+
+def load_records(filename):
+    """Load records from file in list of lists form."""
+    records = []
+    with open(filename, "r", encoding="utf-8-sig") as in_file:
+        in_file.readline()  # Remove CSV header row
+        for line in in_file:
+            parts = line.strip().split(",")
+            records.append(parts)
+    return records
 
 
 def process_records(records):
@@ -28,23 +39,13 @@ def process_records(records):
 
 
 def display_results(champion_to_count, countries):
-    """Display champions and countries"""
+    """Display champions and countries."""
     print("Wimbledon Champions: ")
     for name, count in champion_to_count.items():
         print(name, count)
-    print(f"\nThese {len(countries)} countries have won Wimbledon: ")
+    print()
+    print(f"These {len(countries)} countries have won Wimbledon: ")
     print(", ".join(sorted(countries)))
-
-
-def load_records(filename):
-    """Load records from file in list of lists form."""
-    records = []
-    with open(filename, "r", encoding="utf-8-sig") as in_file:
-        in_file.readline()  # Remove CSV header row
-        for line in in_file:
-            parts = line.strip().split(",")
-            records.append(parts)
-    return records
 
 
 main()
