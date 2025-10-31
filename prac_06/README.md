@@ -8,7 +8,7 @@ new/different student to get (and give) a code review.
 [Find the right student to mention here each week (different for each practical)](https://github.com/CP1404/Starter/wiki/Code-Review-Order#prac-6)
 
 You do not need to wait to receive your code review before starting.  
-If you have not received a review, you can still complete this process. 
+If you have not received a review, you can still complete this process.
 The PR URL is still the same and the reviewer can still review the code even though it has been merged.
 
 Let's run through the process:
@@ -79,7 +79,7 @@ In the used_cars program file, write one new line of code for each of the follow
 
 # Intermediate Exercises
 
-**Include your estimate and actual time in the module docstring.**  
+**Include your estimate and actual time in the module docstring.**
 
 For each of the remaining exercises (as we've done before), read the question, then put an estimate of how long it will
 take you in the module docstring.  
@@ -198,7 +198,7 @@ Remember that methods should not take in any data that the object already knows 
 File: `guitar_test.py`
 
 > [!IMPORTANT]
-> Take testing seriously. 
+> Take testing seriously.
 > If your code prints "Expected 100. Got 102" then something is wrong!  
 > You need to notice when your tests fail and fix the problem.  
 > The problem is either the code, or the tests.
@@ -464,7 +464,8 @@ so we ask for the code review you did from the previous week.
 This week, please submit two PR URLs.
 
 - Type the URL of your Pull Request (PR) that mentions another student **for this prac**.
-- Type the URL of the PR that you reviewed **for the previous prac**.
+- Type the URL of the PR that you reviewed **for the previous prac**.  
+  (If you did not receive a review, you can't do one. Just write a note to say that in the submission.)
 - `car.py` modifications
 - `used_cars.py` modifications (cars have names)
 - `programming_language.py` (the class), `languages.py` (the client program)
