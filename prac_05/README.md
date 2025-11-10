@@ -219,7 +219,7 @@ them out.
     Email: 
     
     Lindsay Ward (lindsay.ward@jcu.edu.au)
-    Abe (Abe@gmail.com)
+    Abe (abe@gmail.com)
     Jim Boh (jimbo546@hotmail.com)
 
 ## Kivy Demo

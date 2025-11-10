@@ -56,7 +56,7 @@ In the used_cars program file, write one new line of code for each of the follow
 
 1. Create a new Car object called "limo" that is initialised with 100 units of fuel.
 
-2. Add 20 more units of fuel to this new car object using the `add` method.
+2. Add 20 more units of fuel to this new car object using the `add_fuel` method.
 
 3. Print the amount of fuel in the car.
 
