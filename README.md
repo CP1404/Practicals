@@ -68,10 +68,13 @@ Each prac includes a "Deliverables" section that tells you what to submit.
   Please type the URL(s) of your **GitHub practicals repository** (pracs 2-4) or PR (pracs 5-10) at the
   top of the text box when you submit your practical on LearnJCU.
 - If the prac (5-10) requires a code review pull request (PR):
-    - Your PR URLs will look something like: `https://github.com/lindsaymarkward/cp1404practicals/pull/1`
+    - Your PR URLs will look something like: `https://github.com/lindsaymarkward/cp1404practicals/pull/1`    
+      Please check this URL; do NOT include anything after the PR number.  
+      [@Mention the appropriate student from the list](https://github.com/CP1404/Starter/wiki/Code-Review-Order) in your PR.
     - Your code review URLs will be very similar but with the other student's repo. The link should take us directly to
-      the PR where you have done your code review.
-    - [@Mention the appropriate student from the list](https://github.com/CP1404/Starter/wiki/Code-Review-Order) in your PR.
+      the PR where you have done your code review.  
+      **NOTE:** If you do not receive a request to review, you can't do one. 
+      Please write a note to say that in the submission.
 - Do not zip up your files.
 - Submit your practical on LearnJCU with each file attached to one submission.
 - If you need to resubmit additional attempts, you must include all files in the new submission.

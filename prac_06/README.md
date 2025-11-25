@@ -465,7 +465,7 @@ This week, please submit two PR URLs.
 
 - Type the URL of your Pull Request (PR) that mentions another student **for this prac**.
 - Type the URL of the PR that you reviewed **for the previous prac**.  
-  (If you did not receive a review, you can't do one. Just write a note to say that in the submission.)
+  (If you did not receive a request to review, please write a note to say that in the submission.)
 - `car.py` modifications
 - `used_cars.py` modifications (cars have names)
 - `programming_language.py` (the class), `languages.py` (the client program)
