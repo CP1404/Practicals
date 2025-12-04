@@ -215,7 +215,7 @@ If you choose different names from what we have shown, you _will_ have problems 
 
 **DO** use this one project for all practicals.  
 **DO NOT** create new projects for each separate practical.  
-**Do** use separate projects for each assignment and any other side 'projects' including lectures and seminars.  
+**Do** use separate projects for each assignment and any other side 'projects' including lectures and seminars.
 
 # Intermediate Exercises - Functions:
 
@@ -322,20 +322,20 @@ Now let's modify this program.
 
 Now we'll refactor two programs from prac 1 to use functions (with suitable verb-phrase function names)...
 
-Download or copy the two files from this prac folder:  
+Download or copy the two files from this prac folder:
 
 * [temperatures.py](temperatures.py)
 * [score.py](score.py)
 
 Commit these two files with an appropriate imperative mood message, probably starting with "Add".  
-We do the commit first before updating so that we can see clearly what we have changed in the "diff".  
+We do the commit first before updating so that we can see clearly what we have changed in the "diff".
 
 ### Temperatures
 
 File: `temperatures.py`
 
 Refactor this to use 2 functions (NOT one!) for converting Celsius to Fahrenheit and vice versa.  
-You will need a `main` function that contains the main menu.  
+You will need a `main` function that contains the main menu.
 
 > [!IMPORTANT]
 > Remember SRP - functions should do one thing, so these should be simple calculation functions.  
@@ -345,16 +345,42 @@ You will need a `main` function that contains the main menu.
 
 File: `score.py`
 
+#### User Score
+
 Your `main` function should ask the user for their score and print the result.  
 Write a new function that takes in the user's score
 as a **parameter** and **returns** the result to be printed.  
 **Follow SRP**: This *function* must not print the result.
+
+#### Random Score
 
 Now add a new part to the bottom of your main function that generates a
 `random` score and prints the result.  
 You do NOT need to write a different function to determine the result for the random score.  
 If you've written your new function properly, you can use it again.  
 If you've breached SRP, then you'll see that you can't.
+
+Sample output (notice the different formatting for user and random scores):
+
+    Enter score: 44.2
+    User score 44.2 is Bad
+    Random: 57 = Passable
+
+#### Processing the Result
+
+Let's do one more thing to really lock in the SRP idea. You have a function that determines the result of a score.  
+That's its one job, nothing else.  
+We can use the result in multiple ways, like printing it or using it as a condition. Let's do that now.
+
+Add a condition to the first part so that if the user's result is "Excellent", you tell them they got a prize.  
+Choose the right decision structure here.  
+The above sample output would still be the same since it's not an excellent score.  
+If they got an excellent result, it would look like:
+
+    Enter score: 100
+    User score 100.0 is Excellent
+    You get a prize!
+    Random: 32 = Bad
 
 # Do-from-scratch Exercises
 
