@@ -171,7 +171,8 @@ print(f"My guitar: {name}, first made in {year}")
 
 You should notice that we have multiple values to store for one guitar entity:
 name, year and cost... and that guitars are awesome! What if we owned 9 guitars? We'd want to use a collection like a
-list... but what would each element in the list be? ... A tuple? A dictionary? No... This is a classic case for a class!
+list... but what would each element in the list be? ... A tuple? A dictionary? No...  
+This is a clear case for a **class**!
 
 Write a `Guitar` class that allows you to store one guitar with these **fields** (attributes):
 
@@ -186,12 +187,28 @@ Define the following **methods**:
 - `__str__` - which uses {} string formatting to return something like (using the values from above):  
   `Gibson L-5 CES (1922) : $16,035.40`
 
-- `get_age()` - which returns how old the guitar is in years (e.g., in 2022 the L-5 is: 2022 - 1922 = 100)
+- `get_age()` - which returns how old the guitar is in years (e.g., in 2022 the L-5 is: 2022 - 1922 = 100).
+  We could set the "current year" with a CONSTANT or literal, but a better way is to use the system's current year with
+  something like `datetime.datetime.now().year`
 
 - `is_vintage()` - which returns `True` if the guitar is 50 or more years old, `False` otherwise  
   Hint: try using `get_age()` to simplify the implementation of this method!
 
 Remember that methods should not take in any data that the object already knows (like age, year, etc.).
+
+> [!NOTE]
+> It's almost impossible to create a complete and deterministic naming scheme
+> with no overlaps, conflicts or grey areas (or is it 'gray'?).  
+> Here, we specify the method name, `get_age()`, which appears to conflict with our Style Guide
+> choice that "get" refers to getting from the user.  
+> An alternative would be to simply call this `age()`, which appears to conflict with our standard that functions should
+> be named with verbs and variables with nouns - this would be a function named as a noun. (That's OK if we think of
+> this method like a 'property', but anyway...)  
+> Should we make another standard/rule/variation? We like to be consistent, but we need to be pragmatic as well.  
+> Let's decide that since we're dealing with a class, we will rarely, if ever, get user input using the class because  
+> that would not be the class's job (SRP, separation of concerns).  
+> We could have made the other decision and chosen to use `age()`. There are pros and cons for both.  
+> So, we can decide to be OK with "get" meaning to get from the object rather than from the user here.
 
 ### Testing
 
@@ -199,14 +216,15 @@ File: `guitar_test.py`
 
 > [!IMPORTANT]
 > Take testing seriously.
-> If your code prints "Expected 100. Got 102" then something is wrong!  
-> You need to notice when your tests fail and fix the problem.  
+> If your code prints `Expected 100. Got 102` then something is wrong!  
+> You need to notice when your tests fail so that you can fix the problem.  
 > The problem is either the code, or the tests.
 
 Now write a program with at least enough code to test that the last two methods work as expected.  
 To test `get_age()`, you could test that the above example guitar does indeed output 100 as
 expected. Here's some sample output for testing two guitars where the second is called Another Guitar and has
-year=2013:
+year=2013 and the code was run in 2022.  
+**DO NOT** match this output exactly, since it's no longer 2022! You code should 'work'.
 
     Gibson L-5 CES get_age() - Expected 100. Got 100
     Another Guitar get_age() - Expected 9. Got 9
