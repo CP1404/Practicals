@@ -112,7 +112,7 @@ Define the following **methods**:
 
 - `is_dynamic()` - which returns True/False if the programming language is dynamically typed or not.
 
-> [IMPORTANT]
+> [!IMPORTANT]
 > Please understand that this function will take no parameters other than `self`.
 > The data is already *inside* the object, so you don't need to tell the object its own data.
 
