@@ -20,6 +20,10 @@ class ProgrammingLanguage:
         return f"{self.name}, {self.typing} Typing, Reflection={self.reflection}, " \
                f"Pointer Arithmetic={self.pointer_arithmetic}, First appeared in {self.year}"
 
+    def __repr__(self):
+        """Provide developer-friendly representation of a ProgrammingLanguage."""
+        return f"{vars(self)}"
+
     def is_dynamic(self):
         """Determine if language is dynamically typed."""
         return self.typing == "Dynamic"
@@ -27,17 +31,19 @@ class ProgrammingLanguage:
 
 def run_tests():
     """Run simple tests/demos on ProgrammingLanguage class."""
-    ruby = ProgrammingLanguage("Ruby", "Dynamic", True, False, 1995)
     python = ProgrammingLanguage("Python", "Dynamic", True, False, 1991)
+    ruby = ProgrammingLanguage("Ruby", "Dynamic", True, False, 1995)
     visual_basic = ProgrammingLanguage("Visual Basic", "Static", False, False, 1991)
 
-    languages = [ruby, python, visual_basic]
     print(python)
-
-    print("The dynamically typed languages are:")
-    for language in languages:
-        if language.is_dynamic():
-            print(language.name)
+    print(repr(python))
+    # Use assert to ensure correct values are set and method returns correctly
+    assert python.reflection is True
+    assert python.is_dynamic() is True
+    assert python.year == 1991
+    assert python.pointer_arithmetic is False
+    assert ruby.reflection is True
+    assert visual_basic.is_dynamic() is False
 
 
 if __name__ == "__main__":
