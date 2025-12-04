@@ -83,7 +83,9 @@ And lastly we need to format the output nicely, which we can use f-strings for.
 
 3. Change the line that gets the income input so that it uses an f-string instead of string concatenation (`+`).
 
-4. **Problem**: We have two variables that sound very similar: `incomes` and
+4. Change the line that prints the report so that it uses an f-string instead of the `.format` method.
+
+5. **Problem**: We have two variables that sound very similar: `incomes` and
    `months`. They're both plural, so they sound like they're both
    lists. `incomes` is a list of incomes, so we might assume that `months`
    is a list of months, but it's actually a scalar value that stores
@@ -97,22 +99,24 @@ And lastly we need to format the output nicely, which we can use f-strings for.
    the completion of that statement is usually a good name.  
    In this case, "This variable stores the... number of months". :)
 
-5. Run the program again with some sample data and make sure it still works.  
+6. Run the program again with some sample data and make sure it still works.  
    This kind of "regression testing" is important. Make sure you don't break anything!
 
-6. Now, let's refactor (move) the report printing into its own
+7. Now, let's refactor (move) the report printing into its own
    function. Select those 6 lines and turn them into a new function
    with a good name.  
    When naming **functions**, we can say, "This function will..." and
    the completion of that statement is usually a good name for the function.  
    In this case, "This function will... print report". :)
 
-7. Test again and make sure it's all good.
+8. Test again and make sure it's all good.
 
-8. Double-check the report printing function you just wrote.  
+9. Double-check the report printing function you just wrote.  
    Is it well-designed according to SRP?  
    Does it take in _only_ what it needs to know?  
    Refactor it if you can make it better.
+
+10. Commit with an accurate and meaningful message when you have finished.
 
 ## Converting Data Strings to Lists
 
@@ -141,12 +145,13 @@ but each part would still be a string.
    `[['CP1401', 'Ada Lovelace', 192],['CP1404', 'Alan Turing', 98]]`  
    Modify the function so that it does this.
 
-3. Currently, main just prints `data`. Add a new function to display all subject details. The function should produce something like the following (depending on the data):
+3. Currently, main just prints `data`. Add a new function to display all subject details. The function should produce
+   something like the following (depending on the data):
 
        CP1401 is taught by Ada Lovelace and has 192 students
        CP1404 is taught by Alan Turing  and has  98 students
 
-4. `data` is about as generic as a variable name can get... Change variable and function names to be more meaningful.  
+4. `data` is about as generic as a variable name can get... Change variable and function names to be more meaningful.
 
 # Intermediate Exercises
 
