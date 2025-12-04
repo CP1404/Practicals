@@ -122,7 +122,7 @@ And lastly we need to format the output nicely, which we can use f-strings for.
 
 File: `subject_reader.py`
 
-A common way of storing data is in text files. All data, including numbers, are stored in string form.  
+A common way of storing data is in text files. All data in a text file, including numbers, are stored in string form.  
 A data file storing subjects, lecturer and student numbers might look like:
 
     CP1401,Ada Lovelace,192
