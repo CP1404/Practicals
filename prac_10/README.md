@@ -71,7 +71,7 @@ to find the one we want, and then click "Install Package".
 > [!NOTE]
 > If you don't have permission to install this, try it with the option to install to user's site packages directory.
 
-![PyCharm install package](../images/10image3.png)
+![PyCharm install package](../images/PyCharm-Install-Package.png)
 
 The quick start documentation for the wikipedia package can be found at:
 [wikipedia.readthedocs.io](https://wikipedia.readthedocs.io/en/latest/quickstart.html)
@@ -148,13 +148,12 @@ Flask docs are at: <http://flask.pocoo.org/docs>.
 
 In PyCharm, create a new project, choosing Flask.
 > [!NOTE]
-> You need the Professional edition, not the Community
-> edition to see this screen when making a new project.
+> You need the [Pro subscription](https://github.com/CP1404/Starter/wiki/Software-Setup#pycharm) to see this screen when making a new project.
 
 If this is the first time you've done this, PyCharm should
 install the Flask package and other dependencies, like Jinja for templating.
 
-![New Flask Project window](../images/10image4.png)
+![New Flask Project window](../images/PyCharm-New-Flask-Project.png)
 
 The default project comes with a folder structure and a simple "hello world" example like:
 
@@ -248,9 +247,10 @@ If you did not write it correctly, then notice how you cannot reuse it.
 
 ![Fahrenheit conversion in website view](../images/10image6.png)
 
-That's version 1... Once it works, modify it so the output shows the input value and the result with useful text.
+That's just version 1...  
+Once it works, **modify it** so the output shows the input value and the result with useful text.
 
-Share this project on GitHub.
+Share this project on GitHub, ensuring that it is public.
 
 ## Flask + Wikipedia API
 
@@ -384,8 +384,8 @@ Please follow the [submission guidelines](../README.md#submission) to ensure you
 
 - Type the URL of your practicals repo.  
   (Your reflection should contain two URLs for code reviews; you do not also need to submit one for the previous prac.)
-- Type the URL of your Flask project with modifications
-- Type the URL of your Flask + Wiki project
+- Type the URL of your public GitHub repo for the Flask demo project with completed modifications
+- Type the URL of your public GitHub repo for the Flask + Wiki project
 - `REFLECTION.md`, which should contain links to two good code reviews
 - `testing.py`
 - `wiki.py`
