@@ -335,12 +335,8 @@ Remember also that the solutions are there to help you learn ***after***
 you have done your best to complete the tasks on your own and using the
 teaching resources we have provided.
 
-# Deliverables
+# Summary
 
-This section summarises the expectations for marking in this practical.  
-Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.
-
-- Type the URL of your GitHub practicals repository in the text box when you submit your practical.
 - `lists_warmup.py`
 - `total_income.py`
 - `subject_reader.py`

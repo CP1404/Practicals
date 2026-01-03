@@ -598,12 +598,8 @@ Some solutions (not all) for practicals are provided in the
 **solutions** branch of the Practicals repository on GitHub:
 <https://github.com/CP1404/Practicals/tree/solutions>
 
-# Deliverables
+# Summary
 
-This section summarises the expectations for marking in this practical.  
-Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.
-
-- Type the URL of your GitHub practicals repository in the text box when you submit your practical.
 - `string_formatting.py`
 - `randoms.py`
 - `capitalist_conrad.py`

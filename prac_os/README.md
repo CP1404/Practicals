@@ -197,12 +197,7 @@ What category would you like to sort jpg files into? <strong>Images</strong>
     - containing certain text
     - etc.
 
-# Deliverables
-
-This section summarises the expectations for marking in this practical.  
-Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.  
-
-Files required:
+# Summary
 
 - `os_demos.py` & modifications
 - `cleanup_files.py`

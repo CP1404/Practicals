@@ -361,13 +361,8 @@ We started working on a [simple guessing game Kivy app here](https://github.com/
 - Have a look at the repo, and try your hand at making the app work
 - Then make a Pull Request back to us.
 
-# Deliverables
+# Summary
 
-This section summarises the expectations for marking in this practical.  
-Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.
-
-- Type the URL of your Pull Request (PR) that mentions another student **for this prac**.
-- Type the URL of the PR that you reviewed **for the previous prac**.
 - `box_layout_demo.py/kv` with modifications (greet, clear)
 - `squaring.py/kv` with modifications
 - `convert_miles_km.py/kv`

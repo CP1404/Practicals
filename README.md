@@ -27,64 +27,13 @@ and if you're really keen, here's another practical that we used to have in the 
 
 ## Marking
 
-Assessment will be based on completing the tasks up to but not including
-the practice/extension section. You will be marked according to the rubric, which is usually follows:
-
-- 100 = Excellent response to all requirements (Always aim for this!)
-- 75 = Good response to most or all requirements, but some omissions or problems
-- 50 = Reasonable response to some requirements, but some significant omissions or problems
-- 25 = Reasonable response to at least one requirement
-- 0 = Minimal or no attempt
-- LATE practicals will receive no more than 50/100 for decent work, or down to 0 marks for poor work.  
-  **Do not be late**.
-
-For practicals that require a code review, the prac work will be worth 80% and the code review worth 20%.  
-Code reviews will be marked as follows:
-
-- 100 = Good code review with well-written, thoughtful comments
-- 50 = Adequate code review
-- 0 = No code review, or no URL submitted
+**As of 2026, practical work is not assessed.**
 
 > [!NOTE]
 > This subject is all about learning best-practices and clean coding using
 > the [patterns taught](https://github.com/CP1404/Starter/wiki/Programming-Patterns).
 > It is important that you learn these important foundations according to the teaching of the subject.    
-> So, to help your learning, prac work must be done in the way that we prescribe to achieve full marks.
-
-> [!CAUTION]
-> Here are some reasons that you might lose marks for your practicals and assignments:
-> - Your work looks too similar to any provided solutions, code found online or answers made by services like ChatGPT
-> - You miss or skip part of a question (you must attempt all requirements)
-> - Your work includes concepts and code not taught in the subject
-> - Your work does not follow the core concepts and patterns taught (e.g., using global variables, while True loops or
-    similar techniques), even if they work!
-
-## Submission
-
-Each prac includes a "Deliverables" section that tells you what to submit.
-
-- Submit your files **and** any requested GitHub URLs. _(No GitHub in prac 1.)_
-- Most pracs require you to submit one or more GitHub URLs.  
-  Please type the URL(s) of your **GitHub practicals repository** (pracs 2-4) or PR (pracs 5-10) at the
-  top of the text box when you submit your practical on LearnJCU.
-- If the prac (5-10) requires a code review pull request (PR):
-    - Your PR URLs will look something like: `https://github.com/lindsaymarkward/cp1404practicals/pull/1`    
-      Please check this URL; do NOT include anything after the PR number.  
-      [@Mention the appropriate student from the list](https://github.com/CP1404/Starter/wiki/Code-Review-Order) in your PR.
-    - Your code review URLs will be very similar but with the other student's repo. The link should take us directly to
-      the PR where you have done your code review.  
-      **NOTE:** If you do not receive a request to review, you can't do one. 
-      Please write a note to say that in the submission.
-- Do not zip up your files.
-- Submit your practical on LearnJCU with each file attached to one submission.
-- If you need to resubmit additional attempts, you must include all files in the new submission.
-- Ensure each file has the correct name, including the extension. If you don't use the right extensions, we cannot read
-  your work in LearnJCU.
-- Ensure your code is not commented-out. Only comments should be commented.
-- Include a `# comment` for any parts of questions that need separate answers. E.g., if a question has parts `a.`
-  and `b.` then add comments like `# a.` and `# b.` to make it clear where your answers are, and to show you what you
-  need to complete.
-- Rewrite any `# TODO` comments as appropriate.
+> Please do your practical work in such a way that you learn well. Don't bother using GenAI, searching for solutions, etc. or otherwise trying to skip the requirements. Do what helps you learn.  
 
 ## Solutions
 

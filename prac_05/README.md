@@ -9,8 +9,7 @@ evaluates and comments on the work of a peer with the goal of improving the fina
 So, to help you towards being a better programmer and being more familiar with industry practices, today you will work
 on some programs, then review another student's work.
 
-*You need to complete the tasks and do a **Pull Request** that *mentions*
-another student to get full marks for this practical.*
+*You need to complete the tasks and do a **Pull Request** that *mentions* another student.*
 
 Your lecturer may have provided you with [details of
 whom to mention](https://github.com/CP1404/Starter/wiki/Code-Review-Order), so please follow that.  
@@ -189,7 +188,7 @@ File: `emails.py`
 **Remember to include your estimate and actual time in the module docstring.**
 
 Write a program that stores users' emails (unique keys) and names (values) in a dictionary.  
-Remember to use our naming convention for dictionaries, `key_to_value`.  
+Remember to use our naming convention for dictionaries, `key_to_value`.
 
 Ask the user for an email until they enter a blank one.  
 Use a separate function to extract a name from the email as in the example below.  
@@ -267,7 +266,7 @@ This is based on
 [the Wikipedia entry Wimbledon gentlemen's singles champions](https://en.wikipedia.org/wiki/List_of_Wimbledon_gentlemen%27s_singles_champions)
 .
 
-Write a program to read this file, process the data and display processed information: 
+Write a program to read this file, process the data and display processed information:
 
 - the champions and how many times they have won.
 - the countries of the champions in alphabetical order
@@ -348,8 +347,6 @@ the IT industry, but is simplified to suit our teaching environment.
 > [!NOTE]
 > We do not expect you to complete the code review of someone else this week.   
 > We expect that you will review another student's prac during next week.
-> This week, you will submit your request for prac 5.  
-> Next week, you will submit your request for prac 6 and your review of someone's prac 5.
 
 1. On the GitHub website, click on the notifications icon at the top:
    which should have a dot on it if you've received your code review
@@ -470,13 +467,8 @@ first list and the values are from the second. Use the above example as a test c
 Extend your name & address program with file loading and saving
 (and any other fun things you'd like to add).
 
-# Deliverables
+# Summary
 
-This section summarises the expectations for marking in this practical.  
-Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.
-
-- Type the URL of your Pull Request (PR) that mentions another student properly.
-    - Your PR URL will look something like: `https://github.com/lindsaymarkward/cp1404practicals/pull/1`
 - `state_names.py`
 - `hex_colours.py`
 - `word_occurrences.py`

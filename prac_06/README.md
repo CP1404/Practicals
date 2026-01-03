@@ -22,8 +22,7 @@ Let's run through the process:
 - Create a new branch, `prac_06_feedback`.
 - Do your prac work.
 
-Expectations and marking for this prac include both requesting and doing a code review.  
-See submission details at the end of the prac.
+Expectations for this prac include both requesting and doing a code review.  
 
 ## Classes
 
@@ -472,18 +471,8 @@ Create a new repo with `git init`, add some code, add files with `git add`, comm
 
 Then, next time you're ready to commit and push your practical work, try using the command line to do it!
 
-# Deliverables
+# Summary
 
-This section summarises the expectations for marking in this practical.  
-Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.
-
-You may not receive your code review request in time to submit each week,
-so we ask for the code review you did from the previous week.  
-This week, please submit two PR URLs.
-
-- Type the URL of your Pull Request (PR) that mentions another student **for this prac**.
-- Type the URL of the PR that you reviewed **for the previous prac**.  
-  (If you did not receive a request to review, please write a note to say that in the submission.)
 - `car.py` modifications
 - `used_cars.py` modifications (cars have names)
 - `programming_language.py` (the class), `languages.py` (the client program)

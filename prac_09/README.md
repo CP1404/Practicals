@@ -565,20 +565,11 @@ Enhance your taxi driving program so that it:
 - keeps track of the number of km you've done (actual distance driven not total requested)
 - displays the taxis with their costs (`flagfall` and `fanciness`)
 
-# Deliverables
-
-This section summarises the expectations for marking in this practical.  
-Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.  
-Please submit two PR URLs:
-
-- Your own feedback branch PR with a mention of a reviewer **for this prac**.
-- The PR that you reviewed **for the last prac**.
-
-Files required:
+# Summary
 
 - `taxi_test.py`
 - `taxi.py` modifications (including class variable)
 - `unreliable_car.py` and `unreliable_car_test.py`
 - `silver_service_taxi.py` and `silver_service_taxi_test.py`
 - `taxi_simulator.py`
-- `band.py` (you don't need to submit the provided files)
+- `band.py`

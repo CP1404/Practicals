@@ -377,15 +377,8 @@ E.g., for 6 rows, it is 6 + 5 + 4 + 3 + 2 + 1 = 21
     - abcba
     - (ignoring case, spaces and punctuation) A Toyota's a Toyota
 
-# Deliverables
+# Summary
 
-This section summarises the expectations for marking in this practical.  
-Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.
-
-- Type the URL of your practicals repo.  
-  (Your reflection should contain two URLs for code reviews; you do not also need to submit one for the previous prac.)
-- Type the URL of your public GitHub repo for the Flask demo project with completed modifications
-- Type the URL of your public GitHub repo for the Flask + Wiki project
 - `REFLECTION.md`, which should contain links to two good code reviews
 - `testing.py`
 - `wiki.py`

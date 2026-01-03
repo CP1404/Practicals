@@ -2,8 +2,7 @@
 
 **Welcome to CP1404 practicals!**
 
-If you haven't read the introduction to practicals, including marking and submission guidelines,
-please [read this now](../README.md).
+If you haven't read the introduction to practicals, please [read this now](../README.md).
 
 # PyCharm Project Setup
 
@@ -138,7 +137,7 @@ Lindsay was working with a student in a prac recently whose code had some proble
 He asked the student why they had chosen to implement the code that way, and the student replied:  
 *"Not gonna lie, I just pressed Tab multiple times."*
 
-* If you want to finish the job quickly, get AI to do it... but you will not learn much.  
+* If you want to finish the job quickly, get AI to do it... but you will not learn much.
 * If you want to learn and build your own skills, don't use AI... but choose to learn all you can.
 
 While we're thinking about being more productive...  
@@ -245,7 +244,7 @@ print()
 Now **write more for loops** (using `range`) to do the following:
 
 > [!NOTE]  
-> For marking, we expect to see a complete file with each loop still in it.  
+> We expect to see a complete file with each loop still in it.  
 > Label each of your questions: a, b, c, d
 
 a. count in 10s from 0 to 100: `0 10 20 30 40 50 60 70 80 90 100`
@@ -416,14 +415,7 @@ Sample output for this program should look like:
     >>> Q
     Finished.
 
-Before you finish or start the practice and extension work, please check the **Deliverables** section below to ensure
-your work is complete.
-
 # Practice & Extension Work
-
-Remember, even though the questions in this final section are not required for marks,
-the best way to get better at programming is... ***programming!***  
-So do them each and every week :)
 
 You will learn better if you spread your work over multiple sessions
 instead of trying to do all of this in one go.  
@@ -493,14 +485,11 @@ These exist to help you learn, not just for copying :)
 See the solutions branch here in this repository. Change the **branch** to "solutions" at the top of the page.  
 Compare your work to the provided solutions and see if there are any significant differences that you can learn from.
 
-# Deliverables
+# Summary
 
-This section summarises the expectations for marking in this practical.  
-Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.
-
-We have not learned about using Git and GitHub this week, so we do not expect you to use GitHub at all yet.  
-Next week you will learn how to use version control properly.
-Do not submit a GitHub URL this week.
+This section summarises the expectations for this practical.  
+Each practical includes a list of files or tasks expected.  
+You are not expected to submit any practical work, since practicals are not marked.
 
 - `temperatures.py`
 - `sales_bonus.py`

@@ -22,9 +22,6 @@ Let's run through the process again:
 - Create a new branch, `prac_07_feedback`.
 - Do your prac work.
 
-Expectations and marking for this prac include both requesting and doing a code review.  
-See submission details at the end of the prac.
-
 # README
 
 As you have seen, a "README" file is a common aspect of a software project.  
@@ -379,16 +376,9 @@ from memory.
 
 Now, write a new version of the Project Management Program to use pickling to load and save the data.
 
-# Deliverables
+# Summary
 
-This section summarises the expectations for marking in this practical.  
-Please follow the [submission guidelines](../README.md#submission) to ensure you receive marks for your work.
-
-- Type the URL of your Pull Request (PR) that mentions another student **for this prac**.
-- Type the URL of the PR that you reviewed **for the previous prac**.  
-  (If you did not receive a review, you can't do one. Just write a note to say that in the submission.)
-- `README.md` (submitted and on GitHub, as with all the files; note this is the main README you did in this prac, not
-  the nearly-empty prac_07/README)
+- `README.md` (This is the main README you did in this prac, not the nearly-empty prac_07/README)
 - `language_file_reader.py`, `programming_language.py`, `languages.csv`
 - `guitar.py`, `myguitars.py`
 - `project.py`, `project_management.py`
