@@ -118,6 +118,7 @@ Search for "PEP" and select "PEP 8 Coding Style Violation" then change the sever
 screenshot:
 ![Inspections settings in PyCharm](../images/PyCharm-Inspections.png)
 
+## Turn GenAI Off
 
 > [!WARNING]
 > We love being productive, and we don't want you to waste time, BUT...  

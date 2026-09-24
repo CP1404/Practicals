@@ -26,11 +26,17 @@ The program should then print asterisks as long as the word.
 Example: if the user enters `Pythonista` (10 characters), the program should print `**********`.
 
 It's a valuable skill to be able to write code with pen and paper -
-without the support of an IDE. Watch out for things like consistent
-variable names and clear indenting as well as basic syntax like colons
+without the support of an IDE.  
+If you don't have access to pen and paper right now, use a very simple text editor like Notepad.  
+Watch out for things like consistent variable names and clear indenting as well as basic syntax like colons
 and brackets.
 
 # Walkthrough Example
+
+> [!NOTE]
+> It's hard to provide exact instructions that cover multiple versions of PyCharm.  
+> Your experience may be a bit different depending
+> on your OS, version of PyCharm and settings.
 
 ![GitHub logo](../images/githublogo.png)
 
@@ -40,11 +46,6 @@ Let's start with the basics of **Git** version control.
 
 These instructions are from the point of view of someone working on a JCU lab computer.  
 Please keep learning and practising with Git and GitHub.
-
-> [!NOTE]
-> It's not easy to provide exact instructions that cover multiple versions of PyCharm.  
-> Your experience may be a bit different depending
-> on your OS, version of PyCharm and settings.
 
 First, we are going to create a new project just to test using Git and GitHub.  
 This will not be inside your existing practicals or other projects.  
@@ -112,8 +113,8 @@ Keep it separate.
     GitHub.
 
 11. Now, imagine we've moved to another computer on a different day...
-    How do we keep working on our project? We **clone** it. Choose
-    **Git > Clone...** from the menu.  
+    How do we keep working on our project? We **clone** it. Choose **VCS > Clone...** from the menu (or something like
+    "Clone Repository" or "Get Project from Version Control").  
     Please do not use the GitHub website to clone or upload. Always use PyCharm or git command line.  
     Copy and paste the GitHub URL of your Sandbox project, and choose the
     location on your local computer where your projects are stored,
@@ -160,8 +161,7 @@ computer:
 If you're working on your own computer you won't need to clone --
 just keep using the same local repo.
 
-Even though it is possible to edit and upload files directly via the GitHub website,
-**do not do this!**
+Even though it is possible to edit and upload files directly via the GitHub website, **do not do this!**
 
 We only made the Sandbox repo so that we could practise Git and GitHub.  
 You don't need to use it again, but you're welcome to put whatever you
@@ -246,8 +246,8 @@ Here's the third place we use the **imperative mood** (what a thing will do):
 - Comments
 
 **From now on**, when writing programs with functions, create a `main()`
-function for the main part of the program. Put the main function at the
-*top* and call it at the *bottom*. If you are changing an existing program
+function for the main part of the program. Put the main function at the *top* and call it at the *bottom*. If you are
+changing an existing program
 that does not already use functions, *first* put it all in a main function;
 then add the other functions.
 
@@ -300,8 +300,8 @@ Now let's modify this program.
 2. **Refactor** the part that gets the password into a separate function...  
    You could do this manually, but let's use PyCharm's refactoring tool:  
    Select the lines that
-   get and check the name (it should be 3-4 lines) then right-click
-   and choose **Refactor > Extract Method...**  
+   get and check the password (it should be 3-4 lines) then right-click
+   and choose **Refactor > Extract Function...**  
    Set the name to `get_password` and press OK.  
    PyCharm should create the function and replace the old code with a
    call like `password = get_password()`  
