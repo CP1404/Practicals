@@ -21,7 +21,7 @@ And it shows it's a great idea for you to provide us with your feedback -
 during the semester anytime, and especially in our main surveys.
 
 **On paper**, write a program that asks the user for a password, with
-error-checking to repeat if the password doesn't meet a minimum length set by a variable.  
+error-checking to repeat if the password doesn't meet a minimum length set by a `CONSTANT`.  
 The program should then print asterisks as long as the word.  
 Example: if the user enters `Pythonista` (10 characters), the program should print `**********`.
 
@@ -107,13 +107,14 @@ Keep it separate.
 
 10. OK, now let's go crazy!  
     Close the project in PyCharm, then delete
-    the project from your computer. That's right, delete it all!
+    the Sandbox project from your computer. That's right, delete it all!  
     This is what you could do if you had finished working on a lab
     computer, and you had committed and pushed all of your changes to
     GitHub.
 
 11. Now, imagine we've moved to another computer on a different day...
-    How do we keep working on our project? We **clone** it. Choose **VCS > Clone...** from the menu (or something like
+    How do we keep working on our project?  
+    We **clone** it. Choose **VCS > Clone...** from the menu (or something like
     "Clone Repository" or "Get Project from Version Control").  
     Please do not use the GitHub website to clone or upload. Always use PyCharm or git command line.  
     Copy and paste the GitHub URL of your Sandbox project, and choose the
@@ -121,7 +122,7 @@ Keep it separate.
     then click **Clone**. You now have the
     whole project, including any previous version history, locally.
 
-12. Now add another file, `list_files.py`, **Add**, then enter this code:
+12. Now add another file, `list_files.py`, **Add** to git, then copy or type this code:
 
     ```python
     import os
@@ -143,7 +144,7 @@ Keep it separate.
     you include this `.git` folder.
 
 14. Now **Commit** using the PyCharm shortcut... enter a meaningful message...  
-    Use the button option to **Commit and Push**, then check that the new file is up on GitHub.
+    Click **Commit and Push**, then check that the new file is up on GitHub.
 
 We covered a fair bit in that walkthrough. Hopefully you can see
 the process for working on your projects:
@@ -156,12 +157,14 @@ the process for working on your projects:
 Then when you want to keep working on the project again on a different
 computer:
 
-- **Clone** the repository from GitHub to your local computer, then add, commit, push, etc.
+- **Clone** the repository from GitHub to your local computer
+- Then add, commit, push, etc.
 
 If you're working on your own computer you won't need to clone --
 just keep using the same local repo.
 
-Even though it is possible to edit and upload files directly via the GitHub website, **do not do this!**
+> [!WARNING]
+> Even though it is possible to edit and upload files directly via the GitHub website, **do not do this!**
 
 We only made the Sandbox repo so that we could practise Git and GitHub.  
 You don't need to use it again, but you're welcome to put whatever you
@@ -188,7 +191,7 @@ Now let's use this repo for your practicals:
 - This will open your new repository as a PyCharm project complete with folders.
 - Copy all of your prac 1 work into the `prac_01` folder in your new project.
 - Commit (all your prac 1 files) with a message like "Add prac 1 files".
-- Push (if you didn't push in the previous step) this commit to GitHub.
+- Push (if you didn't push in the previous step) to GitHub.
 
 **For every prac for the rest of the subject**,
 when you finish a task, do a commit with a meaningful message.  
@@ -236,7 +239,7 @@ That way the result can be used in any way.
 
 **DO NOT** use any global variables.  
 You should never use a global variable in this subject.  
-(CONSTANTS can and should be global, but never any variables.)
+CONSTANTS can and should be global, but never any variables.
 
 All functions should have docstring comments that say what the function will do.  
 Here's the third place we use the **imperative mood** (what a thing will do):
@@ -250,6 +253,8 @@ function for the main part of the program. Put the main function at the *top* an
 changing an existing program
 that does not already use functions, *first* put it all in a main function;
 then add the other functions.
+
+[Here's an example program from CP1401 Prac 7 for reference](https://github.com/CP1401/Practicals/blob/master/prac_07/menu_with_functions.py)
 
 [The structure for all programs](https://github.com/CP1404/Starter/wiki/Programming-Patterns#main-program-structure)
 is:
@@ -307,9 +312,11 @@ Now let's modify this program.
    call like `password = get_password()`  
    If it didn't work properly, your starting code may not have been correct.
 
+![Refactor in PyCharm](../images/PyCharm-Refactor-Password.png)
+
 3. Now refactor the part that prints the asterisks into a function that
-   takes 1 parameter: the password. PyCharm will see that password needs
-   to be an input parameter and create the function accordingly.  
+   takes 1 parameter: the password. PyCharm should see that **password** needs
+   to be an input **parameter** and create the function accordingly.  
    This will be a very simple function, but that's fine (see the note below).
 
 4. Commit with a meaningful message in the imperative voice.  
