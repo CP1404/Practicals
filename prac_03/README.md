@@ -5,22 +5,16 @@ consistently for **all** your work. This should just be how you normally work no
 Remember that it's an important "industry-relevant" skill that you should expect to use
 for many years to come (your entire IT career), so make the time to get good at it.
 
-If you do not already have your prac work with you, start by **cloning**
-your prac repository via PyCharm.
+Keep using the same PyCharm project and GitHub repo for all practicals.  
+If you need to work on a new computer, you can **clone** your prac repository via PyCharm.
 
 Each time you finish a practical task, **commit** it.
-
 You only need to **push** once (when you finish and/or it's time to leave),
 but you can do it more often if you wish.
 
-When you're about to make a change, like refactoring, commit first so that you
-can track the differences, and you can go back to a previous version if
-you need to.
-
-> [!IMPORTANT]
-> Do Not make a new project for each practical.  
-> Keep using the same PyCharm project and GitHub repo for all practicals.  
-> If you need to work on a new computer, you can **clone** your repo.
+> [!NOTE]
+> For the questions where you are given existing code, copy the code, then commit, before you make changes.  
+> This way, you can track the differences, as your new work rather than the whole file.
 
 # Walkthrough Example
 
@@ -89,12 +83,17 @@ Do not use a list and notice that both variable numbers are right-aligned:
 
 File: `randoms.py`
 
+> [!WARNING]
+> **Never** name a file the same as an existing module.  
+> E.g. don't call your file `random.py` or when you use `import random`,
+> Python will import your file, not the desired random module.
+
 Python has a number of random functions -
-contained within the `random` module. Unlike the built-in functions
-(`print()`, `input()`, etc.) the random functions are *not* built-in
+contained within the `random` module. Unlike the built-in functions (`print()`, `input()`, etc.) the random functions
+are *not* built-in
 but need to be **imported**. Modules are reusable collections of
-functions, classes and variables (constants) related to a specific topic
-(e.g., maths, operating system services, handling dates and times).
+functions, classes and variables (constants) related to a specific topic (e.g., maths, operating system services,
+handling dates and times).
 Python has a useful built-in function for finding out about the local
 scope of something, called `dir()`.
 
@@ -121,8 +120,7 @@ The result won't be quite the same...
       File "<input>", line 1, in <module>
     NameError: name 'random' is not defined
 
-This doesn't work, since random is a **module** that needs to be
-**imported** first.
+This doesn't work, since random is a **module** that needs to be **imported** first.
 
 Now try it like this:
 
@@ -150,9 +148,6 @@ about a couple of these functions:
 
 The name of a function can be used without the brackets here, but this
 does not execute the function.
-
-**Never** name a file the same as a module;
-e.g., `random.py` or it will have higher precedence when you import it.
 
 In your **console**, type in the following (run each line multiple
 times), and write the answers to the questions below in comments in `randoms.py`.
@@ -185,6 +180,8 @@ print(random.uniform(2.5, 5.5))  # line 3
 File: `capitalist_conrad.py`
 
 Download the code from: [capitalist_conrad.py](capitalist_conrad.py)
+
+**Commit** with a message like "Add Capitalist Conrad starter code to prac 3".
 
 Capitalist Conrad wants us to write a stock-price simulator for a
 volatile stock. The price starts off at $10.00, and, at the end of
@@ -236,6 +233,10 @@ floating-point number)
     - **Close** the file at the very end:
 
       `out_file.close()`
+
+**Commit** when you are finished.  
+Note that now your imperative mood message (verb) will not start with "Add" but something
+like "Complete", "Modify", "Improve"...
 
 ## Exceptions Demo
 
@@ -452,8 +453,8 @@ The following details are here to help you understand how `.gitignore` works.
 If you did not use the template, then you need to do this manually now...
 
 You have files in your project that you don't want stored in your
-repo, like PyCharm metadata files. You can just choose not to add them
-(as we've done until now) but they do show up as "unversioned files".   
+repo, like PyCharm metadata files. You can just choose not to add them (as we've done until now) but they do show up as
+"unversioned files".   
 We'd prefer to only see files we should consider adding.
 
 ![Unversioned Files window](../images/04image2.png)
@@ -574,7 +575,7 @@ Let's step through the program using the interactive debugger now...
 ### ASCII Columns Challenge
 
 Add columns to your ASCII table output from the earlier questions. Ask the user for how many
-columns to print, then figure out how to write loop(s) and print
+columns to print, then figure out how to write loop (s) and print
 statements to achieve this.
 
 ### Word Generator
@@ -599,9 +600,8 @@ Things To Do:
 
 - Try and make the program more interesting. For example:
 
-  a. Use wildcards for the vowels (#) and consonants (%) or either
-  (*) and make alphabetical characters use that actual
-  character - e.g. the format "%re#*l*" might produce a word
+  a. Use wildcards for the vowels (#) and consonants (%) or either (*) and make alphabetical characters use that actual
+  character - e.g. the format "%re# *l*" might produce a word
   like "greatly" or "breuzla"
 
   b. Automatically (randomly) generate the word_format variable.
@@ -620,8 +620,7 @@ It is ***super important*** that you use any provided
 solutions to **help you learn**, not to avoid learning!  
 Do the work yourself first, and *only* check the solutions to evaluate your work - not to do it for you. **OK?**
 
-Some solutions (not all) for practicals are provided in the
-**solutions** branch of the Practicals repository on GitHub:
+Some solutions (not all) for practicals are provided in the **solutions** branch of the Practicals repository on GitHub:
 <https://github.com/CP1404/Practicals/tree/solutions>
 
 # Summary
