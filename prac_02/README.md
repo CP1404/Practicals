@@ -418,8 +418,12 @@ When the user quits, say some kind of "farewell".
 
 Even though we've only done two practicals so far, it's helpful to stop and reflect, and adjust as needed.
 
-Download and save the template markdown file [REFLECTION.md](REFLECTION.md) to your `prac_02` folder.  
+Download and save the template Markdown file [REFLECTION.md](REFLECTION.md) to your `prac_02` folder.  
 Write short but meaningful answers to the questions in that file.
+
+PyCharm has multiple views for Markdown files. The Preview mode is not editable.  
+To edit Markdown, change the view to one of the other two options using the icons at the top-right.  
+![PyCharm Markdown views](../images/PyCharm-Markdown-Views.png)
 
 # Practice & Extension Work
 

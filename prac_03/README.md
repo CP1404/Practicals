@@ -14,7 +14,7 @@ but you can do it more often if you wish.
 
 > [!NOTE]
 > For the questions where you are given existing code, copy the code, then commit, before you make changes.  
-> This way, you can track the differences, as your new work rather than the whole file.
+> This way, you can track the differences as your new work rather than the whole file.
 
 # Walkthrough Example
 
