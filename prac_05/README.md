@@ -348,6 +348,11 @@ the IT industry, but is simplified to suit our teaching environment.
 > We do not expect you to complete the code review of someone else this week.   
 > We expect that you will review another student's prac during next week.
 
+> [!IMPORTANT]
+> This is not a trivial exercise. Don't just write "all good mate :)", but take your time and add
+> thoughtful comments that help you and the requester to learn and improve.
+> Make this a valuable experience by doing it well.
+
 1. On the GitHub website, click on the notifications icon at the top:
    which should have a dot on it if you've received your code review
    request. ![GitHub notification icon](../images/05image9.png)  
@@ -361,11 +366,6 @@ the IT industry, but is simplified to suit our teaching environment.
 
    Your job is to look for anything that could be improved including incorrect, inconsistent or non-ideal naming,
    formatting, logic... anything relevant. Add clear explanations, suggestions or questions.
-
-   > [!IMPORTANT]
-   > This is not a trivial exercise. Don't just write "all good mate :)", but take your time and add
-   > thoughtful comments that help you and the requester to learn and improve.
-   > Make this a valuable experience by doing it well.
 
    At some point you will receive comments from the review you requested. You can respond to these by making changes
    in your own code in PyCharm and replying to the comments on GitHub.  
@@ -399,10 +399,9 @@ To read more about Pull Requests:
 ## Practice
 
 1. Write a program that uses a dictionary to store and look up your friends' names and addresses. Assume you don't have
-   many friends :) and none of them share the same name
-   (this means the name can be the unique key for the dictionary). Create a simple menu for your program, which should
-   allow you to do the following
-   (remember to implement this incrementally, one bit at a time):
+   many friends :) and none of them share the same name (this means the name can be the unique key for the dictionary).
+   Create a simple menu for your program, which should
+   allow you to do the following (remember to implement this incrementally, one bit at a time):
 
     - Enter a new name & address
     - Change an address for an existing entry
@@ -422,8 +421,8 @@ To read more about Pull Requests:
    Enter number of billing days: 90
    Estimated bill: $295.01
 
-Now create a version of the above electricity program that uses a
-**dictionary** to store the tariffs and the corresponding cost.  
+Now create a version of the above electricity program that uses a **dictionary** to store the tariffs and the
+corresponding cost.  
 In the prompt, list all the tariffs (all the dictionary keys)
 and make sure a valid one is selected.  
 Use the appropriate cost from the dictionary to calculate the bill total.
@@ -464,8 +463,7 @@ first list and the values are from the second. Use the above example as a test c
 
 ### Name and Address
 
-Extend your name & address program with file loading and saving
-(and any other fun things you'd like to add).
+Extend your name & address program with file loading and saving (and any other fun things you'd like to add).
 
 # Summary
 
